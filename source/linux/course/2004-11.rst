@@ -1,0 +1,290 @@
+Course
+******
+
+At CSL on 16th November 2004
+
+Debian
+======
+
+- Stable
+- Unstable
+
+Gentoo
+======
+
+- http://www.gentoo.org/
+- Portage
+- Frequently updated
+- Can emerge an old or a new version
+- Can run different versions of the same package
+- Can use one machine to compile the binaries and distribute to all the 
+  other machines.
+
+Choice of kernel
+================
+
+- 2.4 or 2.6
+- We will use 2.6
+
+Configuration often stored in ``/etc/conf.d/``
+
+Initialisation is often stored in ``/etc/init.d/``
+
+**Software RAID** - Try the following pages for help:
+
+- http://www.gentoo.org/doc/en/gentoo-x86-tipsntricks.xml#software-raid
+- http://forums.gentoo.org/viewtopic.php?p=1058579#1058579
+
+Useful Commands
+===============
+
+Hold down Alt, SysRq while you type K, S, U, B
+
+- ``K`` - Kills all running disks
+- ``S`` - Synchronises drives
+- ``U`` - umounts drives
+- ``B`` - reboot
+
+Note: On the Microsoft Natural Multimedia Keyboard you need to switch off
+"F Lock", Hold down "Ctrl" and then press Alt SysRq etc...
+
+Shift - *Page Up* and *Page Down* - will allow you to scroll back through
+screens.
+
+``cp``/``mv``
+
+- Copy/Move
+
+  ``chmod``
+
+- Make something executable
+
+  ::
+
+    chmod +x <filename>
+    chmod +r <filename> to make read only for the current user
+
+- ``less``
+
+  Check the system log:
+
+  ::
+
+    less /var/log/messages
+
+- ``ls``
+
+  Long listing of everything
+
+  ::
+
+    ls -la
+
+  Sort by date/time
+
+  ::
+
+    ls -last
+
+    <<<lsof>>>
+
+- list open files - shows the port as well
+
+  ::
+
+    lsof | less 
+
+- ``cron``
+
+  To edit a crontab:
+
+  ::
+
+    crontab -e
+
+- ``du``
+
+  To find out how much disk space is used in the current folder and the ones
+  below:
+
+  ::
+
+    du -ch
+
+  Disk Usage - End of listing shows a summary
+
+- ``grep``
+
+  ::
+
+    cat /var/log/messages | grep -i warning - -i = ignore case
+
+- ``less``
+
+  Similar to more on windows - but you can scroll back up!
+
+  ``zless``
+
+  Same as more - but will work on compressed files.
+
+- ``locate``
+
+  To install
+  
+  ::
+
+    emerge slocate
+
+  - a utility which will check the whole hard disk each day and store a map of
+    the file system for quick searches
+  - to update the locate database
+
+  ::
+
+    updatedb &
+
+  to search the database
+
+  ::
+
+    locate <search> 
+
+- ``lsof``
+
+  Utilities for viewing which ports and network services are open/running
+
+  ::
+
+    lsof (list open files)
+    lsof | grep -i listen
+    cat /etc/services | grep pop
+
+- ``make``
+
+  the compiler will use inter process communications
+
+  ::
+
+    -pipe
+
+  another register for the compiler - debug stack trace is not useful.
+
+  ::
+
+    -fomit-frame-pointer 
+    nano -w /etc/make.conf.example
+  
+- We could compile binaries in Crediton, upload them to a web site and all
+  sites could download from this location
+
+  ::
+
+    PORTAGE_BINHOST 
+
+- ``mkdir``
+
+  To make a directory.
+
+- ``mount``
+
+  - Mount a CDROM
+  - If the file system you want is already mentioned in ``fstab`` then just:
+
+    ::
+
+      mount /mnt/cdrom
+
+  - To unmount:
+
+    ::
+
+      umount /mnt/cdrom
+
+  - If not in fstab
+
+    ::
+
+      cat /proc/devices
+
+  - Use command completion to choose device:
+
+    ::
+
+      mount /dev/<device e.g. hdd> /mnt/cdrom
+
+    ``hd`` = ide, ``b`` = scsi
+
+- ``nano``
+
+  - Is a clone of pico - easy to use - installed by default on Gentoo.
+  - ``-w`` turns off word wrap
+  - Always use ``-w`` to switch off word wrap 
+  - NOTE - It saves the file word wrapped if you do not switch off word wrap.
+
+- ``nmap``
+
+  - Simple port scanning:
+
+    ::
+
+      nmap <ip address> -O
+
+    To display OS details:
+
+    ::
+
+      -O 
+
+    loopback - scan yourself or my ip address:
+
+    ::
+
+      nmap -sT -vvv 127.0.0.1 
+
+- See ``lsof``
+
+- ``ps``
+
+  - processes
+  - show original command line
+  - ``a`` - all tasks
+  - ``x`` - list services as well
+  - ``u`` - all users
+
+    ::
+
+      ps faux | less - f
+      kill -9 <pid>
+
+- shows processes
+
+  ::
+
+    top
+
+  - nice level - +19 is the lowest priority
+  - ``wa`` is the CPU wait time - if it goes high then investigate faster hard
+    drives
+  - load average - usually around 2
+
+  If a thread is blocking IO then it will add a whole 1 to the load average
+  A zombie process could be a bad thing - Press the ``<``/``>`` keys to change
+  the sort order, ``?`` to get help
+
+- ``pstree``
+
+  Gives an idea of what is currently running
+
+- *Ctrl Z* pauses in the background
+- ``bg`` lets the task continue in the background
+- ``fg`` brings the task into the foreground
+- ``jobs`` - will list what you have in the background
+- ``%1`` to the first task
+- To launch in the background add an ``&`` to the end of the command
+
+- ``rmdir``
+- ``screen``
+  
+  Allows you to control multiple screens on a remote Linux computer.  Like
+  terminal server for Linux consoles.  emerge -v screen screen
+

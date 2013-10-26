@@ -1,0 +1,237 @@
+SWIG
+****
+
+Links
+=====
+
+- http://www.swig.org/
+- `Python Extensions In C++ Using SWIG`_
+  Copy of `this article by Michael Fotsch`_.
+
+Install
+=======
+
+Download and extract ``swigwin-1.3.31.zip`` from
+http://www.swig.org/download.html
+(Note: This is a development release).
+
+I installed to:
+
+::
+
+  C:\bin\swigwin-1.3.31\
+
+Documentation
+=============
+
+Can be found in the installation folder:
+
+======================  =====================================================
+**Notes**               **Folder**
+======================  =====================================================
+Python Examples         ``Examples/python/index.html``
+Windows documentation   ``Doc/Manual/Windows.html``
+======================  =====================================================
+
+Setup
+=====
+
+- Create the following environment variables:
+
+  ::
+
+    SET PYTHON_INCLUDE=C:\tools\Python25\include
+    SET PYTHON_LIB=C:\tools\Python25\libs\python25.lib
+
+- Add the SWIG folder to your PATH (so ``swig.exe`` can be found):
+
+  ::
+
+    SET PATH=%PATH%;C:\bin\swigwin-1.3.31;
+
+- The `python-swig.bat`_ batch file will set-up these variables for you.
+
+Project
+=======
+
+Interface Definition
+--------------------
+
+Create an interface definition file for your class e.g for a ``Client`` class:
+
+::
+
+  /* File : sample.i */
+  %module sample
+
+  %{
+  #include "Client.h"
+  %}
+
+  %include "std_string.i"
+  /* Let's just grab the original header file here */
+  %include "Client.h"
+
+- The ``%module`` line specifies the name under which you are going to import
+  the resulting extension module in Python.
+- The block between the "``%\{``" and the "``%\}``" is copied into the
+  generated wrapper *as is*.
+- ``%include "std_string.i"`` is a special SWIG header which allows us to pass
+  python string to ``std::string`` arguments.  Other headers can be included for
+  maps, lists, etc...
+  See the
+  `SWIG, STL/C++ Library notes`_.
+
+  Note: I think we need to include the header before the class is included.
+
+- SWIG will parse the declarations in the file ``Client.h``.  You can refer to
+  any number of header files.
+
+Custom Build Step
+-----------------
+
+- In Microsoft Visual Studio, right click on the interface definition file,
+  select *Properties*, then *Custom Build Step*, *General*.  Click on the
+  ``...`` button to the right of *Command Line* and enter the following:
+
+  ::
+
+    echo In order to function correctly, please ensure the following environment variables are correctly set:
+    echo PYTHON_INCLUDE: %PYTHON_INCLUDE%
+    echo PYTHON_LIB: %PYTHON_LIB%
+    echo on
+    swig -c++ -python $(InputPath)
+
+- In the *Outputs* control, enter:
+
+  ::
+
+    $(InputName)_wrap.cxx
+
+- Click OK to save the settings (there are no *Additional Dependencies*).
+- Build the solution, then add the generated source file e.g.
+  ``sample_wrap.cxx`` to the project.
+- If you try and build the project now, you will probably get an error like this:
+
+  ::
+
+    Error  1  fatal error C1083: Cannot open include file: 'Python.h': No such file or directory
+
+  Follow the next steps to set-up the *Visual Studio Environment*.
+
+Visual Studio Environment
+-------------------------
+
+- Change the project configuration to *Release* (the default installation of
+  python does not include include the debug libraries).
+- Right click on the project, and select *Properties*,
+  *Configuration Properties*, *General*.
+  Change *Configuration Type* to ``Dynamic Library (.dll)``.
+- Right click on the project, and select *Properties*,
+  *Configuration Properties*, *C/C++*, *General*.
+  In *Additional Include Directories* enter:
+
+  ::
+
+    $(PYTHON_INCLUDE)
+
+- Right click on the project, and select *Properties*,
+  *Configuration Properties*, *Linker*, *General*.  In the *Output File* enter the
+  DLL name you want created e.g:
+
+  ::
+
+    _sample.pyd
+
+  Note: the underscore is important.  The actual extension module (in this example)
+  will be ``sample.py``, which in turn imports from ``_sample.pyd``.
+
+- Right click on the project, and select *Properties*,
+  *Configuration Properties*, *Linker*, *Input*.  In *Additional Dependencies*
+  enter:
+
+  ::
+
+    "$(PYTHON_LIB)"
+
+Usage
+-----
+
+::
+
+  >python
+  >>> import sample
+  >>> c = sample.Client()
+  >>> c.setName("Patrick")
+  >>> c.getName()
+  'Patrick'
+  >>> m = sample.Matter()
+  >>> m.setNumber(12)
+  >>> m.setDescription('Purchase: 4 Lower Meadow')
+  >>> m.getNumber()
+  12
+  >>> m.getDescription()
+  'Purchase: 4 Lower Meadow'
+  >>>
+
+Sample
+======
+
+This sample is a modified version of the ``class`` example (copied from the
+SWIG install folder, ``Examples/python/class``):
+
+- Create a command prompt with the environment set-up correctly (see above).
+- Checkout the project from Subversion:
+
+  https://weezy/svn/learn/python/swig/example-class
+
+- From the command prompt, open the project in Visual Studio 2005:
+
+  ::
+
+    "C:\Program Files\Microsoft Visual Studio 8\Common7\IDE\devenv.exe" example.vcproj
+
+  Note: The ``example_wrap.cxx`` source file is generated by ``swig.exe``.
+
+- Switch the project to *Release* configuration (the standard python install does
+  not include the debug version of the python libraries).
+- Build the project.
+
+  Note: The *Custom Build Step* can be viewed from within the IDE, by right
+  clicking on ``example.i``, selecting *Properties* followed by
+  *Custom Build Step*, then selecting the ``...`` option from the
+  *Command Line* property (alternatively open ``example.vcproj`` using a text
+  editor).
+
+- Run the python script... see the *Usage* section above.
+
+Issues
+======
+
+AttributeError
+--------------
+
+If you get an error like this...
+
+::
+
+  >>> c.getMatters()
+  Traceback (most recent call last):
+    File "<stdin>", line 1, in <module>
+    File "sample.py", line 55, in <lambda>
+      __getattr__ = lambda self, name: _swig_getattr(self, Client, name)
+    File "sample.py", line 34, in _swig_getattr
+      raise AttributeError,name
+  AttributeError: getMatters
+
+...then try a project *Rebuild*...
+
+You can see if the method is defined by searching for the ``SwigMethods`` array
+in the generated ``_wrap.cxx`` file (e.g. ``sample_wrap.cxx``).
+
+
+.. _`Python Extensions In C++ Using SWIG`: ../../misc/howto/python/python-extensions-in-c++-using-swig.pdf
+.. _`this article by Michael Fotsch`: http://www.geocities.com/foetsch/python/extending_python.htm
+.. _`python-swig.bat`: https://weezy/svn/batch/python-swig.bat
+.. _`SWIG, STL/C++ Library notes`: http://www.swig.org/Doc1.3/Library.html#Library_stl_cpp_library
+

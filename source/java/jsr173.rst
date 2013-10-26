@@ -1,0 +1,30 @@
+JSR 173 - Streaming API for XML
+*******************************
+
+Links
+=====
+
+- `JSR 173 - Streaming API for XML`_
+- `Maven 2 pom.xml`_
+
+Download
+========
+
+http://ftpna2.bea.com/pub/downloads/jsr173.jar
+
+Maven 2
+=======
+
+Install
+-------
+
+Install to your local Maven 2 repository:
+
+::
+
+  mvn install:install-file -DgroupId=javax.xml -DartifactId=jsr173 -Dversion=1.0 -Dpackaging=jar -Dfile=jsr173.jar
+
+
+.. _`JSR 173 - Streaming API for XML`: http://jcp.org/en/jsr/detail?id=173
+.. _`Maven 2 pom.xml`: http://mirrors.ibiblio.org/pub/mirrors/maven2/javax/xml/jsr173/1.0/jsr173-1.0.pom
+
