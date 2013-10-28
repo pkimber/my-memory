@@ -1,2 +1,3 @@
 fabric
 sphinx
+rst2pdf

@@ -9,9 +9,7 @@ Links
 Load
 ====
 
-To load a text file into a PostgreSQL database:
-
-::
+To load a text file into a PostgreSQL database::
 
   psql -d Support2005May5th -f SupportBackUp2005May5th.out 2> log2005May5th.out
 
@@ -26,9 +24,7 @@ In this example:
 Commands
 ========
 
-To run SQL commands on a database:
-
-::
+To run SQL commands on a database::
 
   psql support2005
 
@@ -49,16 +45,14 @@ One field per line               ``\x``
 Use database                     ``\c <db name>``
 ===============================  =================
 
-To run a single SQL command:
-----------------------------
+To run a single SQL command
+---------------------------
 
 ::
 
   echo 'select userinitials from guser' | psql -d Support2005May5th
 
-or
-
-::
+or::
 
   psql -d Support2005May5th -c 'select userinitials from guser'
 
@@ -72,18 +66,14 @@ To run SQL from a file:
 Remote
 ======
 
-To connect to the remote server ``storagebox``:
-
-::
+To connect to the remote server ``storagebox``::
 
   psql -h storagebox postgres
 
 User
 ====
 
-Login to postgresql as a user (in this example, ``my_user_name``):
-
-::
+Login to postgresql as a user (in this example, ``my_user_name``)::
 
   psql my_database my_user_name
 
@@ -101,9 +91,7 @@ Variables
 - Do **NOT** put a semi-colon after the variable name on ``set`` commands.
   The semi-colon will be included in the variable.
 
-To use the variable:
-
-::
+To use the variable::
 
   \set location_id 398
   SELECT ... WHERE location_id = :location_id;

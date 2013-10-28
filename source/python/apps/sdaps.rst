@@ -58,9 +58,9 @@ Session 2 (using GIMP to answer the questions)::
 
 Session 3 (create unique stamp or pupil ID for each questionnaire)::
 
-  mkdir marking
-  cd marking
-  mkvirtualenv --system-site-packages marking
+  mkdir ~/repo/dev/wip/marking/
+  cd ~/repo/dev/wip/marking/
+  mkvirtualenv --system-site-packages dev_marking
   touch README.rst
   add2virtualenv ../../../src/sdaps/
   cp ~/repo/src/sdaps/001.tex 002.tex

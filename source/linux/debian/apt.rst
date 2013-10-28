@@ -16,15 +16,11 @@ Check
 Setup
 =====
 
-Edit:
-
-::
+Edit::
 
   /etc/apt/sources.list
 
-My ``sources.list`` contains:
-
-::
+My ``sources.list`` contains::
 
   #
   # deb cdrom:[Debian GNU/Linux 4.0 r0 _Etch_ - Official i386 NETINST Binary-1 20070407-11:29]/ etch contrib main
@@ -50,6 +46,10 @@ Install
 ::
 
   apt-get install application-name
+
+To install a specific version::
+
+
 
 Reinstall
 ---------
@@ -79,18 +79,18 @@ To list all installed packages:
 Search
 ======
 
-To search the apt cache:
-
-::
+To search the apt cache::
 
   apt-cache search application-name
 
 
-To find which PPA a package belongs to:
-
-::
+To find which PPA a package belongs to::
 
   apt-cache policy application-name
+
+To see the available versions::
+
+  apt-cache show application-name | grep Version
 
 Upgrade
 =======
