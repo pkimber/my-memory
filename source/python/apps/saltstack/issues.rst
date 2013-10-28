@@ -50,6 +50,10 @@ I was trying to use a module when I should have been using a state!!
 Undefined jinja variable
 ========================
 
+.. warning::
+
+  This fix doesn't work... sorry :(
+
 | https://github.com/saltstack/salt/issues/7625
 | https://github.com/saltstack/salt/issues/8079
 

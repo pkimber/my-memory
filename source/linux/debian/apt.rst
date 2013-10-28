@@ -34,9 +34,7 @@ My ``sources.list`` contains::
 
 **Note**: I have commented out the ``cdrom`` section.
 
-To make sure ``apt-get`` knows about these sources:
-
-::
+To make sure ``apt-get`` knows about these sources::
 
   apt-get update
 
@@ -46,10 +44,6 @@ Install
 ::
 
   apt-get install application-name
-
-To install a specific version::
-
-
 
 Reinstall
 ---------
