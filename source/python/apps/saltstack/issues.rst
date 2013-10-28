@@ -50,26 +50,21 @@ I was trying to use a module when I should have been using a state!!
 Undefined jinja variable
 ========================
 
-.. warning::
-
-  This fix doesn't work... sorry :(
+This issue affects Salt version 0.17.1.  Both the master and the minion need to
+be updated to solve the issue.
 
 | https://github.com/saltstack/salt/issues/7625
 | https://github.com/saltstack/salt/issues/8079
 
-Need to replace::
+Need to replace the following file with the new version::
 
   /usr/share/pyshared/salt/utils/jinja.py
-  # and
-  /usr/lib/pymodules/python2.7/salt/utils/jinja.py
 
-Why are there two copies?
+.. note::
 
-::
-
-  /usr/lib/pymodules/python2.7/salt/utils/jinja.py
-  # is a shortcut to
-  /usr/share/pyshared/salt/utils/jinja.py
+  ``/usr/lib/pymodules/python2.7/salt/utils/jinja.py``
+  is a symbolic link to
+  ``/usr/share/pyshared/salt/utils/jinja.py``
 
 To fix, copy the new ``jinja.py`` onto your master and minion::
 
@@ -77,3 +72,6 @@ To fix, copy the new ``jinja.py`` onto your master and minion::
   cp /usr/share/pyshared/salt/utils/jinja.py jinja.py.orig
   wget https://raw.github.com/johnnoone/salt/1309ef98877b80990acba0a386bbe555882c4649/salt/utils/jinja.py
   cp ~/repo/temp/jinja.py /usr/share/pyshared/salt/utils/jinja.py
+
+Restart the master and the minion... and you should be able to get Salt
+version 0.17.1 working.
