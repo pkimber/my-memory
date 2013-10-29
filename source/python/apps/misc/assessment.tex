@@ -1,0 +1,63 @@
+\documentclass[
+  % Babel language, also used to load translations
+  english,
+  %
+  % If you need it, you can add a custom barcode at the center
+  %globalid=SDAPS,
+  %
+  % And the following adds a per sheet barcode at the bottom left
+  print_questionnaire_id,
+  %
+  % You can choose between twoside and oneside. twoside is the default, and
+  % requires the document to be printed and scanned in duplex mode.
+  %oneside,
+  %
+  % The following options make sense so that we can get a better feel for the
+  % final look.
+  pagemark,
+  stamp]{sdaps}
+\usepackage[utf8]{inputenc}
+% For demonstration purposes
+\usepackage{multicol}
+
+\author{Patrick Kimber}
+\title{English, Tuesday 29th October}
+
+\begin{document}
+  % Everything you do should be done inside the questionnaire environment.
+
+  % If you don't like the default text at the beginning of each questionnaire
+  % you can remove it with the optional [noinfo] parameter for the environment 
+  \begin{questionnaire}[noinfo]
+
+    % Use \addinfo to add metadata (which is printed on the report later on)
+    \addinfo{Date}{10.03.2013}
+
+    \vspace*{450px}
+
+    % Set checkbox style to be circular
+    \def\checkboxstyle{ellipse}
+
+    % And a more compact way of doing it; similar to markgroup
+    \begin{choicegroup}{}
+      % We have to add the possible choices at the start.
+      \groupaddchoice{Attained}
+      \groupaddchoice{LS}
+      \groupaddchoice{MS}
+      \groupaddchoice{HS}
+
+      % After that it is possible to add each question.
+      \choiceline{I can write my name.}
+      \choiceline{I can write simple words.}
+      \choiceline{Most of my work can be read by an adult.}
+      \choiceline{I can write a few YR words.}
+      \choiceline{I use finger spaces between words.}
+    \end{choicegroup}
+
+    \begin{multicols}{2}
+      \textbox*{3cm}{}
+      \textbox*{3cm}{}
+    \end{multicols}
+
+  \end{questionnaire}
+\end{document}

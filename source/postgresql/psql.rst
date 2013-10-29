@@ -38,6 +38,7 @@ List databases                   ``\l``
 List databases (table space)     ``\l+``
 List tables                      ``\d``
 List table-spaces                ``\db``
+List schemas                     ``\dn``
 To view a table definition:      ``\d guser;``
 To view command history:         ``\s``
 Quit                             ``\q``
@@ -63,6 +64,10 @@ To run SQL from a file:
 
   psql mydbname -f ~/temp/sales_order.sql
 
+To hide the column headers etc::
+
+  psql mydbname -A -t -f ~/temp/sales_order.sql
+
 Remote
 ======
 
@@ -84,11 +89,12 @@ Variables
 
   # \set location_id 398
 
-**Note**:
+.. note::
 
-- The ``set`` command must be in lower case.  To view variables, just type
+  The ``set`` command must be in lower case.  To view variables, just type
   ``\\set``.
-- Do **NOT** put a semi-colon after the variable name on ``set`` commands.
+
+  Do **NOT** put a semi-colon after the variable name on ``set`` commands.
   The semi-colon will be included in the variable.
 
 To use the variable::

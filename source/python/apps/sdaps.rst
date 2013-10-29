@@ -1,11 +1,20 @@
 SDAPS
 *****
 
+.. highlight:: bash
+
 data acquisition with paper-based surveys
 
 http://sdaps.org/
 
 irc #sdaps on freenode
+
+Sample
+======
+
+Download :download:`misc/assessment.tex` to see examples of ``vspace``,
+circular checkboxes, ``noinfo``, questionnaire ID, ``stamp`` and fixed height
+text boxes.
 
 Dev
 ===

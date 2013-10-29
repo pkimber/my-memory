@@ -7,6 +7,7 @@ Links
 =====
 
 - `The LaTEX Companion`_
+- :doc:`../python/apps/sdaps`
 - :doc:`../python/apps/sphinx/output-pdf`
 - `Sphinx PDF Generation with LaTeX`_
 
@@ -21,7 +22,6 @@ Getting Started
 ===============
 
 From the `The Not So Short Introduction to LaTeX2e`_
-
 
 Create a minimal LaTeX file:
 
