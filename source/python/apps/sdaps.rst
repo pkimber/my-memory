@@ -81,6 +81,19 @@ Session 3 (create unique stamp or pupil ID for each questionnaire)::
   python ~/repo/src/sdaps/sdaps.py 002 stamp -f pupils.txt
   evince 002/stamped_1.pdf
 
+Session 4 (combine a unique stamp with using GIMP to answer)::
+
+  python ~/repo/src/sdaps/sdaps.py 004 stamp -f pupils.txt
+  pdftoppm -tiff 004/stamped_1.pdf out
+  gimp out-1.tif
+  # export from gimp to out-1-answer.tif
+  convert -monochrome out-1-answer.tif out-1-answer-mono.tif
+  python ~/repo/src/sdaps/sdaps.py 004 add out-1-answer-mono.tif
+  python ~/repo/src/sdaps/sdaps.py 004 recognize
+  python ~/repo/src/sdaps/sdaps.py 004 gui
+  python ~/repo/src/sdaps/sdaps.py 004 report
+  evince 004/report_1.pdf
+
 Tips
 ====
 

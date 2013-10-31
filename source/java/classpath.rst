@@ -20,21 +20,15 @@ package name for ``java.awt.Button`` is always specified as ``java.awt``.
 For example, suppose you want the Java runtime to find a class named
 ``Cool.class`` in the package ``utility.myapp``.
 
-If the path to that directory is
-
-::
+If the path to that directory is::
 
   C:\java\MyClasses\utility\myapp
 
-you would set the class path so that it contains
-
-::
+you would set the class path so that it contains::
 
   C:\java\MyClasses
 
-To run that app, you could use the following JVM command:
-
-::
+To run that app, you could use the following JVM command::
 
   C:> java -classpath C:\java\MyClasses utility.myapp.Cool
 
@@ -82,9 +76,7 @@ If you receive this error, java cannot find your bytecode file,
 One of the places java tries to find your bytecode file is your current
 directory. So, if your bytecode file is in ``C:\java``, you should change your
 current directory to that. To change your directory, type the following command
-at the prompt and press Enter:
-
-::
+at the prompt and press Enter::
 
   cd c:\java
 
@@ -94,9 +86,7 @@ you should see your ``.java`` and ``.class`` files.  Now enter
 
 If you still have problems, you might have to change your ``CLASSPATH``
 variable. To see if this is necessary, try "clobbering" the classpath with the
-following command:
-
-::
+following command::
 
   set CLASSPATH=
 
@@ -105,22 +95,16 @@ to change your ``CLASSPATH`` variable. For more information, consult the
 section 5. Update the ``PATH`` variable (outside of the tutorial) in the
 installation instructions.
 
-Example, Trying to run ``lia.analysis.AnalyzerDemo`` in:
-
-::
+Example, Trying to run ``lia.analysis.AnalyzerDemo`` in::
 
   C:\Tools\LuceneInAction\build\classes\lia\analysis
 
 Did not work because I was not including the current folder in the classpath.
-This is the working command line:
-
-::
+This is the working command line::
 
   java -cp c:\tools\lucene-1.4.3\lucene-1.4.3.jar;. lia.analysis.AnalyzerDemo
 
-Ran from:
-
-::
+Ran from::
 
   c:\Tools\LuceneInAction\build\classes\
 
@@ -152,9 +136,8 @@ Printing
   }
 
 
-.. _`Mastering the Java CLASSPATH`: http://www.kevinboone.com/classpath.html
-.. _create-bat.py: http://g1/svn/home/patrick/tools/utility/create-bat.py
-.. _`Understanding class path wildcards`: http://java.sun.com/javase/6/docs/technotes/tools/windows/classpath.html
 .. _`Class-Path Wildcards in Mustang`: http://blogs.sun.com/mr/entry/class_path_wildcards_in_mustang
 .. _`How to print classpath`: http://www.java-tips.org/java-se-tips/java.lang/how-to-print-classpath.html
-
+.. _`Mastering the Java CLASSPATH`: http://www.kevinboone.com/classpath.html
+.. _`Understanding class path wildcards`: http://java.sun.com/javase/6/docs/technotes/tools/windows/classpath.html
+.. _create-bat.py: http://g1/svn/home/patrick/tools/utility/create-bat.py

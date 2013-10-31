@@ -13,25 +13,18 @@ File
 Name
 ----
 
-Search for a file named "foobar.txt" starting in the current folder:
-
-::
+Search for a file named "foobar.txt" starting in the current folder::
 
   find . -name foobar.txt
 
-Search for a file named "foobar.txt" in "/usr":
-
-::
+Search for a file named "foobar.txt" in "/usr"::
 
   find /usr -name foobar.txt
 
 Extension
 ---------
 
-Case insensitive search from "``/``" for all files with an ``mp3``
-extension:
-
-::
+Case insensitive search from "``/``" for all files with an ``mp3`` extension::
 
   find / -iname "*.MP3"
 
@@ -42,18 +35,14 @@ instead of the quotes...
 Size
 ----
 
-Find files that are over a gigabyte in size:
-
-::
+Find files that are over a gigabyte in size::
 
   find ~/Movies -size +1024M
 
 Type
 ----
 
-Find only files:
-
-::
+Find only files::
 
   find . -type f
 
@@ -63,15 +52,13 @@ To count the number of files in a folder and sub-folders, see
 Folder
 ======
 
-Find only directories (``d``):
-
-::
+Find only directories (``d``)::
 
   find . -type d
   find . -type d -name keydir
 
-...to look for others (files, links, or sockets), just substitute ``f``,
-``l`` or ``s`` for the ``d`` in the command above.
+...to look for others (files, links, or sockets), just substitute ``f``, ``l``
+or ``s`` for the ``d`` in the command above.
 
 Time
 ====
@@ -79,24 +66,18 @@ Time
 Accessed
 --------
 
-Files accessed within the last 60 minutes:
-
-::
+Files accessed within the last 60 minutes::
 
   find -amin -60
 
-files accessed more than 60 minutes ago:
-
-::
+files accessed more than 60 minutes ago::
 
   find -amin +60
 
 Modified
 --------
 
-Files modified within the last 10 minutes:
-
-::
+Files modified within the last 10 minutes::
 
   find -mmin -10
 
@@ -107,18 +88,14 @@ There are also day versions of these arguments:
 - ``-mtime``: when the file's data was last modified.
 
 Find all files in ``/etc`` owned by root that have been modified within the
-last day:
-
-::
+last day::
 
   find /etc -user root -mtime -1
 
 User
 ====
 
-Find all files that belong to a certain user:
-
-::
+Find all files that belong to a certain user::
 
   find . -user daniel
 
@@ -134,15 +111,11 @@ two different arguments you are ``and`` ing them.  If you want to use "or" you
 give the ``-o`` option, and if you want to get everything except something,
 you use the ``!`` option.
 
-Find only regular files, owned by ``daniel``, that are also ``jpg`` images:
-
-::
+Find only regular files, owned by ``daniel``, that are also ``jpg`` images::
 
   find . -user daniel -type f -name "*.jpg"
 
-Now do the same, but exclude anything named autumn:
-
-::
+Now do the same, but exclude anything named autumn::
 
   find . -user daniel -type f -name "*.jpg" ! -name "autumn*"
 
@@ -150,9 +123,7 @@ Exec
 ====
 
 This command searches ``../a-folder/`` for files modified within the last 10
-minutes and passes the full path of each file to the ``ls`` command:
-
-::
+minutes and passes the full path of each file to the ``ls`` command::
 
   find ../a-folder/ -mmin -10 -exec ls -la {} \;
 
@@ -165,6 +136,14 @@ minutes and passes the full path of each file to the ``ls`` command:
 ``\;``            Terminate the command (the ``;`` is escaped).
 ================  ===============================================================
 
+Note::
+
+  -exec command {} +
+
+This variant of the ``-exec`` action runs the specified command on the
+selected files, but the command line is built by appending each selected file
+name at the end.
+
 xargs
 -----
 
@@ -172,9 +151,8 @@ xargs
 - xargs_ - construct arg list and execute command
 
 
+.. _`Combining find With xargs`: http://dmiessler.com/study/find/
 .. _`DMIESSLER.COM - find`: http://dmiessler.com/study/find/
 .. _`Mommy, I found it! - 15 Practical Linux Find Command Examples`: http://www.thegeekstuff.com/2009/03/15-practical-linux-find-command-examples/
 .. _tips...: tips.html
-.. _`Combining find With xargs`: http://dmiessler.com/study/find/
 .. _xargs: http://www.research.att.com/~gsf/man/man1/xargs.html
-

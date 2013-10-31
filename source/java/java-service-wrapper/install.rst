@@ -242,4 +242,3 @@ Set the permissions on the two files...
   chmod a+x wrapper
 
 Copied ``lib/libwrapper.so`` to ``bin``.
-
