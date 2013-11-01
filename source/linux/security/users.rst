@@ -32,9 +32,9 @@ Other options:
 ``-u``    Force the user ID (UID).
 ========  ================================
 
-Note:
+.. note::
 
-- To reject shell login attempts, set the shell to ``/bin/false``.
+  To reject shell login attempts, set the shell to ``/bin/false``.
   This doesn't stop the user from using the account to authenticate over ssh.
   For details see
   http://www.semicomplete.com/articles/ssh-security/#id54098.

@@ -12,35 +12,25 @@ Links
 Usage
 =====
 
-unix search file content including subfolders using grep
-
-::
+unix search file content including subfolders using grep::
 
   grep -r "my search term" *
 
-Additionally, you can include/exclude the files that are searched
-
-::
+Additionally, you can include/exclude the files that are searched::
 
   grep -r --include=*.py "my search term" *
 
-...this example excludes any file where the filename contains carpal:
-
-::
+...this example excludes any file where the filename contains carpal::
 
   grep -r --exclude=*carpal* vim *
 
 The following returns all the lines that contain a string matching
-the expression ``foo`` in the file ``file``:
-
-::
+the expression ``foo`` in the file ``file``::
 
   grep foo file
 
 To invert the search (this example will list all files which do not have a
-``.pyc`` extension):
-
-::
+``.pyc`` extension)::
 
   grep -v .pyc
 

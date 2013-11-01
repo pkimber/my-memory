@@ -6,36 +6,26 @@ Windows
 
 http://wrapper.tanukisoftware.org
 
-Copied:
-
-::
+Copied::
 
   InstallTestWrapper-NT.bat
   MyApp.bat
   UninstallTestWrapper-NT.bat
   wrapper.exe
 
-from:
-
-::
+from::
 
   C:\Tools\wrapper_win32_3.1.2\bin
 
-into:
-
-::
+into::
 
   C:\projects\mule-gateway\bin
 
-Renamed:
-
-::
+Renamed::
 
   InstallTestWrapper-NT.bat
 
-to:
-
-::
+to::
 
   InstallMessageService-NT.bat
 
@@ -43,9 +33,7 @@ to:
 
   MyApp.bat
 
-to:
-
-::
+to::
 
   MyMessageService.bat
 
@@ -53,33 +41,23 @@ to:
 
   UninstallTestWrapper-NT.bat
 
-to:
-
-::
+to::
 
   UninstallMessageService-NT.bat
 
-Copied:
-
-::
+Copied::
 
   wrapper.dll
 
-from:
-
-::
+from::
 
   C:\Tools\wrapper_win32_3.1.2\lib
 
-into:
-
-::
+into::
 
   C:\projects\mule-gateway\bin
 
-Added:
-
-::
+Added::
 
   <!-- This dependency is required for the Java Service Wrapper -->
   <dependency>
@@ -88,57 +66,39 @@ Added:
       <version>3.1.2</version>
   </dependency>
 
-to:
-
-::
+to::
 
   C:\projects\mule-gateway\project.xml
 
-Copied:
-
-::
+Copied::
 
   wrapper.conf
 
-from:
-
-::
+from::
 
   C:\Tools\wrapper_win32_3.1.2\conf
 
-into:
-
-::
+into::
 
   C:\projects\mule-gateway\bin
 
-Edited:
-
-::
+Edited::
 
   C:\projects\mule-gateway\bin\MessageService.bat
 
-changed:
-
-::
+changed::
 
   set _WRAPPER_CONF="%_REALPATH%..\conf\wrapper.conf"
 
-to:
-
-::
+to::
 
   set _WRAPPER_CONF="%_REALPATH%wrapper.conf"
 
-Created a new folder:
-
-::
+Created a new folder::
 
   C:\projects\mule-gateway\logs
 
-Made the following changes in:
-
-::
+Made the following changes in::
 
   C:\projects\mule-gateway\bin\wrapper.conf
 
@@ -161,39 +121,27 @@ Made the following changes in:
   wrapper.ntservice.displayname=Messaging Gateway
   wrapper.ntservice.description=Messaging Gateway
 
-Edited:
-
-::
+Edited::
 
   InstallMessageService-NT.bat
 
-Changed:
-
-::
+Changed::
 
   set _WRAPPER_CONF="%_REALPATH%..\conf\wrapper.conf"
 
-to:
-
-::
+to::
 
   set _WRAPPER_CONF="%_REALPATH%wrapper.conf"
 
-Edited:
-
-::
+Edited::
 
   UninstallMessageService-NT.bat
 
-Changed:
-
-::
+Changed::
 
   set _WRAPPER_CONF="%_REALPATH%..\conf\wrapper.conf"
 
-to:
-
-::
+to::
 
   set _WRAPPER_CONF="%_REALPATH%wrapper.conf"
 
@@ -201,21 +149,15 @@ For more information see SVN path, revision 351 to 353:
 
 http://g1/svn/projects/mule-gateway/trunk
 
-To test the application:
-
-::
+To test the application::
 
   bin\MessageService.bat console
 
-To install the service:
-
-::
+To install the service::
 
   bin\InstallMessageService-NT.bat
 
-To uninstall the service:
-
-::
+To uninstall the service::
 
   bin\UnInstallMessageService-NT.bat
 
@@ -234,9 +176,7 @@ Downloaded ``wrapper_linux_3.1.2.tar.gz``
 
 Copied ``bin/wrapper`` to ``bin/``
 
-Set the permissions on the two files...
-
-::
+Set the permissions on the two files::
 
   chmod a+x gateway-linux
   chmod a+x wrapper
