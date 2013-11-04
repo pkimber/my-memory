@@ -34,6 +34,9 @@ To invert the search (this example will list all files which do not have a
 
   grep -v .pyc
 
+To list only the file names::
+
+  grep -r -l "apple" .
 wc
 ==
 

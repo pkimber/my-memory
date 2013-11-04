@@ -20,13 +20,12 @@ Alternative
   issues.
 
 
-.. _`Source code from Subversion`: svn checkout https://svn.sourceforge.net/svnroot/wrapper/trunk/wrapper
-.. _`Tanuki Software.`: http://wrapper.tanukisoftware.org
-.. _Nabble: http://www.nabble.com/Java-Service-Wrapper-f13978.html
-.. _SourceForge.net: http://sourceforge.net/projects/wrapper/
-.. _`Windows Service Wrapper (used by Hudson)`: http://projectkenai.com/projects/winsw
 .. _`Java Service Launcher (for Windows)`: http://jslwin.sourceforge.net/
 .. _`Java Services on NT`: http://sw-technologies.com/java/ntsvc/
+.. _`Source code from Subversion`: svn checkout https://svn.sourceforge.net/svnroot/wrapper/trunk/wrapper
+.. _`Tanuki Software.`: http://wrapper.tanukisoftware.org
+.. _`Windows Service Wrapper (used by Hudson)`: http://projectkenai.com/projects/winsw
 .. _`Yet Another Java Service Wrapper`: http://yajsw.sourceforge.net/
+.. _Nabble: http://www.nabble.com/Java-Service-Wrapper-f13978.html
+.. _SourceForge.net: http://sourceforge.net/projects/wrapper/
 .. _WinRun4j: http://winrun4j.sourceforge.net/
-

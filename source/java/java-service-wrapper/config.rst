@@ -1,6 +1,11 @@
 Configuration
 *************
 
+.. warning::
+
+  In ``wrapper.conf``, files are included using the ``#include`` syntax.  This
+  is really confusing because the rest of the file uses ``#`` as a comment!
+
 Debug
 =====
 
