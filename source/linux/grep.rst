@@ -5,7 +5,7 @@ Links
 =====
 
 - `Contextual Grepping`_
-- :doc:`ack` is a tool like grep aimed at programmers with large trees of
+- :doc:`apps/ack` is a tool like grep aimed at programmers with large trees of
   source code.
 - http://pypi.python.org/pypi/grin
 
@@ -37,6 +37,7 @@ To invert the search (this example will list all files which do not have a
 To list only the file names::
 
   grep -r -l "apple" .
+
 wc
 ==
 

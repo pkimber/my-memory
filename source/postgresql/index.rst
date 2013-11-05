@@ -19,6 +19,7 @@ Contents
    security
    sql-commands
    sql-data-definition
+   sql-info
    sql-joins
    sql-privileges
    sql-select
