@@ -118,11 +118,6 @@ level domain or a host on the local network.
 
     host mail.yahoo.com
 
-lsof - lists open files
-=======================
-
-http://dmiessler.com/study/lsof/
-
 NFS
 ===
 

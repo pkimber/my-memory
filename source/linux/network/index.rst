@@ -8,6 +8,7 @@ Contents
 
    dns
    ftp
+   monitor
    network
    nfs
    pptp
