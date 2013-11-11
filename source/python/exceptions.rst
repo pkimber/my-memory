@@ -29,9 +29,7 @@ Unknown
   except Exception, e:
       print e
 
-or:
-
-::
+or::
 
   try:
       somecode()
@@ -56,32 +54,28 @@ Finally
 
 Note:
 
-- `PEP 341: Unified try/except/finally`_
-  *Until Python 2.5, the try statement came in two flavours.  You could use a
-  finally block to ensure that code is always executed, or one or more except
-  blocks to catch specific exceptions.  You couldn't combine both except
-  blocks and a finally block*.
+`PEP 341: Unified try/except/finally`_
+*Until Python 2.5, the try statement came in two flavours.  You could use a
+finally block to ensure that code is always executed, or one or more except
+blocks to catch specific exceptions.  You couldn't combine both except
+blocks and a finally block*.
 
-  To solve this problem nest a try, except within a try, finally e.g:
+To solve this problem nest a try, except within a try, finally e.g::
 
-  ::
-
-    cursor = None
-    try:
-        try:
-            cursor = somecode()
-        except Exception, e:
-            print e
-    finally:
-        if cursor != None:
-            c.close()
+  cursor = None
+  try:
+      try:
+          cursor = somecode()
+      except Exception, e:
+          print e
+  finally:
+      if cursor != None:
+          c.close()
 
 Throw
 =====
 
-To throw an exception:
-
-::
+To throw an exception::
 
   class MyError(Exception):
       def __init__(self, value):

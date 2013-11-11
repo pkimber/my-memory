@@ -15,9 +15,8 @@ Attributes
 ``verbose_name``
 ----------------
 
-From `How can I get access to a Django Model field verbose name dynamically?`_:
-
-::
+From `How can I get access to a Django Model field verbose name
+dynamically?`_::
 
   from village.models import VillageModel
   row = VillageModel.objects.all()[0]
@@ -30,16 +29,12 @@ Name
 ----
 
 Standard field types take an optional first positional argument that is the
-verbose name to use for that field e.g:
-
-::
+verbose name to use for that field e.g::
 
   first_name = models.CharField("person's first name", max_length=30)
 
 For the other field types (``ForeignKey``, ``ManyToManyField`` and
-``OneToOneField``) use the ``verbose_name`` keyword parameter:
-
-::
+``OneToOneField``) use the ``verbose_name`` keyword parameter::
 
   poll = models.ForeignKey(Poll, verbose_name="the related poll")
 
@@ -123,17 +118,11 @@ CharField
 
 A string field, for small to large-sized strings.
 
-Note: ``max_length`` is a required parameter.
-
-*Sample*
-
-::
+Note: ``max_length`` is a required parameter e.g::
 
   user = models.CharField(max_length=3)
 
-To add a simple lookup:
-
-::
+To add a simple lookup::
 
   COUNTRY_CHOICES = (
       ('ES', 'Spain'),
@@ -176,16 +165,24 @@ Has two required arguments:
   exists.
 - ``decimal_places`` The number of decimal places to store with the number.
 
-For example, to store numbers up to 999 with a resolution of 2 decimal places:
-
-::
+For example, to store numbers up to 999 with a resolution of 2 decimal places::
 
   models.DecimalField(max_digits=5, decimal_places=2)
 
 FileField (and ImageField)
 --------------------------
 
-- `playing with upload_to field`_
+To `Set Django's FileField to an existing file`_ just set
+``instance.field.name`` to the path of your file e.g::
+
+  class Document(models.Model):
+      file = FileField(upload_to=get_document_path)
+      description = CharField(max_length=100)
+
+  doc = Document()
+  doc.file.name = 'path/to/file'
+  doc.file
+  <FieldFile: path/to/file>
 
 .. note::
 
@@ -200,9 +197,7 @@ ForeignKey
 
   artist = models.ForeignKey(Musician)
 
-To create an optional ``ForeignKey``, specify ``blank`` **AND** ``null`` e.g:
-
-::
+To create an optional ``ForeignKey``, specify ``blank`` **AND** ``null`` e.g::
 
   mentor = models.ForeignKey(
       MentorModel,
@@ -326,7 +321,7 @@ URL will *NOT* be checked for existence.
 .. _`How can I get access to a Django Model field verbose name dynamically?`: http://stackoverflow.com/questions/2429074/how-can-i-get-access-to-a-django-model-field-verbose-name-dynamically
 .. _`Model reference`: http://www.djangoproject.com/documentation/model-api/
 .. _`Model Style`: http://docs.djangoproject.com/en/dev/internals/contributing/#model-style
-.. _`playing with upload_to field`: http://adil.2scomplement.com/2009/01/django-playing-with-upload_to-field/
+.. _`Set Django's FileField to an existing file`: http://stackoverflow.com/questions/8332443/set-djangos-filefield-to-an-existing-file
 .. _get_FOO_display: https://docs.djangoproject.com/en/dev/ref/models/instances/#django.db.models.Model.get_FOO_display
 .. _get_next_by_FOO: https://docs.djangoproject.com/en/dev/ref/models/instances/#django.db.models.Model.get_next_by_FOO
 .. _sample_image_field: http://toybox/hg/sample/file/tip/python/django/sample_image_field/

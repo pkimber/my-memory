@@ -16,21 +16,15 @@ Install
 Parameters
 ==========
 
-Stop on first failure:
-
-::
+Stop on first failure::
 
   py.test -x
 
-Disable capturing:
-
-::
+Disable capturing::
 
   py.test -s
 
-Select tests:
-
-::
+Select tests::
 
   py.test -k test_simple
 
@@ -39,9 +33,7 @@ Debug
 
 To use ``ipdb``, then run with the ``-s`` parameter...
 
-If you don't do this, you will get the following nasty/misleading error:
-
-::
+If you don't do this, you will get the following nasty/misleading error::
 
   AttributeError: DontReadFromInput instance has no attribute 'encoding'
 
@@ -60,17 +52,27 @@ Plugins
 Django
 ------
 
-I have been using this plugin:
-
-::
+I have been using this plugin::
 
   pip install pytest-django
 
-To run the Django tests, make sure ``DJANGO_SETTINGS_MODULE`` is defined, then:
-
-::
+To run the Django tests, make sure ``DJANGO_SETTINGS_MODULE`` is defined,
+then::
 
   py.test -x
+
+The ``-x`` option stops the tests on the first failure.
+
+To ``print`` or use ``ipdb``, use the ``-s`` option::
+
+  py.test -x -s
+
+.. note::
+
+  ``py.test`` will cache the database structure to speed up test runs.  To
+  re-initialise the database, use the ``--create-db`` option::
+
+    py.test -x --create-db
 
 PEP 8
 -----

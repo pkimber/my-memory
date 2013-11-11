@@ -13,9 +13,7 @@ In this example, ``labs`` is the database name.
 Table
 -----
 
-To ``dump`` the contents of a table:
-
-::
+To ``dump`` the contents of a table::
 
   mysqldump --user=pjk --password=mydb labs mytable
   mysqldump --host=server --user=pjk --password=mypass --skip-add-drop-table --no-create-info labs mytable
@@ -52,4 +50,3 @@ Note: You might need to create the database first e.g:
 ::
 
   CREATE DATABASE templabs;
-
