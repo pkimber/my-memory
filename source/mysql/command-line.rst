@@ -9,6 +9,8 @@ Getting Started
   cd C:\Program Files\MySQL\MySQL Server 5.1\bin
   mysql -u root -p
 
+  mysql --host=myserver --user=myname --password=mypass mydb
+
 Database
 --------
 
@@ -16,9 +18,7 @@ Database
 
   use test
 
-To log into a ``test`` database on start-up:
-
-::
+To log into a ``test`` database on start-up::
 
   cd C:\mysql-5.1.35-win32\bin
   mysql test
@@ -40,18 +40,14 @@ Help
 History
 =======
 
-``mysql`` command line history is stored in:
-
-::
+``mysql`` command line history is stored in::
 
   ~/.mysql_history
 
 Options
 =======
 
-To display SQL results in a vertical format:
-
-::
+To display SQL results in a vertical format::
 
   SELECT * FROM contact WHERE id = 2\G
 
@@ -63,17 +59,13 @@ Schema
 Script
 ======
 
-To run all the commands in a script:
-
-::
+To run all the commands in a script::
 
   mysql db_name < script.sql
   mysql db_name -t < script.sql > output.tab
   mysql db_name -e "SELECT * FROM client"
 
-...or from the ``mysql`` prompt:
-
-::
+...or from the ``mysql`` prompt::
 
   mysql> source ~/temp/temp.sql
 

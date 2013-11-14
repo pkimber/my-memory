@@ -1,7 +1,7 @@
 inxi
 ****
 
-System information script:
+System information script.
 
 Links
 =====

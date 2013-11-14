@@ -11,18 +11,14 @@ Hard Disk
 Free Space
 ----------
 
-To see free disk space:
-
-::
+To see free disk space::
 
   df -H
 
 Partitions
 ----------
 
-To list all available partitions:
-
-::
+To list all available partitions::
 
   fdisk -l
 
@@ -35,9 +31,7 @@ Memory
 
   cat /proc/meminfo
 
-To `find out what process is using all the RAM`_
-
-::
+To `find out what process is using all the RAM`_::
 
   ps -e -o pid,vsz,comm= | sort -n -k 2
 

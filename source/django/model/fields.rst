@@ -216,7 +216,7 @@ ImageField
 .. note::
 
   *Prerequisites* Install the Python Imaging Library
-  (:doc:`../../python/modules/pillow.rst`).
+  (:doc:`../../python/modules/pillow`).
 
 .. note::
 

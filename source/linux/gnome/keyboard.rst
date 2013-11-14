@@ -16,6 +16,10 @@ Shortcuts
 
 View under *User Menu*, *System Settings*, *Keyboard*, *Shortcuts*::
 
-  Maximise              Ctrl+Super+Up
-  View split on left    Ctrl+Super+Left
-  View split on right   Ctrl+Super+Right
+  Ctrl+Super+Up                 Maximise
+
+  Ctrl + Alt + NUMPAD 6         Move to monitor on the right
+  Ctrl + Alt + NUMPAD 4         Move to monitor on the left
+
+  Ctrl + Super + Left arrow     View split on the left
+  Ctrl + Super + Right arrow    View split on the right

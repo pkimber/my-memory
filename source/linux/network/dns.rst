@@ -4,7 +4,6 @@ DNS
 Test
 ====
 
-
 To find the IP address for a domain name:
 
 ::

@@ -9,9 +9,7 @@ Links
 Gateway
 =======
 
-To find the IP address of your network gateway:
-
-::
+To find the IP address of your network gateway::
 
   $ route -n
   Kernel IP routing table
@@ -24,18 +22,14 @@ To find the IP address of your network gateway:
 Check the line with the ``UG`` flag ``U`` indicates that route is up and ``G``
 indicates that it is gateway.
 
-The following command will produce very similar output:
-
-::
+The following command will produce very similar output::
 
   netstat -nr
 
 DNS
 ===
 
-The DNS server should be listed in:
-
-::
+The DNS server should be listed in::
 
   /etc/resolv.conf
 
@@ -44,24 +38,18 @@ The DNS server should be listed in:
 Lookup
 ------
 
-To lookup the DNS information for a site (including IP address):
-
-::
+To lookup the DNS information for a site (including IP address)::
 
   dig news.bbc.co.uk
 
 IP
 ==
 
-To find the IP address:
-
-::
+To find the IP address::
 
   ifconfig
 
-To set the IP address, edit the following files:
-
-::
+To set the IP address, edit the following files::
 
   /etc/network/interfaces
   /etc/resolv.conf
@@ -69,9 +57,7 @@ To set the IP address, edit the following files:
 hosts
 =====
 
-The file:
-
-::
+The file::
 
   /etc/hosts
 
@@ -83,40 +69,34 @@ The fully qualified domain name needs to be entered.  To leave it out would
 imply some kind of DNS search as a command would not know if this was a top
 level domain or a host on the local network.
 
-- An example file:
+An example file::
 
-  ::
+  127.0.0.1       woody.pjdk.co.uk    woody        localhost.localdomain   localhost
+  10.10.10.4      weezy.pjdk.co.uk    weezy
+  10.10.10.5      buzz.pjdk.co.uk     buzz
 
-    127.0.0.1       woody.pjdk.co.uk    woody        localhost.localdomain   localhost
-    10.10.10.4      weezy.pjdk.co.uk    weezy
-    10.10.10.5      buzz.pjdk.co.uk     buzz
+Another example file::
 
-- Another example file:
+  127.0.0.1>--localhost
+  127.0.1.1>--buzz
 
-  ::
+  192.168.11.68   bigbox
+  192.168.11.69   toybox
+  192.168.11.73   storagebox
+  192.168.11.70   openerp-dev
 
-    127.0.0.1>--localhost
-    127.0.1.1>--buzz
+  # The following lines are desirable for IPv6 capable hosts
+  ::1     ip6-localhost ip6-loopback
+  fe00::0 ip6-localnet
+  ff00::0 ip6-mcastprefix
+  ff02::1 ip6-allnodes
+  ff02::2 ip6-allrouters
+  ff02::3 ip6-allhosts
 
-    192.168.11.68   bigbox
-    192.168.11.69   toybox
-    192.168.11.73   storagebox
-    192.168.11.70   openerp-dev
+``host`` is a simple utility for performing DNS lookups.  It is normally
+used to convert names to IP addresses and vice versa::
 
-    # The following lines are desirable for IPv6 capable hosts
-    ::1     ip6-localhost ip6-loopback
-    fe00::0 ip6-localnet
-    ff00::0 ip6-mcastprefix
-    ff02::1 ip6-allnodes
-    ff02::2 ip6-allrouters
-    ff02::3 ip6-allhosts
-
-  ``host`` is a simple utility for performing DNS lookups.  It is normally
-  used to convert names to IP addresses and vice versa:
-
-  ::
-
-    host mail.yahoo.com
+  host mail.yahoo.com
 
 NFS
 ===
@@ -126,30 +106,22 @@ NFS
 nmap
 ====
 
-To see which ports are open on a server:
-
-::
+To see which ports are open on a server::
 
   nmap <ip address>
 
-e.g.
-
-::
+e.g::
 
   nmap 10.10.10.4
 
 telnet
 ======
 
-To see if a port is running a service:
-
-::
+To see if a port is running a service::
 
   telnet <ip address> <port>
 
-e.g.
-
-::
+e.g::
 
   telnet 10.10.10.4 80
 

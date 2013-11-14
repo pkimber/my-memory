@@ -7,7 +7,6 @@ Contents
    :maxdepth: 2
 
    gedit/index
-   shell/index
 
 .. toctree::
    :maxdepth: 1
@@ -16,6 +15,7 @@ Contents
    empathy
    gnome
    image
+   install
    issues
    keyboard
    nautilus
