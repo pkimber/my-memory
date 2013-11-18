@@ -26,9 +26,7 @@ Note:
   name.
 - We would normally redirect the output of this command to a file.
 
-Options
-
-::
+Options::
 
   --complete-insert       Use column names on the INSERT statement.
   --no-create-info        Remove CREATE TABLE commands from output.

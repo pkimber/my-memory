@@ -49,8 +49,7 @@ Rename
 Status
 ------
 
-Shows alot of information about each non-temporary table (e.g. number of rows):
-
-::
+Shows alot of information about each non-temporary table (e.g. number of
+rows)::
 
   SHOW TABLE STATUS;

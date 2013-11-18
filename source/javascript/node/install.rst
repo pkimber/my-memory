@@ -14,9 +14,8 @@ Installation instructions from:
 Install
 =======
 
-We start by installing nave_ (which creates virtual environments for node.js):
-
-::
+We start by installing nave_ (which creates virtual environments for
+node.js)::
 
   mkdir ~/bin/
   mkdir ~/.nave/
@@ -25,43 +24,35 @@ We start by installing nave_ (which creates virtual environments for node.js):
   chmod +x nave.sh
   ln -s $PWD/nave.sh ~/bin/nave
 
-**Note**: The following step will take a long time...
+.. warning::
 
-Create a virtual environment for ``node.js`` version 0.6.11:
+  The following step will take a long time...
 
-::
+Create a virtual environment for ``node.js`` version 0.6.11::
 
-  nave use 0.6.11
+  nave use 0.10.22
   exit
 
-Install `Node Package Manager`_:
+Install `Node Package Manager`_::
 
-::
-
-  nave use 0.4.9
+  nave use 0.10.22
   curl http://npmjs.org/install.sh | sh
 
 Usage
 =====
 
-To enter the virtual environment created above:
-
-::
+To enter the virtual environment created above::
 
   nave use 0.4.9
 
-To leave the virtual environment:
-
-::
+To leave the virtual environment::
 
   exit
 
 Sample
 ======
 
-Here is the sample code from the node home page: example-web-server.js_
-
-::
+Here is the sample code from the node home page: example-web-server.js_::
 
   $ node ~/repo/sample/javascript/node/example-web-server.js
   Server running at http://127.0.0.1:8000/
