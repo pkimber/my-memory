@@ -10,9 +10,7 @@ Links
 Sample
 ======
 
-Log on to your web server as ``root``:
-
-::
+Log on to your web server as ``root``::
 
   root@web:~# openssl req -new -newkey rsa:2048 -nodes -keyout server.key -out server.csr
   Generating a 2048 bit RSA private key
@@ -47,9 +45,7 @@ optional company name).  Just press *Enter* to ignore...
 This process will generate two files, ``server.csr`` (the certificate request)
 and ``server.key`` (the private key).
 
-Copy the certificate request to your local workstation:
-
-::
+Copy the certificate request to your local workstation::
 
   scp root@2.2.2.2:/root/server.csr .
 

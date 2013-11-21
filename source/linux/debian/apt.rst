@@ -62,9 +62,7 @@ Uninstall
 Packages
 ========
 
-To list all installed packages:
-
-::
+To list all installed packages::
 
   dpkg -l | grep vim
   # or...
@@ -95,9 +93,7 @@ Distribution
 ------------
 
 To upgrade your distribution to the newest release, as well as all the
-packages available:
-
-::
+packages available::
 
   apt-get update
   apt-get dist-upgrade
@@ -106,9 +102,7 @@ Packages
 --------
 
 If you want to simply upgrade the packages you have installed for your
-current distro:
-
-::
+current distro::
 
   apt-get update
   apt-get upgrade

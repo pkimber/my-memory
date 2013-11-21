@@ -18,9 +18,7 @@ Tunnel
 
 In this example, our server is hosting a web site on port 80.  We want to
 tunnel the HTTP requests to our local workstation (``localhost``) and browse
-to the site on port ``8888``:
-
-::
+to the site on port ``8888``::
 
   ssh -N -L 8888:localhost:80 server
 

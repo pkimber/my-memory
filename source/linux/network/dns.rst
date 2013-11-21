@@ -1,6 +1,26 @@
 DNS
 ***
 
+.. highlight:: bash
+
+::
+
+  dig pkimber.net +nocomments +noquestion +noauthority +noadditional +nostats
+
+MX::
+
+  dig pkimber.net MX +noall +answer
+  dig -t MX pkimber.net +noall +answer
+
+NS::
+
+  dig -t NS pkimber.net +noall +answer
+  dig pkimber.net NS +noall +answer
+
+Specific DNS Server::
+
+  dig @ns2.digitalocean.com pkimber.net
+
 Test
 ====
 

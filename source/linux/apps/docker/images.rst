@@ -14,7 +14,7 @@ Update the image e.g. install some software e.g::
   sudo docker run -dns 8.8.8.8 -dns 8.8.4.4 -i -t ubuntu /bin/bash                                                                     
   root@f3924d65dfa6:/# apt-get install vim
 
-.. note::
+.. warning::
 
   Do not exit from the virtual machine because all your changes will be lost.
 

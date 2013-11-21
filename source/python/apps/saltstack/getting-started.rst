@@ -12,7 +12,6 @@ Prerequisites
 ::
 
   apt-get install python-software-properties
-  apt-get install add-apt-repository
   add-apt-repository ppa:saltstack/salt
   apt-get update
 
@@ -42,10 +41,8 @@ If the minion is running on the same server, then set the master to ``localhost`
 Master
 ------
 
-Note: You might need to open firewall ports on the server to allow connections.  For a little more
-information, see :doc:`../../../linux/apps/shorewall`
-
-::
+Note: You might need to open firewall ports on the server to allow connections.
+For a little more information, see :doc:`../../../linux/apps/shorewall`::
 
   # list the keys accepted and unaccepted Salt keys:
   salt-key -L
