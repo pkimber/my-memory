@@ -17,9 +17,7 @@ Sample
 
 `PyMOTW: BaseHTTPServer`_
 
-A simple HTTP Server: `simple_http_server.py`_
-
-::
+A simple HTTP Server: `simple_http_server.py`_::
 
   cd ~/your/folder/
   python -m SimpleHTTPServer 8080
@@ -36,10 +34,7 @@ GET
 ===
 
 Here is an example session that uses the *GET* method to retrieve a URL
-containing
-parameters:
-
-::
+containing parameters::
 
   import urllib
   params = urllib.urlencode({'spam': 1, 'eggs': 2, 'bacon': 0})
@@ -49,18 +44,14 @@ parameters:
 POST
 ====
 
-The following example uses the *POST* method instead:
-
-::
+The following example uses the *POST* method instead::
 
   import urllib
   params = urllib.urlencode({'spam': 1, 'eggs': 2, 'bacon': 0})
   f = urllib.urlopen("http://www.musi-cal.com/cgi-bin/query", params)
   print f.read()
 
-To post specific content type e.g. for SOLR XML requests:
-
-::
+To post specific content type e.g. for SOLR XML requests::
 
   url = 'http://localhost:8080/solr/'
   xml = '<delete><id>%s</id></delete>' % id
