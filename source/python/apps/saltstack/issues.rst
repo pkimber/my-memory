@@ -1,6 +1,11 @@
 Issues
 ******
 
+.. note:
+
+  Start by checking that the versions of Salt on ``master`` and ``minion`` are
+  both up to date!
+
 mapping values are not allowed here
 ===================================
 

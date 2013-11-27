@@ -44,9 +44,7 @@ Also see ``ModelChoiceField`` example below:
 
 
 From `Overriding ModelChoiceField`_ and ModelChoiceField_, to set the content
-of the drop down list:
-
-::
+of the drop down list::
 
   class ContactModelChoiceField(ModelChoiceField):
       def label_from_instance(self, obj):
@@ -67,9 +65,7 @@ of the drop down list:
 ModelChoiceField
 ----------------
 
-`Changing the ModelChoiceField QuerySet`_ (also see previous example):
-
-::
+`Changing the ModelChoiceField QuerySet`_ (also see previous example)::
 
   from django import forms
   from django.contrib.auth.models import User
