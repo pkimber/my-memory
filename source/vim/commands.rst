@@ -315,9 +315,7 @@ Text Editing
 Word Wrap
 ---------
 
-To turn on *nice* word-wrap:
-
-::
+To turn on *nice* word-wrap::
 
   set wrap on
   set nolist
@@ -326,9 +324,7 @@ To turn on *nice* word-wrap:
 sort
 ====
 
-highlight the area you want to sort:
-
-::
+highlight the area you want to sort::
 
   :sort              the command will look like this: <<<:'\<,'\>:sort>>>.
   :sort n            sort by the first decimal in the line.

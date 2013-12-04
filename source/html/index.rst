@@ -9,6 +9,7 @@ Contents
    links
    attributes
    character-entities
+   convert
    image-maps
    redirect
    sample
