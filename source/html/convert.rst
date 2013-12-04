@@ -1,6 +1,8 @@
 Convert
 *******
 
+.. highlight:: bash
+
 Convert html to PDF::
 
   sudo apt-get install wkhtmltopdf
