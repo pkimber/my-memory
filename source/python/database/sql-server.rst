@@ -57,7 +57,5 @@ environment, then create the virtual environment **without** the
 ``--no-site-packages`` option.
 
 
-
 .. _`Django - Database - SQL Server`: ../../django/database-sql-server.html
 .. _SQLAlchemy: http://www.sqlalchemy.org/docs/05/reference/dialects/mssql.html#driver
-

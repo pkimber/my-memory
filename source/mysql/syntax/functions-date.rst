@@ -56,4 +56,3 @@ Year
 ::
 
   YEAR(record_date)
-

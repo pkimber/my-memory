@@ -45,4 +45,3 @@ See :doc:`sql-server`, Usage, Parameters`_
 
 
 .. _`PEP 249 - Python Database API Specification v2.0`: http://www.python.org/dev/peps/pep-0249/
-

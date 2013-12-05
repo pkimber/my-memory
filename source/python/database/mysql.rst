@@ -35,14 +35,11 @@ Sample
   conn.close()
 
 **Note**: For parameters you must use the ``%s`` format (for strings and
-numbers):
-
-::
+numbers)::
 
   sql = 'SELECT id FROM positions WHERE building = %s AND pos = %s'
   parameters = ('kitchen', 23)
   self.cursor.execute(sql, parameters)
-
 
 Issues
 ======
