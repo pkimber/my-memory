@@ -6,9 +6,7 @@ dpkg
 Install
 =======
 
-To install a ``.deb`` file, become root and use the command:
-
-::
+To install a ``.deb`` file, become root and use the command::
 
   dpkg -i filename.deb
 

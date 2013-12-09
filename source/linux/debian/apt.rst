@@ -75,7 +75,6 @@ To search the apt cache::
 
   apt-cache search application-name
 
-
 To find which PPA a package belongs to::
 
   apt-cache policy application-name

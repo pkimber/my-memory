@@ -40,31 +40,23 @@ Contains
 Insert
 ------
 
-Insert an item at the second element of the array:
-
-::
+Insert an item at the second element of the array::
 
   items.splice(2, 0, { name: "Splice", price: 222 })
 
-Insert an item at the start of the array:
-
-::
+Insert an item at the start of the array::
 
   items.splice(0, 0, { name: "Pat", price: 333 })
 
 Iterate
 -------
 
-Safer to use the *C* like syntax:
-
-::
+Safer to use the *C* like syntax::
 
   for (var i = 0; i < items.length; i += 1) {
       var name = items[i];
 
-Alternatively:
-
-::
+Alternatively::
 
   for (var i in items) {
       var name = items[i];
@@ -100,9 +92,7 @@ Remove one item from the third element of the array:
 Type
 ----
 
-From `Robust way to check if a variable is an array in Javascript`:
-
-::
+From `Robust way to check if a variable is an array in Javascript`::
 
   function isArray(obj) {
       return Object.prototype.toString.call( obj ) === '[object Array]';

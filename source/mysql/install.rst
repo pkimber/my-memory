@@ -54,43 +54,32 @@ Linux
 Windows
 -------
 
-- Extract the archive.  I extracted to:
+Extract the archive.  I extracted to::
 
-  ::
+  c:\tools\mysql-5.0.51a-win32\
 
-    c:\tools\mysql-5.0.51a-win32\
+Run MySQL::
 
-- Run MySQL:
+  cd c:\tools\mysql-5.0.51a-win32\
+  bin\mysqld.exe --console
 
-  ::
+**Note**: If you omit the ``--console`` option, the server writes diagnostic
+output to the error log in the data directory .  The error log is the file
+with the ``.err`` extension.
 
-    cd c:\tools\mysql-5.0.51a-win32\
-    bin\mysqld.exe --console
+If you omit the ``---console`` option, you can shutdown using this command::
 
-  **Note**: If you omit the ``--console`` option, the server writes diagnostic
-  output to the error log in the data directory .  The error log is the file
-  with the ``.err`` extension.
+  bin\mysqladmin" -u root shutdown
 
-  If you omit the ``---console`` option, you can shutdown using this command:
+Check that MySQL has started successfully.  The console output should finish
+a bit like this::
 
-  ::
-
-    bin\mysqladmin" -u root shutdown
-
-- Check that MySQL has started successfully.  The console output should finish
-  a bit like this:
-
-  ::
-
-    080131 22:41:18 [Note] bin\mysqld.exe: ready for connections.
-    Version: '5.0.51a-community'  socket: ''  port: 3306  MySQL Community Edition (GPL)
+  080131 22:41:18 [Note] bin\mysqld.exe: ready for connections.
+  Version: '5.0.51a-community'  socket: ''  port: 3306  MySQL Community Edition (GPL)
 
 Test
 ====
 
-Once the server is running, you can test it using the command:
-
-::
+Once the server is running, you can test it using the command::
 
   bin\mysqlshow
-
