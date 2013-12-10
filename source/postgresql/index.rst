@@ -16,6 +16,7 @@ Contents
    issues
    libpqxx
    psql
+   schema
    security
    sql-commands
    sql-data-definition
