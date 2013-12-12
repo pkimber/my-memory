@@ -43,8 +43,6 @@ Restore
   mysql -u root -p < fullDump.sql
   mysql --user=root --database=tropicana < fullDump.sql
 
-Note: You might need to create the database first e.g:
-
-::
+Note: You might need to create the database first e.g::
 
   CREATE DATABASE templabs;

@@ -33,23 +33,21 @@ To run SQL commands on a database::
 psql
 ----
 
-===============================  =================
-List databases                   ``\l``
-List databases (table space)     ``\l+``
-List tables                      ``\d``
-List table-spaces                ``\db``
-List schemas                     ``\dn``
-To view a table definition:      ``\d guser;``
-To view command history:         ``\s``
-Quit                             ``\q``
-One field per line               ``\x``
-Use database                     ``\c <db name>``
-===============================  =================
+=================================== =================
+List databases                      ``\l``
+List databases (table space)        ``\l+``
+List tables                         ``\d``
+List tables (in a schema)           ``\dt myschema.*``
+List table-spaces                   ``\db``
+List schemas                        ``\dn``
+To view a table definition:         ``\d guser;``
+To view command history:            ``\s``
+Quit                                ``\q``
+**One field per line**              ``\x``
+Use database                        ``\c <db name>``
+=================================== =================
 
-To run a single SQL command
----------------------------
-
-::
+To run a single SQL command::
 
   echo 'select userinitials from guser' | psql -d Support2005May5th
 
@@ -57,16 +55,21 @@ or::
 
   psql -d Support2005May5th -c 'select userinitials from guser'
 
-To run SQL from a file:
------------------------
-
-::
+To run SQL from a file::
 
   psql mydbname -f ~/temp/sales_order.sql
 
 To hide the column headers etc::
 
   psql mydbname -A -t -f ~/temp/sales_order.sql
+
+To write output to a file (in this example a list of tables) (you have to
+``\q`` to write the buffer)::
+
+  psql mydb
+  mydb=> \o temp.out
+  mydb=> \dt
+  mydb=> \q
 
 Remote
 ======

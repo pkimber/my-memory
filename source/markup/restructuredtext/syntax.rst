@@ -243,11 +243,22 @@ Note
   .. note:: We are considering merging the latest version with the outstanding
      code on the old branch.
 
+The following admonition directives have been implemented::
+
+  attention
+  caution
+  danger
+  error
+  hint
+  important
+  note
+  tip
+  warning
+
 For more information, see: `Specific Admonitions`_
 
-The title for a generic, titled admonition may be anything (e.g. ``Question``):
-
-::
+The title for a generic, titled admonition may be anything (e.g.
+``Question``)::
 
   .. admonition:: Question
 

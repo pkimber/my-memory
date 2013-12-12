@@ -7,7 +7,7 @@ Security
 Root Password
 =============
 
-- `Setting a root password for MySQL`_.
+`Setting a root password for MySQL`_.
 
 To change the root password::
 
@@ -25,9 +25,7 @@ User
 Create
 ------
 
-`MySQL create user`_
-
-::
+`MySQL create user`_::
 
   CREATE USER 'patrick'@'localhost' IDENTIFIED BY 'my-password';
   GRANT SELECT, INSERT, UPDATE, DELETE ON *.* TO 'patrick'@'localhost';

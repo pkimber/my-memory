@@ -19,18 +19,14 @@ LIMIT
 
 `Limiting QuerySets`_
 
-For example, this returns the first 5 objects (``LIMIT 5``):
-
-::
+For example, this returns the first 5 objects (``LIMIT 5``)::
 
   Entry.objects.all()[:5]
 
 order_by
 --------
 
-To order by more than one field:
-
-::
+To order by more than one field::
 
   qs = Option.objects.filter(option_group__site=site)
   qs.order_by('option_group__name', 'name')
@@ -38,16 +34,12 @@ To order by more than one field:
 values
 ------
 
-Return a dictionary, rather than model-instance objects e.g:
-
-::
+Return a dictionary, rather than model-instance objects e.g::
 
   >>> Blog.objects.filter(name__startswith='Beatles').values()
   [{'id': 1, 'name': 'Beatles Blog', 'tagline': 'All the latest Beatles news.'}]
 
-...or to return specific fields:
-
-::
+...or to return specific fields::
 
   >>> Blog.objects.values('id', 'name')
   [{'id': 1, 'name': 'Beatles Blog'}]

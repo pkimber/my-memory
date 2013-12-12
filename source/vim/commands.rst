@@ -130,11 +130,13 @@ Cut, Copy, Paste and Delete
   c                  same as d, delete - but leaves editor in insert mode
   cc                 cuts the whole line and leaves editor in insert mode
   C                  cut from the cursor to the end of the line and leave in insert mode...
+  df                 delete up until the character you enter next
   dh                 delete character to the left of the cursor position.
   dw                 delete words forward
   db                 delete words backwords
   d0                 (zero) delete from the cursor to the beginning of the line.
   d/fred/            delete until 'fred' (press 'Enter' after)
+  d$                 delete from the cursor to the end of the line (see next command)
   D                  cut from the cursor to the end of the line
   s                  cut the current character and leave in insert mode
   ]p                 the text you paste matches the indentation level - or try 'Esc', ':insert', 'Enter', then paste, then 'Esc'.

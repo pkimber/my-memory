@@ -46,9 +46,7 @@ If ``True``, the field is allowed to be blank.  Default is ``False``.
 **Note**: See ``null`` notes below.  To allow a date to be empty, you will need
 to set both ``blank`` and ``null`` (see *Sample* below):
 
-*Sample*
-
-::
+*Sample*::
 
   completed = models.DateTimeField(blank=True, null=True)
   notes = models.TextField(blank=True)
@@ -270,9 +268,7 @@ OneToOneField
 
 A one-to-one relationship.  Conceptually, this is similar to a ``ForeignKey``
 with ``unique=True``, but the "reverse" side of the relation will directly
-return a single object.
-
-::
+return a single object::
 
   class Car(models.Model):
       engine = models.OneToOneField(Engine)
@@ -294,15 +290,15 @@ SlugField
 
 Note:
 
-- The default value for ``max_length`` is 50.
-- A ``SlugField`` is supposed to create a unique index for this field, but it
-  doesn't seem to unless you put ``unique=True``.
-- To auto-populate the slug field add the following to the admin object:
+The default value for ``max_length`` is 50.
 
-  ::
+A ``SlugField`` is supposed to create a unique index for this field, but it
+doesn't seem to unless you put ``unique=True``.
 
-    class ClubAdmin(admin.ModelAdmin):
-        prepopulated_fields = {'slug':('name',),}
+To auto-populate the slug field add the following to the admin object::
+
+  class ClubAdmin(admin.ModelAdmin):
+      prepopulated_fields = {'slug':('name',),}
 
 TextField
 ---------
@@ -310,6 +306,8 @@ TextField
 A large text field.
 
 The admin represents this as a ``<textarea>`` (a multi-line input).
+
+To create a ``TextField`` which can be ``blank``, specify **only** ``blank``.
 
 URLField
 --------
