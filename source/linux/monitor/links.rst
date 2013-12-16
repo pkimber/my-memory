@@ -26,3 +26,5 @@ Links
     sudo smartctl -X /dev/sda6
 
   Here is the :doc:`../../misc/howto/linux/smartctl-sample-output.txt`.
+- htop
+  http://www.yourownlinux.com/2013/07/monitor-system-processes-with-htop.html

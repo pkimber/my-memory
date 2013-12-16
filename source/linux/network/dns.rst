@@ -24,9 +24,7 @@ Specific DNS Server::
 Test
 ====
 
-To find the IP address for a domain name:
-
-::
+To find the IP address for a domain name::
 
   $ dig pkimber.net
 
