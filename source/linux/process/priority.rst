@@ -7,4 +7,3 @@ following (in this example ``python script.py`` is the command):
 ::
 
   nice ionice -c3 python script.py
-

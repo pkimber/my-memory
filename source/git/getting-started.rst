@@ -14,25 +14,19 @@ Links
 Configuration
 =============
 
-Set user name and password:
-
-::
+Set user name and password::
 
   git config --global user.name "Patrick Kimber"
   git config --global user.email code@pkimber.net
   git config -l
 
-Enable colours:
-
-::
+Enable colours::
 
   git config --global color.diff auto
   git config --global color.status auto
   git config --global color.branch auto
 
-View configuration:
-
-::
+View configuration::
 
   git config -l
 
@@ -65,24 +59,18 @@ Clone
 diff
 ----
 
-To get a ``diff`` of the stuff in the index:
-
-::
+To get a ``diff`` of the stuff in the index::
 
   git diff --cached
 
-To get a ``diff`` of the stuff not yet staged (in the index):
-
-::
+To get a ``diff`` of the stuff not yet staged (in the index)::
 
   git diff
 
 Ignore
 ------
 
-Edit the ``.gitignore`` file in the project folder e.g:
-
-::
+Edit the ``.gitignore`` file in the project folder e.g::
 
   # Can ignore specific files
   .DS_Store
@@ -111,15 +99,11 @@ Modify
 ------
 
 Note: You have to **stage** a file before you can commit it.  You can do this
-automatically by using the ``-a`` parameter on the ``commit`` command:
-
-::
+automatically by using the ``-a`` parameter on the ``commit`` command::
 
   git commit -a -m "Rename activation code."
 
-...or... by adding the file to the staging error before committing:
-
-::
+...or... by adding the file to the staging error before committing::
 
   git add my-file.py
   git commit -m "Update colours."
@@ -127,9 +111,7 @@ automatically by using the ``-a`` parameter on the ``commit`` command:
 Reset (revert)
 --------------
 
-Note: `'git revert' is not equivalent to 'svn revert'`_:
-
-::
+Note: `'git revert' is not equivalent to 'svn revert'`_::
 
   git checkout filename
 

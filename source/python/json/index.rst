@@ -7,6 +7,6 @@ Contents
    :maxdepth: 1
 
    links
-   shell
+   print
    simplejson
 

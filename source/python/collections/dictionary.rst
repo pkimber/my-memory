@@ -27,9 +27,7 @@ Initialise
 **Note**: See ``zip`` in :doc:`tuple`...
 
 Alternatively, use ``setdefault``.  This class method is similar to ``get()``,
-but will set ``dict[key]=default`` if ``key`` is not already in ``dict``:
-
-::
+but will set ``dict[key]=default`` if ``key`` is not already in ``dict``::
 
   In [1]: dict = {'Name': 'Zara', 'Age': 7}
   In [2]: print "Value : %s" %  dict.setdefault('Age', 99)
@@ -51,9 +49,7 @@ Adding
 Convert
 =======
 
-Dictionary to list of tuples:
-
-::
+Dictionary to list of tuples::
 
   l = properties.items()
 
@@ -87,9 +83,7 @@ Exists
 
   if 'svn:mime-type' in properties:
 
-...in older version of python:
-
-::
+...in older version of python::
 
   tel.has_key('guido')
 

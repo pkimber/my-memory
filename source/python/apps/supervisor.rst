@@ -17,9 +17,7 @@ Install
 =======
 
 Note: Better to install using ``apt-get`` rather than ``pip`` because then you
-get all the ``init.d`` scripts.
-
-::
+get all the ``init.d`` scripts::
 
   sudo apt-get install supervisor
 
@@ -33,9 +31,7 @@ Usage
 Test
 ----
 
-To create a test application:
-
-::
+To create a test application::
 
   sudo vim /etc/supervisor/conf.d/foo.conf
 
@@ -47,15 +43,11 @@ To create a test application:
 Control
 =======
 
-Start the shell (type ``help`` for help):
-
-::
+Start the shell (type ``help`` for help)::
 
   sudo supervisorctl
 
-To list processes run ``status``:
-
-::
+To list processes run ``status``::
 
   supervisor> status
   uwsgi                            RUNNING    pid 15435, uptime 0:27:13
@@ -63,9 +55,7 @@ To list processes run ``status``:
 Reload
 ------
 
-I am not sure if this is correct, but try:
-
-::
+I am not sure if this is correct, but try::
 
   supervisor> reread
   supervisor> update
@@ -82,8 +72,6 @@ Issues
   Error: Another program is already listening on a port that one of our HTTP
   servers is configured to use.
 
-To solve this issue:
-
-::
+To solve this issue::
 
   sudo unlink /var/run/supervisor.sock

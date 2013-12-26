@@ -20,9 +20,7 @@ Minion/Master public key does not match
 
   The Salt Master server's public key did not authenticate!
 
-The message will tell you where the master key is located e.g:
-
-::
+The message will tell you where the master key is located e.g::
 
   The master public key can be found at:
   /etc/salt/pki/minion_master.pub
@@ -37,9 +35,7 @@ Pillar failed to render
 
 Had an issue where the parse error, ``expected <block end>, but found
 '<scalar>'`` was complaining about a line which I removed from the file.  To
-solve the issue, I refreshed the pillar:
-
-::
+solve the issue, I refreshed the pillar::
 
   salt '*' saltutil.refresh_pillar
 

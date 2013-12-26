@@ -1,6 +1,8 @@
 http
 ****
 
+.. highlight:: python
+
 Links
 =====
 

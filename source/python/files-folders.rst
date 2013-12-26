@@ -18,9 +18,7 @@ Simple
 Glob
 ----
 
-`PyMOTW: glob`_
-
-::
+`PyMOTW: glob`_::
 
   import glob
   file_list = glob.glob(path + '/*.jar')
@@ -36,9 +34,7 @@ glob doesn't seem to work that well with subdirectories
 (``glob.glob(path + '/*/*')``), probably better to use the script at
 ActiveState_...
 
-There is copy in my version control software at:
-
-::
+There is copy in my version control software at::
 
   utility\directory_walk.py
 
@@ -53,9 +49,7 @@ File
   import shutil
   shutil.copy(name, self.binFolder)
 
-...or...
-
-::
+...or::
 
   >>> import shutil
   >>> shutil.copy('pom.xml', '/temp/')
@@ -63,9 +57,7 @@ File
 Folder
 ------
 
-Code adapted from the python source code: ``Lib/shutil.py``:
-
-::
+Code adapted from the python source code: ``Lib/shutil.py``::
 
   import shutil
 
@@ -118,9 +110,7 @@ Current Directory
 
   os.getcwd()
 
-I used the following code to get the name of the folder:
-
-::
+I used the following code to get the name of the folder::
 
   os.getcwd().split(os.sep)[-1]
 
@@ -149,9 +139,7 @@ Module Folder
 -------------
 
 `Recipe 474083`_
-: Get the path of the currently executing python script using import.
-
-::
+: Get the path of the currently executing python script using import::
 
   os.path.dirname(os.path.realpath(__file__))
 
@@ -244,18 +232,14 @@ Separator
   import os
   ps = '/tmp/my/path'.split(os.sep)
 
-...or for the character which separates the file name from the extension:
-
-::
+...or for the character which separates the file name from the extension::
 
   os.extsep
 
 Split
 -----
 
-`os.path -- Common pathname manipulations, split`_
-
-::
+`os.path -- Common pathname manipulations, split`_::
 
   >>> import os
   >>> f = r'c:\repository\lucene\index.apt'
@@ -298,9 +282,7 @@ Folder
   if os.path.exists(folder):
       os.rmdir(folder)
 
-or... to delete an entire directory tree:
-
-::
+or... to delete an entire directory tree::
 
   import shutil
   if os.path.exists(folder):
@@ -309,9 +291,7 @@ or... to delete an entire directory tree:
 Statistics
 ==========
 
-Date/time created/modified/accessed and size:
-
-::
+Date/time created/modified/accessed and size::
 
   import os
   import stat
@@ -351,9 +331,7 @@ Folder
 ------
 `tempfile - Generate temporary files and directories`_
 
-To create a temporary folder:
-
-::
+To create a temporary folder::
 
   import tempfile
   return tempfile.mkdtemp()

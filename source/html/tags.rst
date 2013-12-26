@@ -80,16 +80,12 @@ Differences Between HTML and XHTML:
 Example
 -------
 
-Assume that the absolute address for an image is:
-
-::
+Assume that the absolute address for an image is::
 
   <img src="http://www.w3schools.com/images/smile.gif" />
 
 Now we insert the ``<base>`` tag, which specifies a base URL for all of
-the links in a page, in the head section of a page:
-
-::
+the links in a page, in the head section of a page::
 
   <head>
     <base href="http://www.w3schools.com/images/" />
@@ -97,9 +93,7 @@ the links in a page, in the head section of a page:
 
 When inserting images on the page in the example above, we just have to specify
 the relative address, and the browser will look for that file using the full
-URL (http://www.w3schools.com/images/smile.gif):
-
-::
+URL (http://www.w3schools.com/images/smile.gif)::
 
   <img src="smile.gif" />
 

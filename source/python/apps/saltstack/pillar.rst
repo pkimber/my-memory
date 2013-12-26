@@ -5,23 +5,17 @@ Pillar
 
   vim /etc/salt/master
 
-Uncomment the following:
-
-::
+Uncomment the following::
 
   pillar_roots:
     base:
       - /srv/pillar
 
-Create the ``top`` file:
-
-::
+Create the ``top`` file::
 
   vim /srv/pillar/top.sls
 
-e.g:
-
-::
+e.g::
 
   base:
     '*':
@@ -35,8 +29,12 @@ See :doc:`state`
 View
 ====
 
-To view the pillar data for a minion (from the master):
-
-::
+To view the pillar data for a minion (from the master)::
 
    salt '*' pillar.data
+
+.. note::
+
+  For this to work, the minion must be connected to the master and be able to
+  respond positively to a ``ping``.  Pillar data is based off of variables etc,
+  so the server must be accessible to the master.

@@ -1,10 +1,16 @@
 pprint
 ******
 
+.. highlight:: python
+
 Links
 =====
 
 - `pprint - Data pretty printer`_
+
+.. note::
+
+  I think the :doc:`json/print` ``dumps`` is probably easier to read.
 
 Sample
 ======
@@ -22,17 +28,14 @@ Sample
       'knights',
       'ni']
 
-Note: You can construct a ``PrettyPrinter`` object:
-
-::
+Note: You can construct a ``PrettyPrinter`` object::
 
   >>> pp = pprint.PrettyPrinter(indent=4)
   >>> pp.pprint(stuff)
 
-Note: To return a string, rather than writing to ``stdout``, then use:
+Note: To return a string, rather than writing to ``stdout``, then use::
 
-::
-
+  import pprint
   pprint.pformat(...
   pprint.pformat(data, indent=4)
 
