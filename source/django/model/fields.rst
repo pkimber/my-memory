@@ -232,6 +232,10 @@ sample_image_field_
       name = models.CharField(maxlength = 30)
       headshot = models.ImageField(upload_to='pictures')
 
+To use in a template::
+
+   {{ object.headshot.url }}
+
 IntegerField
 ------------
 
