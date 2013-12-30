@@ -29,3 +29,10 @@ String
 ======
 
 - :doc:`functions-string`
+
+Version
+=======
+
+::
+
+  mysql -e "SELECT VERSION()"
