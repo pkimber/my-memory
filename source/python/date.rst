@@ -58,9 +58,7 @@ Difference
 - timedelta_
 
 "*Only days, seconds and microseconds are stored internally*".  To calculate
-the difference, you only have to take into account these three values:
-
-::
+the difference, you only have to take into account these three values::
 
   >>> import datetime
   >>> d1 = datetime.datetime(2007, 11, 1, 19, 30)
@@ -71,9 +69,7 @@ the difference, you only have to take into account these three values:
   >>> t.days, t.seconds, t.microseconds
   (0, 900, 0)
 
-To convert a ``timedelta`` into milliseconds and minutes:
-
-::
+To convert a ``timedelta`` into milliseconds and minutes::
 
   def timedelta_minutes(td):
       return td.days * 1440 + td.seconds / 60
@@ -84,9 +80,7 @@ To convert a ``timedelta`` into milliseconds and minutes:
 Iterator
 ========
 
-Using this nice `date range iterator`_:
-
-::
+Using this nice `date range iterator`_::
 
   import datetime
 
@@ -96,9 +90,7 @@ Using this nice `date range iterator`_:
           from_date = from_date + datetime.timedelta(days=1)
       return
 
-...we can get a list of dates:
-
-::
+...we can get a list of dates::
 
   date_start = datetime.datetime(2009, 7, 27)
   date_end = datetime.datetime(2009, 11, 16)
@@ -112,9 +104,10 @@ Replace
 
   date.replace(year, month, day)
 
-Return a date with the same value, except for those parameters given new values
-by whichever keyword arguments are specified.  For example, if
-``d == date(2002, 12, 31)``, then ``d.replace(day=26) == date(2002, 12, 26)``.
+Return a date with the same value, except for those parameters given new
+values by whichever keyword arguments are specified.  For example, if::
+
+  d == date(2002, 12, 31)``, then ``d.replace(day=26) == date(2002, 12, 26)
 
 Today
 =====

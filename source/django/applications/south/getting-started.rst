@@ -1,6 +1,8 @@
 Getting Started
 ***************
 
+.. highlight:: bash
+
 Links
 =====
 
@@ -27,7 +29,7 @@ way as ``syncdb`` would):
 
 Add ``south`` to ``INSTALLED_APPS``:
 
-::
+.. code-block:: python
 
   INSTALLED_APPS = (
       'django.contrib.auth',
@@ -37,14 +39,10 @@ Add ``south`` to ``INSTALLED_APPS``:
       'south',
   )
 
-Run ``syncdb`` to create the migration history table:
-
-::
+Run ``syncdb`` to create the migration history table::
 
   django-admin.py syncdb --noinput
 
-For each application which you want to convert to South:
-
-::
+For each application which you want to convert to South::
 
   django-admin.py schemamigration app_name --initial

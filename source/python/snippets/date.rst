@@ -6,18 +6,14 @@ Date
 Adding
 ======
 
-To add one day to the current date:
-
-::
+To add one day to the current date::
 
   import datetime
   d = datetime.datetime.today()
   one_day = datetime.timedelta(days=1)
   d = d + one_day
 
-To add one month is a little awkward e.g:
-
-::
+To add one month is a little awkward e.g::
 
   # Copied from:
   # http://code.activestate.com/recipes/577274-subtract-or-add-a-month-to-a-datetimedate-or-datet/

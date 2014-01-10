@@ -1,6 +1,8 @@
 Template Tags
 *************
 
+.. highlight:: html
+
 Links
 =====
 
@@ -22,24 +24,18 @@ Comment
 date
 ====
 
-To display ``Mon 13th Jul 2009 21:54``:
-
-::
+To display ``Mon 13th Jul 2009 21:54``::
 
   {{ item.created_date|date:"D jS M Y H:i" }}
 
 default
 =======
 
-If value evaluates to ``False``, use given default:
-
-::
+If value evaluates to ``False``, use given default::
 
   {{ value|default:"nothing" }}
 
-If (and only if) value is ``None``, use given default:
-
-::
+If (and only if) value is ``None``, use given default::
 
   {{ value|default_if_none:"nothing" }}
 
@@ -57,9 +53,7 @@ for
 Foreign Keys
 ------------
 
-From `Filtering then Iterating through nested django models`_
-
-::
+From `Filtering then Iterating through nested django models`_::
 
   {% for event in events %}
     {{ event.name }}
@@ -87,9 +81,7 @@ ifequal
       ...
   {% endifequal %}
 
-To compare a string:
-
-::
+To compare a string::
 
   {% ifequal user.username "adrian" %}
 
@@ -104,16 +96,12 @@ RequestContext
 Parameters
 ----------
 
-Parameters, in this example, I get the query variable named ``q``:
-
-::
+Parameters, in this example, I get the query variable named ``q``::
 
   {{ request.REQUEST.q }}
 
 **Note**: I can't get this to work... the following seems to do the job, but I
-am not sure it is *correct*:
-
-::
+am not sure it is *correct*::
 
   {{ request.META.QUERY_STRING }}
 
@@ -135,17 +123,13 @@ URL (reverse)
 
 `Template Tags - url`_:
 
-e.g. We can reference this named URL:
-
-::
+e.g. We can reference this named URL::
 
   url(r'^(?P<category>[-\w]+)/$',
       index_view,
       name='feature_index'),
 
-...with this template tag:
-
-::
+...with this template tag::
 
   <a href="{% url feature_index feature.category.slug %}">some text</a>
 
@@ -162,9 +146,7 @@ Admin
 Image (or file):
 ----------------
 
-To get the URL of an image (or file) field:
-
-::
+To get the URL of an image (or file) field::
 
   <img src="{{ news.image.url }}" align="left" alt="{{ news.headline }}" />
 
