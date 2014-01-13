@@ -3,6 +3,10 @@ Date
 
 .. highlight:: python
 
+.. note::
+
+  Check :doc:`../modules/dateutil` before using these snippets...
+
 Adding
 ======
 

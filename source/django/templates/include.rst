@@ -23,4 +23,3 @@ To include a template within another template:
 
 
 .. _`include documentation`: http://docs.djangoproject.com/en/1.1/ref/templates/builtins/#include
-

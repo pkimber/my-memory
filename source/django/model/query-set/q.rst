@@ -11,9 +11,7 @@ Links
 Sample
 ======
 
-Using the Satchmo product database:
-
-::
+Using the Satchmo product database::
 
   from django.db.models import Q
 

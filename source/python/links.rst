@@ -86,8 +86,7 @@ Database
 Date
 ====
 
-- http://labix.org/python-dateutil
-  powerful extensions to the standard datetime module
+:doc:`modules/dateutil`
 
 Debugger
 ========
@@ -99,7 +98,7 @@ Deployment
 
 - http://www.blueskyonmars.com/projects/paver/
   Paver is a Python-based build/distribution/deployment scripting tool.
-- :doc:`apps/fabric`
+- :doc:`apps/fabric/index`
 - `Django deployment continued`_
 
 Docs
@@ -221,9 +220,6 @@ Learning
 - http://europython09.blip.tv/
 - `Exploring Python, Simon Willison - Stack Overflow DevDays`_
 - `Charming Python: Decorators make magic easy`_
-
-  - PyCon UK 2008, Conference Talk, :doc:`conference/decorators`.
-
 - David Beazley http://www.dabeaz.com/:
 
   - `Generator Tricks for Systems Programmers`_

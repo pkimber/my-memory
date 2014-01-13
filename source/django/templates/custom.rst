@@ -1,7 +1,7 @@
 Custom Template Tags
 ********************
 
-.. hightlight:: python
+.. highlight:: python
 
 Links
 =====

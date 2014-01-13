@@ -17,6 +17,7 @@ Contents
    beautiful-soup
    cloudfiles
    code
+   dateutil
    httpie
    markdown
    optparse
