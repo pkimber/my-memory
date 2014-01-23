@@ -24,6 +24,7 @@ Contents
    flatpages
    ka-lite
    notification
+   nvd3
    pagination
    rest-framework
    reusable

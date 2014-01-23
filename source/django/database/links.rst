@@ -4,8 +4,7 @@ Links
 Conference
 ==========
 
-- Three Years of Worst Practice or
-  :download:`Unbreaking Your Django Application <../misc/unbreaking-django.pdf>`
+- Three Years of Worst Practice or *Unbreaking Your Django Application*...
 
 Microsoft SQL Server
 ====================

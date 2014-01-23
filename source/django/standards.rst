@@ -5,9 +5,8 @@ import
 ======
 
 From `The Best (and Worst) of Django`_
-(:download:`misc/bestandworstofdjango.pdf`):
 
-Use non-project-relative imports:
+Use non-project-relative imports::
 
 ::
 
@@ -25,7 +24,6 @@ manage.py
 =========
 
 From `The Best (and Worst) of Django`_
-(:download:`misc/bestandworstofdjango.pdf`):
 
 Stop using ``manage.py`` and see :doc:`snippets/virtualenv`.
 
@@ -47,10 +45,7 @@ The order of model inner classes and standard methods should be as follows
 settings.py
 ===========
 
-From `The Best (and Worst) of Django`_
-(:download:`misc/bestandworstofdjango.pdf`):
-
-::
+From `The Best (and Worst) of Django`_::
 
   settings
   |-- __init__.py
@@ -82,9 +77,7 @@ Style
 URL
 ===
 
-From `Coding Conventions`_ (:download:`misc/bestandworstofdjango.pdf`):
-
-::
+From `Coding Conventions`_::
 
   url(regex=r'^$',
       view=views.poll_list,

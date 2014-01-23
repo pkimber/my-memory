@@ -134,7 +134,7 @@ CMS Panel
 Responsive Web Design
 =====================
 
-Brilliant talk, see :download:`../misc/rwd_djangocon_talk.pdf`
+Brilliant talk:
 
 - http://www.alistapart.com/articles/responsive-web-design/
 

@@ -38,8 +38,7 @@ To solve the problem copy ``msvcr71.dll`` to the tomcat ``bin`` folder:
 
   copy msvcr71.dll \tools\tomcat\bin\
 
-There is a copy of ``msvcr71.dll`` here...
-:download:`../../misc/howto/tomcat/msvcr71.dll`
+There was a copy of ``msvcr71.dll`` on my workstation at some stage!
 
 IllegalArgumentException
 ========================
