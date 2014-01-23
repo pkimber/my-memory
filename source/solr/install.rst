@@ -13,15 +13,11 @@ http://www.apache.org/dyn/closer.cgi/lucene/solr/
 Prerequisites
 =============
 
-Install Tomcat 7 (the only essential app is probably ``tomcat7``):
-
-::
+Install Tomcat 7 (the only essential app is probably ``tomcat7``)::
 
   sudo apt-get install tomcat7 tomcat7-admin tomcat7-common tomcat7-user
 
-Create users (if you want to use the Tomcat admin):
-
-::
+Create users (if you want to use the Tomcat admin)::
 
   sudo vim /etc/tomcat7/tomcat-users.xml
 
@@ -37,17 +33,13 @@ Install
 
 `Solr with Apache Tomcat`_:
 
-Extract the archive
-
-::
+Extract the archive::
 
   cd ~/repo/temp/
   unzip ~/Downloads/solr/solr-4.3.0.zip
   cd solr-4.3.0/
 
-Copy ``solr-4.3.0.war`` to a folder:
-
-::
+Copy ``solr-4.3.0.war`` to a folder::
 
   mkdir -p ~/repo/solr/war/
   cp dist/solr-4.3.0.war ~/repo/solr/war/
@@ -56,9 +48,7 @@ Note: For Tomcat 5.5 and later, the war file must be stored outside of the
 ``webapps`` directory for this to work.  Otherwise, the ``Context`` element is
 ignored.
 
-Copy the example files, from the extracted archive to the repository folder:
-
-::
+Copy the example files, from the extracted archive to the repository folder::
 
   cp -r example/multicore ~/repo/solr/
 
@@ -66,16 +56,12 @@ Copy the example files, from the extracted archive to the repository folder:
   rm -r ~/repo/solr/example/exampledocs
   rm -r ~/repo/solr/example/solr-webapp
 
-Change permissions:
-
-::
+Change permissions::
 
   sudo chgrp -R tomcat7 /home/patrick/repo/solr
   sudo chmod -R 775 /home/patrick/repo/solr
 
-Copy the logging files to Tomcat:
-
-::
+Copy the logging files to Tomcat::
 
   sudo cp example/lib/ext/* /var/lib/tomcat7/shared/
   sudo cp example/resources/log4j.properties /var/lib/tomcat7/shared/
@@ -96,9 +82,7 @@ started):
 .. **Note**: If you want the index files to be created in SOLR home, then remove
 .. the ``dataDir`` attribute...
 
-Create a context file:
-
-::
+Create a context file::
 
   sudo vim /var/lib/tomcat7/conf/Catalina/localhost/solr.xml
 

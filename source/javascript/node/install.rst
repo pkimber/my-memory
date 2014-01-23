@@ -28,22 +28,27 @@ node.js)::
 
   The following step will take a long time...
 
-Create a virtual environment for ``node.js`` version 0.6.11::
+Create a virtual environment for ``node.js``::
 
-  nave use 0.10.22
+  nave use 0.10.24
   exit
 
 Install `Node Package Manager`_::
 
-  nave use 0.10.22
+  nave use 0.10.24
   curl http://npmjs.org/install.sh | sh
+
+  # or...
+  nave use 0.10.24
+  wget http://npmjs.org/install.sh
+  sh install.sh
 
 Usage
 =====
 
 To enter the virtual environment created above::
 
-  nave use 0.4.9
+  nave use 0.10.24
 
 To leave the virtual environment::
 

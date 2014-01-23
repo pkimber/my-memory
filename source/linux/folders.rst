@@ -18,9 +18,7 @@ that cp just complains at you. Probably it says something like
 ``cp: omitting directory``.
 
 You see, the cp command wants you to use the -r option if you want to copy a
-directory with its contents. The -r means "copy recursively":
-
-::
+directory with its contents. The -r means "copy recursively"::
 
   cp -r dir1 dir2
 
@@ -43,9 +41,7 @@ Shared Data
 This directory contains user applications and a variety of other things for
 them, like their source codes, and pictures, docs, or config files they use.
 /usr is the largest directory on a Linux system, and some people like to have
-it on a separate partition. Some interesting stuff in /usr:
-
-::
+it on a separate partition. Some interesting stuff in /usr::
 
   /usr/share/
 
@@ -71,9 +67,7 @@ officially a part of your distro, you should install them in /usr/local.
 For example, if the app would normally go to /usr/bin but it isn't a part of
 your distro, you should install it in /usr/local/bin instead. When you keep
 your own programs away from the programs that are included in your distro,
-you'll avoid confusion and keep things nice and clean.
-
-::
+you'll avoid confusion and keep things nice and clean::
 
   From: Paul B
   Sent: 12 April 2007 13:17
@@ -103,19 +97,15 @@ Size
 
 `How to find - Size of a directory and Free disk space`_
 
-- Display a summary of the directory size:
+Display a summary of the directory size::
 
-  ::
+  du -sh
+  du -sh ./dovecot/mail/*
 
-    du -sh
-    du -sh ./dovecot/mail/*
+This would display the size of the current directory excluding the size of
+the subdirectories that exist within that directory::
 
-- This would display the size of the current directory excluding the size of
-  the subdirectories that exist within that directory:
-
-  ::
-
-    du -Sh
+  du -Sh
 
 
 .. _`How to find - Size of a directory and Free disk space`: http://www.codecoffee.com/tipsforlinux/articles/22.html

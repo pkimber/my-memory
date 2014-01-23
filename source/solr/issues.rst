@@ -134,8 +134,7 @@ To solve the problem:
 
 
 .. _`Difference between ClassNotFoundException and NoClassDefFoundError`: http://www.jroller.com/sjivan/entry/difference_between_classnotfoundexception_and_noclassdeffounderror
-.. _LocalSolr: http://www.gissearch.com/localsolr
-.. _`how to run solr in windows & Tomcat5`: http://www.nabble.com/how-to-run-solr-in-windows---Tomcat5-t1658550.html
 .. _`Failed to create an XPathFactory for the default object model`: http://www.psuedoguru.com/roller/page/psuedoblog?entry=failed_to_create_an_xpathfactory
+.. _`how to run solr in windows & Tomcat5`: http://www.nabble.com/how-to-run-solr-in-windows---Tomcat5-t1658550.html
 .. _`Running Solr on Debian with Tomcat`: http://yousefourabi.com/programming/running-solr-on-debian-with-tomcat
-
+.. _LocalSolr: http://www.gissearch.com/localsolr

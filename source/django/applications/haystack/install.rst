@@ -198,15 +198,14 @@ SOLR - Schema
 
 To generate the SOLR schema for your search models:
 
-- Generate the schema:
+Generate the schema::
 
-  ::
+  python manage.py build_solr_schema
 
-    python manage.py build_solr_schema
+Copy the output from the ``build_solr_schema`` command to your SOLR
+``conf/schema.xml`` file...
 
-- Copy the output from the ``build_solr_schema`` command to your SOLR
-  ``conf/schema.xml`` file...
-- Re-start SOLR.
+Re-start SOLR (Tomcat)...
 
 Maintenance
 ===========
@@ -214,7 +213,4 @@ Maintenance
 Read the :doc:`maintenance` notes next...
 
 
-
-
 .. _`faceting notes`: faceting.html
-
