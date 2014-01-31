@@ -15,7 +15,7 @@ Remove
 
 ::
 
-  dpkg -i <package name>
+  dpkg -r <package name>
 
 Other
 =====

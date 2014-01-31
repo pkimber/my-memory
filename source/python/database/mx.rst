@@ -20,4 +20,3 @@ Download
 
 Download ``egenix-mx-commercial-2.0.7.win32-py2.4.exe`` from
 http://www.egenix.com/files/python/eGenix-mx-Extensions.html#mxODBC
-

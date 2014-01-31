@@ -15,9 +15,7 @@ Install
 
 My notes in :doc:`../pip/install-modules`.
 
-If you are **not** using a virtual environment, then this will work:
-
-::
+If you are **not** using a virtual environment, then this will work::
 
   apt-get install python-psycopg2
 
@@ -26,9 +24,7 @@ Windows
 
 A Windows port of the interface (which includes an installer) can be
 downloaded from
-http://www.stickpeople.com/projects/python/win-psycopg/index.html:
-
-::
+http://www.stickpeople.com/projects/python/win-psycopg/index.html::
 
   psycopg2-2.0.8.win32-py2.5-pg8.3.4-release.exe
 
@@ -48,9 +44,7 @@ Sample
   print data
 
 Note: If the server is set-up to use ``ident`` based authentication, then
-connect by leaving out the ``host`` and ``password`` e.g:
-
-::
+connect by leaving out the ``host`` and ``password`` e.g::
 
   dsn = 'dbname=production user=patrick'
 

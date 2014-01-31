@@ -13,30 +13,31 @@ Links
 Cursor Objects
 ==============
 
-- ``.description``
+``.description``
+----------------
 
-  This read-only attribute is a sequence of 7-item sequences.  Each of these
-  sequences contains information describing one result column:
+This read-only attribute is a sequence of 7-item sequences.  Each of these
+sequences contains information describing one result column:
 
-  - ``name``
-  - ``type_code``: ``STRING``, ``BINARY``, ``NUMBER``, ``DATETIME``
-    or ``ROWID``.
-  - ``display_size``
-  - ``internal_size``
-  - ``precision``
-  - ``scale``
-  - ``null_ok``
+- ``name``
+- ``type_code``: ``STRING``, ``BINARY``, ``NUMBER``, ``DATETIME`` or ``ROWID``
+- ``display_size``
+- ``internal_size``
+- ``precision``
+- ``scale``
+- ``null_ok``
 
-  The first two items (name and type_code) are mandatory, the other five are
-  optional.
+The first two items (name and type_code) are mandatory, the other five are
+optional.
 
-  Note: For an example of how to process this data, review the
-  ``pk.db.query_result_processor.QueryResultProcessor`` class.
+Note: For an example of how to process this data, review the
+``pk.db.query_result_processor.QueryResultProcessor`` class.
 
-- ``.rowcount``
+``.rowcount``
+-------------
 
-  This read-only attribute specifies the number of rows that the last
-  ``executeXXX()`` produced or affected.
+This read-only attribute specifies the number of rows that the last
+``executeXXX()`` produced or affected.
 
 Parameters
 ==========

@@ -18,15 +18,11 @@ Install
 Getting Started
 ===============
 
-Change into your project folder and run:
-
-::
+Change into your project folder and run::
 
   sphinx-quickstart
 
-Here are some suggested values to use:
-
-::
+Here are some suggested values to use::
 
   > Root path for the documentation [.]:
   > Separate source and build directories (y/N) [n]: y
@@ -44,18 +40,14 @@ Here are some suggested values to use:
 
 To do the initial build:
 
-- Windows
+Windows::
 
-    ::
+  cd doc
+  make.bat html
 
-      cd doc
-      make.bat html
+Linux::
 
-- Linux
-
-    ::
-
-      cd doc;make html;cd ..
+  cd doc;make html;cd ..
 
 - To view the initial documentation, browse to ``build/html/index.html``.
 - To add documents to the build, see :doc:`documentation`.

@@ -21,45 +21,33 @@ In an XML document or external parsed entity, a CDATA section is a section of
 element content that is marked for the parser to interpret as only character
 data, not markup.
 
-A CDATA section starts with the following sequence:
-
-::
+A CDATA section starts with the following sequence::
 
   <![CDATA[
 
-and ends with the first occurrence of the sequence:
-
-::
+and ends with the first occurrence of the sequence::
 
   ]]>
 
 All characters enclosed between these two sequences are interpreted as
 characters, not markup or entity references.  For example, in a line like
-this:
-
-::
+this::
 
   <sender>John Smith</sender>
 
 the opening and closing "sender" tags are interpreted as markup.  However, if
-written like this:
-
-::
+written like this::
 
   <![CDATA[<sender>John Smith</sender>]]>
 
-then the code is interpreted the same as if it had been written like this:
-
-::
+then the code is interpreted the same as if it had been written like this::
 
   &lt;sender&gt;John Smith&lt;/sender&gt;
 
 Comment
 =======
 
-http://www.webheadstart.org/xhtml/comments/
-
-::
+http://www.webheadstart.org/xhtml/comments/::
 
   <!-- This is an example of a comment -->
 
@@ -113,9 +101,7 @@ Note: Not recognized by the W3C HTML version 4.01 standard.
 hr
 ==
 
-Use this tag to display lines across the screen:
-
-::
+Use this tag to display lines across the screen::
 
   <hr />
 
@@ -129,9 +115,7 @@ img
   <img src="angry.gif" alt="Angry face" />
 
 The ``width`` and ``height`` attributes are optional but strongly
-recommended as they help the browser arrange the page more quickly:
-
-::
+recommended as they help the browser arrange the page more quickly::
 
   <img src="image.jpg" width="200" height="150">
 
@@ -142,9 +126,7 @@ The *input* tag defines the start of an input field where the user can enter
 data.
 
 In HTML the ``input`` tag has no end tag.  In XHTML the ``input`` tag must be
-properly closed.
-
-::
+properly closed::
 
   <form action="form_action.asp" method="get">
     First name:
@@ -159,11 +141,6 @@ properly closed.
 
 **Note**: Only form elements with a ``name`` attribute will have their values
 passed when submitting a form.
-
-
-<form action="form_action.asp">
-</form>
-
 
 hidden
 ------
@@ -193,9 +170,7 @@ Links_
 
   <a href="./chapter2.html" title="Get chapter two.">chapter two</a>.
 
-To open the page in another tab, use the ``target`` attribute:
-
-::
+To open the page in another tab, use the ``target`` attribute::
 
   <a
       target="_blank"
@@ -205,9 +180,7 @@ To open the page in another tab, use the ``target`` attribute:
   </a>
 
 Also see *anchor* above... a link defined in the file "``two.html``" in the
-same directory as "``one.html``" would refer to the anchor as follows:
-
-::
+same directory as "``one.html``" would refer to the anchor as follows::
 
   <A href="./one.html#anchor-one"> anchor one</A>.
 
@@ -221,9 +194,7 @@ email
 select
 ======
 
-(drop down list box)
-
-::
+(drop down list box)::
 
   <select name="cars">
     <option value = "volvo">Volvo</option>
@@ -254,9 +225,7 @@ Table
     </tr>
   </table>
 
-Note: Table headers are with the ``th`` tag e.g:
-
-::
+Note: Table headers are with the ``th`` tag e.g::
 
   <table border="1">
     <tr>
@@ -276,9 +245,7 @@ Note: Table headers are with the ``th`` tag e.g:
 Text Area
 =========
 
-Defines a text-area (a multi-line text input control):
-
-::
+Defines a text-area (a multi-line text input control)::
 
   <textarea name="fname" rows="2" cols="20">
     The cat was playing in the garden.
