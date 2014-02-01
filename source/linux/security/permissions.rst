@@ -103,8 +103,10 @@ not set the file's group ownership corresponds to the user's default group.
 In order to set the SGID on a directory or to remove it, use the following
 commands::
 
-  chmod g+s directory
-  chmod g-s directory
+  chmod g+s directory_name
+  chmod g-s directory_name
+
+  chmod 2755 directory_name
 
 When set, the SGID attribute is represented by the letter ``s`` which replaces
 the ``x`` in the group permissions::

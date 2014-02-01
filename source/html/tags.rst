@@ -184,6 +184,12 @@ same directory as "``one.html``" would refer to the anchor as follows::
 
   <A href="./one.html#anchor-one"> anchor one</A>.
 
+To ask that the browser download the file rather than open it::
+
+  <a href="/fs/Spring.mp4" download="Spring.mp4">
+    Download
+  </a>
+
 email
 -----
 

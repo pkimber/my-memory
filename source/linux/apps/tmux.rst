@@ -1,6 +1,8 @@
 tmux
 ****
 
+.. highlight:: bash
+
 Links
 =====
 
@@ -42,14 +44,16 @@ To run::
 Create
 ------
 
-::
+Create a new sessions with the name ``basic``::
 
   tmux new -s basic
+
+Create a new sessions with the name ``second_session`` and detach it from the
+terminal::
+
   tmux new -s second_session -d
 
-Create a new session named ``windows`` and name the first window ``shell``:
-
-::
+Create a new session named ``windows`` and name the first window ``shell``::
 
   tmux new -s windows -n shell
 
