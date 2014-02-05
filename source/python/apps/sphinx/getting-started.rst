@@ -4,7 +4,7 @@ Getting Started
 Links
 =====
 
-- :doc:`../../markup/restructuredtext/syntax`
+- :doc:`../../../markup/restructuredtext/syntax`
 - http://sphinx.pocoo.org/
 - http://showmedo.com/videotutorials/video?name=2910020&fromSeriesID=291
 

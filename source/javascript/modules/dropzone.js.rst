@@ -13,12 +13,12 @@ WIP
 ----------
 
 Lovely looking library, but I couldn't get it integrated with Django (not yet
-anyways).  Here are my notes, in case I want to try again in future::
+anyways).  Here are my notes, in case I want to try again in future...
 
 In the following code:
 
 - The form ID is ``my_form`` (see below), this matches with the ``myForm`` in the
-``options`` section
+  ``options`` section
 - The ``name`` of the file upload field is ``picture``.
 - The submit button has an ID of ``my_submit``.
 

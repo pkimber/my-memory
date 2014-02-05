@@ -9,8 +9,7 @@ Links
 - :doc:`sample/office`.
 - :doc:`snippets/fix-permissions`
 - `Understanding file permissions`_.
-- `Shared Folders in Ubuntu with setgid and ACL`_.  PDF copy in:
-  :doc:`misc/Geek_Thoughts__Shared_Folders_in_Ubuntu_with_setgid_and_ACL.pdf`.
+- `Shared Folders in Ubuntu with setgid and ACL`_
 
 File
 ====

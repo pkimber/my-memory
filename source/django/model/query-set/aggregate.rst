@@ -13,9 +13,7 @@ Import
 Sample
 ======
 
-From `Generating aggregates over a QuerySet`_
-
-::
+From `Generating aggregates over a QuerySet`_::
 
   >>> from django.db.models import Avg
   >>> Book.objects.aggregate(Avg('price'))
@@ -25,20 +23,15 @@ From `Generating aggregates over a QuerySet`_
   >>> Book.objects.aggregate(Avg('price'), Max('price'), Min('price'))
   {'price__avg': 34.35, 'price__max': Decimal('81.20'), 'price__min': Decimal('12.99')}
 
-Note: The ``aggregate`` method returns a dictionary.  To specify the key name:
-
-::
+Note: The ``aggregate`` method returns a dictionary.  To specify the key
+name::
 
   >>> Book.objects.aggregate(average_price=Avg('price'))
   {'average_price': 34.35}
 
-From `Aggregations and other QuerySet clauses`_
-
-::
+From `Aggregations and other QuerySet clauses`_::
 
   Book.objects.annotate(num_authors=Count('authors')).filter(num_authors__gt=1)
-
-::
 
   village_rows = Villages.objects.filter(
       voting__completed__isnull=True
