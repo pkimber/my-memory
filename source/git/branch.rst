@@ -19,4 +19,3 @@ Tags
 ====
 
 We can switch to tags in the same was as we switch branches (see above).
-
