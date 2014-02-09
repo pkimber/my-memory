@@ -23,12 +23,6 @@ Columns
 
 - `Top reasons your CSS columns are messed up`_
 
-Commercial
-==========
-
-- http://www.psd2html.com/
-  Order Now a Hand-Coded Markup for Your Design. You Design - We XHTML / CSS.
-
 Conference
 ==========
 
