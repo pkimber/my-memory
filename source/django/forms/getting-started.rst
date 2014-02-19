@@ -179,21 +179,20 @@ custom template::
 - ``{{ form.message.errors }}`` will display as a ``<ul class="errorlist">``
   if errors are present and a blank string if the field is valid (or the form
   is unbound).
-- We can also treat ``form.message.errors`` as a ``Boolean`` or even
-  iterate over it as a list, for example::
 
-  ::
+We can also treat ``form.message.errors`` as a ``Boolean`` or even iterate
+over it as a list, for example::
 
-    <div class="fieldWrapper{% if form.message.errors %} errors{% endif %}">
-        {% if form.message.errors %}
-            <ol>
-            {% for error in form.message.errors %}
-                <li><strong>{{ error|escape }}</strong></li>
-            {% endfor %}
-            </ol>
-        {% endif %}
-        {{ form.message }}
-    </div>
+  <div class="fieldWrapper{% if form.message.errors %} errors{% endif %}">
+      {% if form.message.errors %}
+          <ol>
+          {% for error in form.message.errors %}
+          <li><strong>{{ error|escape }}</strong></li>
+          {% endfor %}
+          </ol>
+      {% endif %}
+      {{ form.message }}
+  </div>
 
 In the case of validation errors, this will add an ``errors`` class to the
 containing ``<div>`` and display the list of errors in an ordered list.

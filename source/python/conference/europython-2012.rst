@@ -37,24 +37,18 @@ Alex Martelli
 Permission or Forgiveness
 -------------------------
 
-Slides_ (``europ12_fop.pdf``)
-
 Sometimes the best answer, is neither!
 
 The only way Grace Hopper could innovate so much in a bureaucratic US Navy was
 by doing it first and asking for forgiveness later.  See *Why does it tend to
-work* in the slides (funny, but true).
-
-::
+work* in the slides (funny, but true)::
 
   if isinstance(x, numbers.Number):
 
 ... is an idiomatic, well-supported way to perform typeclass checking, but
 don't forget, not ALL problems are nails.
 
-Even better, when applicable, use defaults:
-
-::
+Even better, when applicable, use defaults::
 
   d.get(key, 'default')
 
@@ -721,21 +715,15 @@ Development Requirements
 
 Logger
 
-Root logger
-
-::
+Root logger::
 
   basicConfig()
 
-Get the logger and send a message
-
-::
+Get the logger and send a message::
 
   getLogger().error(error_message)
 
-Or... use a named logger:
-
-::
+Or... use a named logger::
 
   my_logger = getLogger('main.special')
 
