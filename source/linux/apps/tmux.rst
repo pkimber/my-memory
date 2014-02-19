@@ -141,18 +141,14 @@ Pairing
 Config
 ------
 
-On the server where you want to use tmux with other users:
-
-::
+On the server where you want to use tmux with other users::
 
   sudo addgroup tmux
   sudo mkdir /var/tmux
   sudo chgrp tmux /var/tmux
   sudo chmod g+ws /var/tmux
 
-For each user (in this example, the user is called ``ted``:
-
-::
+For each user (in this example, the user is called ``ted``::
 
   sudo usermod -aG tmux ted
 
@@ -162,14 +158,10 @@ continuing...
 Usage
 -----
 
-One user creates the session:
-
-::
+One user creates the session::
 
   tmux -S /var/tmux/pair
 
-Other users in the group can attach to the session:
-
-::
+Other users in the group can attach to the session::
 
   tmux -S /var/tmux/pair attach

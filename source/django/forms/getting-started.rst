@@ -6,76 +6,66 @@ Getting Started
 Sample
 ======
 
-- ``forms.py``:
+``forms.py``::
 
-  ::
+  from django import forms
 
-    from django import forms
+  TOPIC_CHOICES = (
+      ('general', 'General enquiry'),
+      ('bug', 'Bug report'),
+      ('suggestion', 'Suggestion'),
+  )
 
-    TOPIC_CHOICES = (
-        ('general', 'General enquiry'),
-        ('bug', 'Bug report'),
-        ('suggestion', 'Suggestion'),
-    )
+  class ContactForm(forms.Form):
+      topic = forms.ChoiceField(choices=TOPIC_CHOICES)
+      message = forms.CharField(widget=forms.Textarea())
+      sender = forms.EmailField(required=False)
 
-    class ContactForm(forms.Form):
-        topic = forms.ChoiceField(choices=TOPIC_CHOICES)
-        message = forms.CharField(widget=forms.Textarea())
-        sender = forms.EmailField(required=False)
+**Note**: See *Forms from Models*, :doc:`models`...
 
-  **Note**: See *Forms from Models*, :doc:`models`...
+``contact.html`` (normally in ``mysite/templates/app-name/``)::
 
-- ``contact.html`` (normally in ``mysite/templates/app-name/``):
+  <!doctype html>
+  <html lang="en">
+    <head>
+      <title>Contact us</title>
+    </head>
+    <body>
+      <h1>Contact us</h1>
+      <form action="." method="POST">
+        {% csrf_token %}
+        <table>
+          {{ form.as_table }}
+        </table>
+        <p><input type="submit" value="Submit"></p>
+      </form>
+    </body>
+  </html>
 
-  ::
+**Note**: See *Custom Look and Feel* below for details on how to construct a
+custom template rather than using ``form.as_table``
 
-    <!doctype html>
-    <html lang="en">
-      <head>
-        <title>Contact us</title>
-      </head>
-      <body>
-        <h1>Contact us</h1>
-        <form action="." method="POST">
-          {% csrf_token %}
-          <table>
-            {{ form.as_table }}
-          </table>
-          <p><input type="submit" value="Submit"></p>
-        </form>
-      </body>
-    </html>
+``app-name/views.py``::
 
-  **Note**: See *Custom Look and Feel* below for details on how to construct a
-  custom template rather than using ``form.as_table``
+  from forms import ContactForm
 
-- ``app-name/views.py``
-
-  ::
-
-    from forms import ContactForm
-
-    def contact(request):
-        if request.method == 'POST':
-            form = ContactForm(request.POST)
-        else:
-            form = ContactForm()
+  def contact(request):
+      if request.method == 'POST':
+          form = ContactForm(request.POST)
+      else:
+          form = ContactForm()
 
 Initial Data
 ============
 
-Initial data can be set in the form class:
-
-::
+Initial data can be set in the form class::
 
   class ContactForm(forms.Form):
       message = forms.CharField(
           widget = forms.Textarea(),
           initial = "Replace with your feedback.")
 
-...or... when the form is created (in ``app-name/views.py``):
-
-::
+...or... when the form is created (in ``app-name/views.py``)::
 
   def contact(request):
       if request.method == 'POST':
@@ -89,9 +79,7 @@ Initial data can be set in the form class:
 Processing
 ==========
 
-``app-name/views.py``:
-
-::
+``app-name/views.py``::
 
   from django.core.mail import send_mail
   from django.http import HttpResponseRedirect
@@ -139,9 +127,7 @@ Processing
 Save
 ----
 
-To update a model before saving, you can follow one of the following patterns:
-
-::
+To update a model before saving, you can follow one of the following patterns::
 
   author = Author(title='Mr')
   form = PartialAuthorForm(request.POST, instance=author)
@@ -158,9 +144,7 @@ Custom Look and Feel
 ====================
 
 Rather than using ``form.as_table`` (see above) we can build our own
-custom template:
-
-::
+custom template::
 
   <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
   <html lang="en">
@@ -196,7 +180,7 @@ custom template:
   if errors are present and a blank string if the field is valid (or the form
   is unbound).
 - We can also treat ``form.message.errors`` as a ``Boolean`` or even
-  iterate over it as a list, for example:
+  iterate over it as a list, for example::
 
   ::
 
@@ -211,17 +195,15 @@ custom template:
         {{ form.message }}
     </div>
 
-  In the case of validation errors, this will add an ``errors`` class to the
-  containing ``<div>`` and display the list of errors in an ordered list.
+In the case of validation errors, this will add an ``errors`` class to the
+containing ``<div>`` and display the list of errors in an ordered list.
 
-- Don't forget to include hidden fields in the form.  These can be included
-  as follows:
+Don't forget to include hidden fields in the form.  These can be included
+as follows::
 
-  ::
-
-    {% for hidden in form.hidden_fields %}
-        {{ hidden }}
-    {% endfor %}
+  {% for hidden in form.hidden_fields %}
+      {{ hidden }}
+  {% endfor %}
 
 Testing
 =======

@@ -76,9 +76,7 @@ Default is ``False``.
   wish to permit empty values in forms, as the ``null`` parameter only affects
   database storage (see ``blank`` above).
 
-*Sample*
-
-::
+Sample::
 
   num_pages = models.IntegerField(blank=True, null=True)
 

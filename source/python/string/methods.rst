@@ -12,9 +12,7 @@ character
 =========
 
 Returns a one-character string whose ASCII code is the parameter (this is the
-inverse of ``ord``):
-
-::
+inverse of ``ord``)::
 
   >>> chr(65)
   'A'
@@ -33,9 +31,7 @@ Note: *Don't forget* ``in``...
 
 Return the lowest index in the string where substring sub is found, such that
 sub is contained in the range [start, end). Optional arguments start and end
-are interpreted as in slice notation. Return -1 if sub is not found.
-
-::
+are interpreted as in slice notation. Return -1 if sub is not found::
 
   if s.find('--') != -1:
 
@@ -49,9 +45,18 @@ format
 New
 ---
 
-Cookbook_
+Cookbook_ - Align (replace ``s`` with ``d`` for an integer)::
 
-::
+  In [2]: print '[{:10s}]'.format('pat')
+  [pat       ]
+
+  In [4]: print '[{:>10s}]'.format('pat')
+  [       pat]
+
+  In [5]: print '[{:^10s}]'.format('pat')
+  [   pat    ]
+
+Cookbook_ - Padding::
 
   '{:.2%}'.format(vat_rate)
 
@@ -247,9 +252,7 @@ splitlines
 
 Return a list of the lines in the string, breaking at line boundaries.  Line
 breaks are not included in the resulting list unless ``keepends`` is given
-and true:
-
-::
+and true::
 
   result = message.splitlines()
 
@@ -262,9 +265,7 @@ startswith
       pass
 
 Note: Starting with version 2.5, the ``startswith()`` and ``endswith()``
-methods of string types now accept tuples of strings to check for:
-
-::
+methods of string types now accept tuples of strings to check for::
 
   return filename.endswith(('.gif', '.jpg', '.tiff'))
 

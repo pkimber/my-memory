@@ -17,9 +17,7 @@ Output
 Dictionary
 ----------
 
-Using a dictionary:
-
-::
+Using a dictionary::
 
   >>> t = {'b': 'banana', 'a': 'apple'}
   >>> print "%(a)s %(b)s" % t
@@ -36,16 +34,12 @@ Justify
 Width
 -----
 
-Maximum (``.``):
-
-::
+Maximum (``.``)::
 
   >>> print '[%-.5s]' % 'southampton'
   [south]
 
-Minimum:
-
-::
+Minimum::
 
   >>> print '[%30s]' % 'southampton'
   [                   southampton]
@@ -59,8 +53,7 @@ pprint
   pleasing representations of your data structures.
 
 
-.. _`String Formatting Operations`: http://docs.python.org/lib/typesseq-strings.html
-.. _`Python % formating`: http://snippets.dzone.com/posts/show/1701
 .. _`pprint -- Data pretty printer`: http://docs.python.org/lib/module-pprint.html
 .. _`PyMOTW: pprint`: http://www.oreillynet.com/onlamp/blog/2007/11/pymotw_pprint.html
-
+.. _`Python % formating`: http://snippets.dzone.com/posts/show/1701
+.. _`String Formatting Operations`: http://docs.python.org/lib/typesseq-strings.html
