@@ -4,8 +4,7 @@ Links
 Applications
 ============
 
-- http://shutter-project.org/
-  Shutter is a feature-rich screenshot program.
+:doc:`apps/index`
 
 Backup
 ======

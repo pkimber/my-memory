@@ -13,22 +13,16 @@ Latitude and Longtitude
 Go To
 -----
 
-Just enter the latitude and longitude into the search box:
-
-::
+Just enter the latitude and longitude into the search box::
 
   51.5, -0.117
 
 Find
 ----
 
-When the address you want to find is dead center, copy and paste this code into
-your browser bar:
-
-::
-
-  javascript:void(prompt('', gApplication.getMap().getCenter()));
+When you click on a point on the map, the coordinates will be displayed in the
+box in the top left corner of the map.  You can click on the link to display
+those coordinates in the centre of the map.
 
 
 .. _`Google Maps From A to Z, Creating our first simple map`: http://jeez.eu/2009/10/09/google-maps-from-a-to-z/
-

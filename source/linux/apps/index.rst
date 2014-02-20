@@ -17,6 +17,7 @@ Contents
    irssi
    python-window-organizer
    shorewall
+   shutter
    tmux
    weechat
    xbmc

@@ -9,12 +9,6 @@ Documents
   - http://www.linuxinsider.com/rsstory/72288.html
     PDF Shuffler: A Dead Simple, Dead Serious, Dead-On Winner.
 
-Tools
-=====
-
-- http://shutter-project.org/
-  Shutter is a feature-rich screenshot program.
-
 Music
 =====
 

@@ -164,9 +164,7 @@ screen readers etc.  For more information see:
 Links (URL)
 ===========
 
-Links_
-
-::
+Links_::
 
   <a href="./chapter2.html" title="Get chapter two.">chapter two</a>.
 
