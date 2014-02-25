@@ -18,9 +18,7 @@ Linux (default python)
 Linux (Python Version)
 ----------------------
 
-If using Ubuntu Linux and a different version of python than the default:
-
-::
+If using Ubuntu Linux and a different version of python than the default::
 
   virtualenv -v -p python2.4 --no-site-packages env-name
   cd env-name
@@ -38,18 +36,14 @@ Windows
 Deactivate
 ==========
 
-To leave the virtual environment:
-
-::
+To leave the virtual environment::
 
   deactivate
 
 Environment
 ===========
 
-To **create** a virtual environment which ignores site packages:
-
-::
+To **create** a virtual environment which ignores site packages::
 
   virtualenv --no-site-packages env-name
 
@@ -57,9 +51,7 @@ Python Version
 ==============
 
 I managed to create a virtual environment for python 2.5 on my Ubuntu box
-with the following command:
-
-::
+with the following command::
 
   /usr/bin/python2.5 /usr/local/bin/virtualenv --no-site-packages env-name
 
@@ -70,9 +62,7 @@ Debian virtual machine with only python 2.5 installed.
 Yolk
 ====
 
-You can use *Yolk* to list the installed python packages on your system:
-
-::
+You can use *Yolk* to list the installed python packages on your system::
 
   easy_install yolk
   yolk -l

@@ -46,6 +46,7 @@ Contents:
    redis/index
    redmine/index
    ruby/index
+   social/index
    solr/index
    sqlite/index
    subversion/index

@@ -90,7 +90,11 @@ Exists
 Looping
 =======
 
-::
+python 3::
+
+  >>> for k, v in knights.items():
+
+python 2::
 
   >>> knights = {'gallahad': 'the pure', 'robin': 'the brave'}
   >>> for k, v in knights.iteritems():

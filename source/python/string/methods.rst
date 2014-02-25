@@ -223,9 +223,7 @@ replace
 
 Return a copy of the string with all occurrences of substring old replaced
 by new.  If the optional third argument ``count`` is given, only the first
-count occurrences are replaced:
-
-::
+count occurrences are replaced::
 
   >>> print '***'.replace('*', '+++ ')
   +++ +++ +++

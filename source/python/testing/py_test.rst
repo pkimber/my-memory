@@ -49,6 +49,15 @@ Discovery
 Plugins
 =======
 
+Coverage
+--------
+
+https://pypi.python.org/pypi/pytest-cov::
+
+  pip install pytest-cov
+
+  py.test --cov .
+
 Django
 ------
 
@@ -77,7 +86,13 @@ To ``print`` or use ``ipdb``, use the ``-s`` option::
 PEP 8
 -----
 
-http://pypi.python.org/pypi/pytest-pep8/
+http://pypi.python.org/pypi/pytest-pep8/::
+
+  pip install pytest-pep8
+
+  py.test --pep8
+  # to clear the cache
+  py.test --pep8 --clearcache
 
 
 .. _`A simple way of running your tests from within VIM`: https://github.com/alfredodeza/pytest.vim
