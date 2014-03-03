@@ -83,6 +83,14 @@ To ``print`` or use ``ipdb``, use the ``-s`` option::
 
     py.test -x --create-db
 
+Flakes
+------
+
+::
+
+  pip install pytest-flakes
+  py.test --flakes
+
 PEP 8
 -----
 

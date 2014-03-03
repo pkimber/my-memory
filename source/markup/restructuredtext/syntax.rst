@@ -175,23 +175,23 @@ include directive e.g:
 Images
 ======
 
-- Create an ``images`` folder alongside the folder containing the ``rst``
-  files:
+Create an ``images`` folder alongside the folder containing the ``rst``
+files:
 
-  ::
+::
 
-    doc/source/
-    doc/images/
+  doc/source/
+  doc/images/
 
-- Copy in your images (``png`` format is probably best).
-- To reference the image from the ``rst`` file:
+Copy in your images (``png`` format is probably best).
+To reference the image from the ``rst`` file:
 
-  ::
+::
 
-    .. image:: ../images/project.png
-       :scale: 60
+  .. image:: ../images/project.png
+     :scale: 60
 
-  Here we use the ``scale`` directive.  For others see: `Image Directives`_
+Here we use the ``scale`` directive.  For others see: `Image Directives`_
 
 Line
 ====

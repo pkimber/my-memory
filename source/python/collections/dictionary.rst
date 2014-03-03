@@ -150,6 +150,17 @@ Return the keys as a list... (and sort in place).
 **Note**: There is also a ``sorted`` function which will sort a copy of the
 list (i.e. not in place).
 
+Values
+======
 
+In python 3, you probably need to convert the ``values`` to a ``list`` e.g::
+
+  return list(result.values())
+
+I don't fully understand this yet, but perhaps `Dictionary view objects`_
+might help?
+
+
+.. _`Dictionary view objects`: http://docs.python.org/3/library/stdtypes.html#dictionary-view-objects
 .. _`python - Sorting Mini-HOW TO`: http://wiki.python.org/moin/HowTo/Sorting
 .. _`Simple but handy "collector of a bunch of named stuff" class`: http://code.activestate.com/recipes/52308-the-simple-but-handy-collector-of-a-bunch-of-named/

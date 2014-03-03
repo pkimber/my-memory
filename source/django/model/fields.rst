@@ -107,6 +107,9 @@ BooleanField
 
   models.BooleanField()
 
+From Django 1.6, set ``default=False`` (if you want the default value to be
+``False``).
+
 If you need to accept null values then use ``NullBooleanField`` instead.
 
 CharField

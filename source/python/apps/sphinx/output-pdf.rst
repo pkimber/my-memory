@@ -4,9 +4,7 @@ PDF
 Single Page
 ===========
 
-http://rst2pdf.ralsina.com.ar/
-
-::
+http://rst2pdf.ralsina.com.ar/::
 
   rst2pdf source/info/cv.rst -o cv.pdf
 
@@ -30,15 +28,11 @@ Linux
 
 Install Latex, :doc:`../../../linux/latex`
 
-Generate the PDF document:
-
-::
+Generate the PDF document::
 
   make latexpdf
 
-Open the document:
-
-::
+Open the document::
 
   evince build/latex/MyProjectName.pdf
 
@@ -46,9 +40,7 @@ Windows
 -------
 
 To generate a PDF document from a standard Sphinx project, we need to start by
-producing ``latex`` output:
-
-::
+producing ``latex`` output::
 
   make latex
 
@@ -57,15 +49,11 @@ To convert the latex documentation into PDF format:
 Download the *basic MiKTeX system*, ``basic-miktex-2.8.3557.exe``, from
 http://www.miktex.org/.
 
-I installed to:
-
-::
+I installed to::
 
   C:\tools\MiKTeX 2.8\
 
-Run *TeXworks* by clicking *Start*, *All Programs*, *MiKTeX 2.8*, *TeXworks*.
-
-::
+Run *TeXworks* by clicking *Start*, *All Programs*, *MiKTeX 2.8*, *TeXworks*::
 
   "C:\tools\MiKTeX 2.8\miktex\bin\miktex-texworks.exe"
 
@@ -86,9 +74,7 @@ tex.bat_.
 
 To generate the ``pdf`` file, change into the folder containing your ``tex``
 file and run the ``pdflatex`` command passing the ``tex`` file as the first
-parameter.  The ``pdf`` file will be generated in the current folder e.g:
-
-::
+parameter.  The ``pdf`` file will be generated in the current folder e.g::
 
   cd doc\latex\
   pdflatex myApp.tex
@@ -99,9 +85,7 @@ Customise
 Latex
 -----
 
-The latex ``documentclass`` files can be found as follows:
-
-::
+The latex ``documentclass`` files can be found as follows::
 
   cdsitepackages
   cd sphinx

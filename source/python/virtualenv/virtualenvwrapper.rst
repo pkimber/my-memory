@@ -50,6 +50,10 @@ To use python3::
 
   mkvirtualenv --python=/usr/bin/python3 temp
 
+To use python2::
+
+  mkvirtualenv -p /usr/bin/python temp
+
 Run the ``workon`` command to list the virtual environments::
 
   workon

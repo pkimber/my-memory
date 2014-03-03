@@ -1,6 +1,8 @@
 Regular Expressions
 *******************
 
+.. highlight:: python
+
 Links
 =====
 
@@ -28,6 +30,15 @@ Sample
   >>> print p.match('')
   None
 
+Extract (positive) numbers from a string
+----------------------------------------
+
+From `Extract numbers from a string`_::
+
+  >>> import re
+  >>> re.findall(r'\d+', 'hello 42 I\'m a 32 string 30')
+  ['42', '32', '30']
+
 
 .. _`Verbose Regular Expressions`: http://www.diveintopython.org/regular_expressions/verbose.html
-
+.. _`Extract numbers from a string`: http://stackoverflow.com/questions/4289331/python-extract-numbers-from-a-string
