@@ -1,6 +1,8 @@
 py.test
 *******
 
+.. highlight:: bash
+
 Links
 =====
 
@@ -27,6 +29,12 @@ Disable capturing::
 Select tests::
 
   py.test -k test_simple
+
+Modify traceback::
+
+  py.test -x --tb=short
+
+For more information, see `Modifying Python traceback printing`_
 
 Debug
 =====
@@ -105,3 +113,4 @@ http://pypi.python.org/pypi/pytest-pep8/::
 
 .. _`A simple way of running your tests from within VIM`: https://github.com/alfredodeza/pytest.vim
 .. _`Conventions for Python test discovery`: http://doc.pytest.org/en/latest/goodpractises.html#test-discovery
+.. _`Modifying Python traceback printing`: https://pytest.org/latest/usage.html#modifying-python-traceback-printing

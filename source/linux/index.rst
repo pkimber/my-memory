@@ -52,6 +52,7 @@ Contents
    gnupg
    grep
    grub
+   image
    kernel
    latex
    ls
@@ -84,7 +85,6 @@ Contents
    watch
    wc
    which
-   whois
    wine
    workstation
    x

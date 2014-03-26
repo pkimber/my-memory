@@ -134,7 +134,7 @@ Format
   >>> now.strftime('%d/%m/%Y %H:%M')
   '20/05/2011 10:55'
 
-Also see ``strftime`` in time_.
+Also see ``strftime`` in time_ and http://strftime.org/
 
 
 .. _`date range iterator`: http://www.ianlewis.org/en/python-date-range-iterator

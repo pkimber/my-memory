@@ -20,9 +20,7 @@ Catch
 Unknown
 -------
 
-...to catch exceptions of an unknown, try:
-
-::
+...to catch exceptions of an unknown, try::
 
   try:
       somecode()
@@ -41,9 +39,7 @@ Finally
 
 **Note** for python/jython 2.1 see *Note* below...
 
-`Try..Finally`_
-
-::
+`Try..Finally`_::
 
   try:
       f = file('poem.txt')
@@ -105,10 +101,8 @@ Rethrow
 
 raise_
 
-If no expressions are present, raise re-raises the last exception that was active
-in the current scope:
-
-::
+If no expressions are present, raise re-raises the last exception that was
+active in the current scope::
 
   raise
 

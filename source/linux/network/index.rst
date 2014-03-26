@@ -14,4 +14,5 @@ Contents
    pptp
    remote-desktop
    samba
+   whois
    wireshark

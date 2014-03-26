@@ -55,7 +55,7 @@ To list processes run ``status``::
 Reload
 ------
 
-I am not sure if this is correct, but try::
+::
 
   supervisor> reread
   supervisor> update
@@ -66,6 +66,9 @@ I am not sure if this is correct, but try::
 Issues
 ======
 
+Another program is already
+--------------------------
+
 ::
 
   Starting supervisor:
@@ -75,3 +78,13 @@ Issues
 To solve this issue::
 
   sudo unlink /var/run/supervisor.sock
+
+Weird/repeating errors
+----------------------
+
+I think ``supervisor`` caches the contents of the ``config`` file.  I had an
+issue where I updated my python path to use a ``virtualenv`` and it couldn't
+import packages which had been installed.
+
+To solve the issue make sure the config file is ``reread``, ``reload``,
+``update`` (or something)...

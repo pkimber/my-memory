@@ -1,6 +1,8 @@
 Keys
 ****
 
+.. highlight:: bash
+
 Links
 =====
 
@@ -30,6 +32,10 @@ To copy your key to a server (so you no longer need the password)::
   ssh-copy-id root@myserver
 
 This command will simply copy your key to ``~/.ssh/authorized_keys``.
+
+To append the key without an editor::
+
+  cat mykey.pub >> .ssh/authorized_keys
 
 To copy the key to your clipboard::
 

@@ -267,9 +267,7 @@ The title for a generic, titled admonition may be anything (e.g.
 Syntax Highlighting
 ===================
 
-To set the highlight value for all following literal blocks:
-
-::
+To set the highlight value for all following literal blocks::
 
   .. highlight:: xml
 
@@ -278,9 +276,7 @@ To set the highlight value for all following literal blocks:
     <com.sample.ImageView
         android:id="@+id/img_banner" />
 
-To set the language for one block:
-
-::
+To set the language for one block::
 
   .. code-block:: xml
 
