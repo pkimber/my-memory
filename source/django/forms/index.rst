@@ -14,5 +14,6 @@ Contents
    formsets
    models
    template
+   tips
    validation
    widgets
