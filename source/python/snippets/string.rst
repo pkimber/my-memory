@@ -6,9 +6,7 @@ String
 Contains letters etc
 ====================
 
-`Verify that a string only contains letters, numbers`_
-
-::
+`Verify that a string only contains letters, numbers`_::
 
   import string
   allowed = string.letters + string.digits + '_' + '-'
@@ -27,9 +25,7 @@ Remove Newlines
 Lowercase First Character of a String
 =====================================
 
-`How to down-case the first character of a string in Python`_
-
-::
+`How to down-case the first character of a string in Python`_::
 
   func = lambda s: s[:1].lower() + s[1:] if s else ''
 

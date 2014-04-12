@@ -31,9 +31,7 @@ DecimalField
 ForeignKey
 ==========
 
-Also see ``ModelChoiceField`` example below:
-
-::
+Also see ``ModelChoiceField`` example below::
 
   def __init__(self, *args, **kwargs):
       # ...
@@ -42,17 +40,18 @@ Also see ``ModelChoiceField`` example below:
           company=self.instance
       )
 
-
 From `Overriding ModelChoiceField`_ and ModelChoiceField_, to set the content
 of the drop down list::
 
   class ContactModelChoiceField(ModelChoiceField):
+
       def label_from_instance(self, obj):
           return '{} {}'.format(obj.firstname, obj.surname)
 
+
   class MarketingForm(forms.ModelForm):
+
       def __init__(self, *args, **kwargs):
-          # ...
           super(MarketingForm, self).__init__(*args, **kwargs)
           self.fields['contact'] = ContactModelChoiceField(
               queryset=Contact.objects.filter(
@@ -61,6 +60,11 @@ of the drop down list::
                   'firstname'
               )
           )
+
+.. note::
+
+  To change the contents of a ``ManyToManyField``, just replace
+  ``ModelChoiceField`` with ``ModelMultipleChoiceField``.
 
 ModelChoiceField
 ----------------
@@ -71,6 +75,7 @@ ModelChoiceField
   from django.contrib.auth.models import User
 
   class ComplaintForm(forms.Form):
+
       user = forms.ModelChoiceField(queryset=User.objects.none())
       message = forms.CharField(widget=forms.Textarea())
 

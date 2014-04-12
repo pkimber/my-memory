@@ -15,9 +15,7 @@ String
 Replace multiple spaces with a single space
 -------------------------------------------
 
-`Compressing consecutive spaces`_
-
-::
+`Compressing consecutive spaces`_::
 
   >>> test = "a  b c d   efdd  slkj   sdfdsfl"
   >>> " ".join(test.split())
@@ -26,9 +24,7 @@ Replace multiple spaces with a single space
 Strip Non Printable Characters
 ------------------------------
 
-`Stripping non printable characters from a string in python`_
-
-::
+`Stripping non printable characters from a string in python`_::
 
   def filter_non_printable(str):
       return ''.join([c for c in str if ord(c) > 31 or ord(c) == 9])
@@ -36,4 +32,3 @@ Strip Non Printable Characters
 
 .. _`Compressing consecutive spaces`: http://mail.python.org/pipermail/python-list/2007-July/620255.html
 .. _`Stripping non printable characters from a string in python`: http://stackoverflow.com/questions/92438/stripping-non-printable-characters-from-a-string-in-python
-

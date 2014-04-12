@@ -29,9 +29,7 @@ Append/Extend
   In [8]: l1
   Out[8]: [1, 2, 3, 4, 5, 6]
 
-Not sure if it is OK to do the following, but it appears to work:
-
-::
+Not sure if it is OK to do the following, but it appears to work::
 
   >>> l1 = ['peter', 'alison',]
   >>> l2 = ['barry', 'martin',]
@@ -46,17 +44,13 @@ Not sure if it is OK to do the following, but it appears to work:
 Convert
 -------
 
-List to dictionary:
-
-::
+List to dictionary::
 
   >>> l = [(1, 'one'), (2, 'two'), (3, 'three')]
   >>> dict(l)
   {1: 'one', 2: 'two', 3: 'three'}
 
-List to tuple:
-
-::
+List to tuple::
 
   >>> sports = ['football', 'cricket']
   >>> tuple(sports)
@@ -75,9 +69,7 @@ Delete/Remove
 Get
 ---
 
-Get the last element in the list:
-
-::
+Get the last element in the list::
 
   l[-1]
 
@@ -117,18 +109,14 @@ Looping - Over More Than One List
 Reverse
 -------
 
-Reverses the items of l **in place**:
-
-::
+Reverses the items of l **in place**::
 
   l.reverse()
 
 Slicing
 -------
 
-From `good primer for python slice notation`_:
-
-::
+From `good primer for python slice notation`_::
 
   a[start:end] # items start through end-1
   a[start:]    # items start through the rest of the array
@@ -138,9 +126,7 @@ From `good primer for python slice notation`_:
 Sorting
 -------
 
-Sorting (in place):
-
-::
+Sorting (in place)::
 
   l.sort()
 

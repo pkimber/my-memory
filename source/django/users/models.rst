@@ -1,6 +1,8 @@
 Models
 ******
 
+.. highlight:: python
+
 ::
 
   from django.contrib.auth.models import User

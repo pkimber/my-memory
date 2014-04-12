@@ -101,6 +101,7 @@ Shortcuts
 *ctrl a*, "           split screen horizontally
 *ctrl a*, *spacebar*  cycle through standard pane layouts
 *ctrl a*, q           momentarily display pane numbers
+*ctrl a*, z           zoom (or un-zoom) a pane
 
 *ctrl a*, o           switch to another pane
 *ctrl a*, *arrow*     switch to another pane using the arrow keys
