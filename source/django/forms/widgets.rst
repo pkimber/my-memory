@@ -1,10 +1,14 @@
 Widgets
 *******
 
+.. highlight:: python
+
 Attributes
 ==========
 
-::
+To change the widget for a model form, see :doc:`model`.
+
+To change the widget for a standard form::
 
   class ProductForm(forms.Form):
       sku = forms.CharField(
@@ -14,8 +18,6 @@ Attributes
               })
           )
 
-The HTML source code created by this widget looks like this:
-
-::
+The HTML source code created by this widget looks like this::
 
   <input name="sku" value="teapot" readonly="readonly" type="text" id="sku" size="50" />

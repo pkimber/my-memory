@@ -89,9 +89,7 @@ Two options - just display the field on the template:
 Widget
 ------
 
-To change the widget and set attributes for a form field:
-
-::
+To change the widget and set attributes for a form field::
 
   from django.forms.widgets import Select
 

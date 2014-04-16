@@ -83,6 +83,23 @@ ModelChoiceField
           super(ComplaintForm, self).__init__(*args, **kwargs)
           self.fields["user"].queryset = User.objects.filter(is_staff=False)
 
+RadioSelect
+-----------
+
+To use a ``RadioSelect`` widget on a model form::
+
+    class Meta:
+        # ...
+        widgets = {
+            'level': forms.RadioSelect
+        }
+
+To remove the empty value::
+
+  def __init__(self, *args, **kwargs):
+      super(MyForm, self).__init__(*args, **kwargs)
+      self.fields['level'].empty_label = None
+
 
 .. _`Changing the ModelChoiceField QuerySet`: http://oebfare.com/blog/2008/feb/23/changing-modelchoicefield-queryset/
 .. _`Overriding ModelChoiceField`: https://github.com/maraujop/django-crispy-forms/issues/82
