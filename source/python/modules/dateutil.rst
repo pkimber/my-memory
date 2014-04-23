@@ -39,6 +39,15 @@ First day of the previous month::
   >>> d + relativedelta(months=-1, day=1)
   datetime.date(2013, 8, 1)
 
+Last day of the previous month::
+
+  >>> d + relativedelta(day=1, days=-1)
+  datetime.date(2013, 8, 31)
+
+Last day of this month::
+
+  >>> d + relativedelta(months=+1, day=1, days=-1)
+
 Tomorrow::
 
   date.today() + relativedelta(days=1)

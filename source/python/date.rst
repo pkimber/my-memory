@@ -6,6 +6,10 @@ Date Time
 Links
 =====
 
+.. note::
+
+  Check :doc:`../modules/dateutil`.  It is very nice.
+
 - :doc:`calendar`
 - https://github.com/crsmithdev/arrow
   Better date and time manipulation for Python
@@ -17,6 +21,10 @@ Links
 
 Snippets
 --------
+
+.. note::
+
+  Check :doc:`../modules/dateutil` before using these snippets...
 
 - Add one day, :doc:`snippets/date`
 - Add one month, :doc:`snippets/date`
