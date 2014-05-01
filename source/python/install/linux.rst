@@ -1,49 +1,71 @@
 Linux
 *****
 
-Prerequisites
-=============
+.. highlight:: bash
 
-Check to make sure the following are **not** installed::
+.. note::
 
-  dpkg -l | grep python-virtualenv
-  dpkg -l | grep python-pip
-  dpkg -l | grep python-setuptools
-  dpkg -l | grep virtualenvwrapper
+  The release of ubuntu 14.04 has made this alot more complicated (at least
+  for now).
 
-easy_install
-============
+  We need python 2 and python 3 to work alongside each other in a similar
+  manner.
 
-Download the ``setuptools`` ``egg`` file (make sure you have the version
-matching the python you have installed)::
+  01/05/2014, For now, I will stop using ``virtualenvwrapper`` and just use
+  ``activate`` instead.
 
-  wget http://pypi.python.org/packages/2.7/s/setuptools/setuptools-0.6c11-py2.7.egg
-  wget http://pypi.python.org/packages/2.6/s/setuptools/setuptools-0.6c11-py2.6.egg
-  wget http://pypi.python.org/packages/2.5/s/setuptools/setuptools-0.6c11-py2.5.egg
+See:
 
-Run the installer as the root user as a shell script::
+https://django-dev-and-deploy-using-salt.readthedocs.org/en/latest/dev-env.html
+and
+https://github.com/pkimber/docs/blob/master/source/dev-env.rst
 
-  sudo sh setuptools-0.6c11-py2.7.egg
 
-pip
-===
-
-Note:
-
-Apparently, if you ``easy_install virtualenv`` you will automatically get a
-copy of ``pip`` (*but it didn't work for me*).
-
-The new version of ``pip`` includes an installer script.  See `release
-notes`_::
-
-  sudo easy_install pip
-
-virtualenv and virtualenvwrapper
-================================
-
-::
-
-  sudo pip install virtualenvwrapper
+.. Prerequisites
+.. =============
+.. 
+.. Check to make sure the following are **not** installed::
+.. 
+..   dpkg -l | grep python-virtualenv
+..   dpkg -l | grep python-pip
+..   dpkg -l | grep python-setuptools
+..   dpkg -l | grep virtualenvwrapper
+.. 
+.. python 2
+.. ========
+.. 
+.. Download and install ``setuptools``::
+.. 
+..   wget https://bitbucket.org/pypa/setuptools/raw/bootstrap/ez_setup.py -O - | sudo python
+..   sudo easy_install pip
+..   sudo pip install virtualenv
+.. 
+.. To create and activate a virtual environment::
+.. 
+..   virtualenv --no-site-packages venv-name
+..   source venv-name/bin/activate
+.. 
+.. python 3
+.. ========
+.. 
+.. To create a virtual environment::
+.. 
+..   pyvenv-3.4 --without-pip venv-name
+..   source venv-name/bin/activate
+..   wget https://raw.githubusercontent.com/pypa/pip/master/contrib/get-pip.py
+..   python get-pip.py
+.. 
+.. To activate a virtual environment::
+.. 
+..   source venv-name/bin/activate
+.. 
+.. 
+.. virtualenv and virtualenvwrapper
+.. ================================
+.. 
+.. ::
+.. 
+..   sudo pip install virtualenvwrapper
 
 
 .. _`release notes`: http://www.pip-installer.org/en/latest/news.html
