@@ -14,6 +14,13 @@ Links
 API
 ===
 
+Empty
+-----
+
+To create an empty queryset::
+
+  MyModel.objects.none()
+
 LIMIT
 -----
 

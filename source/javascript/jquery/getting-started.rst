@@ -1,14 +1,14 @@
 Getting Started
 ***************
 
+.. highlight:: javascript
+
 Download
 ========
 
 Download jQuery from
 http://docs.jquery.com/Downloading_jQuery#Current_Release
-(option to download the *Uncompressed* version for development.
-
-::
+(option to download the *Uncompressed* version for development::
 
   wget http://code.jquery.com/jquery-1.6.1.min.js
 
@@ -34,9 +34,7 @@ Include and Initialise
     </body>
   </html>
 
-Here is another version of the initialise function:
-
-::
+Here is another version of the initialise function::
 
   jQuery(function() {
       $("div.notLongForThisWorld").hide();

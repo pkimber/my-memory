@@ -40,6 +40,7 @@ List tables                         ``\d``
 List tables (in a schema)           ``\dt myschema.*``
 List table-spaces                   ``\db``
 List schemas                        ``\dn``
+List users and their roles          ``\du``
 To view a table definition:         ``\d guser;``
 To view command history:            ``\s``
 Quit                                ``\q``
