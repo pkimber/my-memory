@@ -16,6 +16,26 @@ If you need a migration from another app to run first::
 
       def forwards(self, orm):
 
+Ghost
+=====
+
+.. warning:: Be very careful before using the solution below on a production
+             database.  Something has probably gone wrong!
+
+If you are using a development database and you have been deleting and
+re-creating migrations, you might get the following error::
+
+  ! These migrations are in the database but not on disk:
+  <pay: 0003_auto__add_field_product_bundle>
+  ! I'm not trusting myself; either fix this yourself by fiddling
+  ! with the south_migrationhistory table, or pass --delete-ghost-migrations
+  ! to South to have it delete ALL of these records (this may not be good).
+
+The following message solved the problem::
+
+  django-admin.py migrate --delete-ghost-migrations
+
+.. warning:: Read the warning above before running this command!
 
 `South - Settings`_...
 ======================
