@@ -15,5 +15,6 @@ Contents
    local
    pillar
    master
+   modules
    salt-cloud
    state

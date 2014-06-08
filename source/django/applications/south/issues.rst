@@ -49,4 +49,3 @@ than with migrations::
 
 
 .. _`South - Settings`: http://south.aeracode.org/docs/settings.html#south-tests-migrate
-

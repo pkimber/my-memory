@@ -8,6 +8,7 @@ Contents
 
    aggregate
    api
+   does-not-exist
    field-lookups
    insert
    q

@@ -6,7 +6,7 @@ Getting Started
 Links
 =====
 
-- http://south.aeracode.org/
+http://south.aeracode.org/
 
 Install
 =======
