@@ -8,7 +8,7 @@ Links
 
 .. note::
 
-  Check :doc:`../modules/dateutil`.  It is very nice.
+  Check :doc:`modules/dateutil`.  It is very nice.
 
 - :doc:`calendar`
 - https://github.com/crsmithdev/arrow
@@ -24,7 +24,7 @@ Snippets
 
 .. note::
 
-  Check :doc:`../modules/dateutil` before using these snippets...
+  Check :doc:`modules/dateutil` before using these snippets...
 
 - Add one day, :doc:`snippets/date`
 - Add one month, :doc:`snippets/date`
