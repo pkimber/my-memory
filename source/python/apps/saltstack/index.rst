@@ -17,4 +17,5 @@ Contents
    master
    modules
    salt-cloud
+   salt-cloud-amazon
    state

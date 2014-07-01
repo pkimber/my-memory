@@ -1,6 +1,8 @@
 Salt Cloud
 **********
 
+Also see :doc:`salt-cloud-amazon`
+
 Prerequisites
 =============
 
