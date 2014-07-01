@@ -11,6 +11,7 @@ Contents:
 .. toctree::
    :maxdepth: 1
 
+   amazon/index
    android/index
    apache/index
    c++/index
