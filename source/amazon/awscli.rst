@@ -51,11 +51,9 @@ Create a security group::
       --cidr 198.51.100.100/32 \
       --protocol tcp --port 22
 
-.. note::
+.. note:: Replace the IP address above with your own!
 
-  Replace the IP address above with your own!
-
-  ``authorize-security-group-ingress`` can be repeated as required.
+.. tip:: ``authorize-security-group-ingress`` can be repeated as required.
 
 To view the details for the security group::
 

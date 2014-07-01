@@ -33,8 +33,6 @@ Add an image to ``cloud.profiles`` e.g::
     provider: kb_eu_west_1_private_ips
       image: ami-ff498688
 
-Note:
-
 - I chose ``ami-ff498688`` from
   http://cloud-images.ubuntu.com/releases/14.04/release/ (which I hope it a 32
   bit micro instance).
@@ -66,13 +64,29 @@ Add a ``provider`` to ``cloud.providers``::
     rename_on_destroy: True
     provider: ec2
 
-Note:
-
 - Replace ``YourAmazonId`` and ``YourAmazonKey`` with your ID and key.
 - Update the ``keyname`` and ``private_key`` so they match your own key name.
 - Find the ``availability_zone`` for your ``location`` by running
   ``aws ec2 describe-availability-zones``
 - Make sure the ``securitygroup`` matches the name you chose.
+
+Usage
+=====
+
+Create a test server::
+
+  sudo -i
+  salt-cloud
+    --profiles=/home/patrick/repo/dev/module/deploy/salt-cloud/cloud.profiles \
+    --providers-config=/home/patrick/repo/dev/module/deploy/salt-cloud/cloud.providers \
+    --profile base_ec2_private \
+    test01
+
+Log into your new server::
+
+  # no longer need to be 'root'
+  exit
+  ssh ubuntu@54.77.12.170
 
 
 .. _`How to Provision AWS EC2 Instances with Salt Cloud`: http://www.linux.com/learn/tutorials/772719-how-to-provision-aws-ec2-instances-with-salt-cloud
