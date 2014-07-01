@@ -48,5 +48,15 @@ connect by leaving out the ``host`` and ``password`` e.g::
 
   dsn = 'dbname=production user=patrick'
 
+Parameters::
+
+  sql = (
+      "INSERT INTO user_map_legacy_to_new( "
+      "user_name, email, old_id, new_pk) VALUES (%s, %s, %s, %s)"
+  )
+  cursor = conn.cursor()
+  cursor.execute(sql, [name, email, uid, user_pk])
+  cursor.close()
+
 
 .. _`pg8000 is a Pure-Python interface to the PostgreSQL database engine`: http://pybrary.net/pg8000/

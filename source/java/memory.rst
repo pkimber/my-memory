@@ -7,6 +7,7 @@ Heap Size
 ==================  ==========
 initial heap size   ``-Xms``
 maximum heap size   ``-Xmx``
+stack size          ``-Xss``
 ==================  ==========
 
 ::
@@ -23,4 +24,3 @@ JVM
 ===
 
 See Java - JVM, :doc:`jvm`
-
