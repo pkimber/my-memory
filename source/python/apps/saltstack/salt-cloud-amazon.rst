@@ -52,27 +52,56 @@ Add an image to ``cloud.profiles`` e.g::
 Add a ``provider`` to ``cloud.providers``::
 
   kb_eu_west_1_private_ips:
-    # ip address salt-cloud should connect to
-    ssh_interface: private_ips
-    # aws credentials
+    # Set up the location of the salt master
+    #
+    minion:
+      master: salt.master.pkimber.net
+
+    # Specify whether to use public or private IP for deploy script.
+    #
+    # Valid options are:
+    #     private_ips - The salt-master is also hosted with EC2
+    #     public_ips - The salt-master is hosted outside of EC2
+    #
+    ssh_interface: public_ips
+
+    # Set the EC2 access credentials
+    #
     id: YourAmazonId
     key: 'YourAmazonKey'
-    # ssh key
+
+    # Make sure this key is owned by root with permissions 0400
+    #
     keyname: my_salt_cloud_key
     private_key: /etc/salt/my_salt_cloud_key
-    # aws location
+    securitygroup: KbSecurityGroup
+
+    # Optionally configure default region
+    #
     location: eu-west-1
     availability_zone: eu-west-1a
-    # aws security group
-    securitygroup: MySecurityGroup
+
     # aws ami
     size: Micro Instance
     # delete aws root volume when minion is destroyed
     del_root_vol_on_destroy: True
-    # local user
-    ssh_username: root
-    # rename on destroy
+
+    # Configure which user to use to run the deploy script. This setting is
+    # dependent upon the AMI that is used to deploy. It is usually safer to
+    # configure this individually in a profile, than globally. Typical users
+    # are:
+    #
+    # Amazon Linux -> ec2-user
+    # RHEL         -> ec2-user
+    # CentOS       -> ec2-user
+    # Ubuntu       -> ubuntu
+    #
+    ssh_username: ubuntu
+
+    # rename instances when they are destroyed.
+    #
     rename_on_destroy: True
+
     provider: ec2
 
 - Replace ``YourAmazonId`` and ``YourAmazonKey`` with your ID and key.
@@ -87,7 +116,7 @@ Usage
 Create a test server::
 
   sudo -i
-  salt-cloud
+  salt-cloud \
     --profiles=/home/patrick/repo/dev/module/deploy/salt-cloud/cloud.profiles \
     --providers-config=/home/patrick/repo/dev/module/deploy/salt-cloud/cloud.providers \
     --profile base_ec2_private \
