@@ -49,9 +49,20 @@ Create a security group::
   aws ec2 authorize-security-group-ingress \
       --group-name MySecurityGroup \
       --cidr 198.51.100.100/32 \
-      --protocol tcp --port 22
+      --protocol tcp \
+      --port 22
+  aws ec2 authorize-security-group-ingress \
+      --group-name MySecurityGroup \
+      --protocol tcp \
+      --cidr 0.0.0.0/0 \
+      --port 80
+  aws ec2 authorize-security-group-ingress \
+      --group-name MySecurityGroup \
+      --protocol tcp \
+      --cidr 0.0.0.0/0 \
+      --port 443
 
-.. note:: Replace the IP address above with your own!
+.. note:: Replace the IP address (``198.51.100.100``) above with your own!
 
 .. tip:: ``authorize-security-group-ingress`` can be repeated as required.
 

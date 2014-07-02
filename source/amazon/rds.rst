@@ -56,11 +56,15 @@ Security
 
 To allow access to your database you need two bits of information:
 
-1. The EC2 instance ID.  Find the ``InstanceId`` by running this command::
+The EC2 instance ID.  Find the ``InstanceId`` by running this command::
 
   aws ec2 describe-instances
 
-2. The group ID of your database security group::
+The group ID of your original security group (see ``awscli``)::
+
+  aws ec2 describe-security-groups --group-names MySecurityGroup
+
+The group ID of your database security group::
 
   aws ec2 describe-security-groups --group-names MySecurityGroupDBOnly
 
@@ -68,10 +72,12 @@ This is the command to set-up the security::
 
   aws ec2 modify-instance-attribute \
     --instance-id <instance id> \
-    --groups <db security group id>
+    --groups <security group id> <db security group id>
 
 - Replace ``<instance id>`` with the ``InstanceId``
-- Replace ``<db security group id>`` with the ID of the security group.
+- Replace ``<security group id>`` with the ID of the standard security group
+  (see ``awscli``).
+- Replace ``<db security group id>`` with the ID of the database security group.
 
 Usage
 =====
