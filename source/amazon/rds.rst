@@ -73,5 +73,16 @@ This is the command to set-up the security::
 - Replace ``<instance id>`` with the ``InstanceId``
 - Replace ``<db security group id>`` with the ID of the security group.
 
+Usage
+=====
+
+You should be able to connect to your database instance using ``psql``::
+
+  psql --host=my-db-instance.cmf1ips9eg9s.eu-west-1.rds.amazonaws.com --username=dbadmin postgres
+
+- Run ``aws rds describe-db-instances`` (see above) to find the *Endpoint*
+  address.
+- Enter the master user password when prompted (see ``apg`` above)
+
 
 .. _`An Introduction to the AWS Command Line Tool Part 2`: http://www.linux.com/news/featured-blogs/206-rene-cunningham/764536-an-introduction-to-the-aws-command-line-tool-part-2
