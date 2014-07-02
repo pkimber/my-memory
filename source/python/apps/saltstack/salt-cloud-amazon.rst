@@ -13,16 +13,27 @@ Follow the instructions in :doc:`../../../amazon/awscli`
 Key
 ---
 
-Create a private and public SSH key (replace ``patrick`` with your user name
-and replace ``my_salt_cloud_key`` with a key name of your choice)::
+Create a private and public SSH key (replace ``my_salt_cloud_key`` with a key
+name of your choice)::
 
-  ssh-keygen -f ~/.ssh/my_salt_cloud_key -t rsa -b 4096
+  sudo ssh-keygen -f /etc/salt/my_salt_cloud_key -t rsa -b 4096
   aws ec2 import-key-pair --key-name my_salt_cloud_key \
-      --public-key-material file:///home/patrick/.ssh/my_salt_cloud_key.pub
+        --public-key-material file:///etc/salt/my_salt_cloud_key.pub
 
-Add the key to your agent::
+.. Add the key to your agent::
+.. ssh-add ~/.ssh/my_salt_cloud_key
 
-  ssh-add ~/.ssh/my_salt_cloud_key
+::
+
+  ssh-add /etc/salt/my_salt_cloud_key.pub
+
+To list key pairs::
+
+  aws ec2 describe-key-pairs
+
+To remove a key pair::
+
+  aws ec2 delete-key-pair --key-name my_salt_cloud_key
 
 Salt Cloud
 ----------
@@ -48,7 +59,7 @@ Add a ``provider`` to ``cloud.providers``::
     key: 'YourAmazonKey'
     # ssh key
     keyname: my_salt_cloud_key
-    private_key: /home/patrick/.ssh/my_salt_cloud_key
+    private_key: /etc/salt/my_salt_cloud_key
     # aws location
     location: eu-west-1
     availability_zone: eu-west-1a
@@ -84,9 +95,13 @@ Create a test server::
 
 Log into your new server::
 
-  # no longer need to be 'root'
-  exit
+  sudo -i
+  eval `ssh-agent`
+  ssh-add /etc/salt/my_salt_cloud_key
   ssh ubuntu@54.77.12.170
+
+.. note:: The IP address of the new server will be displayed when the
+          ``salt-cloud`` command finishes.
 
 
 .. _`How to Provision AWS EC2 Instances with Salt Cloud`: http://www.linux.com/learn/tutorials/772719-how-to-provision-aws-ec2-instances-with-salt-cloud
