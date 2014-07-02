@@ -8,7 +8,7 @@ CV - Patrick Kimber
 | Hatherleigh, Okehampton, Devon
 | United Kingdom
 |
-| email  mail@pkimber.net
+| email  web@pkimber.net
 | mobile 07840 538 357
 
 Employment History
