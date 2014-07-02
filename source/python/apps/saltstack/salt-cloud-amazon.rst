@@ -132,5 +132,9 @@ Log into your new server::
 .. note:: The IP address of the new server will be displayed when the
           ``salt-cloud`` command finishes.
 
+To get root access (on this Ubuntu server)::
+
+  sudo -i
+
 
 .. _`How to Provision AWS EC2 Instances with Salt Cloud`: http://www.linux.com/learn/tutorials/772719-how-to-provision-aws-ec2-instances-with-salt-cloud

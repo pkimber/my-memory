@@ -8,9 +8,7 @@ clone
 Usage
 =====
 
-To clone over ``ssh``:
-
-::
+To clone over ``ssh``::
 
   hg clone ssh://patrick@192.168.11.62//home/patrick/env env
   hg clone . ssh://patrick@server//home/patrick/repo/markdown
