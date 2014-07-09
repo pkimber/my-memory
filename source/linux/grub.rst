@@ -1,6 +1,8 @@
 grub
 ****
 
+.. highlight:: bash
+
 Links
 =====
 - `Boot-Repair`_
@@ -23,12 +25,24 @@ menu displays.  GRUB 2 searches for a depressed *SHIFT* key signal during boot.
 Fix
 ===
 
-- `Re-Enable Grub For Linux After Windows Install`_
+`Re-Enable Grub For Linux After Windows Install`_
+
+Order
+=====
+
+From `How do I change the GRUB boot order?`_
+
+Grub Customizer::
+
+  sudo add-apt-repository ppa:danielrichter2007/grub-customizer
+  sudo apt-get update
+  sudo apt-get install grub-customizer
 
 
 .. _`Boot-Repair`: https://help.ubuntu.com/community/Boot-Repair
 .. _`GRUB4DOS is an universal boot loader based on GNU GRUB`: https://gna.org/projects/grub4dos/
 .. _`grubinstall.exe`: http://www.geocities.com/lode_leroy/grubinstall/
+.. _`How do I change the GRUB boot order?`: http://askubuntu.com/questions/100232/how-do-i-change-the-grub-boot-order
 .. _`How to restore Grub from a live Ubuntu cd`: http://oldlight.wordpress.com/2008/10/18/how-to-restore-grub-from-a-live-ubuntu-cd/
 .. _`LILO and GRUB: Boot Loaders Made Simple`: http://www.linuxdevcenter.com/pub/a/linux/2008/01/22/lilo-and-grub-boot-loaders-made-simple.html
 .. _`Re-Enable Grub For Linux After Windows Install`: http://codytaylor.org/?p=14228

@@ -36,7 +36,7 @@ States
 user
 ----
 
-To create a password hash (where ``<password>>`` is your password)::
+To create a password hash (where ``<password>`` is your password)::
 
   mkpasswd -m sha-512 <password>
 

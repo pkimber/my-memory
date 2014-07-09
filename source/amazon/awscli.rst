@@ -64,7 +64,19 @@ Create a security group::
 
 .. note:: Replace the IP address (``198.51.100.100``) above with your own!
 
+If you want to allow ssh access from anywhere, replace the second rule with the
+following::
+
+  aws ec2 authorize-security-group-ingress \
+      --group-name MySecurityGroup \
+      --cidr 0.0.0.0/0 \
+      --protocol tcp \
+      --port 22
+
 .. tip:: ``authorize-security-group-ingress`` can be repeated as required.
+
+.. tip:: To remove a rule, use ``revoke-security-group-ingress`` with the same
+         parameters as ``authorize-security-group-ingress``.
 
 To view the details for the security group::
 
