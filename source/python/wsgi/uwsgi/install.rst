@@ -31,9 +31,7 @@ emperor
   mkdir /home/web/repo/uwsgi/vassals/
   mkdir /home/web/repo/uwsgi/log/
 
-To start the uWSGI Emperor:
-
-::
+To start the uWSGI Emperor::
 
   sudo -i -u web
   . /home/web/repo/uwsgi/venv_uwsgi/bin/activate
@@ -46,15 +44,11 @@ Configure each application
 --------------------------
 
 Create an ``ini`` file for each of your applications (e.g. for the ``whatson``
-app - built using Django 1.4):
-
-::
+app - built using Django 1.4)::
 
   vim /home/web/repo/uwsgi/vassals/whatson.ini
 
-Sample contents:
-
-::
+Sample contents::
 
   [uwsgi]
   chdir = /home/web/repo/wcc/whatson
@@ -69,9 +63,7 @@ Sample contents:
 Configure nginx
 ---------------
 
-Here is the ``nginx.conf`` file:
-
-::
+Here is the ``nginx.conf`` file::
 
   user www-data;
   error_log /var/log/nginx/error.log;

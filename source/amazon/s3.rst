@@ -1,0 +1,20 @@
+S3
+**
+
+.. highlight:: bash
+
+List::
+
+ aws s3 ls
+ # list the contents of the 'hatherleigh-info' bucket::
+ aws s3 ls s3://hatherleigh-info/
+
+Create::
+
+  aws s3 mb s3://hatherleigh-info
+
+.. note:: I don't think underlines are allowed in the bucket name.
+
+Remove::
+
+  aws s3 rb s3://hatherleigh-info

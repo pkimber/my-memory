@@ -1,11 +1,9 @@
-Amazon
-******
+Apps
+****
 
 Contents
 
 .. toctree::
    :maxdepth: 1
 
-   awscli
-   rds
-   s3
+   grunt

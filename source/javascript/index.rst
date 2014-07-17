@@ -6,6 +6,11 @@ Contents
 .. toctree::
    :maxdepth: 2
 
+   apps/index
+
+.. toctree::
+   :maxdepth: 2
+
    angular/index
    ext/index
    fckeditor/index
