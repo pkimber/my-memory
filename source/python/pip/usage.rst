@@ -1,6 +1,8 @@
 pip
 ***
 
+.. highlight:: bash
+
 Links
 =====
 
@@ -43,6 +45,10 @@ Bazaar::
 GIT::
 
   pip install git+git://github.com/rackspace/python-cloudfiles.git#egg=python-cloudfiles
+
+To install a branch, use the ``@`` parameter e.g::
+
+  pip install git+https://github.com/django-compressor/django-compressor.git@develop#egg=compressor
 
 Mercurial::
 

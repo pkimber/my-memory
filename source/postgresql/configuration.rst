@@ -7,8 +7,8 @@ http://github.com/jacobian/django-deployment-workshop
 Initialise
 ==========
 
-**NOTE** Probably not a good idea to change the default location.  Use table
-spaces instead!!
+.. warning:: Probably not a good idea to change the default location.
+             Use :doc:`tablespace` instead!!
 
 If you change the location of the ``data_directory``, you will need to
 initialise the folder.  To do this, I ran the following command:

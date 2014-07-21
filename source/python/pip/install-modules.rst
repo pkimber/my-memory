@@ -1,6 +1,8 @@
 Install Modules
 ***************
 
+.. highlight:: bash
+
 Links
 =====
 

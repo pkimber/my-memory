@@ -1,10 +1,12 @@
 Getting Started
 ***************
 
+.. highlight:: bash
+
 Install
 =======
 
-Make sure you have Ubuntu Raring 13.04 (64 bit)
+Make sure you have Ubuntu 14.04 (64 bit)
 
 ::
 
@@ -12,14 +14,17 @@ Make sure you have Ubuntu Raring 13.04 (64 bit)
 
 ::
 
-  sudo apt-get install linux-image-extra-`uname -r`
-  sudo apt-get install software-properties-common
+  [ -e /usr/lib/apt/methods/https ] || {
+    apt-get update
+    apt-get install apt-transport-https
+  }
 
-  sudo add-apt-repository ppa:dotcloud/lxc-docker
+  sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 36A1D7869245C8950F966E92D8576A8BA88D21E9
+  sudo sh -c "echo deb https://get.docker.io/ubuntu docker main > /etc/apt/sources.list.d/docker.list"
   sudo apt-get update
   sudo apt-get install lxc-docker
 
-Docker uses a bridge to manage containers networking, by default UFW drop all
+Docker uses a bridge to manage containers networking, by default UFW drops all
 forwarding, a first step is to enable forwarding::
 
   sudo vim /etc/default/ufw
@@ -28,9 +33,7 @@ forwarding, a first step is to enable forwarding::
   # to
   DEFAULT_FORWARD_POLICY="ACCEPT"
 
-Then reload UFW:
-
-::
+Then reload UFW::
 
   sudo ufw reload
 

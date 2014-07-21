@@ -1,6 +1,8 @@
 PyPI - Python Package Index
 ***************************
 
+.. highlight:: bash
+
 .. note::
 
   Check out :doc:`../apps/devpi`
@@ -12,23 +14,17 @@ Also see :doc:`../apps/proxypypi`
 Mirror
 ======
 
-`What to do when PyPI goes down`_
-
-::
+`What to do when PyPI goes down`_::
 
   pip install -i http://d.pypi.python.org $PACKAGE
 
 Note: Three mirrors are available, ``b``, ``c`` and ``d``.
 
-... or:
-
-::
+... or::
 
   pip install --use-mirrors $PACKAGE
 
-... or set the following environment variable in ``~/.bashrc``:
-
-::
+... or set the following environment variable in ``~/.bashrc``::
 
   export PIP_USE_MIRRORS=true
 

@@ -1,6 +1,8 @@
 Requirements
 ************
 
+.. highlight:: bash
+
 Links
 =====
 

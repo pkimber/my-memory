@@ -7,21 +7,17 @@ Table Space
 
   CREATE TABLESPACE cbs LOCATION '/mnt/cbsvolume/pgdata';
 
-To list table spaces:
-
-::
+To list table spaces::
 
   postgres=# \db
                 List of tablespaces
-      Name    |  Owner   |       Location        
+      Name    |  Owner   |       Location
   ------------+----------+-----------------------
    cbs        | postgres | /mnt/cbsvolume/pgdata
-   pg_default | postgres | 
-   pg_global  | postgres | 
-  
-To show which database are on a table space:
+   pg_default | postgres |
+   pg_global  | postgres |
 
-::
+To show which database are on a table space::
 
   postgres=# \l+
                                      List of databases
