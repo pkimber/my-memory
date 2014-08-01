@@ -8,3 +8,4 @@ Contents
 
    links
    install
+   report

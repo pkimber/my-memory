@@ -10,6 +10,7 @@ Contents
    ack
    avconv
    docker/index
+   encrptfs
    gimp/index
    guake
    inkscape/index
