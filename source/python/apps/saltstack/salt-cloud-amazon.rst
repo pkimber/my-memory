@@ -120,7 +120,7 @@ Create a test server::
     --profiles=/home/patrick/repo/dev/module/deploy/salt-cloud/cloud.profiles \
     --providers-config=/home/patrick/repo/dev/module/deploy/salt-cloud/cloud.providers \
     --profile base_ec2_private \
-    test01
+    test-ec2
 
 Log into your new server::
 

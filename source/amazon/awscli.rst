@@ -33,7 +33,7 @@ The following two commands will get the command line tool running::
   aws ec2 describe-availability-zones
 
 Security Group
---------------
+==============
 
 Find your external IP address::
 
@@ -85,6 +85,43 @@ To view the details for the security group::
 To delete a security group::
 
   aws ec2 delete-security-group --group-name MySecurityGroup
+
+Salt Master
+-----------
+
+To allow inbound connections to a Salt master...
+
+Create the security group::
+
+  aws ec2 create-security-group \
+      --group-name SaltMaster \
+      --description "Salt Master"
+  aws ec2 authorize-security-group-ingress \
+      --group-name SaltMaster \
+      --protocol tcp \
+      --cidr 0.0.0.0/0 \
+      --port 4505
+  aws ec2 authorize-security-group-ingress \
+      --group-name SaltMaster \
+      --protocol tcp \
+      --cidr 0.0.0.0/0 \
+      --port 4506
+
+Assign the group to the Salt Master:
+
+Find the ``InstanceId``, current group id and the new group id::
+
+  # find the instance id (in this example, the name is 'master-ec2')
+  # filter by the 'Name' tag.
+  aws ec2 describe-instances --filter Name=tag:Name,Values=master-ec2
+
+  # find the id of the new group
+  aws ec2 describe-security-groups --group-names SaltMaster
+
+Assign the old group id and the new group id to the instance::
+
+  ec2-modify-instance-attribute i-6b9cf329 --group-id sg-fd35ea98
+  aws ec2 modify-instance-attribute --instance-id i-6b9cf329 --groups sg-fd35ea98 sg-85d41fe0
 
 
 .. _`An Introduction to the AWS Command Line Tool`: http://www.linux.com/learn/tutorials/761430-an-introduction-to-the-aws-command-line-tool

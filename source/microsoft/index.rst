@@ -8,6 +8,7 @@ Contents
 
    dev/index
    dos/index
+   office/index
    visio/index
    windows/index
 
@@ -17,7 +18,6 @@ Contents
    links
    enterprise-library
    event-viewer
-   excel
    ftp
    iis-issues
    iis
@@ -25,7 +25,6 @@ Contents
    linq
    messenger
    networking
-   office
    outlook-express
    outlook
    patterns-and-practices
@@ -35,4 +34,3 @@ Contents
    tips
    visual-studio-tips
    web-services
-   word

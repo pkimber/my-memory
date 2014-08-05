@@ -15,7 +15,7 @@ These articles will also be useful:
 
 Install::
 
-  sudo apt-get install ecryptfs-utils 
+  sudo apt-get install ecryptfs-utils
   ecryptfs-setup-private
 
 Enter your login password, and either choose a mount pass phrase or generate
