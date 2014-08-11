@@ -3,6 +3,8 @@ Methods (and functions)
 
 .. highlight:: python
 
+**For string formatting, check out the Cookbook_**
+
 Links
 =====
 
@@ -268,5 +270,5 @@ methods of string types now accept tuples of strings to check for::
   return filename.endswith(('.gif', '.jpg', '.tiff'))
 
 
-.. _Cookbook: http://mkaz.com/solog/python-string-format
+.. _Cookbook: http://mkaz.com/2012/10/10/python-string-format/
 .. _`String Formatting Operations`: http://docs.python.org/library/stdtypes.html#string-formatting

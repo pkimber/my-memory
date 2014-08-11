@@ -5,9 +5,7 @@ Testing Forms
 
 `Tests for the django-registration application`_.
 
-For unit testing forms:
-
-::
+For unit testing forms::
 
   data = {
       'email': 'user@net.com',
@@ -61,6 +59,15 @@ Attributes
       for i in element.attrs:
           attributes[i[0]] = i[1]
       return attributes
+
+View
+----
+
+To test a form within a view::
+
+  response = self.client.get(url)
+  form = response.context_data['form']
+  self.assertEqual('test@pkimber.net', form.initial['email'])
 
 
 .. _`Tests for the django-registration application`: http://bitbucket.org/ubernostrum/django-registration/src/tip/registration/tests/forms.py

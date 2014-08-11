@@ -40,7 +40,8 @@ INTO
 Like
 ====
 
-::
+The following two statements illustrate that string comparisons are not case
+sensitive unless one of the operands is a binary string::
 
   SELECT * FROM auth_user WHERE first_name LIKE '%kimber%';
 
