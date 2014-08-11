@@ -3,7 +3,7 @@ Methods (and functions)
 
 .. highlight:: python
 
-**For string formatting, check out the Cookbook_**
+.. tip:: For string formatting, check out the Cookbook_
 
 Links
 =====
