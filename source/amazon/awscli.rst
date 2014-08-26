@@ -5,7 +5,7 @@ AWS Command Line Tool
 
 From `An Introduction to the AWS Command Line Tool`_
 
-Also see :doc:`../python/apps/saltstack/salt-cloud-amazon`
+.. tip:: Also see :doc:`../python/apps/saltstack/salt-cloud-amazon`
 
 Install
 =======

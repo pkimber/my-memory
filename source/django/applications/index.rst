@@ -21,6 +21,7 @@ Contents
    crispy-forms
    cloudfiles
    extensions
+   factory-boy
    flatpages
    ka-lite
    notification

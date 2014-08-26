@@ -10,6 +10,7 @@ Contents
    dictionary-comprehension
    list
    list-comprehension
+   set
    tuple
    tuple-named
 

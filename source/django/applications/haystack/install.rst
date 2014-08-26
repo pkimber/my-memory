@@ -4,9 +4,7 @@ Install
 Dependencies
 ============
 
-If using SOLR:
-
-::
+If using SOLR::
 
   pip -E ./env/ install pysolr
 
