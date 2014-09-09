@@ -44,11 +44,11 @@ Windows
   http://www.enterprisedb.com/products/pgdownload.do#windows.
 - Installation folder::
 
-  C:\Tools\PostgreSQL\8.3\
+    C:\Tools\PostgreSQL\8.3\
 
 - Data directory::
 
-  C:\repository\PostgreSQL\8.3\data\
+    C:\repository\PostgreSQL\8.3\data\
 
 - The installer will create a Windows service, ``postgresql-8.3``.  Make
   sure the service is configured as you want it... and make sure it is

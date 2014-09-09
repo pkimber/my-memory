@@ -23,7 +23,7 @@ To build the project::
   make html
   rsync -av --delete --force --size-only \
     ./build/html/ \
-    web@kb-a:/home/web/repo/project/pkimber_net/howto/
+    web@pkimber.net:/home/web/repo/project/pkimber_net/howto/
 
 To convert my CV into a PDF::
 
