@@ -1,6 +1,9 @@
 Salt Cloud - Amazon
 *******************
 
+.. attention:: These notes are being moved to
+               https://www.pkimber.net/open/salt-cloud-amazon.html
+
 .. highlight:: bash
 
 Following `How to Provision AWS EC2 Instances with Salt Cloud`_

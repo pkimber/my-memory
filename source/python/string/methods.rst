@@ -91,18 +91,14 @@ isdigit
 -------
 
 ``isdigit`` returns ``true`` if all characters in ``s`` are digit
-characters:
-
-::
+characters::
 
   s.isdigit()
 
 isinstance (type)
 =================
 
-To check if an object is a string:
-
-::
+To check if an object is a string::
 
   if isinstance(value, basestring):
 
@@ -114,22 +110,17 @@ join
 
 ::
 
+  ','.join(['abc', 'def'])
+
+Not sure if the following works in python 3::
+
   >>> name = ('Patrick', 'Gerald', 'Kimber')
   >>> import string
   >>> string.join(name)
   'Patrick Gerald Kimber'
 
-Note: Looks like the above function is different to this one which doesn't take
-any parameters:
-
-::
-
-  ''.join(['abc', 'def'])
-
 For this function, we can join multiple data types by converting them to
-strings using ``map``:
-
-::
+strings using ``map``::
 
   >>> ','.join(map(str, ('a', 'b', 'c', 99)))
   'a,b,c,99'
@@ -144,9 +135,7 @@ lower
 Padding
 =======
 
-Justify:
-
-::
+Justify::
 
   >>> 'and'.ljust(10) + 'the'.ljust(10) + ']'
   'and       the       ]'
@@ -168,9 +157,7 @@ partition
 Split the string at the first occurrence of ``sep``, and return a 3-tuple
 containing the part before the separator, the separator itself, and the part
 after the separator.  If the separator is not found, return a 3-tuple
-containing the string itself, followed by two empty strings:
-
-::
+containing the string itself, followed by two empty strings::
 
   >>> ('http://www.python.org').partition('://')
   ('http', '://', 'www.python.org')
@@ -243,7 +230,6 @@ split
 Note:
 
 - See notes on ``partition`` (above) and ``splitlines`` (below).
-
 - If the separator is not specified or is ``None``, runs of consecutive
   whitespace are regarded as a single separator.
 

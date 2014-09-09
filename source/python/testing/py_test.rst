@@ -45,6 +45,20 @@ If you don't do this, you will get the following nasty/misleading error::
 
   AttributeError: DontReadFromInput instance has no attribute 'encoding'
 
+Mark
+====
+
+Skipping_:
+
+.. code-block:: python
+
+  import pytest
+
+  @pytest.mark.skipif(date.today() < date(2014, 9, 5),
+      reason='cannot test this for a couple of days...')
+  def test_contact_template(self):
+      pass
+
 Discovery
 =========
 
@@ -114,3 +128,4 @@ http://pypi.python.org/pypi/pytest-pep8/::
 .. _`A simple way of running your tests from within VIM`: https://github.com/alfredodeza/pytest.vim
 .. _`Conventions for Python test discovery`: http://doc.pytest.org/en/latest/goodpractises.html#test-discovery
 .. _`Modifying Python traceback printing`: https://pytest.org/latest/usage.html#modifying-python-traceback-printing
+.. _Skipping: http://pytest.org/latest/skipping.html#skipping

@@ -7,9 +7,7 @@ copy
 Import
 ------
 
-To import a *tab separated* file:
-
-::
+To import a *tab separated* file::
 
   \copy codes FROM '/home/patrick/wip/codes.txt'
 
@@ -25,4 +23,3 @@ Export
 ::
 
   \copy codes TO '/home/patrick/wip/codes.txt'
-

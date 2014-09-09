@@ -1,6 +1,9 @@
 Relational Database Service
 ***************************
 
+.. attention:: These notes are being moved to
+               https://www.pkimber.net/open/salt-cloud-amazon.html
+
 From `An Introduction to the AWS Command Line Tool Part 2`_
 
 Create a security group for the database::

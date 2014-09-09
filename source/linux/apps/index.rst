@@ -19,6 +19,7 @@ Contents
    python-window-organizer
    shorewall
    shutter
+   teamviewer
    tmux
    weechat
    xbmc

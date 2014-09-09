@@ -15,6 +15,13 @@ folder::
 
   tar cvzf svn-3281.tgz svn-3281/
 
+To archive files in a symbolic link folder, use the ``h`` flag e.g::
+
+  tar -hcvzf ~/repo/backup/temp.tar.gz /home/web/repo/temp/
+
+.. warning:: From `tar: cannot open: no such file or directory`_  Make sure
+             ``h`` is the first flag (or ``f`` is the final flag)!
+
 Extract
 =======
 
@@ -61,3 +68,4 @@ List
 
 
 .. _Gzip: http://en.wikipedia.org/wiki/Gzip
+.. _`tar: cannot open: no such file or directory`: http://superuser.com/questions/691131/tar-cannot-open-no-such-file-or-directory

@@ -1,6 +1,9 @@
 AWS Command Line Tool
 *********************
 
+.. attention:: These notes are being moved to
+               https://www.pkimber.net/open/salt-cloud-amazon.html
+
 .. highlight:: bash
 
 From `An Introduction to the AWS Command Line Tool`_

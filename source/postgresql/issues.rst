@@ -14,9 +14,7 @@ cannot retrieve authentication info
   su: Authentication service cannot retrieve authentication info.
 
 indicates that su cannot find an entry for the user postgres in
-``/etc/shadow``. This can be solved by just adding one:
-
-::
+``/etc/shadow``. This can be solved by just adding one::
 
   echo "postgres:*:9797:0:::::" >> /etc/shadow
 
