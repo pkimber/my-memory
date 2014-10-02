@@ -49,7 +49,21 @@ To delete the ``hotfix`` branch::
 
   git branch -d hotfix
 
+Rename
+======
+
+From `How do I rename a local Git branch?`_::
+
+  git branch -m <oldname> <newname>
+
+If you want to rename the current branch, you can simply do::
+
+  git branch -m <newname>
+
 Tags
 ====
 
 We can switch to tags in the same was as we switch branches (see above).
+
+
+.. _`How do I rename a local Git branch?`: http://stackoverflow.com/questions/6591213/how-do-i-rename-a-local-git-branch

@@ -1,6 +1,8 @@
 Exceptions
 **********
 
+.. highlight:: python
+
 Custom
 ======
 
@@ -22,8 +24,7 @@ Sample
               'Use the admin site to set one of the shops to be the default.')
       return result
 
-Note: Not really sure what ``silent_variable_failure`` does.  I think it
-just controls the response to an exception when rendering a template.  If
-``silent_variable_failure`` is set to ``True``, then the template will
-display an empty string.
-
+Note: Not really sure what ``silent_variable_failure`` does.  I think it just
+controls the response to an exception when rendering a template.  If
+``silent_variable_failure`` is set to ``True``, then the template will display
+an empty string.

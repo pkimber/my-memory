@@ -89,6 +89,13 @@ their order:
 ::
 
   from django.core.exceptions import ValidationError
+
+  with self.assertRaises(ValidationError):
+      contact.full_clean()
+
+or::
+
+  from django.core.exceptions import ValidationError
   from django.test import TestCase
 
   from blog.models import Article

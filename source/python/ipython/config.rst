@@ -1,15 +1,14 @@
 Configuration
 *************
 
-File
-====
+.. highlight:: bash
 
-Configuration is (by default) stored in a **folder**:
+To create the default configuration file::
 
-- Linux: ``$HOME/.ipython``
-- Windows: ``$HOME/_ipython`` e.g.
+  ipython profile create
 
-  ::
+This will create the following file::
 
-    c:\Users\Patrick\_ipython\ipythonrc.ini
+  ~/.ipython/profile_default/ipython_config.py
 
+Edit this file to uncomment anything you like the look of...

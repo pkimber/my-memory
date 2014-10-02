@@ -11,15 +11,9 @@ Links
 Install
 =======
 
-Create a virtual environment:
+Create a **python 2** virtual environment::
 
-::
-
-  pip install http://www.reportlab.org/ftp/ReportLab_2_3.tar.gz
-  pip install rst2pdf==0.14.2
-
-Note: Had to install ReportLab separately as there was an issue with the md5
-hash.
+  pip install rst2pdf
 
 Usage
 =====
@@ -32,4 +26,3 @@ Usage
 
 
 .. _`Creating presentations using restructured text`: http://lateral.netmanagers.com.ar/stories/BBS52.html
-

@@ -11,7 +11,7 @@ Contents
    commands
    config
    debug
+   django
    notebook
    usage
    virtualenv
-

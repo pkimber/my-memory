@@ -6,6 +6,4 @@ Install
 
 ::
 
-  pip install pyzmq tornado
-
-  fatal error: zmq.h: No such file or directory
+  pip install ipython jinja2 pyzmq tornado

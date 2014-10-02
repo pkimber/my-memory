@@ -16,9 +16,7 @@ Configuration
 
 To speed up the testing, use an in-memory SQLite database:
 
-Create a new settings file for testing e.g. ``test_settings.py``:
-
-::
+Create a new settings file for testing e.g. ``test_settings.py``::
 
   from settings import *
 
@@ -38,9 +36,7 @@ Create a new settings file for testing e.g. ``test_settings.py``:
 
   DATABASE_OPTIONS = {}
 
-Run the test command, passing the test settings file as a parameter:
-
-::
+Run the test command, passing the test settings file as a parameter::
 
   ./manage.py test --settings=test_settings
 
@@ -50,15 +46,11 @@ Management Command
 Application
 -----------
 
-To test a single application (in this example ``villages``):
-
-::
+To test a single application (in this example ``villages``)::
 
   python manage.py test villages
 
-To run a single test:
-
-::
+To run a single test::
 
   django-admin.py test villages.TestHelper.test_create
 
