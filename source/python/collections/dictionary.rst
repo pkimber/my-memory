@@ -53,6 +53,12 @@ Dictionary to list of tuples::
 
   l = properties.items()
 
+Tuple to a dictionary::
+
+  >>> t = ((0, 'Green'), (1, 'Red'))
+  >>> dict(t)
+  {0: 'Green', 1: 'Red'}
+
 Delete
 ======
 
@@ -149,6 +155,15 @@ Return the keys as a list... (and sort in place).
 
 **Note**: There is also a ``sorted`` function which will sort a copy of the
 list (i.e. not in place).
+
+Reverse
+=======
+
+python 2.7 and above I think::
+
+  >>> d = {'name': 'Patrick', 'distance': 23}
+  >>> {v: k for k, v in d.items()} 
+  {'Patrick': 'name', 23: 'distance'}
 
 Values
 ======

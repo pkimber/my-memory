@@ -1,7 +1,6 @@
 Django
 ******
 
-
 From `Turbocharge your Python prompt and Django shell with IPython Notebook`_:
 
 Install the :doc:`notebook`

@@ -52,6 +52,12 @@ Tuple to list:
   In [2]: list(sports)
   Out[2]: ['football', 'cricket']
 
+Tuple to a dictionary::
+
+  >>> t = ((0, 'Green'), (1, 'Red'))
+  >>> dict(t)
+  {0: 'Green', 1: 'Red'}
+
 zip
 ===
 

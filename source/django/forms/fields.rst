@@ -69,7 +69,8 @@ of the drop down list::
 ModelChoiceField
 ----------------
 
-`Changing the ModelChoiceField QuerySet`_ (also see previous example)::
+`Changing the ModelChoiceField QuerySet`_ (also see next and previous
+examples)::
 
   from django import forms
   from django.contrib.auth.models import User
@@ -82,6 +83,15 @@ ModelChoiceField
       def __init__(self, *args, **kwargs):
           super(ComplaintForm, self).__init__(*args, **kwargs)
           self.fields["user"].queryset = User.objects.filter(is_staff=False)
+
+
+The queryset can simple be defined within the field::
+
+  product_category = forms.ModelChoiceField(
+      queryset=ProductCategory.objects.product_type(COURSE),
+      empty_label='all courses',
+      required=False,
+  )
 
 RadioSelect
 -----------

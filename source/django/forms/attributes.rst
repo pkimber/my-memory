@@ -3,9 +3,7 @@ Attributes
 
 .. highlight:: python
 
-Custom form attributes:
-
-::
+Custom form attributes::
 
   class VillageModelForm(ModelForm):
 
