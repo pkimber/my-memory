@@ -32,7 +32,9 @@ Definition lists
 Escape
 ======
 
-Escape characters with a back-slash.
+Escape characters with a back-slash e.g::
+
+  \*\*\*\*
 
 Format
 ======

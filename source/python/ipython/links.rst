@@ -9,9 +9,7 @@ Extensions
 ipipe_.  The ipipe extension provides a handy way to browse and manipulate
 tabular data, e.g. groups of files or environment variables.
 
-Note: On Windows, you will need to install wxPython (:doc:`install`).
-
-::
+Note: On Windows, you will need to install wxPython (:doc:`install`)::
 
   ils
   ils("/wip")

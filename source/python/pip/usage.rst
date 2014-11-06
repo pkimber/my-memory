@@ -8,6 +8,9 @@ Links
 
 http://pip.openplans.org/
 
+https://github.com/sesh/piprot
+How rotten are your requirements?
+
 Help
 ====
 

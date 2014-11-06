@@ -1,6 +1,8 @@
 Environment Variables
 *********************
 
+.. highlight:: bash
+
 Links
 =====
 

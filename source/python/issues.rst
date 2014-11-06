@@ -74,6 +74,26 @@ To solve the issue, I put the following at the top of the source file:
 
 `Source Code Encoding`_
 
+ValueError: bad marshal data (unknown type code)
+================================================
+
+When running ``py.test``...
+
+This is something to do with ``.pyc`` files.  I tried removing them::
+
+  find . -name '*.pyc' -delete
+
+... but this did not solve the problem.
+
+I had a module included from a requirements file::
+
+  -e ../base
+
+I removed the ``.pyc`` files from this app, and all was OK once more.
+
+Might be worth removing ``__pycache__`` folders as well if removing the
+``pyc`` doesn't help.
+
 
 .. _`'id' is a bad variable name in Python`: http://stackoverflow.com/questions/77552/id-is-a-bad-variable-name-in-python
 .. _`Python Functions: Assignments And Scope`: http://paddy3118.blogspot.com/2006/07/python-functions-assignments-and-scope.html

@@ -1,6 +1,8 @@
 bash shell
 **********
 
+.. highlight:: bash
+
 Links
 =====
 
@@ -33,25 +35,19 @@ Commands
 alias
 -----
 
-This is an alias I created in my cygwin ``~/.bash_login`` file:
-
-::
+This is an alias I created in my cygwin ``~/.bash_login`` file::
 
   alias cd-p="cd /cygdrive/c/projects/"
   alias cd-mem="cd //g1/PatrickK/documents/my-memory/"
 
-To list current aliases:
-
-::
+To list current aliases::
 
   alias
 
 echo
 ----
 
-Print to the screen:
-
-::
+Print to the screen::
 
   echo java $OPTIONS
 
@@ -60,23 +56,21 @@ set
 
 :doc:`environment`
 
+:doc:`snippets/date`
+
 Command Completion
 ==================
 
 `An introduction to bash completion`_
 
-Can be loaded by typing into your shell:
-
-::
+Can be loaded by typing into your shell::
 
   . /etc/bash_completion
 
 You can put that line (with the ``.`` ) in ``~/.bashrc``.
 
 Once this is done you'll be able to TAB-complete many common arguments to
-programs, for example:
-
-::
+programs, for example::
 
   $ apt-get upd[TAB]
   $ apt-get upg[TAB]
@@ -89,9 +83,7 @@ Comments
 `Special Characters`_
 
 Lines beginning with a ``#`` (with the exception of ``#!``) are comments and
-will not be executed:
-
-::
+will not be executed::
 
   # This line is a comment.
   echo "A comment will follow." # Comments may also occur following the end of a command.
@@ -102,9 +94,7 @@ Configuration
 Reload
 ------
 
-To reload a configuration file (I think this creates a new shell):
-
-::
+To reload a configuration file (I think this creates a new shell)::
 
   source ~/.bash_login
 
@@ -118,16 +108,12 @@ Chaining Commands
 
 Commands separated by a ``;`` are executed sequentially; the shell waits for
 each command to terminate in turn.  The return status is the exit status of the
-last command executed:
-
-::
+last command executed::
 
   clear;date
 
 Commands separated by ``&&`` are executed in turn provided that the
-previous command has given a return value of true (zero):
-
-::
+previous command has given a return value of true (zero)::
 
   command-1 && command-2 && command-3 && ... command-n
 
@@ -136,10 +122,8 @@ History
 
 From `Bash tips and tricks`_:
 
-To make bash append history instead of overwriting it, and makes it so that each
-time the prompt is shown it writes out all the history:
-
-::
+To make bash append history instead of overwriting it, and makes it so that
+each time the prompt is shown it writes out all the history::
 
   shopt -s histappend
   PROMPT_COMMAND=history -a
@@ -149,15 +133,11 @@ above.  Not sure if this is correct, or not.
 
 See :doc:`shortcut-keys`.
 
-To skip duplicate entries, add the following to ``~/.bashrc``:
-
-::
+To skip duplicate entries, add the following to ``~/.bashrc``::
 
   export HISTCONTROL=ignoreboth
 
-or:
-
-::
+or::
 
   export HISTCONTROL="ignoredups"
 
@@ -173,9 +153,7 @@ Environment
 -----------
 
 Command line editing was not working when I was using a Solaris server.
-To enable command line editing type these commands when you log in:
-
-::
+To enable command line editing type these commands when you log in::
 
   bash
   export PS1="\u@\h:\w> "
@@ -187,9 +165,7 @@ for
 ---
 
 In this example, ``BING`` is a variable, and ``list.out`` contains a space
-separated list of things:
-
-::
+separated list of things::
 
   for BING in `cat list.out`; do echo $BING; done
 
@@ -248,21 +224,15 @@ Files
 Parameters
 ==========
 
-Command line parameters:
-
-::
+Command line parameters::
 
   $1 $2 $3 $4
 
-The number of command line parameters:
-
-::
+The number of command line parameters::
 
   $#
 
-To get the result of the last command (this can be used at the command line):
-
-::
+To get the result of the last command (this can be used at the command line)::
 
   $?
 
@@ -270,35 +240,28 @@ Test
 ====
 
 The ``test`` builtin command returns **0** (**True**) or 1 (False), depending
-on the evaluation of an expression:
-
-::
+on the evaluation of an expression::
 
   > test 3 -gt 4 && echo True || echo False
   False
 
-``-gt`` operator performs an arithmetic comparison.  You can compare
-arithmetic values using one of ``-eq``, ``-ne``, ``-lt``, ``-le``, ``-gt``, or
-``-ge``.
+``-gt`` operator performs an arithmetic comparison.  You can compare arithmetic
+values using one of ``-eq``, ``-ne``, ``-lt``, ``-le``, ``-gt``, or ``-ge``.
 
 You can also use square brackets: ``test expr`` and ``[ expr ]`` are
 equivalent.
 
-You can examine the return value by displaying ``$?``:
-
-::
+You can examine the return value by displaying ``$?``::
 
   > [ "abc" != "def" ];echo $?
   0
 
-You can compare strings using the operators ``=``, ``!=``, ``<``, and
-``>``.  The unary operator ``-z`` tests for a null string, while ``-n`` or
-no operator at all returns True if a string is not empty.
+You can compare strings using the operators ``=``, ``!=``, ``<``, and ``>``.
+The unary operator ``-z`` tests for a null string, while ``-n`` or no operator
+at all returns True if a string is not empty.
 
-Note: the ``<`` and ``>`` operators are also used by the shell for
-redirection, so you must escape them using ``\\<`` or ``\\>``:
-
-::
+Note: the ``<`` and ``>`` operators are also used by the shell for redirection,
+so you must escape them using ``\\<`` or ``\\>``::
 
   ~> test "abc" = "def" ;echo $?
   1
@@ -314,9 +277,7 @@ redirection, so you must escape them using ``\\<`` or ``\\>``:
   1
 
 In this example, the value of the ``HOME`` variable is tested to see if it is a
-directory using the ``-d`` unary operator:
-
-::
+directory using the ``-d`` unary operator::
 
   > test -d "$HOME" ;echo $?
   0
@@ -357,9 +318,7 @@ using ``set -o`` option.
 
 The ``-a`` and ``-o``  options allow you to combine expressions with logical
 AND and OR, respectively, while the unary ``!`` operator inverts the sense of
-the test.
-
-::
+the test::
 
   ~> test 1 = 1 -a 2 \< 3 ; echo $?
   0
@@ -376,9 +335,7 @@ vi Mode
 
 `Improve your interactive programming using the vi mode...`_
 
-To enable vi mode in bash, add to your ``.bashrc`` in your home directory:
-
-::
+To enable vi mode in bash, add to your ``.bashrc`` in your home directory::
 
   set -o vi
 

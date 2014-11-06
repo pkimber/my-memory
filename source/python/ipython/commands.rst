@@ -25,14 +25,10 @@ Note: ``-e`` stops the exception stack from displaying system classes.
 Run
 ===
 
-To run a script:
-
-::
+To run a script::
 
   %run ~/temp/test.py
 
-...to run with the debugger:
-
-::
+...to run with the debugger::
 
   %run -d ~/temp/test.py

@@ -49,6 +49,13 @@ To delete the ``hotfix`` branch::
 
   git branch -d hotfix
 
+Log
+===
+
+To see the branch on the log::
+
+  git log --decorate
+
 Rename
 ======
 

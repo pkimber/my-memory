@@ -1,6 +1,13 @@
 time
 ****
 
+.. highlight:: python
+
+Combine
+=======
+
+See :ref:`combine_date_time`
+
 Difference
 ==========
 
@@ -24,9 +31,7 @@ See :doc:`links`, Scheduling.
 Sleep
 =====
 
-The time is in seconds:
-
-::
+The time is in seconds::
 
   import time
   time.sleep(1)

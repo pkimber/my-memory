@@ -1,9 +1,11 @@
 Notebook
 ********
 
+See doc:`django` for Django integration...
+
 Install
 =======
 
 ::
 
-  pip install ipython jinja2 pyzmq tornado
+  pip install ipython[notebook] jinja2 pyzmq tornado

@@ -1,9 +1,9 @@
 Date
 ****
 
-Append the date and time to a parameter:
+.. highlight:: bash
 
-::
+Append the date and time to a parameter::
 
   #!/bin/bash
   # exit immediately if a command exits with a nonzero exit status.
@@ -25,3 +25,8 @@ Append the date and time to a parameter:
   DUMP_FILE=$1-$NOW
   echo $DUMP_FILE
 
+Another example::
+
+  pg_dump -U postgres db -f ~/repo/backup/$(date +%Y%m%d_%H%M).sql
+
+.. note:: Not sure if we need the double quotes around the ``date`` variable.

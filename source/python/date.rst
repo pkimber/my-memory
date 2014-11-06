@@ -1,5 +1,5 @@
-Date Time
-*********
+Date
+****
 
 .. highlight:: python
 
@@ -10,6 +10,7 @@ Links
 
   Check :doc:`modules/dateutil`.  It is very nice.
 
+- :doc:`time`
 - :doc:`calendar`
 - https://github.com/crsmithdev/arrow
   Better date and time manipulation for Python
@@ -37,6 +38,15 @@ Constructor
 ::
 
   datetime(year, month, day [,hour [,minute [,second]]])
+
+.. _combine_date_time:
+
+Combine
+=======
+
+Combine date and time::
+
+  start_date_time = datetime.combine(start_date, start_time)
 
 Conversion
 ==========

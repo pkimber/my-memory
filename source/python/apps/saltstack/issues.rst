@@ -30,6 +30,29 @@ The message will tell you where the master key is located e.g::
   rm /etc/salt/pki/minion_master.pub
   start salt-minion
 
+None issues in template variables
+=================================
+
+When passing ``None`` to a template e.g::
+
+  {% set option = pillar.get('option', None) %}
+
+  /etc/cron.d/{{ site }}:
+    file:
+      - context:
+        option: {{ option }}
+
+The variable will be set to the string ``None``.  If you do a test on the
+variable in the template e.g. ``{% if option %}``, then ``None`` will be
+evaluated as ``True`` which is not what we want.
+
+To solve this issue, set the variable to ``False`` if it doesn't exist e.g::
+
+  {% set option = pillar.get('option', False) %}
+
+e.g.
+https://github.com/pkimber/salt/commit/f0c9dde501cfcbe7f4e9f48dc82e8061b8b16876
+
 Pillar failed to render
 =======================
 
