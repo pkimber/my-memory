@@ -3,6 +3,8 @@ DNS
 
 .. highlight:: bash
 
+.. tip:: Also see :doc:`whois`
+
 ::
 
   dig pkimber.net +nocomments +noquestion +noauthority +noadditional +nostats

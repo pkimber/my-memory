@@ -58,6 +58,13 @@ Cookbook_ - Align (replace ``s`` with ``d`` for an integer)::
   In [5]: print '[{:^10s}]'.format('pat')
   [   pat    ]
 
+Cookbook_ - Numbers::
+
+  >>> '{:.2f}'.format(1.3)
+  '1.30'
+  >>> '{:10.2f}'.format(1.3)
+  '      1.30'
+
 Cookbook_ - Padding::
 
   '{:.2%}'.format(vat_rate)

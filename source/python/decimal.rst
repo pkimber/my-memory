@@ -9,8 +9,14 @@ string.
 Links
 =====
 
-- decimal_
-  Decimal fixed point and floating point arithmetic.
+decimal_ Decimal fixed point and floating point arithmetic.
+
+Convert
+=======
+
+To string::
+
+  str(number)
 
 Import
 ======
@@ -22,10 +28,7 @@ Import
 Rounding
 ========
 
-- rounding.py_
-
-  - Copied from
-    `How to round decimal numbers in Python`_
+- rounding.py_ (copied from `How to round decimal numbers in Python`_)
 
 
 .. _`How to round decimal numbers in Python`: http://pyxx.org/2007/10/28/how-to-round-decimal-numbers-in-python/

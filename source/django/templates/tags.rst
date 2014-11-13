@@ -28,6 +28,10 @@ To display ``Mon 13th Jul 2009 21:54``::
 
   {{ item.created_date|date:"D jS M Y H:i" }}
 
+To display ``07/11/2014 15:28:11``::
+
+  {{ item.created_date|date:"d/m/Y H:i:s" }}
+
 default
 =======
 
