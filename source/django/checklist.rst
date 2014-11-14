@@ -1,6 +1,8 @@
 Checklist
 *********
 
+Check out http://webdevchecklist.com/
+
 Accessibility
 =============
 
