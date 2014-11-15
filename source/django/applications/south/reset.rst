@@ -1,6 +1,10 @@
 Reset
 *****
 
+.. attention:: South has been replaced with Django Migrations.
+               For more information,
+               https://www.pkimber.net/open/dev-django.html#migrations
+
 Copied from `Resetting Your South Migrations`_
 `Resetting migration history Django South`_ and
 `stackoverflow, recommended approach to resetting migration history`

@@ -3,6 +3,10 @@ Getting Started
 
 .. highlight:: bash
 
+.. attention:: South has been replaced with Django Migrations.
+               For more information,
+               https://www.pkimber.net/open/dev-django.html#migrations
+
 Links
 =====
 
