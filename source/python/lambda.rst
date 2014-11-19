@@ -12,9 +12,7 @@ Issues
 Sample
 ======
 
-This lambda function is exactly the same as the function ``f`` following:
-
-::
+This lambda function is exactly the same as the function ``f`` following::
 
   g = lambda x: x*2
 

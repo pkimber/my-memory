@@ -12,9 +12,7 @@ Links
 Getting Started
 ===============
 
-Sample script with some basic error checking:
-
-::
+Sample script with some basic error checking::
 
   #!/bin/bash
   # exit immediately if a command exits with a nonzero exit status.
@@ -26,27 +24,21 @@ Sample script with some basic error checking:
   # Do the work.
   echo Hello world
 
-Permissions:
-
-::
+Permissions::
 
   chmod 755 scriptname
 
 Note: Not sure if these are the correct permissions... (perhaps try
 ``chmod +x myfile.py``).
 
-To run this script:
-
-::
+To run this script::
 
   bash <script-name>
 
 Sample
 ======
 
-Run a python application, passing all parameters to the command:
-
-::
+Run a python application, passing all parameters to the command::
 
   #!/bin/sh
   . ~/repo/env/env-app/bin/activate
@@ -55,9 +47,7 @@ Run a python application, passing all parameters to the command:
 
 Note: To pass all parameters to a command, Simon says to use ``$@``.  You
 should (almost) always put it in double-quotes to avoid misparsing of argument
-with spaces in them e.g:
-
-::
+with spaces in them e.g::
 
   #!/bin/sh
   ack-grep "$@"

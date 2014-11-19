@@ -1,9 +1,9 @@
 File
 ****
 
-Check if a file exists:
+.. highlight:: bash
 
-::
+Check if a file exists::
 
   if [ -f /path/to/testfile ]
   then
@@ -11,4 +11,3 @@ Check if a file exists:
   else
       exit 1
   fi
-

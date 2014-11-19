@@ -8,7 +8,9 @@ Create a pull request
 
 Go to your fork of a repository on GitHub.
 
-Click *Compare and review* (the green button with two arrows).
+In the *Branch* menu, choose the branch that contains your commits.
+
+To the left of the *Branch* menu, click the green *Compare and Review* button.
 
 Rename a Repository
 ===================

@@ -1,6 +1,8 @@
 Folder
 ******
 
+.. highlight:: bash
+
 List
 ====
 
@@ -13,9 +15,7 @@ Also see ``sample/bash/iterate-folders.sh``.
 Exists
 ======
 
-Check if a folder exists:
-
-::
+Check if a folder exists::
 
   DESTDIR=$HOME/repo/vm/$1/
   if [ -d "$DESTDIR" ]; then
@@ -27,4 +27,3 @@ Check if a folder exists:
       echo Error: Folder $DESTDIR was not created...
       exit
   fi
-

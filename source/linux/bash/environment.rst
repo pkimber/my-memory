@@ -6,7 +6,7 @@ Environment Variables
 Links
 =====
 
-- :doc:`path`
+:doc:`path`
 
 Set
 ===

@@ -9,9 +9,7 @@ Path
     export PATH=$HOME/bin:$PATH
   fi
 
-From my ``~/.bashrc``:
-
-::
+From my ``~/.bashrc``::
 
   # funky function nicked from Red Hat and altered a little
   # adds entries to the PATH at the start or end and only if the dir exists
@@ -31,6 +29,6 @@ From my ``~/.bashrc``:
   pathmunge /sbin
   pathmunge $HOME/bin after
   pathmunge $HOME/opt after
-  
+
   # clean up
   unset pathmunge

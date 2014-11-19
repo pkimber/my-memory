@@ -208,10 +208,7 @@ If... else...
 Empty
 -----
 
-::
-
-  # Test if variable is empty...
-  if [ -n "$JAVA_HOME" ]; then
+:doc:`snippets/variables`
 
 Files
 =====

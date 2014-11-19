@@ -11,5 +11,4 @@ Contents
    file
    folder
    pause
-   string
-
+   variables

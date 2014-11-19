@@ -4,14 +4,12 @@ Redirection
 Links
 =====
 
-- `IO Redirection`_
+`IO Redirection`_
 
 Sample
 ======
 
-To re-direct standard error to a file:
-
-::
+To re-direct standard error to a file::
 
   ./manage_test 2> ~/repo/temp/temp.out
 
@@ -33,4 +31,3 @@ Usage
 
 
 .. _`IO Redirection`: http://tldp.org/LDP/abs/html/io-redirection.html
-

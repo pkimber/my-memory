@@ -4,9 +4,7 @@ Conditional Expressions
 if/else
 =======
 
-`What's New in Python 2.5`_
-
-::
+`What's New in Python 2.5`_::
 
   a = 1 if x > 15 else 2
 
