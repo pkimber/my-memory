@@ -115,6 +115,27 @@ Note: `'git revert' is not equivalent to 'svn revert'`_::
 
   git checkout filename
 
+To actually remove a commit (from `Delete commits from a branch in Git`_):
+
+.. warning:: ``git reset --hard`` WILL DELETE YOUR WORKING DIRECTORY CHANGES.
+             Be sure to stash any local changes you want to keep before running
+             this command.
+
+Assuming you are sitting on that commit, then this command will wack it::
+
+  git reset --hard HEAD~1
+
+The ``HEAD~1`` means the commit before head.
+
+Or, you could look at the output of ``git log``, find the commit id of the
+commit you want to back up to, and then do this::
+
+  git reset --hard <sha1-commit-id>
+
+If you already pushed it, you will need to do a force push to get rid of it::
+
+  git push origin HEAD --force
+
 Status
 ------
 
@@ -125,6 +146,7 @@ Status
 
 
 .. _`'git revert' is not equivalent to 'svn revert'`: http://bryan-murdock.blogspot.com/2007/07/git-revert-is-not-equivalent-to-svn.html
+.. _`Delete commits from a branch in Git`: http://stackoverflow.com/questions/1338728/delete-commits-from-a-branch-in-git
 .. _`Git - SVN Crash Course`: http://git.or.cz/course/svn.html
 .. _`Git Tutorial : Starting with git using just 10 commands`: http://blog.xkoder.com/2008/08/13/git-tutorial-starting-with-git-using-just-10-commands/
 .. _`Setting up GIT to use a Subversion (SVN) style workflow`: http://www.wausita.com/2010/08/setting-git-follow-subversion-workflow/

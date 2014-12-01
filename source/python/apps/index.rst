@@ -12,6 +12,7 @@ Contents
    jinja
    proxypypi
    pykaboo
+   requests
    saltstack/index
    scons/index
    sdaps

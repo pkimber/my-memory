@@ -127,6 +127,14 @@ Merge
   >>> family
   {'Peter': 44, 'Alison': 45, 'Barry': 21, 'Martin': 18}
 
+Ordered
+=======
+
+::
+
+  from collections import OrderedDict
+  result = OrderedDict()
+
 Pop
 ===
 

@@ -32,9 +32,7 @@ See :doc:`jquery/string`
 Sample
 ======
 
-Note: ``print`` is (probably) a doc:`narwhal` function...
-
-::
+Note: ``print`` is (probably) a doc:`narwhal` function::
 
   s = 'Patrick';
   print(s.length);

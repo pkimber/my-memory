@@ -3,8 +3,8 @@ Decimal
 
 .. highlight:: python
 
-**Note**:  To create a ``Decimal`` from a ``float``, first convert it to a
-string.
+.. note:: To create a ``Decimal`` from a ``float``, first convert it to a
+          string.
 
 Links
 =====
@@ -28,9 +28,25 @@ Import
 Rounding
 ========
 
-- rounding.py_ (copied from `How to round decimal numbers in Python`_)
+::
+
+  from decimal import Decimal
+
+  bmi = weight / (height * height)
+  return bmi.quantize(Decimal('.01'))
+
+::
+
+  from decimal import (
+      Decimal,
+      ROUND_UP,
+  )
+
+  bmi = weight / (height * height)
+  return bmi.quantize(Decimal('.01'), rounding=ROUND_UP)
+
+.. tip:: ``round`` converts the decimal to floating point, so better to use
+         ``quantize`` (although I don't understand the maths behind it).
 
 
-.. _`How to round decimal numbers in Python`: http://pyxx.org/2007/10/28/how-to-round-decimal-numbers-in-python/
-.. _decimal: http://docs.python.org/library/decimal.html
-.. _rounding.py: http://toybox/hg/env/file/tip/lib/python/pk/types/rounding.py
+.. _decimal: https://docs.python.org/3.4/library/decimal.html

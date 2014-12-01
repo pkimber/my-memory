@@ -12,5 +12,3 @@ to top of your html file:
 ::
 
   <!-- saved from url=(0013)about:internet -->
-
-

@@ -49,6 +49,11 @@ GIT::
 
   pip install git+git://github.com/rackspace/python-cloudfiles.git#egg=python-cloudfiles
 
+  # Passing branch names, a commit hash or a tag name is possible like so
+  pip install git+git://git.myproject.org/MyProject.git@master#egg=MyProject
+  pip install git+git://git.myproject.org/MyProject.git@v1.0#egg=MyProject
+  pip install git+git://git.myproject.org/MyProject.git@da39a3ee5e6b4b0d3255bfef95601890afd80709#egg=MyProject
+
 To install a branch, use the ``@`` parameter e.g::
 
   pip install git+https://github.com/django-compressor/django-compressor.git@develop#egg=compressor

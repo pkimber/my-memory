@@ -8,17 +8,13 @@ Standards
 Class
 =====
 
-Use a capital letter for constructors e.g:
-
-::
+Use a capital letter for constructors e.g::
 
   function Animal() {
       this.breed = "test";
   }
 
-*Note*: Make sure you construct class objects with the ``new`` keyword e.g:
-
-::
+*Note*: Make sure you construct class objects with the ``new`` keyword e.g::
 
   var f = new Animal();
 
@@ -41,4 +37,3 @@ JavaScript programs are written using the Unicode character set.
 .. _`Code Conventions for the JavaScript Programming Language`: http://javascript.crockford.com/code.html
 .. _`Dojo Style Guide`: - http://dojotoolkit.org/community/styleGuide
 .. _`Principals of Writing Consistent, Idiomatic JavaScript`: https://github.com/rwldrn/idiomatic.js
-

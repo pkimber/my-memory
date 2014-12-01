@@ -485,4 +485,3 @@ http://www.w3schools.com/js/js_special_characters.asp
 
 In JavaScript you can add special characters to a text string by using the
 backslash sign.
-
