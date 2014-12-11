@@ -1,6 +1,8 @@
 Timer
 *****
 
+.. highlight:: javascript
+
 ``setTimeout``
 ==============
 
@@ -22,4 +24,3 @@ Sample
       console.log('do something useful...');
       setTimeout(updateData, 2000);
   }
-
