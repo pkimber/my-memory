@@ -4,9 +4,7 @@ Command Line Parameters
 Module
 ======
 
-To load and run a python module on the path:
-
-::
+To load and run a python module on the path::
 
   python -m my_script
 

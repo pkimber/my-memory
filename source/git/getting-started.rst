@@ -1,6 +1,8 @@
 Getting Started
 ***************
 
+.. highlight:: bash
+
 Links
 =====
 
@@ -88,10 +90,10 @@ Log
 ::
 
   git log
+  # list file names
+  git log --name-status
 
-GUI:
-
-::
+GUI::
 
   gitk
 

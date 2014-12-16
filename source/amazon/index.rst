@@ -7,5 +7,6 @@ Contents
    :maxdepth: 1
 
    awscli
+   issues
    rds
    s3

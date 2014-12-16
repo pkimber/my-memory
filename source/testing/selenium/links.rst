@@ -6,6 +6,12 @@ Blog
 
 - `Automated integration testing with Selenium, Maven and Jetty`_
 
+CSS
+===
+
+Automated tests for your CSS:
+https://github.com/bfirsh/needle
+
 Learning
 ========
 
@@ -24,4 +30,3 @@ python
 .. _`Python - Headless Selenium WebDriver Tests using PyVirtualDisplay`: http://coreygoldberg.blogspot.com/2011/06/python-headless-selenium-webdriver.html
 .. _`Getting started with Selenium 2.0 (WebDriver)`: http://blog.activelylazy.co.uk/2011/07/08/getting-started-with-selenium-2-0-webdriver/
 .. _`Selenium with Python`: https://gist.github.com/1047207
-

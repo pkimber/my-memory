@@ -6,8 +6,7 @@ Tips
 Page load
 =========
 
-To wait for a page to load, do a ``find`` of some kind e.g:
-
+To wait for a page to load, do a ``find`` of some kind e.g::
 
   self.browser.find_element_by_partial_link_text('chess')
 
