@@ -1,6 +1,8 @@
 process
 *******
 
+.. highlight:: python
+
 Links
 =====
 
