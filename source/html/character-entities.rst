@@ -22,30 +22,27 @@ the name of the character (but no ``#`` sign), followed by a semi-colon.
 Example
 =======
 
-To produce the copyright symbol:
-
-::
+To produce the copyright symbol::
 
   &#169;
 
-or (because the copyright symbol has a name):
-
-::
+or (because the copyright symbol has a name)::
 
   &copy;
 
 Reference
 =========
 
-============  ================  ===============
-Ampersand     ``&amp;``
-Cent          ``&cent;``        ``&#162;``
-Colon                           ``&#58;``
-Copyright     ``&copy;``        ``&#169;``
-Pound         ``&pound;``
-Quote         ``&quot;``
-Registered    ``&reg;``
-============  ================  ===============
+==================  ==============  ===============
+Ampersand           ``&amp;``
+Cent                ``&cent;``      ``&#162;``
+Colon                               ``&#58;``
+Copyright           ``&copy;``      ``&#169;``
+Non-breaking space  ``&nbsp;``      ``&#160;``
+Pound               ``&pound;``
+Quote               ``&quot;``
+Registered          ``&reg;``
+==================  ==============  ===============
 
 
 .. _`Character entity references in HTML 4`: http://www.w3.org/TR/html401/sgml/entities.html
