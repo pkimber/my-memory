@@ -1,8 +1,8 @@
 Getting Started
 ***************
 
-**NOTE: For Selenium 2.0 (and above), I think we just need to
-``pip install selenium``.  No need to install the stuff below...**
+.. note:: For Selenium 2.0 (and above), I think we just need to
+          ``pip install selenium``.  No need to install the stuff below.
 
 Links
 =====
