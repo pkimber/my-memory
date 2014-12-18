@@ -8,4 +8,5 @@ Contents
 
    links
    install
+   env
    report
