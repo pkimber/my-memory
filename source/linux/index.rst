@@ -27,6 +27,7 @@ Contents
    ssl/index
    suse/index
    ubuntu/index
+   zsh/index
 
 .. toctree::
    :maxdepth: 1
