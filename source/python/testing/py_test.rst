@@ -124,6 +124,15 @@ http://pypi.python.org/pypi/pytest-pep8/::
   # to clear the cache
   py.test --pep8 --clearcache
 
+Sugar
+-----
+
+http://pivotfinland.com/pytest-sugar/::
+
+  pip install pytest-sugar
+
+Nothing else to do.
+
 
 .. _`A simple way of running your tests from within VIM`: https://github.com/alfredodeza/pytest.vim
 .. _`Conventions for Python test discovery`: http://doc.pytest.org/en/latest/goodpractises.html#test-discovery
