@@ -19,6 +19,7 @@ Contents
    pep8
    pydoc
    pyflakes
+   powerline
    snippets
    supertab
    surround
