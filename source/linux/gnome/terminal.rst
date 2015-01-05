@@ -6,9 +6,7 @@ Terminal
 Reset
 =====
 
-`How to reset the terminal properties and preferences?`_
-
-::
+`How to reset the terminal properties and preferences?`_::
 
   cp -a ~/.gconf/apps/gnome-terminal ~/repo/temp/terminal-settings.bak
   ~/.gconf/apps/gnome-terminal
@@ -22,26 +20,18 @@ Colour
 256 colours
 -----------
 
-Is my terminal able to display 256 colours:
-
-::
+Is my terminal able to display 256 colours::
 
   wget http://www.vim.org/scripts/download_script.php?src_id=4568 -O colortest
   perl colortest -w
 
-Scheme
-------
+Solarized -  Scheme
+-------------------
 
-Solarized
-
-**This colour scheme really isn't comprehensive enough - some text is hidden**:
-
-To install:
-
-::
+To install::
 
   cd ~/repo/src/
-  git clone https://github.com/sigurdga/gnome-terminal-colors-solarized.git
+  git clone git@github.com:Anthony25/gnome-terminal-colors-solarized.git
   cd gnome-terminal-colors-solarized
   ./install.sh
 

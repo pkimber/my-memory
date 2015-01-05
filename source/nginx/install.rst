@@ -12,3 +12,10 @@ Configuration
 ==============
 
 - :doc:`../django/deploy/nginx`
+
+Version
+=======
+
+::
+
+  nginx -V

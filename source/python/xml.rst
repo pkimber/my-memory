@@ -1,6 +1,10 @@
 XML
 ***
 
+.. highlight:: python
+
+.. important:: Check out the :doc:`snippets/xml` snippets page.
+
 Links
 =====
 
@@ -25,7 +29,10 @@ Sample
 Read
 ----
 
-::
+.. note:: The :doc:`snippets/xml` snippets page has a python 3 example which
+          iterates over attributes **and** tags.
+
+An older python 2 example which iterates over tags::
 
   from xml.etree import ElementTree as ET
   tree = ET.parse('pom.xml')
@@ -36,17 +43,13 @@ Read
           trav(c, indent+1)
   trav(r)
 
-...using the ``trav`` method above, we can iterate over a string:
-
-::
+...using the ``trav`` method above, we can iterate over a string::
 
   >>> xml = '<code><detail><userId>79918</userId><totalPoints>8</totalPoints></detail></code>'
   >>> tree = ET.fromstring(xml)
   >>> trav(tree)
 
-Another (slightly confusing) sample:
-
-::
+Another (slightly confusing) sample::
 
   >>> testtext = """
   ...     <html><body>hello world.  <i>foo!</i>
@@ -84,116 +87,101 @@ Create
   tree = ET.ElementTree(root)
   tree.write('temp.xml')
 
-- Encoding
+Encoding
 
-  e.g. using the ``tree`` object from the *Create* sample (above):
+e.g. using the ``tree`` object from the *Create* sample (above)::
 
-  ::
+  tree.write('out.xml', encoding="UTF-8")
 
-    tree.write('out.xml', encoding="UTF-8")
+`Introducing ElementTree 1.3, XML Output`_
 
-  `Introducing ElementTree 1.3, XML Output`_
+Pretty Print
 
-- Pretty Print
+We can produce a *pretty print* using this method::
 
-  We can produce a *pretty print* using this method:
+  def indent(elem, level=0):
+      i = "\n" + level*"  "
+      if len(elem):
+          if not elem.text or not elem.text.strip():
+              elem.text = i + "  "
+          if not elem.tail or not elem.tail.strip():
+              elem.tail = i
+          for elem in elem:
+              indent(elem, level+1)
+          if not elem.tail or not elem.tail.strip():
+              elem.tail = i
+      else:
+          if level and (not elem.tail or not elem.tail.strip()):
+              elem.tail = i
 
-  ::
+e.g. using the ``tree`` object from the *Create* sample (above)::
 
-    def indent(elem, level=0):
-        i = "\n" + level*"  "
-        if len(elem):
-            if not elem.text or not elem.text.strip():
-                elem.text = i + "  "
-            if not elem.tail or not elem.tail.strip():
-                elem.tail = i
-            for elem in elem:
-                indent(elem, level+1)
-            if not elem.tail or not elem.tail.strip():
-                elem.tail = i
-        else:
-            if level and (not elem.tail or not elem.tail.strip()):
-                elem.tail = i
-
-  e.g. using the ``tree`` object from the *Create* sample (above):
-
-  ::
-
-    indent(tree.getroot())
-    tree.write('pretty.xml', encoding="ISO-8859-1")
+  indent(tree.getroot())
+  tree.write('pretty.xml', encoding="ISO-8859-1")
 
 - `Element Library Functions, prettyprint`_
 - `Gentlemen indent your XML!`_
 - `ActiveState, Recipe 576750: Pretty-print XML`_
 
-  ::
+::
 
-    #!/usr/bin/env python
-    import xml.dom.minidom as md
-    import sys
+  #!/usr/bin/env python
+  import xml.dom.minidom as md
+  import sys
 
-    pretty_print = lambda f: '\n'.join([line for line in md.parse(open(f)).toprettyxml(indent=' '*2).split('\n') if line.strip()])
+  pretty_print = lambda f: '\n'.join([line for line in md.parse(open(f)).toprettyxml(indent=' '*2).split('\n') if line.strip()])
 
-    if __name__ == "__main__":
-       if len(sys.argv)>=2:
-          print pretty_print(sys.argv[1])
-       else:
-          sys.exit("Usage: %s [xmlfile]" % sys.argv[0])
+  if __name__ == "__main__":
+     if len(sys.argv)>=2:
+        print pretty_print(sys.argv[1])
+     else:
+        sys.exit("Usage: %s [xmlfile]" % sys.argv[0])
 
 ``find`` and ``findAll``
 ========================
 
 For this example we will parse a standard Maven ``pom.xml`` file.
 
-- To find elements using *XPath like* syntax, we first need to know the
-  namespace:
+To find elements using *XPath like* syntax, we first need to know the
+namespace::
 
-  ::
+  from xml.etree import ElementTree as ET
+  tree = ET.parse('sample-app/pom.xml')
+  root = tree.getroot()
+  for element in root: print element.tag
+     ...:
+  {http://maven.apache.org/POM/4.0.0}modelVersion
+  {http://maven.apache.org/POM/4.0.0}groupId
+  {http://maven.apache.org/POM/4.0.0}artifactId
+  ...
 
-    from xml.etree import ElementTree as ET
-    tree = ET.parse('sample-app/pom.xml')
-    root = tree.getroot()
-    for element in root: print element.tag
-       ...:
-    {http://maven.apache.org/POM/4.0.0}modelVersion
-    {http://maven.apache.org/POM/4.0.0}groupId
-    {http://maven.apache.org/POM/4.0.0}artifactId
-    ...
+Don't forget to include the namespace when searching for elements::
 
-- Don't forget to include the namespace when searching for elements:
+  e = tree.find('{http://maven.apache.org/POM/4.0.0}artifactId')
+  e.text
+  'sample-app'
 
-  ::
+To find all elements in the xml file, prefix the query with ``\/\/``::
 
-    e = tree.find('{http://maven.apache.org/POM/4.0.0}artifactId')
-    e.text
-    'sample-app'
+  e = tree.findall('//{http://maven.apache.org/POM/4.0.0}artifactId')
+  for i in e:
+      print i.text
+     ....:
+  sample-app
+  junit
 
-- To find all elements in the xml file, prefix the query with ``\/\/``:
+To search down through a specific path::
 
-  ::
-
-    e = tree.findall('//{http://maven.apache.org/POM/4.0.0}artifactId')
-    for i in e:
-        print i.text
-       ....:
-    sample-app
-    junit
-
-- To search down through a specific path:
-
-  ::
-
-    e = tree.find('{http://maven.apache.org/POM/4.0.0}dependencies/{http://maven.apache.org/POM/4.0.0}dependency/{http://maven.apache.org/POM/4.0.0}artifactId')
-    e.text
-    'junit'
+  e = tree.find('{http://maven.apache.org/POM/4.0.0}dependencies/{http://maven.apache.org/POM/4.0.0}dependency/{http://maven.apache.org/POM/4.0.0}artifactId')
+  e.text
+  'junit'
 
 
-.. _`What's New in Python 2.5`: http://www.onlamp.com/pub/a/python/2006/10/26/python-25.html?page=4
-.. _`ElementTree Overview`: http://effbot.org/zone/element-index.htm
-.. _`Python Library Reference- The ElementTree XML API`: http://docs.python.org/lib/module-xml.etree.ElementTree.html
-.. _`XML building library`: http://github.com/galvez/xmlwitch/
-.. _`Introducing ElementTree 1.3, XML Output`: http://effbot.org/zone/elementtree-13-intro.htm
-.. _`Element Library Functions, prettyprint`: http://effbot.org/zone/element-lib.htm#prettyprint
-.. _`Gentlemen indent your XML!`: http://infix.se/2007/02/06/gentlemen-indent-your-xml
 .. _`ActiveState, Recipe 576750: Pretty-print XML`: http://code.activestate.com/recipes/576750/
-
+.. _`Element Library Functions, prettyprint`: http://effbot.org/zone/element-lib.htm#prettyprint
+.. _`ElementTree Overview`: http://effbot.org/zone/element-index.htm
+.. _`Gentlemen indent your XML!`: http://infix.se/2007/02/06/gentlemen-indent-your-xml
+.. _`Introducing ElementTree 1.3, XML Output`: http://effbot.org/zone/elementtree-13-intro.htm
+.. _`Python Library Reference- The ElementTree XML API`: http://docs.python.org/lib/module-xml.etree.ElementTree.html
+.. _`What's New in Python 2.5`: http://www.onlamp.com/pub/a/python/2006/10/26/python-25.html?page=4
+.. _`XML building library`: http://github.com/galvez/xmlwitch/

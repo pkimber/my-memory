@@ -8,6 +8,7 @@ Contents
 
    links
    ack
+   autojump
    avconv
    docker/index
    encrptfs
