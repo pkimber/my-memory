@@ -5,6 +5,23 @@ XML
 
 .. note:: Also see some older notes at :doc:`../xml`
 
+Convert
+=======
+
+To a dictionary using https://github.com/martinblech/xmltodict:
+
+.. code-block:: bash
+
+  pip install xmltodict
+
+::
+
+  import xmltodict
+
+  tree = ElementTree.parse('your.xml')
+  root = tree.getroot()
+  return xmltodict.parse(root.text)
+
 Escape
 ======
 
@@ -34,6 +51,8 @@ Pretty
 
 Traverse
 ========
+
+.. tip:: Probaby easier to convert the XML to a ``dict``.  See Convert_ above.
 
 python 3 code to traverse XML and display attributes::
 

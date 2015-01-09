@@ -32,6 +32,10 @@ Read
 .. note:: The :doc:`snippets/xml` snippets page has a python 3 example which
           iterates over attributes **and** tags.
 
+.. tip:: The :doc:`snippets/xml` snippets page has an example using
+          ``xmltodict``.  If the file can fit in memory this is probably an
+          easier option.
+
 An older python 2 example which iterates over tags::
 
   from xml.etree import ElementTree as ET
