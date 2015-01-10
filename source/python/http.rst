@@ -43,6 +43,11 @@ containing parameters::
   f = urllib.urlopen("http://www.musi-cal.com/cgi-bin/query?%s" % params)
   print f.read()
 
+Parse
+=====
+
+For parsing a URL, see :doc:`url`
+
 POST
 ====
 
