@@ -19,17 +19,6 @@ If you are **not** using a virtual environment, then this will work::
 
   apt-get install python-psycopg2
 
-Windows
--------
-
-A Windows port of the interface (which includes an installer) can be
-downloaded from
-http://www.stickpeople.com/projects/python/win-psycopg/index.html::
-
-  psycopg2-2.0.8.win32-py2.5-pg8.3.4-release.exe
-
-*Run as administrator* on Vista.
-
 Sample
 ------
 
@@ -57,6 +46,25 @@ Parameters::
   cursor = conn.cursor()
   cursor.execute(sql, [name, email, uid, user_pk])
   cursor.close()
+
+Transactions
+------------
+
+If don't want to have to commit each entry to the database, you can set the
+``autocommit`` property on the connection e.g::
+
+  conn = psycopg2.connect('dbname=test_import user=postgres')
+  conn.autocommit = True
+
+Windows
+-------
+
+A Windows port of the interface (which includes an installer) can be downloaded
+from http://www.stickpeople.com/projects/python/win-psycopg/index.html::
+
+  psycopg2-2.0.8.win32-py2.5-pg8.3.4-release.exe
+
+*Run as administrator* on Vista.
 
 
 .. _`pg8000 is a Pure-Python interface to the PostgreSQL database engine`: http://pybrary.net/pg8000/

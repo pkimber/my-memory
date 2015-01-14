@@ -170,7 +170,7 @@ Reverse
 python 2.7 and above I think::
 
   >>> d = {'name': 'Patrick', 'distance': 23}
-  >>> {v: k for k, v in d.items()} 
+  >>> {v: k for k, v in d.items()}
   {'Patrick': 'name', 23: 'distance'}
 
 Values

@@ -56,6 +56,7 @@ Contents
    image
    kernel
    latex
+   logging
    ls
    lvm
    meld
