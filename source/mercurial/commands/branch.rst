@@ -1,6 +1,8 @@
 Branch
 ******
 
+.. highlight:: bash
+
 List
 ====
 

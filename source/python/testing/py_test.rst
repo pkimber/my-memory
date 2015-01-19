@@ -45,6 +45,15 @@ If you don't do this, you will get the following nasty/misleading error::
 
   AttributeError: DontReadFromInput instance has no attribute 'encoding'
 
+Diff
+====
+
+To display more data in the diff (for ``dict`` and sequences), use
+:ref:`unittest_maxdiff` or use the simpler `assert with the assert statement`_
+syntax e.g::
+
+  assert {'data': ['message']} == response.data
+
 Mark
 ====
 
@@ -135,6 +144,7 @@ Nothing else to do.
 
 
 .. _`A simple way of running your tests from within VIM`: https://github.com/alfredodeza/pytest.vim
+.. _`assert with the assert statement`: http://pytest.readthedocs.org/en/2.0.3/assert.html#assert-with-the-assert-statement
 .. _`Conventions for Python test discovery`: http://doc.pytest.org/en/latest/goodpractises.html#test-discovery
 .. _`Modifying Python traceback printing`: https://pytest.org/latest/usage.html#modifying-python-traceback-printing
 .. _Skipping: http://pytest.org/latest/skipping.html#skipping

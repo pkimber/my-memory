@@ -25,5 +25,6 @@ Contents
    pillow
    raze
    rst2pdf
+   soap
    xlwt
    yaml

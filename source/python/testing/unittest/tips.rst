@@ -3,13 +3,19 @@ Tips
 
 .. highlight:: python
 
+.. _unittest_maxdiff:
+
 Diff
 ====
 
-maxDiff_::
+To control the maximum length of diffs output by assert methods use maxDiff_::
 
   def setUp(self):
       self.maxDiff = None
+
+  # or
+  class MyTest(unittest.TestCase):
+      maxDiff = None
 
 Skip Test
 =========

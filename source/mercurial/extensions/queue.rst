@@ -45,80 +45,65 @@ Patch
 
 Patches are created in a queue...
 
-- Create
+Create::
 
-  ::
+  hg qnew first.patch
 
-    hg qnew first.patch
+Refresh
 
-- Refresh
+Update (commit) the current patch::
 
-  Update (commit) the current patch:
+  hg qrefresh
 
-  ::
+Patch - Add to the queue...
 
-    hg qrefresh
+You can add another patch to the queue::
 
-- Patch - Add to the queue...
+  hg qnew second.patch
 
-  You can add another patch to the queue:
+Information
 
-  ::
+To see the patches which are currently applied to your source::
 
-    hg qnew second.patch
+  $ hg qapplied
+  first.patch
+  second.patch
 
-- Information
+To see all the patches in the queue::
 
-  To see the patches which are currently applied to your source:
+  $ hg qseries
+  first.patch
+  second.patch
+  third.patch
 
-  ::
+Push/Pop
 
-    $ hg qapplied
-    first.patch
-    second.patch
+To push/pop the patches in the queue::
 
-  To see all the patches in the queue:
+  hg qpop
+  hg qpush
 
-  ::
+Remember to use ``hg qapplied`` to see which patches are applied.
 
-    $ hg qseries
-    first.patch
-    second.patch
-    third.patch
+To push or pop all patches in the queue, use the ``-a`` option::
 
-- Push/Pop
+  hg qpop -a
+  hg qpush -a
 
-  To push/pop the patches in the queue:
+Converting the patch to a changeset.
 
-  ::
+For more information, the following links might help:
 
-    hg qpop
-    hg qpush
+- `Tips & tricks - Converting the patch to a changeset`_
+- `The life of a patch`_
 
-  Remember to use ``hg qapplied`` to see which patches are applied.
+Guards
 
-  To push or pop all patches in the queue, use the ``-a`` option:
-
-  ::
-
-    hg qpop -a
-    hg qpush -a
-
-- Converting the patch to a changeset.
-
-  For more information, the following links might help:
-
-  - `Tips & tricks - Converting the patch to a changeset`_
-  - `The life of a patch`_
-
-- Guards
-
-  Patches can be applied conditionally using *guards*.  For more information
-  see `Conditionally applying patches with guards`_.
+Patches can be applied conditionally using *guards*.  For more information
+see `Conditionally applying patches with guards`_.
 
 
-.. _`Managing change with Mercurial Queues`: http://hgbook.red-bean.com/hgbookch12.html
-.. _`Tips & tricks - Converting the patch to a changeset`: http://blogs.sun.com/sunwg11nprg/entry/using_mercurial_queues_extension
-.. _`The life of a patch`: https://developer.mozilla.org/en/Mercurial_Queues
 .. _`Conditionally applying patches with guards`: http://hgbook.red-bean.com/hgbookch13.html#x17-30500013.2
-
+.. _`Managing change with Mercurial Queues`: http://hgbook.red-bean.com/hgbookch12.html
+.. _`The life of a patch`: https://developer.mozilla.org/en/Mercurial_Queues
+.. _`Tips & tricks - Converting the patch to a changeset`: http://blogs.sun.com/sunwg11nprg/entry/using_mercurial_queues_extension
