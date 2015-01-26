@@ -1,6 +1,12 @@
 SOAP
 ****
 
+My search for a SOAP library which:
+
+- Supports python 3
+- SOAP 1.2
+- Is a server (not just a client)
+
 `What SOAP client libraries exist for Python`_
 
 Libraries
@@ -37,6 +43,9 @@ http://spyne.io/:
 
   But it doesn't support SOAP 1.2 (which I think is used by the API):
   http://spyne.io/docs/2.11/faq.html#does-spyne-support-the-soap-1-2-standard
+
+  This pull request did some work on SOAP 1.2:
+  https://github.com/arskom/spyne/pull/386
 
 .. code-block:: xml
 
