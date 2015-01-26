@@ -24,6 +24,7 @@ urlunparse
 
 .. note:: ``urlunparse`` takes a ``tuple`` containing the same six values in
           the same order as ``urlparse``.
+
 ::
 
   from urllib.parse import urlparse
