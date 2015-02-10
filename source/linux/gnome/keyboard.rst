@@ -9,6 +9,16 @@ Run the *Tweak Tool*
 - *Ctrl key position* to *Caps Lock as Ctrl*
 - *Caps Lock key behaviour* to *Make Caps Lock an additional Ctrl*
 
+Issues
+======
+
+Losing the UK keyboard layout:
+
+- Settings
+- Region and Language
+- Input Sources - Add ``English (US)``, remove ``English (US)``.
+
+
 .. To remap the *Caps Lock* key to *Ctrl*:
 ..
 .. - System Settings

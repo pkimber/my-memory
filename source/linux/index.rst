@@ -6,27 +6,32 @@ Contents
 .. toctree::
    :maxdepth: 2
 
+   distribution/which
+   distribution/debian/index
+   distribution/gentoo/index
+   distribution/lxde/index
+   distribution/solaris/index
+   distribution/ubuntu/index
+   distribution/suse/index
+
+.. toctree::
+   :maxdepth: 2
+
    apps/index
    bash/index
    course/index
-   debian/index
    dsl/index
-   gentoo/index
    gnome/index
    install/index
    kernel/index
    kvm/index
-   lxde/index
    mail/index
    monitor/index
    network/index
    process/index
    security/index
-   solaris/index
    ssh/index
    ssl/index
-   suse/index
-   ubuntu/index
    zsh/index
 
 .. toctree::
@@ -43,7 +48,6 @@ Contents
    curl
    df
    diff
-   distribution
    dos2unix
    files
    find
