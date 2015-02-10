@@ -22,6 +22,25 @@ Import
 Sample
 ======
 
+Iterate
+-------
+
+::
+
+  from dateutil.rrule import (
+      DAILY,
+      rrule,
+  )
+  for day in rrule(DAILY, dtstart=date(2015, 1, 1), until=date(2015, 1, 3)):
+      print(day)
+
+  >>> 2015-01-01 00:00:00
+  >>> 2015-01-02 00:00:00
+  >>> 2015-01-03 00:00:00
+
+Specific
+--------
+
 First day of the month::
 
   d = date(2013, 9, 22)

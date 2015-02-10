@@ -6,13 +6,13 @@ Contents
 .. toctree::
    :maxdepth: 2
 
-   distribution/which
-   distribution/debian/index
-   distribution/gentoo/index
-   distribution/lxde/index
-   distribution/solaris/index
-   distribution/ubuntu/index
-   distribution/suse/index
+   distro/which
+   distro/debian/index
+   distro/gentoo/index
+   distro/lxde/index
+   distro/solaris/index
+   distro/ubuntu/index
+   distro/suse/index
 
 .. toctree::
    :maxdepth: 2

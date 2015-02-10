@@ -50,7 +50,7 @@ Write
       ]
   }
   import yaml
-  with open('setup.yaml', 'w') as f:
+  with open('temp.yaml', 'w') as f:
       yaml.dump(data, f, default_flow_style=False)
 
 

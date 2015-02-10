@@ -3,9 +3,7 @@ class
 
 .. highlight:: python
 
-Simple class with ``__init__`` and ``__str__`` methods:
-
-::
+Simple class with ``__init__`` and ``__str__`` methods::
 
   class client(object):
       def __init__(self, name, address, age):
@@ -30,11 +28,11 @@ Name
 Method Resolution Order
 =======================
 
-From `Python's super() considered super!`_
-
-::
+From `Python's super() considered super!`_::
 
   pprint(MyClassName.__mro__)
+
+.. note:: See ``super`` below.
 
 Properties
 ==========
@@ -53,9 +51,7 @@ Class Method
 A class method is similar to a static method in that it has no ``self``
 argument.  Instead, it receives a class as its first argument.  By convention,
 this argument is called ``cls``.  A class method is defined using the
-``classmethod`` descriptor:
-
-::
+``classmethod`` descriptor::
 
   class MyClass(object):
       def SomeMethod(cls, x):
@@ -95,6 +91,16 @@ Static Method
 
 Note: You should really consider creating a static method whenever a method
 does not make substantial use of the instance (``self``).
+
+super
+*****
+
+For python 3::
+
+  def get_data(self, name):
+      data = super().get_data(name)
+      # do something with the data
+      return data
 
 
 .. _`this article by Michael Fotsch`: http://www.geocities.com/foetsch/python/new_style_classes.htm

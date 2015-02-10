@@ -143,6 +143,13 @@ Module Folder
 
   os.path.dirname(os.path.realpath(__file__))
 
+To find the name of the folder containing the module (and append)::
+
+  plugin_folder = os.path.join(
+      os.path.dirname(os.path.realpath(__file__)),
+      'plugin',
+  )
+
 Move
 ====
 
