@@ -39,5 +39,22 @@ Install duplicity::
 
   yum install duplicity
 
+After installing Duplicity, disable the two repositories (``clearos-core`` and
+``clearos-epel``).
 
+Config
+------
+
+
+Configure the `Cloud Server`.  The server won't be set-up using SaltStack, so
+you will need to:
+
+- create your own SSH Keys_
+- copy the GPG keys from your workstation before importing them.
+- copy a backup script.
+- set-up the cron task.
+
+
+.. _`Cloud Server`: https://www.pkimber.net/open/backup.html#cloud-server
 .. _`How to Enable EPEL Repository`: http://www.tecmint.com/how-to-enable-epel-repository-for-rhel-centos-6-5/
+.. _Keys: https://www.pkimber.net/howto/linux/ssh/keys.html

@@ -8,6 +8,20 @@ Combine
 
 See :ref:`combine_date_time`
 
+Constructor
+===========
+
+::
+
+  >>> from datetime import time
+  >>> time()
+  datetime.time(0, 0)
+  # hour=0, minute=0, second=0, microsecond=0, tzinfo=None
+  >>> time(13, 45)
+  datetime.time(13, 45)
+  >>> time(13, 45, 59)
+  datetime.time(13, 45, 59)
+
 Difference
 ==========
 

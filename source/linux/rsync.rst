@@ -90,7 +90,11 @@ a password.
 Sample
 ======
 
-Here are a some sample ``rsync`` command lines:
+Here are a some sample ``rsync`` command lines::
+
+  rsync --recursive --rsh=ssh --size-only --verbose \
+    /home/patrick/projects \
+    patrick@weezy:/home/patrick/temp/
 
 ::
 
@@ -108,6 +112,10 @@ Here are a some sample ``rsync`` command lines:
   rsync --checksum --delete --recursive --rsh=ssh --size-only --verbose \
     /home/patrick/projects \
     patrick@weezy:/home/patrick/temp/
+
+.. warning:: The ``checksum`` option will forces rsync to calculate a checksum
+             for all files.  It might take a very long time
+             ``sending incremental file list``.
 
 Command
 =======
