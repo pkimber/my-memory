@@ -7,6 +7,7 @@ Contents
    :maxdepth: 2
 
    distro/which
+   distro/clearos/index
    distro/debian/index
    distro/gentoo/index
    distro/lxde/index

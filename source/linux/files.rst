@@ -1,6 +1,42 @@
 Files
 *****
 
+.. highlight:: bash
+
+Duplicate
+=========
+
+To remove duplicate files e.g. photos::
+
+  apt-get install fdupes
+
+Find and remove duplicate files::
+
+  fdupes -rdN .
+
+.. warning:: The ``d`` option will **delete** the duplicate files.
+
+===== ========================================================================
+r     option makes fdupes search for files recursively.
+d     option makes fdupes delete duplicates.
+N     option, when used together with ``d``, preserve the first file in each
+      set of duplicates and delete the others **without** prompting the user.
+===== ========================================================================
+
+To move photos into folders::
+
+  sudo apt-get install libimage-exiftool-perl
+  exiftool '-Directory<CreateDate' -d %Y/%Y-%m -r .
+
+Remove olde Windows ``ini`` files::
+
+  find . -type f -name "Thumbs.db" -exec rm -f {} \;
+  find . -type f -name "Picasa.ini" -exec rm -f {} \;
+
+To remove all empty directories under the current directory::
+
+  find . -type d -empty -delete
+
 File Type
 =========
 
