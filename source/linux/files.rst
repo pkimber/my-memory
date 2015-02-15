@@ -17,8 +17,8 @@ Find and remove duplicate files::
 .. warning:: The ``d`` option will **delete** the duplicate files.
 
 ===== ========================================================================
-r     option makes fdupes search for files recursively.
-d     option makes fdupes delete duplicates.
+r     option makes ``fdupes`` search for files recursively.
+d     option makes ``fdupes`` delete duplicates.
 N     option, when used together with ``d``, preserve the first file in each
       set of duplicates and delete the others **without** prompting the user.
 ===== ========================================================================
@@ -26,7 +26,10 @@ N     option, when used together with ``d``, preserve the first file in each
 To move photos into folders::
 
   sudo apt-get install libimage-exiftool-perl
-  exiftool '-Directory<CreateDate' -d %Y/%Y-%m -r .
+  exiftool "-filename=%f%c.%e" '-Directory<CreateDate' -d %Y/%Y-%m -r .
+
+.. note:: The ``%e`` should add a copy number if ``exiftool`` finds a duplicate
+          filename.
 
 Remove olde Windows ``ini`` files::
 
