@@ -3,6 +3,8 @@ Fields
 
 .. highlight:: python
 
+.. important:: For field attributes see :doc:`attributes`.
+
 BooleanField
 ============
 
@@ -18,7 +20,7 @@ BooleanField
       widget=forms.HiddenInput()
       )
 
-Note: To allow the user to un-tick the box, you must have ``required=False``.
+.. note:: To allow the user to un-tick the box, you must have ``required=False``.
 
 DecimalField
 ============
@@ -61,10 +63,8 @@ of the drop down list::
               )
           )
 
-.. note::
-
-  To change the contents of a ``ManyToManyField``, just replace
-  ``ModelChoiceField`` with ``ModelMultipleChoiceField``.
+.. note:: To change the contents of a ``ManyToManyField``, just replace
+          ``ModelChoiceField`` with ``ModelMultipleChoiceField``.
 
 ModelChoiceField
 ----------------
@@ -83,7 +83,6 @@ examples)::
       def __init__(self, *args, **kwargs):
           super(ComplaintForm, self).__init__(*args, **kwargs)
           self.fields["user"].queryset = User.objects.filter(is_staff=False)
-
 
 The queryset can simple be defined within the field::
 

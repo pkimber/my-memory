@@ -19,6 +19,7 @@ Contents
    code
    csv
    dateutil
+   difflib
    httpie
    markdown
    optparse

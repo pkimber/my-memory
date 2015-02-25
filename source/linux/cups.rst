@@ -9,18 +9,15 @@ http://localhost:631/
 PDF
 ===
 
-To install a CUPS PDF printer:
-
-::
+To install a CUPS PDF printer::
 
   sudo apt-get install cups-pdf
 
 To check the install, you should see a *PDF* printer in *System*,
 *Administration*, *Printing*.
 
-If you print to this printer, the PDF file will appear in the following folder:
-
-::
+If you print to this printer, the PDF file will appear in the following
+folder::
 
   ~/PDF/
 

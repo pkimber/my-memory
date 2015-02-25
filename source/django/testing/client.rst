@@ -8,38 +8,33 @@ Note: To avoid hard-coding the URL, use ``reverse``, :doc:`snippets/url`.
 AJAX and Post
 =============
 
-- See sample below.
-- To pass raw data (rather than form fields) to a post request:
+See sample below.
 
-  ::
+To pass raw data (rather than form fields) to a post request::
 
-    post_data = '[{"name": "East Anstey"}, {"name": "East Buckland"}]'
-    response = self.client.post(
-        '/my_screen_name/json/',
-        post_data,
-        content_type='application/json'
-    )
+  post_data = '[{"name": "East Anstey"}, {"name": "East Buckland"}]'
+  response = self.client.post(
+      '/my_screen_name/json/',
+      post_data,
+      content_type='application/json'
+  )
 
-  To make this into an AJAX request which will be recognised by ``is_ajax``,
-  add the ``HTTP_X_REQUESTED_WITH`` parameter:
+To make this into an AJAX request which will be recognised by ``is_ajax``,
+add the ``HTTP_X_REQUESTED_WITH`` parameter::
 
-  ::
+  response = self.client.post(
+      '/my_screen_name/json/',
+      post_data,
+      content_type='application/json',
+      HTTP_X_REQUESTED_WITH='XMLHttpRequest'
+  )
 
-      response = self.client.post(
-          '/my_screen_name/json/',
-          post_data,
-          content_type='application/json',
-          HTTP_X_REQUESTED_WITH='XMLHttpRequest'
-      )
-
-  For details see `Testing AJAX Views in Django`_
+For details see `Testing AJAX Views in Django`_
 
 Sample
 ======
 
-Create a ``tests.py`` file inside your application folder:
-
-::
+Create a ``tests.py`` file inside your application folder::
 
   from django.test import TestCase
 
@@ -86,15 +81,11 @@ Assertions_:
 
 Asserts that a ``Response`` instance produced the given status_code and
 that text appears in the content of the response.  If count is provided,
-text must occur exactly count times in the response:
-
-::
+text must occur exactly count times in the response::
 
   TestCase.assertContains(response, text, count=None, status_code=200)
 
-e.g:
-
-::
+e.g::
 
   response = self.client.get('/')
   self.assertContains(response, 'Latest News')
@@ -113,10 +104,11 @@ Note:
   response = self.client.get('/region/store/')
   self.assertRedirects(response, '/region/choose/')
 
-If you would to test a re-direct to an external URL (from
-`Django's assertRedirects little gotcha`_):
+.. tip:: If ``fetch_redirect_response`` is set to ``False``, the final page
+         won't be loaded.
 
-::
+If you would to test a re-direct to an external URL (from
+`Django's assertRedirects little gotcha`_)::
 
   response = self.client.get('/region/store/')
   self.assertEqual(
@@ -141,9 +133,7 @@ Cookies
 Request
 =======
 
-From `RequestFactory`:
-
-::
+From `RequestFactory`::
 
   from django.utils import unittest
   from django.test.client import RequestFactory
@@ -166,12 +156,9 @@ Response
 
 The ``response`` object in the example above has a ``context`` attribute which
 you can use to examine the ``context`` returned from the view function.  To
-access context elements, use the following syntax:
-
-::
+access context elements, use the following syntax::
 
   response.context['category']
-
 
 Note: If you examine the ``context`` object, you will find it is a list (or a
 list of lists).  This can become very confusing, so just use the simple syntax
@@ -182,13 +169,10 @@ URL
 ===
 
 To use a test/temporary URL, put a ``urls.py`` file into the ``tests`` folder,
-and reference it within the test:
-
-::
+and reference it within the test::
 
   class TestMyView(TestCase):
       urls = 'myapp.tests.urls'
-
 
 For details, see `TestCase.urls`_
 

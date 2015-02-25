@@ -28,7 +28,7 @@ To move photos into folders::
   sudo apt-get install libimage-exiftool-perl
   exiftool "-filename=%f%c.%e" '-Directory<CreateDate' -d %Y/%Y-%m -r .
 
-.. note:: The ``%e`` should add a copy number if ``exiftool`` finds a duplicate
+.. note:: The ``%c`` should add a copy number if ``exiftool`` finds a duplicate
           filename.
 
 Remove olde Windows ``ini`` files::

@@ -1,15 +1,15 @@
 difflib
 *******
 
-- http://pydoc.org/2.5.1/difflib.html
+.. highlight:: python
+
+http://pydoc.org/2.5.1/difflib.html
 
 Sample
 ======
 
 A good sample can be found in the python distribution,
-``Tools/Scripts/diff.py``:
-
-::
+``Tools/Scripts/diff.py``::
 
   \Python25\Tools\Scripts\diff.py file1.txt file2.txt -m > temp.html
 
@@ -37,4 +37,3 @@ Differ
       result = list(Differ().compare(old, new))
       for line in result:
           print line
-

@@ -41,7 +41,6 @@ Contents
    date
    decimal
    decorators
-   difflib
    docstring
    exceptions
    execfile
