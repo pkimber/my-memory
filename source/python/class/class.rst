@@ -21,7 +21,11 @@ from a built-in type.  The base class for all *new-style* classes is called
 Name
 ====
 
-::
+New style classes::
+
+  type(self).__name__
+
+For old (and new) style classes::
 
   self.__class__.__name__
 
