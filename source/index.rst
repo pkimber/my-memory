@@ -6,7 +6,16 @@
 My Memory
 *********
 
-Contents:
+My current projects are web sites built using python and Django.  The linux
+servers are provisioned using SaltStack_ and the code is deployed using
+Fabric_.
+
+My notes for managing this process are (*more or less*) up to date and are
+here:
+`Deploy Django projects using SaltStack`_
+
+The following are general notes on software development (*these are often out
+of date or incorrect*):
 
 .. toctree::
    :maxdepth: 1
@@ -70,3 +79,8 @@ Indices and tables
 * :ref:`genindex`
 * :ref:`modindex`
 * :ref:`search`
+
+
+.. _`Deploy Django projects using SaltStack`: https://www.pkimber.net/open/
+.. _Fabric: http://www.fabfile.org/
+.. _SaltStack: http://saltstack.com/
