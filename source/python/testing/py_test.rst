@@ -15,6 +15,27 @@ Install
 
   pip install pytest
 
+Assert
+======
+
+Extra data:
+
+.. code-block:: python
+
+  assert a % 2 == 0, "value was odd, should be even"
+
+Exception:
+
+.. code-block:: python
+
+  import pytest
+
+  with pytest.raises(RuntimeError) as excinfo:
+      def f():
+          f()
+      f()
+  assert 'maximum recursion' in str(excinfo.value)
+
 Parameters
 ==========
 
@@ -39,9 +60,15 @@ For more information, see `Modifying Python traceback printing`_
 Debug
 =====
 
-To use ``ipdb``, then run with the ``-s`` parameter...
+To use ``pdb``, then:
 
-If you don't do this, you will get the following nasty/misleading error::
+.. code-block:: python
+
+  import pytest
+  pytest.set_trace()
+
+To use ``ipdb``, then run with the ``-s`` parameter...  If you don't do this,
+you will get the following nasty/misleading error::
 
   AttributeError: DontReadFromInput instance has no attribute 'encoding'
 

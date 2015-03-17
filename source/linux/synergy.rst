@@ -37,3 +37,21 @@ Linux
   section above into the correct position.
 - Click *Execute*...
 
+WIP
+===
+
+March 2015
+----------
+
+::
+
+  # linux
+  synergys -f --config ~/.synergy.conf
+
+  # windows
+  telnet 192.168.1.247 24800
+
+I switched off the Firewall and it still doesn’t connect::
+
+  CD c:\Program Files\Synergy
+  synergyc.exe -f -d DEBUG2 192.168.1.247

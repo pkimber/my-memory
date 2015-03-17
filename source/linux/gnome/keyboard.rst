@@ -12,6 +12,22 @@ Run the *Tweak Tool*
 Issues
 ======
 
+Caps Lock
+---------
+
+Inverted on start-up.
+
+From `Sometimes Caps Lock works inverted`_, I ran::
+
+  setleds -caps
+  xmodmap -e "remove lock = Caps_Lock"
+  setxkbmap -option
+
+Note: Only the final command didn't throw an error, but the issue was fixed.
+
+UK
+--
+
 Losing the UK keyboard layout:
 
 - Settings
@@ -28,3 +44,6 @@ Losing the UK keyboard layout:
 .. - *Options...* button (bottom right of the dialog).
 .. - *Caps Lock key behaviour*
 .. - Select *Make Caps Lock an additional Control but keep the Caps_Lock keysym*
+
+
+.. _`Sometimes Caps Lock works inverted`: https://bugs.launchpad.net/ubuntu/+source/linux/+bug/267999
