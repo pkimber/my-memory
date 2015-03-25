@@ -3,12 +3,22 @@ Branch
 
 .. highlight:: bash
 
-List
-====
+List and Checkout
+=================
 
-::
+List::
 
   git branch -a
+
+To checkout a remote branch e.g::
+
+  git branch -a
+  * master
+    remotes/origin/747-board
+
+To checkout ``747-board``::
+
+  git checkout -b 747-board origin/747-board
 
 Create
 ======

@@ -123,6 +123,14 @@ I have been using this plugin::
 
   pip install pytest-django
 
+To write a test which needs to access the database::
+
+  import pytest
+
+  @pytest.mark.django_db
+  def test_audit():
+     # write your test
+
 To run the Django tests, make sure ``DJANGO_SETTINGS_MODULE`` is defined,
 then::
 
@@ -133,6 +141,9 @@ The ``-x`` option stops the tests on the first failure.
 To ``print`` or use ``ipdb``, use the ``-s`` option::
 
   py.test -x -s
+  # or
+  import pytest
+  pytest.set_trace()
 
 .. note::
 
