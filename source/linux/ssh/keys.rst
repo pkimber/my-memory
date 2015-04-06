@@ -21,7 +21,7 @@ To create your key::
 
   ssh-keygen -t rsa
 
-**Note**: I don't think there is any need to enter a password here.
+.. note:: Do not enter a password here.
 
 To add your key to the authentication agent::
 

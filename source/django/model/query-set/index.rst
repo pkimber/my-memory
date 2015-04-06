@@ -13,4 +13,5 @@ Contents
    insert
    q
    relationships
+   tips
    update

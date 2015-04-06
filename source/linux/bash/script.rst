@@ -52,6 +52,13 @@ with spaces in them e.g::
   #!/bin/sh
   ack-grep "$@"
 
+Debug
+=====
+
+To see which command is running, use the ``-xv`` command::
+
+  sh -xv ./myscript.sh
+
 
 .. _`10 Steps to Beautiful Shell Scripts`: http://bashcurescancer.com/10-steps-to-beautiful-shell-scripts.html
 .. _`Advanced Bash-Scripting Guide`: http://tldp.org/LDP/abs/html/
