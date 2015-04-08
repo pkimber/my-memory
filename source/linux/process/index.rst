@@ -11,3 +11,4 @@ Contents
    getting-started
    kill
    priority
+   swap
