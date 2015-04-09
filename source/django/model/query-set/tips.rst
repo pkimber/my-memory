@@ -9,7 +9,8 @@ Combine Querysets
 From `Combine 2 Django Querysets from Different Models`:
 
 If you've ever tried to concatenating two or more querysets from different
-models (i.e. combined = queryset1 | queryset2), you've hit this lovely error::
+models (i.e. ``combined = queryset1 | queryset2``), you've hit this lovely
+error::
 
   Cannot combine queries on two different base models.
 
