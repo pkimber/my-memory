@@ -3,6 +3,9 @@ Tips
 
 .. highlight:: python
 
+Combine Querysets
+=================
+
 From `Combine 2 Django Querysets from Different Models`:
 
 If you've ever tried to concatenating two or more querysets from different
@@ -26,6 +29,14 @@ created::
       chain(queryset1, queryset2),
       key=attrgetter('date_created')
   )
+
+SQL
+===
+
+To display the SQL::
+
+  qs = Option.objects.filter(option_group__site=site)
+  print(qs.query)
 
 
 .. _`Combine 2 Django Querysets from Different Models`: http://chriskief.com/2015/01/12/combine-2-django-querysets-from-different-models/
