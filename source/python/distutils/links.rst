@@ -6,6 +6,9 @@ Links
 - :doc:`manifest`
 - :doc:`../../django/deploy/distutils`
 
+.. attention:: https://packaging.python.org/ is the authoritative resource on
+               packaging.
+
 Learning
 ========
 
@@ -17,4 +20,3 @@ Learning
 .. _`Dive Into Python 3, Packaging Python Libraries`: http://diveintopython3.org/packaging.html
 .. _`Writing the Setup Script`: http://docs.python.org/py3k/distutils/setupscript.html
 .. _`pytest, Integrating with distutils`: http://pytest.org/goodpractises.html
-

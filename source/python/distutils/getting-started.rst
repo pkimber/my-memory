@@ -1,6 +1,9 @@
 Getting Started
 ***************
 
+.. attention:: https://packaging.python.org/ is the authoritative resource on
+               packaging.
+
 Links
 =====
 
