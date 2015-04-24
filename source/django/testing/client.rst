@@ -31,6 +31,20 @@ add the ``HTTP_X_REQUESTED_WITH`` parameter::
 
 For details see `Testing AJAX Views in Django`_
 
+File Upload
+===========
+
+I guess this will also work with image upload::
+
+  with open('test/data/about.jpg', 'rb') as fp:
+      data = {
+          'picture': fp,
+      }
+      response = self.client.post(
+          url,
+          data=data,
+      )
+
 Sample
 ======
 
