@@ -3,6 +3,27 @@ Factory Boy
 
 .. highlight:: python
 
+Many to Many
+============
+
+Here is the model::
+
+  products = models.ManyToManyField(Product, related_name='+')
+
+And the factory::
+
+  enrol = StockFactory(products=[product])
+
+  @factory.post_generation
+  def products(self, create, extracted, **kwargs):
+      if not create:
+          # Simple build, do nothing.
+          return
+      if extracted:
+          # A list of products were passed in, use them
+          for product in extracted:
+              self.products.add(product)
+
 Issues
 ======
 

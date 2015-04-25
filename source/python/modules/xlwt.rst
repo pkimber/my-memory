@@ -3,6 +3,9 @@ xlwt
 
 ``xlwt``, generate spreadsheet files compatible with Microsoft Excel.
 
+.. note:: https://github.com/krockode/x_x does not excellent job of extracting
+          data from Excel or CSV files.
+
 Links
 =====
 
@@ -33,4 +36,3 @@ Sample
 .. _`Hacking xlwt`: http://blog.insightvr.com/?p=30
 .. _`python-excel Google Group`: http://groups.google.com/group/python-excel
 .. _`Styling your Excel data with xlwt`: http://reliablybroken.com/b/2011/07/styling-your-excel-data-with-xlwt/
-
