@@ -31,3 +31,20 @@ The response is formatted like this:
           { "value": "United States",        "data": "US" }
       ]
   }
+
+Issues
+======
+
+I had some issues with speed of response.  To resolve this, I changed the
+trigger count to two characters::
+
+  $('#autocomplete').autocomplete({
+      minChars: 2,
+      serviceUrl: '{% url 'location.search' %}',
+      onSelect: function (suggestion) {
+          console.log('You selected: ' + suggestion.value);
+          console.log(suggestion.data);
+      }
+  });
+
+.. note:: ``{% url 'location.search' %}`` is a Django tag.

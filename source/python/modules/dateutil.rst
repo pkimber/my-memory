@@ -19,6 +19,18 @@ Import
   from datetime import date
   from dateutil.relativedelta import relativedelta
 
+rrule
+=====
+
+Django timezone::
+
+  from django.utils import timezone
+  result = rrule(MONTHLY, bymonthday=(-1,), dtstart=timezone.now())
+  result.after(timezone.now())
+
+.. tip:: To get ``rrule`` to work with ``timezone``, then set ``dtstart`` to a
+         timezone aware date/time.
+
 Sample
 ======
 

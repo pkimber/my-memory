@@ -116,6 +116,13 @@ https://pypi.python.org/pypi/pytest-cov::
 
   py.test --cov .
 
+.. note:: The ``.`` is important.  This needs to be the folder you want
+          coverage to report on.
+
+Django app example::
+
+  py.test -x --reuse-db --cov-report html --cov job
+
 Django
 ------
 
