@@ -100,8 +100,11 @@ GUI::
 Modify
 ------
 
-Note: You have to **stage** a file before you can commit it.  You can do this
-automatically by using the ``-a`` parameter on the ``commit`` command::
+.. note:: You have to **stage** a file before you can commit it.  You can do
+          this automatically by using the ``-a`` parameter on the ``commit``
+          command.
+
+::
 
   git commit -a -m "Rename activation code."
 
@@ -109,6 +112,10 @@ automatically by using the ``-a`` parameter on the ``commit`` command::
 
   git add my-file.py
   git commit -m "Update colours."
+
+If you enter an incorrect commit message, you can amend the message using::
+
+  git commit --amend
 
 Reset (revert)
 --------------

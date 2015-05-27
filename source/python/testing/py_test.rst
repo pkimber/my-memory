@@ -81,6 +81,13 @@ syntax e.g::
 
   assert {'data': ['message']} == response.data
 
+Issues
+======
+
+I had this error: `IndexError: list index out of range`_.  To solve the issue::
+
+  py.test -x --tb=native
+
 Mark
 ====
 
@@ -191,5 +198,6 @@ Nothing else to do.
 .. _`A simple way of running your tests from within VIM`: https://github.com/alfredodeza/pytest.vim
 .. _`assert with the assert statement`: http://pytest.readthedocs.org/en/2.0.3/assert.html#assert-with-the-assert-statement
 .. _`Conventions for Python test discovery`: http://doc.pytest.org/en/latest/goodpractises.html#test-discovery
+.. _`IndexError: list index out of range`: https://bitbucket.org/pytest-dev/pytest/issue/754/cant-render-tracebacks-that-have-missing
 .. _`Modifying Python traceback printing`: https://pytest.org/latest/usage.html#modifying-python-traceback-printing
 .. _Skipping: http://pytest.org/latest/skipping.html#skipping

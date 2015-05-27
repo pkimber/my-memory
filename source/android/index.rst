@@ -6,6 +6,11 @@ Contents
 .. toctree::
    :maxdepth: 2
 
+   recovery
+
+.. toctree::
+   :maxdepth: 2
+
    emulator/index
    snippets/index
    studio/index
