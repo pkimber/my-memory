@@ -246,6 +246,20 @@ Note: Table headers are with the ``th`` tag e.g::
     </tr>
   </table>
 
+Align
+-----
+
+::
+
+  <td align="right">100</td>
+
+Width
+-----
+
+::
+
+  <table width="100%">
+
 Text Area
 =========
 
