@@ -17,6 +17,7 @@ Colours
 =======
 
 - http://www.colourlovers.com/
+- http://www.colourlovers.com/palettes/search?query=django
 
 Columns
 =======

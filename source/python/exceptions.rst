@@ -14,8 +14,18 @@ Catch
 
   try:
       self.open()
-  except HTTPError, e:
+  except HTTPError as e:
       print http error: ' + str(e)
+
+Chained
+-------
+
+python 3 only::
+
+  try:
+      v = {}['a']
+  except KeyError as e:
+      raise ValueError('failed') from e
 
 Unknown
 -------
@@ -24,7 +34,7 @@ Unknown
 
   try:
       somecode()
-  except Exception, e:
+  except Exception as e:
       print e
 
 or::
@@ -48,13 +58,11 @@ Finally
   finally:
       f.close()
 
-Note:
-
-`PEP 341: Unified try/except/finally`_
-*Until Python 2.5, the try statement came in two flavours.  You could use a
-finally block to ensure that code is always executed, or one or more except
-blocks to catch specific exceptions.  You couldn't combine both except
-blocks and a finally block*.
+.. note:: `PEP 341: Unified try/except/finally`_
+          Until Python 2.5, the try statement came in two flavours.  You could
+          use a finally block to ensure that code is always executed, or one or
+          more except blocks to catch specific exceptions.  You couldn't
+          combine both except blocks and a finally block*
 
 To solve this problem nest a try, except within a try, finally e.g::
 
@@ -62,7 +70,7 @@ To solve this problem nest a try, except within a try, finally e.g::
   try:
       try:
           cursor = somecode()
-      except Exception, e:
+      except Exception as e:
           print e
   finally:
       if cursor != None:
@@ -73,20 +81,20 @@ Throw
 
 To throw an exception::
 
-  class MyError(Exception):
+  class SyncError(Exception):
+
       def __init__(self, value):
           Exception.__init__(self)
           self.value = value
+
       def __str__(self):
-          return repr(self.value)
-          # or...
-          # return repr('%s, %s' % (self.__class__.__name__, self.value))
+          return repr('{}, {}'.format(self.__class__.__name__, self.value))
 
 ::
 
   try:
-      raise MyError(2*2)
-  except MyError, e:
+      raise SyncError(2*2)
+  except SyncError as e:
       print 'My exception occurred, value:', e.value
 
 Exceptions

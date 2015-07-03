@@ -3,7 +3,7 @@ elasticsearch
 
 From `Install ElasticSearch in Ubuntu 14.04 server`
 
-Install :doc:`../../linux/ubuntu/java`::
+Install :doc:`../../linux/distro/ubuntu/java`::
 
   sudo wget -O - http://packages.elasticsearch.org/GPG-KEY-elasticsearch | sudo apt-key add -
 
@@ -39,6 +39,8 @@ We must have an ``_id`` field e.g::
             'score': self.score,
             'comments': [c.to_search() for c in self.comments()],
         }
+        # using the DocType from below
+        return QuestionDoc(meta={'id': d.pop('_id')}, **d)
 
 Very easy to query many indexes at once.
 
@@ -63,6 +65,7 @@ Client::
   es.info()
   es.search(q='awful flavour')
   es.search(body={"query": {"filtered": {"query": {"bool": {"should": [{"match": {"title": "bean"}}, {"match": {"body": "bean"}}}, "filter": {"term": {"tags": "beans"}}}})
+  es.indices.get_mapping(index='stack', doc_type='question')
 
   # this is better
   from elasticsearch_dsl import Search
@@ -85,6 +88,32 @@ Client::
   result.comment
   # for the id, we use meta
   result.meta.id
+  result.aggregations.per_tag.buckets
+
+  # DocType is just like a Django model
+  # in search.py
+  # ElasticSearch still uses the dynamic mappings
+  from elasticsearch_dsl import DocType
+  class Question(DocType):
+      creation_date = Date()
+      tags = String(index='not_analyzed', multi=True)
+
+  Question._doc_type.mapping.to_dict()
+  # refresh the actual field types from elasticsearch
+  Question._doc_type.refresh()
+  Question._doc_type.mapping.to_dict()
+  Question.get(id=464)
+
+Reply on ``post_save`` being more or less reliable and then reindex everything
+every now and again::
+
+  def update_search(instance, **kwargs):
+      instance.to_search().save()
+
+  post_save.connect(update_search, sender=Answer)
+
+You should have 1 server or more than 2.  Do not have 2 servers.  This is
+called *split brain*.
 
 
 .. _`Install ElasticSearch in Ubuntu 14.04 server`: http://blog.bekijkhet.com/2014/06/install-elasticsearch-in-ubuntu-1404.html

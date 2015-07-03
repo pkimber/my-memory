@@ -40,6 +40,7 @@ Contents
    cookies
    custom-commands
    diagnostics
+   djangogirls
    eclipse-pydev
    email
    exception
@@ -53,4 +54,3 @@ Contents
    signals
    sites
    standards
-

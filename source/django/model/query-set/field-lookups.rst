@@ -48,5 +48,15 @@ startswith
   regex
   iregex
 
+Fields
+======
+
+FileField
+---------
+
+To find ``FileField`` which contain data::
+
+  Documents.objects.exclude(document_file='')
+
 
 .. _`Field lookups`: https://docs.djangoproject.com/en/dev/ref/models/querysets/#field-lookups

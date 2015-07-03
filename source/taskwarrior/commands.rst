@@ -3,6 +3,16 @@ Usage
 
 `Best Practices`_
 
+Dependencies
+============
+
+::
+
+  task blocked
+  task blocking
+
+  task ID modify depends:OTHER_ID
+
 Info
 ====
 
@@ -10,8 +20,19 @@ Info
 
   task 7 info
 
+List
+====
+
+::
+
+  task status:completed all
+
 Modify
 ======
+
+Annotation (note)::
+
+  task 14 annotate Cheese and Bacon
 
 To boost a tags urgency::
 
@@ -29,6 +50,24 @@ Don't show the task until::
 
   task 12 modify wait:11months
   task 13 modify wait:22/09/2050
+
+Search
+======
+
+Case sensitive search::
+
+  task list /Cross/
+
+User Defined Attributes (UDA)
+=============================
+
+::
+
+  # 'estimate' of type 'numeric'
+  task config uda.estimate.type numeric
+
+  # 'url' of type 'string'
+  task config uda.url.type string
 
 Workflow
 ========

@@ -168,6 +168,10 @@ For example, to store numbers up to 999 with a resolution of 2 decimal places::
 
   models.DecimalField(max_digits=5, decimal_places=2)
 
+.. note:: For now (because I can't find it in the docs), I am creating a
+          ``DecimalField`` which can be ``blank`` with ``blank`` **AND**
+          ``null`` (the same as an ``IntegerField``).
+
 FileField (and ImageField)
 --------------------------
 

@@ -1,6 +1,16 @@
 Contributing to Django
 **********************
 
+DjangoCon EU 2015
+=================
+
+Links:
+
+- https://dashboard.djangoproject.com/
+- https://code.djangoproject.com/
+- https://docs.djangoproject.com/en/1.8/internals/contributing/writing-code/submitting-patches/
+- https://docs.djangoproject.com/en/dev/internals/contributing/
+
 Getting Started
 ===============
 
@@ -47,4 +57,3 @@ split into three periods of time:
 
 
 .. _`Preparing for the next Django sprint`: http://www.pointy-stick.com/blog/2008/02/15/preparing-next-django-sprint/
-
