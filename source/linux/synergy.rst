@@ -37,6 +37,8 @@ Linux
   section above into the correct position.
 - Click *Execute*...
 
+For notes on the Ubuntu Firewall, :doc:`distro/ubuntu/firewall`
+
 WIP
 ===
 
@@ -55,3 +57,19 @@ I switched off the Firewall and it still doesn’t connect::
 
   CD c:\Program Files\Synergy
   synergyc.exe -f -d DEBUG2 192.168.1.247
+
+06/07/2015
+==========
+
+Had similar issues to March (see above).  Finally solved the problem, by
+opening the firewall port::
+
+  ufw allow 24800/tcp
+
+To see the firewall status::
+
+  ufw status
+
+To view the firewall log (where I found the problem)::
+
+  tail -f /var/log/ufw.log

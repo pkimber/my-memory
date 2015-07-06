@@ -7,6 +7,7 @@ Contents
    :maxdepth: 1
 
    links
+   firewall
    fonts
    grub
    issues
@@ -18,4 +19,3 @@ Contents
    ssh
    tips
    unity
-
