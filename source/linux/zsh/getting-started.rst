@@ -8,7 +8,7 @@ From `ZSH or Oh-My-ZSH on Ubuntu`_:
 Install
 =======
 
-Make sure ``git`` is installed before:
+Make sure ``git`` is installed before::
 
   sudo apt-get install zsh
   curl -L http://install.ohmyz.sh | sh

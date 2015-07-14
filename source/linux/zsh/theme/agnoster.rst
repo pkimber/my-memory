@@ -1,7 +1,7 @@
 agnoster
 ********
 
-Install the patched terminal fonts, :doc:`../../vim/plugin/powerline`
+Install the patched terminal fonts, :doc:`../../../vim/plugin/powerline`
 
 Edit ``~/.zshrc``::
 
