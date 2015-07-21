@@ -130,5 +130,18 @@ Sorting (in place)::
 
   l.sort()
 
+Sorting (python 3)::
+
+  from datetime import date
+  data = [
+      {'expiry': date(2010, 6, 2), 'name': 'Patrick'},
+      {'expiry': date(2010, 3, 1), 'name': 'Andrea'},
+  ]
+  sorted(data, key=lambda item: item.get('expiry'))
+  >>> [{'name': 'Andrea', 'expiry': datetime.date(2010, 3, 1)}, {'name': 'Patrick', 'expiry': datetime.date(2010, 6, 2)}]
+
+  sorted(data, key=lambda item: item.get('expiry'), reverse=True)
+  >>> [{'name': 'Patrick', 'expiry': datetime.date(2010, 6, 2)}, {'name': 'Andrea', 'expiry': datetime.date(2010, 3, 1)}]
+
 
 .. _`good primer for python slice notation`: http://stackoverflow.com/questions/509211/good-primer-for-python-slice-notation
