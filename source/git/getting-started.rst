@@ -28,6 +28,10 @@ Enable colours::
   git config --global color.status auto
   git config --global color.branch auto
 
+Set the default editor (to ``vim``)::
+
+  git config --global core.editor vim
+
 View configuration::
 
   git config -l

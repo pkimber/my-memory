@@ -9,6 +9,7 @@ Contents
    distro/which
    distro/clearos/index
    distro/debian/index
+   distro/elementary/index
    distro/gentoo/index
    distro/lxde/index
    distro/solaris/index

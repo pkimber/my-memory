@@ -30,7 +30,9 @@ Case insensitive search from "``/``" for all files with an ``mp3`` extension::
 
 Note: Placing quotes around the search criteria avoids issues with wildcard
 characters and is probably a good habit to get into.  Could use a back-slash
-instead of the quotes...
+instead of the quotes... e.g::
+
+  find . -iname \*pillow\*
 
 Size
 ----

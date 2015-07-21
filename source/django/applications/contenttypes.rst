@@ -15,13 +15,13 @@ Model
 
 ::
 
-  from django.contrib.contenttypes import generic
+  from django.contrib.contenttypes.fields import GenericForeignKey
   from django.contrib.contenttypes.models import ContentType
 
   class MyModel(models.Model):
       content_type = models.ForeignKey(ContentType, null=True)
       object_id = models.PositiveIntegerField(null=True)
-      content_object = generic.GenericForeignKey()
+      content_object = GenericForeignKey()
 
   >>> from django.contrib.auth.models import User
   >>> user_row = User.objects.get(username='Guido')

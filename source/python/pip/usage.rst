@@ -73,6 +73,21 @@ Uninstall
 
   pip uninstall hgsubversion
 
+I can't find a simple way to rebuild a wheel... so I did it like this:
+
+Find the wheel in the cache (in this example I am rebuilding ``pillow``)::
+
+  cd ~/.cache/pip/wheels/
+  find . -iname \*pillow\*
+
+  # sample output
+  $ ./e3/29/cd/0761582ad93ad680a439eb56b021fe26739be7a7d5dc05ee15/Pillow-2.9.0-cp34-cp34m-linux_x86_64.whl
+  $ rm ./e3/29/cd/0761582ad93ad680a439eb56b021fe26739be7a7d5dc05ee15/Pillow-2.9.0-cp34-cp34m-linux_x86_64.whl
+
+  # back to your project folder
+  pip uninstall pillow
+  pip install pillow
+
 Upgrade/Update
 --------------
 

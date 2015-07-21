@@ -29,3 +29,10 @@ Headers
 ::
 
   http --headers GET http://www.google.co.uk/
+
+SSL
+---
+
+To skip the SSL certificate verification::
+
+  http --verify=no GET http://www.google.co.uk/

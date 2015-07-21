@@ -10,18 +10,14 @@ Source
 Prequisites
 -----------
 
-Install *CMake* using ``apt-get``.
-
-::
+Install *CMake* using ``apt-get``::
 
   sudo apt-get install cmake
 
 Download
 --------
 
-Download the *Source code tarball* from `Taskwarrior Download`_
-
-::
+Download the *Source code tarball* from `Taskwarrior Download`_::
 
   cd ~/Downloads/taskwarrior/
   wget http://www.taskwarrior.org/download/task-2.0.0.tar.gz

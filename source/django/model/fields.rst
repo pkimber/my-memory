@@ -54,7 +54,10 @@ to set both ``blank`` and ``null`` (see *Sample* below):
 ``editable``
 ------------
 
-Default is ``True``.
+If ``False``, the field will not be displayed in the admin or any other
+``ModelForm``.  They are also skipped during model validation.
+
+  Default is ``True``.
 
 ``help_text``
 -------------
@@ -343,13 +346,21 @@ URLField
 A field for a URL.  If the ``verify_exists`` option is ``False`` (default), the
 URL will *NOT* be checked for existence.
 
+UUIDField
+---------
+
+::
+
+  import uuid
+
+  id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+
 
 .. _`How can I get access to a Django Model field verbose name dynamically?`: http://stackoverflow.com/questions/2429074/how-can-i-get-access-to-a-django-model-field-verbose-name-dynamically
 .. _`Model reference`: http://www.djangoproject.com/documentation/model-api/
 .. _`Model Style`: http://docs.djangoproject.com/en/dev/internals/contributing/#model-style
 .. _`Set Django's FileField to an existing file`: http://stackoverflow.com/questions/8332443/set-djangos-filefield-to-an-existing-file
+.. _django_conduit: https://django-conduit.readthedocs.org/en/latest/related.html#default-behavior
 .. _get_FOO_display: https://docs.djangoproject.com/en/dev/ref/models/instances/#django.db.models.Model.get_FOO_display
 .. _get_next_by_FOO: https://docs.djangoproject.com/en/dev/ref/models/instances/#django.db.models.Model.get_next_by_FOO
 .. _sample_image_field: http://toybox/hg/sample/file/tip/python/django/sample_image_field/
-.. _django_conduit: https://django-conduit.readthedocs.org/en/latest/related.html#default-behavior
-
