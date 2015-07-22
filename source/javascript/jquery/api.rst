@@ -1,6 +1,8 @@
 API
 ***
 
+.. highlight:: javascript
+
 parseJSON
 =========
 
@@ -11,11 +13,7 @@ parseJSON
 val
 ===
 
-val_
-
-.. code-block:: javascript
-
-::
+val_::
 
   $('select.foo').val(); // get the value from a dropdown select even easier
   var text = $('#input_address').val();

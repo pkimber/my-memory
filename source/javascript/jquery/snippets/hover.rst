@@ -4,9 +4,7 @@ Hover
 .. highlight:: javascript
 
 From `.hover()`_: To add a special style to table cells that are being hovered
-over, try:
-
-::
+over, try::
 
   $("td").hover(
       function () {

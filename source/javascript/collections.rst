@@ -1,6 +1,8 @@
 Collections
 ***********
 
+.. highlight:: javascript
+
 Initializer
 ===========
 
@@ -19,4 +21,3 @@ Object
 ::
 
   {x:1, y:2}
-

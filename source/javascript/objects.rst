@@ -1,7 +1,7 @@
 Objects
 *******
 
-.. highlight: javascript
+.. highlight:: javascript
 
 Construct
 =========
@@ -48,9 +48,7 @@ hasOwnProperty
 Sample
 ======
 
-Also see :doc:`prototype`:
-
-::
+Also see :doc:`prototype`::
 
   o = Object();
   o.x = 2;

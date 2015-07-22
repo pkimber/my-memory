@@ -1,6 +1,8 @@
 Code Snippets
 *************
 
+.. highlight:: javascript
+
 Links
 =====
 
@@ -18,9 +20,7 @@ Download
 String - Remove Control Characters
 ==================================
 
-`Remove control characters from a string`_:
-
-::
+`Remove control characters from a string`_::
 
   function removeNL(s) {
       /*
@@ -42,9 +42,7 @@ String - Remove Control Characters
 String - Trim
 =============
 
-`Adds trim function to javascript string object`_:
-
-::
+`Adds trim function to javascript string object`_::
 
   String.prototype.trim = function() {
       return this.replace(/^\s+|\s+$/g, "");

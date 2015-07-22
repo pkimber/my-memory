@@ -143,5 +143,18 @@ Sorting (python 3)::
   sorted(data, key=lambda item: item.get('expiry'), reverse=True)
   >>> [{'name': 'Patrick', 'expiry': datetime.date(2010, 6, 2)}, {'name': 'Andrea', 'expiry': datetime.date(2010, 3, 1)}]
 
+Sorting (python 3) - with a function (I prefer this)::
+
+  def expiry_as_str(item):
+      """Sort by date by converting to a string.
+
+      Handles 'None' dates.
+
+      """
+      d = item.get('expiry', None)
+      return d.strftime('%Y%m%d') if d else ''
+
+  return sorted(result, key=expiry_as_str)
+
 
 .. _`good primer for python slice notation`: http://stackoverflow.com/questions/509211/good-primer-for-python-slice-notation
