@@ -26,6 +26,22 @@ one.
 
 Log out... log back in...
 
+USB Memory Stick
+================
+
+Make a folder on the USB device e.g::
+
+  mkdir /media/patrick/pny8gb/Private
+
+Initialise the encrypted file system::
+
+  sudo mount -t ecryptfs /media/patrick/pny8gb/Private /media/patrick/pny8gb/Private
+  # enter the 'Passphrase' and then accept all default options
+
+Unmount::
+
+  sudo umount -l /media/patrick/pny8gb/Private
+
 
 .. _`Encrypt Directory in Linux`: http://miteshjlinuxtips.wordpress.com/2012/11/09/encrypt-directory-in-linux/
 .. _Encryptfs: http://bodhizazen.net/Tutorials/Ecryptfs/

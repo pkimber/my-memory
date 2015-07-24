@@ -3,6 +3,21 @@ Images
 
 .. highlight:: bash
 
+List images::
+
+  docker images
+
+List image IDs::
+
+  docker images -q
+
+Remove all images (delete)::
+
+  docker rmi `docker images -q`
+
+Original Notes
+==============
+
 Run docker (see :doc:`getting-started`)::
 
   sudo docker run -i -t ubuntu /bin/bash

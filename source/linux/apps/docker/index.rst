@@ -8,6 +8,7 @@ Contents
 
    links
    getting-started
+   containers
    images
    issues
    repository
