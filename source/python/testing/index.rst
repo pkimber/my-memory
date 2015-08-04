@@ -15,9 +15,9 @@ Contents
    links
    coverage
    lettuce
+   mock
    nose
    pep8
    py_test-distutils
    py_test
    pylint
-

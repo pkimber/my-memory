@@ -7,15 +7,34 @@ http://doc.devpi.net/
 
 .. note::
 
-  Check out https://github.com/pkimber/docs_cloud for my up to date notes...
+  Check out https://www.pkimber.net/open/devpi.html for my up to date notes...
 
 ::
 
   bin/devpi-ctl status
   bin/devpi-ctl start devpi-server
 
+Configuration
+=============
+
+::
+
+  ~/.pydistutils.cfg
+  ~/.pip/pip.conf
+  ~/.buildout/default.cfg
+
+Upload::
+
+  ~/.pydistutils.cfg
+  ~/.pypirc
+
 Issues
 ======
+
+Check out: https://www.pkimber.net/open/issues.html#devpi
+
+Upload
+------
 
 I kept getting a *Bad request (400)* error with no more information when
 running::

@@ -1,6 +1,15 @@
 whois
 *****
 
+.. highlight:: bash
+
+Install
+=======
+
+::
+
+  sudo apt-get install whois
+
 Domain
 ======
 
