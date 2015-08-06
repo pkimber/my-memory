@@ -10,9 +10,7 @@ Copy
   djangosnippets - Copy a model instance.
 - `ability to make a copies of model instances`_
 
-To copy an instance of a model (using the snippet code from above):
-
-::
+To copy an instance of a model (using the snippet code from above)::
 
   from django.db.models import AutoField
   def copy_model_instance(obj):
@@ -29,9 +27,7 @@ Create
 ======
 
 ``create(**kwargs)`` creates a new object, saves it (puts it in the related
-object set if applicable) and returns the newly created object:
-
-::
+object set if applicable) and returns the newly created object::
 
   company = Company.objects.create(name=name, postcode=postcode)
   print company.pk
@@ -39,17 +35,13 @@ object set if applicable) and returns the newly created object:
 get_absolute_url
 ================
 
-The absolute URL should be based on a named URL.  So for this URL:
-
-::
+The absolute URL should be based on a named URL.  So for this URL::
 
   url(r'^(?P<category>[-\w]+)/(?P<feature>[-\w]+)/$',
       feature_item_view,
       name='feature_item'),
 
-... we can write this method:
-
-::
+... we can write this method::
 
   from django.db.models import permalink
 
@@ -58,9 +50,7 @@ The absolute URL should be based on a named URL.  So for this URL:
       return ('feature_item', (self.category.slug, self.slug,))
   get_absolute_url = permalink(get_absolute_url)
 
-... and use it in the template like this:
-
-::
+... and use it in the template like this::
 
   <a href=" object.get_absolute_url "> object.name </a>
 
@@ -69,6 +59,8 @@ Overriding predefined model methods.
 
 - `Overriding predefined model methods`_:
 - **Also see** :doc:`validation`.
+
+.. _django_model_method_save:
 
 Save
 ----
@@ -84,9 +76,15 @@ Save
           super(Blog, self).save(*args, **kwargs) # Call the "real" save() method.
           do_something_else()
 
-You can also prevent saving:
+You can save the original name of a file::
 
-::
+  def save(self, *args, **kwargs):
+      """Save the original file name."""
+      self.original_file_name = self.document.name
+      # Call the "real" save() method.
+      super().save(*args, **kwargs)
+
+You can also prevent saving::
 
   class Blog(models.Model):
       name = models.CharField(max_length=100)
@@ -98,17 +96,13 @@ You can also prevent saving:
           else:
               super(Blog, self).save(*args, **kwargs) # Call the "real" save() method.
 
-And, only save stuff when the record is created:
-
-::
+And, only save stuff when the record is created::
 
       def save(self, *args, **kwargs):
           if not self.pk:
               # do some stuff here...
 
-You can also check other records in the table e.g:
-
-::
+You can also check other records in the table e.g::
 
   class Shop(models.Model):
       description = models.CharField(max_length=255)
@@ -135,9 +129,7 @@ Row Level
 
 Define custom methods on a model to add custom "row-level" functionality to
 your objects.  Whereas ``Manager`` methods are intended to do "table-wide"
-things, model methods should act on a particular model instance e.g:
-
-::
+things, model methods should act on a particular model instance e.g::
 
   from django.contrib.localflavor.us.models import USStateField
 

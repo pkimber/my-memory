@@ -190,6 +190,8 @@ To `Set Django's FileField to an existing file`_ just set
   doc.file
   <FieldFile: path/to/file>
 
+To save the original file name see :ref:`django_model_method_save`
+
 .. note::
 
   Don't forget to use
