@@ -33,9 +33,14 @@ Make a folder on the USB device e.g::
 
   mkdir /media/patrick/pny8gb/Private
 
-Initialise the encrypted file system::
+Initialise the encrypted file system:
+
+.. tip:: Make sure the USB device is mounted before running the following.
+
+::
 
   sudo mount -t ecryptfs /media/patrick/pny8gb/Private /media/patrick/pny8gb/Private
+  # enter your sudo password (the first time)
   # enter the 'Passphrase' and then accept all default options
 
 Unmount::
