@@ -11,7 +11,7 @@ Contents
    autojump
    avconv
    docker/index
-   encrptfs
+   ecryptfs
    gimp/index
    guake
    inkscape/index
