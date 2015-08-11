@@ -1,6 +1,8 @@
 debugger - pdb
 **************
 
+.. tip::  Try ``pip install pdbpp``
+
 Links
 =====
 
@@ -15,6 +17,8 @@ Commands
 ======== ========= ========================================================================
 l        list      Shows the current code around the line that your on.  The line that is about to be executed has a -* before it.
 n        next      Executes the current line and moves to the next in the current file.
+p        print
+pp       pretty p  **This is very good to use**
 c        continue  Finishes the debugging session.  If there are more breakpoints (or if your set_trace() code gets called again before the request finishes) then you will get back to the debugger, otherwise the requests will complete back to the browser.
 s        step      Goes down into the next level of execution (presumably a different file). You can follow your code through Django's internals this way. This is really good for finding bugs and getting a better understanding about how Django works.
 r        return    Continue execution until the current function returns.
@@ -28,9 +32,7 @@ Issues
 ======
 
 If your screen gets corrupted running ``pdb``, try typing one (or more) of the
-following:
-
-::
+following::
 
   reset
   tset
@@ -46,9 +48,7 @@ Sample
 
   import pdb; pdb.set_trace()
 
-Note: To invoke the full-fledged python shell anywhere in code:
-
-::
+Note: To invoke the full-fledged python shell anywhere in code::
 
   import code; code.interact(local=locals())
 

@@ -3,7 +3,7 @@ Debugger
 
 .. highlight:: python
 
-**NOTE** Check out http://pypi.python.org/pypi/ipdb/0.6.  **IS IT WORKING NOW**
+.. tip:: Check out ``pdbpp``.  See :doc:`../pdb` for more information.
 
 Debug
 =====
