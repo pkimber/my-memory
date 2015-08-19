@@ -1,5 +1,5 @@
-encryptfs
-*********
+ecryptfs
+********
 
 .. highlight:: bash
 

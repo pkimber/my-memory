@@ -6,6 +6,8 @@ debugger - pdb
 Links
 =====
 
+- *This is excellent*:
+  `Clayton Parker - So you think you can PDB? - PyCon 2015`_
 - `Using pdb`_ by Eric Holscher.
 - `Debugging in Python, gentle introduction to using pdb`_
 - `PuDB is a full-screen, console-based visual debugger for Python.`_
@@ -21,7 +23,8 @@ p        print
 pp       pretty p  **This is very good to use**
 c        continue  Finishes the debugging session.  If there are more breakpoints (or if your set_trace() code gets called again before the request finishes) then you will get back to the debugger, otherwise the requests will complete back to the browser.
 s        step      Goes down into the next level of execution (presumably a different file). You can follow your code through Django's internals this way. This is really good for finding bugs and getting a better understanding about how Django works.
-r        return    Continue execution until the current function returns.
+r        return    Continue execution until the end of the current function.
+until              To get through a loop
 w        where     Shows you a backtrace of the calls that have gotten you to the current point in the code execution. This is really handy for the following 2 commands.
 u        up        Allows you to go up one level in the backtrace.
 d        down      Allows you to go down one level in the backtrace. These two commands allow you to see where you came from, and what variables were called where. This lets you see how the state ended up the current way that it did, which is great for figuring out how to fix it. :)
@@ -60,3 +63,4 @@ Note: To invoke the full-fledged python shell anywhere in code::
 .. _`pdb++`: http://pypi.python.org/pypi/pdbpp/
 .. _`PuDB is a full-screen, console-based visual debugger for Python.`: http://pypi.python.org/pypi/pudb
 .. _`Using pdb`: http://ericholscher.com/blog/2008/aug/31/using-pdb-python-debugger-django-debugging-series-/
+.. _`Clayton Parker - So you think you can PDB? - PyCon 2015`: https://www.youtube.com/watch?v=P0pIW5tJrRM
