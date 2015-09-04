@@ -18,6 +18,11 @@ To string::
 
   str(number)
 
+To set the number of decimal places to 2::
+
+  >>> 'The price is {:.2f} pounds'.format(Decimal('1'))
+  'The price is 1.00 pounds'
+
 Import
 ======
 

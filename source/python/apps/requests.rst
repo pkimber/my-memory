@@ -23,6 +23,23 @@ Download
           shutil.copyfileobj(response.raw, out_file)
       print(file_name)
 
+Issues
+======
+
+Error::
+
+  InsecurePlatformWarning: A true SSLContext object is not available.
+  This prevents urllib3 from configuring SSL appropriately and may cause
+  certain SSL connections to fail.
+
+From InsecurePlatformWarning_::
+
+  pip install requests[security]
+
+.. note:: this is not required for python-2.7.9+
+
+.. _InsecurePlatformWarning: http://stackoverflow.com/questions/29099404/ssl-insecureplatform-error-when-using-requests-package
+
 JSON
 ====
 
