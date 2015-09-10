@@ -1,6 +1,8 @@
 Validation
 **********
 
+.. highlight:: bash
+
 Links
 =====
 
@@ -13,9 +15,35 @@ Links
 W3C Markup Validation Service.
 ==============================
 
-- http://validator.w3.org/check?uri=http%3A%2F%2Fwww.mycompany.co.uk%2Femails%2F2009_03_02_raf.html&charset=%28detect+automatically%29&doctype=Inline&group=0
+Use the online service https://validator.w3.org/
+
+Or download the ``jar`` file from
+https://github.com/validator/validator/releases/
+
+I downloaded::
+
+  wget https://github.com/validator/validator/releases/download/15.6.29/vnu.jar_15.6.29.zip
+  unzip vnu.jar_15.6.29.zip
+
+Run the validator::
+
+  java -jar ./dist/vnu.jar http://localhost:8000/links/
+
+HTML Tidy
+=========
+
+::
+
+  sudo apt-get install tidy
+
+I downloaded an HTML page from our site using :doc:`../python/modules/httpie`::
+
+  http GET http://localhost:8000/links/ > out.html
+
+Run ``tidy``::
+
+  tidy --indent auto --indent-spaces 2 source.html > out.html 2> tidy.out
 
 
 .. _`CSE HTML Validator`: http://www.htmlvalidator.com/
 .. _`HTML Tidy Library Project`: http://tidy.sourceforge.net/
-

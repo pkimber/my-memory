@@ -6,7 +6,7 @@ HTTPie
 Links
 =====
 
-- https://github.com/jkbr/httpie
+https://github.com/jkbr/httpie
 
 Install
 =======
