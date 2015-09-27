@@ -22,12 +22,14 @@ https://github.com/validator/validator/releases/
 
 I downloaded::
 
+  cd ~/repo/temp/
   wget https://github.com/validator/validator/releases/download/15.6.29/vnu.jar_15.6.29.zip
   unzip vnu.jar_15.6.29.zip
+  cp ./dist/vnu.jar ~/bin/
 
 Run the validator::
 
-  java -jar ./dist/vnu.jar http://localhost:8000/links/
+  java -jar ~/bin/vnu.jar http://localhost:8000/links/
 
 HTML Tidy
 =========
