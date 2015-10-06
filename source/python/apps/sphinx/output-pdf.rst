@@ -85,6 +85,12 @@ Customise
 Latex
 -----
 
+Page break::
+
+  .. raw:: latex
+
+     \newpage
+
 The latex ``documentclass`` files can be found as follows::
 
   cdsitepackages
