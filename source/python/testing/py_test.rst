@@ -194,6 +194,18 @@ http://pivotfinland.com/pytest-sugar/::
 
 Nothing else to do.
 
+Watch
+-----
+
+https://pypi.python.org/pypi/pytest-watch/::
+
+  pip install pytest-watch
+
+Usage::
+
+  py.test.watch
+  # or ptw
+
 
 .. _`A simple way of running your tests from within VIM`: https://github.com/alfredodeza/pytest.vim
 .. _`assert with the assert statement`: http://pytest.readthedocs.org/en/2.0.3/assert.html#assert-with-the-assert-statement
