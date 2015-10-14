@@ -22,3 +22,4 @@ Contents
    jenkins
    model-maker
    runner
+   wizard
