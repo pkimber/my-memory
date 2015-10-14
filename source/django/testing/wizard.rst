@@ -10,6 +10,7 @@ Links
 - tests.py_
 - http://www.tivix.com/blog/django-form-wizard/
 - http://brack3t.com/not-exactly-tim-the-enchanter.html
+- http://chriskief.com/2013/05/24/django-form-wizard-and-getting-data-from-previous-steps/
 
 Tips
 ====
