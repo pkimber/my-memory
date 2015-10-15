@@ -1,10 +1,50 @@
 Android Recovery
 ****************
 
+Download Android Studio:
+http://developer.android.com/sdk/index.html
+
+- Extract
+- Run
+- The SDK will be downloaded.  This might be an old version!
+
+Set-up the linux USB so it could see my phone.  I followed the
+`Setting up a Device for Development`_ instructions::
+
+  sudo -i
+  # list usb devices - make sure you can see a google device
+  lsusb
+  # set-up udev rules for google devices
+  vim /etc/udev/rules.d/51-android.rules
+
+Add the following::
+
+  SUBSYSTEM=="usb", ATTR{18d1}=="0bb4", MODE="0666", GROUP="plugdev"
+
+.. note:: The ``ATTR`` value in this example if for Google.  Other
+          manufacturers are listed on the web page (see above) under
+          *USB Vendor IDs*.  You can also find the vendor ID by plugging in
+          your USB device and running ``lsusb``.
+
+Update file permissions::
+
+  chmod a+r /etc/udev/rules.d/51-android.rules
+
+Another online article said to reload the ``udev`` interface (not sure if this
+helped or not)::
+
+  sudo -i
+  udevadm control --reload
+
+.. _`Setting up a Device for Development`: http://developer.android.com/tools/device.html#setting-up
+
 Enable Fastboot Bootloader Mode:
 
 - press and hold Volume Down and Power simultaneously.  Don't release the
   buttons until the Fastboot Mode menu appears.
+
+I didn't need recovery mode, but if you do:
+
 - when entering recovery mode, you will see a green Android chilling on his
   back with a red warning sign.  Press and hold the phones Power button and
   then press once Volume Up.
@@ -17,6 +57,9 @@ From the linux computer with the Android SDK installed::
 
 Add the folder containing ``fastboot`` to the system path e.g::
 
+  export PATH=/home/patrick/Android/Sdk/platform-tools/:$PATH
+
+  # An older version of the SDK put 'platform-tools' into this folder:
   export PATH=/home/patrick/bin/android-studio/sdk/platform-tools/:$PATH
 
 Unlock the phone::
