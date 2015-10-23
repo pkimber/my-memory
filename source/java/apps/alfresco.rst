@@ -30,6 +30,23 @@ The ``README.txt`` is at::
 Login at http://170.23.45.250:8080/share/ with the user name ``admin`` and the
 password you entered when you installed Alfresco.
 
+Maintenance
+===========
+
+Stop::
+
+ cd /opt/alfresco-5.0.d/
+ ./alfresco.sh stop
+
+Start::
+
+ cd /opt/alfresco-5.0.d/
+ ./alfresco.sh start
+
+Some log files in this folder::
+
+  /opt/alfresco-5.0.d/
+
 Links
 =====
 
@@ -40,3 +57,25 @@ For install instructions:
 
 How to install Alfresco 5.0.a Community Edition on Ubuntu 14.04 LTS:
 http://fcorti.com/2014/10/13/how-to-install-alfresco-5-0-ubuntu-14-04-lts/
+
+Workflow
+========
+
+We installed Activiti Designer (the Eclipse plugin).  We exported an invoice
+workflow and it created the following folders (and files)::
+
+  ├── extension
+  │   ├── invoice.bpmn20.xml
+  │   ├── invoice-context.xml
+  │   └── invoice-model.xml
+  └── web-extension
+      ├── invoice-config-custom.xml
+      └── invoice-share-context.xml
+
+I copied these to our Alfresco server to the matching folders i.e::
+
+  /opt/alfresco-5.0.d/tomcat/shared/classes/alfresco/extension/
+  /opt/alfresco-5.0.d/tomcat/shared/classes/alfresco/web-extension/
+
+We logged into Eclipse as an administrator, clicked on *Tasks*, *My Tasks*,
+*Start Workflow* and selected our task.
