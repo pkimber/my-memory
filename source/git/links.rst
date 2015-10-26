@@ -7,6 +7,7 @@ Learn
 - `A Visual Git Reference`_
 - `git-workshop`_
   Resources for a Git Workshop originally given at Digpen IV (Exeter)
+- Add or inspect object notes: http://git-scm.com/docs/git-notes
 
 SVN
 ===

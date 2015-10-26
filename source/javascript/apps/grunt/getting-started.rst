@@ -1,5 +1,5 @@
-Grunt
-*****
+Getting Started
+***************
 
 .. highlight:: bash
 

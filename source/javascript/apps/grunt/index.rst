@@ -1,9 +1,10 @@
-Apps
-****
+Grunt
+*****
 
 Contents
 
 .. toctree::
    :maxdepth: 1
 
-   grunt/index
+   links
+   getting-started

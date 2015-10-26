@@ -6,6 +6,6 @@ Contents
 .. toctree::
    :maxdepth: 1
 
-   alfresco
+   alfresco/index
    elasticsearch
    james/index

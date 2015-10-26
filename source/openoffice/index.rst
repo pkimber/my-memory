@@ -5,6 +5,12 @@ Contents
 
 .. toctree::
    :maxdepth: 1
-   :glob:
 
-   *
+   calc
+   calc-functions
+   command-line
+   draw
+   issues
+   links
+   macro-python
+   pdf
