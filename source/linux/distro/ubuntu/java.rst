@@ -10,7 +10,10 @@ Install
 
   sudo add-apt-repository ppa:webupd8team/java
   sudo apt-get update
+  # java 7
   sudo apt-get install oracle-java7-installer
+  # java 8
+  sudo apt-get install oracle-java8-installer
 
 Check the version of Java::
 

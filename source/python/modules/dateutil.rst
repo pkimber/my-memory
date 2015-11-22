@@ -24,7 +24,10 @@ rrule
 
 Django timezone::
 
+  from dateutil.rrule import MONTHLY
+  from dateutil.rrule import rrule
   from django.utils import timezone
+
   result = rrule(MONTHLY, bymonthday=(-1,), dtstart=timezone.now())
   result.after(timezone.now())
 

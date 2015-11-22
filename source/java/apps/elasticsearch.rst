@@ -5,13 +5,13 @@ From `Install ElasticSearch in Ubuntu 14.04 server`
 
 Install :doc:`../../linux/distro/ubuntu/java`::
 
-  sudo wget -O - http://packages.elasticsearch.org/GPG-KEY-elasticsearch | sudo apt-key add -
+  sudo wget -qO - https://packages.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add -
 
-Add the following line to ``/etc/apt/sources.list``::
+Add to the list of sources::
 
-  deb http://packages.elasticsearch.org/elasticsearch/1.3/debian stable main
+  echo "deb http://packages.elastic.co/elasticsearch/2.x/debian stable main" | sudo tee -a /etc/apt/sources.list.d/elasticsearch-2.x.list
 
-::
+Install::
 
   sudo apt-get update
   sudo apt-get install elasticsearch
