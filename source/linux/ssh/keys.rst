@@ -41,6 +41,13 @@ To copy the key to your clipboard::
 
   xclip -sel clip < ~/.ssh/id_rsa.pub
 
+Forward
+=======
+
+To use SSH agent forwarding for ``example.co.uk``::
+
+  ssh -A example.co.uk
+
 
 .. _`OpenSSH key management`: http://www.ibm.com/developerworks/library/l-keyc2/
 .. _`ubuntu documentation - SSH Keys`: https://help.ubuntu.com/community/SSH/OpenSSH/Keys

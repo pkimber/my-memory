@@ -1,7 +1,9 @@
 elasticsearch
 *************
 
-From `Install ElasticSearch in Ubuntu 14.04 server`
+.. highlight:: bash
+
+From Repositories_
 
 Install :doc:`../../linux/distro/ubuntu/java`::
 
@@ -18,6 +20,15 @@ Install::
   sudo service elasticsearch start
 
 See https://www.pkimber.net/open/app-search.html for diagnostics etc...
+
+Query
+=====
+
+Match all documents:
+
+.. code-block:: json
+
+  { "match_all": {} }
 
 DjangoConEU 2015
 ================
@@ -54,6 +65,7 @@ To verify that the information has loaded into ElasticSearch::
   http://localhost:9200/_search?q=tags:bean
   http://localhost:9200/_search?q=awful flavor
 
+- http://localhost:9200/ will return the version number.
 - Scoring not relevant when only search for one word.
 - It used to ignore the common words e.g. ``the``, but not longer.
 
@@ -116,4 +128,4 @@ You should have 1 server or more than 2.  Do not have 2 servers.  This is
 called *split brain*.
 
 
-.. _`Install ElasticSearch in Ubuntu 14.04 server`: http://blog.bekijkhet.com/2014/06/install-elasticsearch-in-ubuntu-1404.html
+.. _Repositories: https://www.elastic.co/guide/en/elasticsearch/reference/current/setup-repositories.html

@@ -7,6 +7,9 @@ http://labix.org/python-dateutil
 
 powerful extensions to the standard datetime module
 
+.. tip:: Check out `Delorean (Time Travel Made Easy)`_
+         (`Delorean Documentation`_)
+
 For python 2.x::
 
   pip install python-dateutil==1.5
@@ -85,3 +88,8 @@ Last day of this month::
 Tomorrow::
 
   date.today() + relativedelta(days=1)
+
+
+.. _`Delorean (Time Travel Made Easy)`: https://github.com/myusuf3/delorean
+.. _`Delorean Documentation`: http://delorean.readthedocs.org/
+

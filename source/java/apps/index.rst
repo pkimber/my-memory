@@ -9,3 +9,4 @@ Contents
    alfresco/index
    elasticsearch
    james/index
+   nuxeo/index

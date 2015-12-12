@@ -14,9 +14,8 @@ Links
 Setup
 =====
 
-Copy the .screenrc_ configuration file
-to your home folder to bind *F11* and *F12* to the next and previous window
-commands.
+Copy the .screenrc_ configuration file to your home folder to bind *F11* and
+*F12* to the next and previous window commands.
 
 Usage
 =====
@@ -28,24 +27,18 @@ Usage
 List
 ====
 
-To list screens:
-
-::
+To list screens::
 
   screen -ls
 
 Attach
 ======
 
-To attach to a screen, do an "-ls" to get the name then:
-
-::
+To attach to a screen, do an "-ls" to get the name then::
 
   screen -r "name"
 
-e.g.
-
-::
+e.g::
 
   screen -r 31619.ttyp2.gigan
 
@@ -58,9 +51,7 @@ Reattach
 ========
 
 Attach  here and now. In detail this means: If a session is running, then
-reattach.
-
-::
+reattach::
 
   screen -D -R
 
@@ -69,24 +60,23 @@ Scrollback
 
 `Working with the Scrollback Buffer`_
 
-- Edit your ``~/.screenrc`` file and add the following:
+Edit your ``~/.screenrc`` file and add the following::
 
-  ::
+  defscrollback 5000
 
-    defscrollback 5000
+This will give you 5000 lines of scrollback.
 
-  This will give you 5000 lines of scrollback.
+To enter scrollback mode: *Ctrl* *a*, *[*.  Note: The screen will say
+``Copy mode``.
+Use the normal vim commands to move around the screen.
 
-- To enter scrollback mode: *Ctrl* *a*, *[*.  Note: The screen will say
-  ``Copy mode``.
-- Use the normal vim commands to move around the screen.
-- To copy:
+To copy:
 
-  - move to the start of the text and press *spacebar*.
-  - move to the end and press *spacebar*.
-  - To paste the text: *Ctrl* *a*, *]*.
+- move to the start of the text and press *spacebar*.
+- move to the end and press *spacebar*.
+- To paste the text: *Ctrl* *a*, *]*.
 
-- Press *Escape* to exit this mode.
+Press *Escape* to exit this mode.
 
 Shortcuts
 =========
@@ -106,9 +96,7 @@ Issues
 ======
 
 If you have problems with the delete key, put the following line in your
-``.bashrc``:
-
-::
+``.bashrc``::
 
   alias screen=TERM=screen screen
 

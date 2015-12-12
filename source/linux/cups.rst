@@ -4,7 +4,21 @@ CUPS
 Administration
 ==============
 
-http://localhost:631/
+From `How do I clear a Print-queue in Ubuntu?`_
+
+List::
+
+  lpstat -o
+
+Cancel all jobs::
+
+  cancel -a {printer}
+
+Cancel one job::
+
+  cancel {printerjobid}
+
+Web interface at http://localhost:631/
 
 PDF
 ===
@@ -41,3 +55,6 @@ Service
 ::
 
   sudo /etc/init.d/cups restart
+
+
+.. _`How do I clear a Print-queue in Ubuntu?`: http://askubuntu.com/questions/350334/how-do-i-clear-a-print-queue-in-ubuntu
