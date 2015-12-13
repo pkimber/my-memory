@@ -8,6 +8,8 @@ Install
 
 .. important:: Make sure you have Ubuntu 14.04 (64 bit)
 
+.. important:: Install Docker on a **64 bit** operating system.
+
 Verify that you have wget installed::
 
   which wget

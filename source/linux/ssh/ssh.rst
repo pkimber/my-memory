@@ -1,6 +1,17 @@
 ssh
 ***
 
+Forward
+=======
+
+::
+
+  ssh -A 1.2.3.4
+
+To carry the ssh through ``sudo``::
+
+  sudo -E -s
+
 Record
 ======
 
@@ -29,9 +40,7 @@ Quit
 
 `Close a hanging ssh session`_
 
-To quit (exit/terminate) an SSH session:
-
-::
+To quit (exit/terminate) an SSH session::
 
   ~.
 
