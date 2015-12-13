@@ -15,6 +15,29 @@ Remove all images (delete)::
 
   docker rmi `docker images -q`
 
+Create
+======
+
+::
+
+  mkdir gitlab-pytest
+  cd gitlab-pytest
+  touch Dockerfile
+  #
+  # FROM ubuntu:14.04
+  # MAINTAINER Patrick Kimber <code@pkimber.net>
+  # RUN apt-get update
+  #
+  docker build -t pkimber/gitlab-pytest .
+
+Create a container from the image::
+
+  docker run -t -i pkimber/gitlab-pytest /bin/bash
+
+Push to Docker hub::
+
+  docker push pkimber/gitlab-pytest
+
 Original Notes
 ==============
 
