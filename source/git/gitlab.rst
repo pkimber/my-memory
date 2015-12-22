@@ -83,9 +83,8 @@ the new remote, run the following commands there::
   git remote add origin git@gitlab.com:kb/contact.git
   git fetch --all
 
-Go to the *Project Settings* for the GitLab project, click on
-*Protected branches* and unprotect the master branch so developers can push to
-it.
+Rename the GitHub repository to stop it from being used e.g.
+``contact`` to ``old-contact-migrated-to-gitlab``
 
 
 .. _`How do I import an existing git project into GitLab?`: http://stackoverflow.com/questions/20359936/how-do-i-import-an-existing-git-project-into-gitlab
