@@ -14,6 +14,8 @@ From `Install using official GitLab repositories`_
 
 Install Docker, :doc:`../../linux/apps/docker/getting-started`
 
+Create a Docker image :doc:`../linux/apps/docker/images`
+
 Install ``gitlab-ci-multi-runner``::
 
   curl -L https://packages.gitlab.com/install/repositories/runner/gitlab-ci-multi-runner/script.deb.sh | sudo bash
