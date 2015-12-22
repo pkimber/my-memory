@@ -1,6 +1,8 @@
 GitLab
 ******
 
+.. highlight:: bash
+
 .. note:: The script below will not install ``gitlab-ci-multi-runner`` on
           Elementary OS.  I am installing onto a cloud server running Ubuntu
           14.04.
