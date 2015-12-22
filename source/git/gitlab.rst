@@ -5,8 +5,8 @@ GitLab
           Elementary OS.  I am installing onto a cloud server running Ubuntu
           14.04.
 
-CI
-==
+Continuous Integration
+======================
 
 From `Install using official GitLab repositories`_
 
@@ -17,13 +17,20 @@ Install ``gitlab-ci-multi-runner``::
   curl -L https://packages.gitlab.com/install/repositories/runner/gitlab-ci-multi-runner/script.deb.sh | sudo bash
   apt-get install gitlab-ci-multi-runner
 
+.. tip:: Register the runner using ``sudo`` because you cannot enable the
+         service unless you are ``root``.
+
 Set-up::
 
-  $ gitlab-ci-multi-runner register
+  sudo -i
+  gitlab-ci-multi-runner register
+
+Sample output::
+
   Please enter the gitlab-ci coordinator URL (e.g. https://gitlab.com/ci):
   https://gitlab.com/ci
   Please enter the gitlab-ci token for this runner:
-  eabd2c42b5e5b3a34d044e9dae97f1
+  eaeae123ababa
   Please enter the gitlab-ci description for this runner:
   [master-b]: ci.kbsoftware.co.uk
   Please enter the gitlab-ci tags for this runner (comma separated):
@@ -38,5 +45,57 @@ Set-up::
   If you want to enable mongo please enter version (X.Y) or enter latest?
   INFO[0498] Runner registered successfully. Feel free to start it, but if it's running already the config should be automatically reloaded!
 
+Run in debug mode::
 
+  gitlab-runner --debug run
+
+To start the service::
+
+  gitlab-runner start
+
+Create a ``.gitlab-ci.yml`` file in your project.  Here is an example:
+https://gitlab.com/kb/checkout/blob/master/.gitlab-ci.yml
+
+- Our standard is to create a ``requirements/ci.txt`` file.  Use the GIT
+  ``https`` URL rather than a path to the folder.
+
+Log into GitLab as an administrator, *Project Settings*, *Runners*, click
+*Enable for this project*.
+
+Migrate from GitHub
+===================
+
+Adapted from `How do I import an existing git project into GitLab?`_
+
+e.g. to move ``git@github.com:pkimber/contact.git`` to
+``git@gitlab.com:kb/contact.git``
+
+Create a new (empty) repository in GitLab:
+
+- Log into https://gitlab.com/ using our company login details.
+- Click on *New Project*.
+- In the *Project path* section select the ``kb`` group.  Select the correct
+  *Visibility Level* and click *Create Project* e.g.
+  ``git@gitlab.com:kb/contact.git``
+
+In a **temporary** directory::
+
+  git clone --mirror git@github.com:pkimber/contact.git
+  cd contact.git
+  git remote add gitlab git@gitlab.com:kb/contact.git
+  git push gitlab --mirror
+
+Now if you have a locally cloned repository that you want to keep using with
+the new remote, run the following commands there::
+
+  git remote remove origin
+  git remote add origin git@gitlab.com:kb/contact.git
+  git fetch --all
+
+Go to the *Project Settings* for the GitLab project, click on
+*Protected branches* and unprotect the master branch so developers can push to
+it.
+
+
+.. _`How do I import an existing git project into GitLab?`: http://stackoverflow.com/questions/20359936/how-do-i-import-an-existing-git-project-into-gitlab
 .. _`Install using official GitLab repositories`: https://gitlab.com/gitlab-org/gitlab-ci-multi-runner/blob/master/docs/install/linux-repository.md
