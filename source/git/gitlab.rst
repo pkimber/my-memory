@@ -53,15 +53,6 @@ To start the service::
 
   gitlab-runner start
 
-Create a ``.gitlab-ci.yml`` file in your project.  Here is an example:
-https://gitlab.com/kb/checkout/blob/master/.gitlab-ci.yml
-
-- Our standard is to create a ``requirements/ci.txt`` file.  Use the GIT
-  ``https`` URL rather than a path to the folder.
-
-Log into GitLab as an administrator, *Project Settings*, *Runners*, click
-*Enable for this project*.
-
 Migrate from GitHub
 ===================
 
