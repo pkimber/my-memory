@@ -55,6 +55,8 @@ To start the service::
 
   gitlab-runner start
 
+To set-up `Continuous Integration`_ for the project...
+
 Migrate from GitHub
 ===================
 
@@ -89,5 +91,6 @@ Rename the GitHub repository to stop it from being used e.g.
 ``contact`` to ``old-contact-migrated-to-gitlab``
 
 
+.. _`Continuous Integration`: https://www.pkimber.net/open/dev-git.html#continuous-integration
 .. _`How do I import an existing git project into GitLab?`: http://stackoverflow.com/questions/20359936/how-do-i-import-an-existing-git-project-into-gitlab
 .. _`Install using official GitLab repositories`: https://gitlab.com/gitlab-org/gitlab-ci-multi-runner/blob/master/docs/install/linux-repository.md
