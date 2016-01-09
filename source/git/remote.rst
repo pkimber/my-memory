@@ -8,3 +8,17 @@ To view the URL of a remote repository::
 To change the URI::
 
   git remote set-url origin git@github.com:pkimber/story.git
+
+Server
+======
+
+To create an empty repository on a remote server::
+
+  cd ~/repo/temp/
+  mkdir pillar.git
+  git init --bare
+
+To push to this repository::
+
+  git remote set-url origin ssh://patrick@46.10.8.55:/home/patrick/repo/temp/pillar.git
+  git push origin master

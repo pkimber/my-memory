@@ -20,6 +20,15 @@ To checkout ``747-board``::
 
   git checkout -b 747-board origin/747-board
 
+Cherry Pick
+===========
+
+`How to merge a specific commit in git`::
+
+  git cherry-pick aeca961
+
+.. warning:: Checkout the `consequence of cherry-picking`_
+
 Create
 ======
 
@@ -83,4 +92,6 @@ Tags
 We can switch to tags in the same was as we switch branches (see above).
 
 
+.. _`consequence of cherry-picking`: http://stackoverflow.com/questions/880957/pull-all-commits-from-a-branch-push-specified-commits-to-another/881014#881014
 .. _`How do I rename a local Git branch?`: http://stackoverflow.com/questions/6591213/how-do-i-rename-a-local-git-branch
+.. _`How to merge a specific commit in git`: http://stackoverflow.com/questions/881092/how-to-merge-a-specific-commit-in-git
