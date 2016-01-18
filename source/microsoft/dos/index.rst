@@ -11,4 +11,5 @@ Contents
    environment
    file
    shortcuts
+   shutdown
    tips

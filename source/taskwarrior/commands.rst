@@ -51,6 +51,13 @@ Don't show the task until::
   task 12 modify wait:11months
   task 13 modify wait:22/09/2050
 
+Report
+======
+
+From `Printing report output`_::
+
+  task long rc.detection:off rc.defaultwidth:184 > out.txt
+
 Search
 ======
 
@@ -78,3 +85,4 @@ When you start a task::
 
 
 .. _`Best Practices`: http://taskwarrior.org/projects/taskwarrior/wiki/Best_Practices
+.. _`Printing report output`: https://answers.tasktools.org/questions/4489386/printing-report-output
