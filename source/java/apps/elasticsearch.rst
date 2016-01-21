@@ -19,7 +19,10 @@ Install::
   sudo apt-get install elasticsearch
   sudo service elasticsearch start
 
-See https://www.pkimber.net/open/app-search.html for diagnostics etc...
+.. tip:: See https://www.pkimber.net/open/app-search.html for diagnostics etc.
+
+.. tip:: See https://www.pkimber.net/open/dev-elasticsearch.html for how to
+         install the Phoentic Analysis plugins.
 
 Query
 =====
