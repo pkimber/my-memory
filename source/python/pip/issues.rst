@@ -1,13 +1,13 @@
 Issues
 ******
 
+.. highlight:: bash
+
 DistributionNotFound
 ====================
 
 This is a weird error and might be related to the fact that I downloaded and
-installed :doc:`../distutils/setuptools`:
-
-::
+installed :doc:`../distutils/setuptools`::
 
   $ pip
   Traceback (most recent call last):
@@ -28,9 +28,7 @@ Solution
 --------
 
 The following files in ``/usr/local/lib/python2.6/dist-packages/`` were
-installed with incorrect permissions:
-
-::
+installed with incorrect permissions::
 
   easy-install.pth
   pip-0.8.2-py2.6.egg
@@ -49,9 +47,7 @@ details see :doc:`../../linux/security/sample/office`).
 
 To solve the problem:
 
-- I removed the files above and the ``bin`` scripts:
-
-::
+I removed the files above and the ``bin`` scripts::
 
   sudo rm /usr/local/bin/easy_install
   sudo rm /usr/local/bin/easy_install-2.6
@@ -60,5 +56,13 @@ To solve the problem:
   sudo rm /usr/local/bin/virtualenv
   sudo rm /usr/local/bin/virtualenvwrapper.sh
 
-- Then follow the instructions in ../install/linux` to install the standard
-  python environment.
+Then follow the instructions in ../install/linux` to install the standard
+python environment.
+
+Index
+=====
+
+If you have a local PyPI server, and you don't want to use it, then comment out
+``index-url`` in::
+
+  ~/.pip/pip.conf

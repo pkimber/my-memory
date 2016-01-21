@@ -30,6 +30,13 @@ Match all documents:
 
   { "match_all": {} }
 
+Sample
+======
+
+Using HTTPie::
+
+  http GET http://localhost:9200/job-index/_analyze analyzer=my_analyzer text="Plymouth"
+
 DjangoConEU 2015
 ================
 

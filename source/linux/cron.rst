@@ -1,6 +1,10 @@
 cron
 ****
 
+.. warning:: If a cron script in ``/etc/cron.d`` has a ``.`` in the file name,
+             then it will not run!
+             ref `configs with dots in file name not working in /etc/cron.d`_
+
 Links
 =====
 
@@ -146,6 +150,7 @@ working hours 9 a.m – 6 p.m::
 
 .. _`Backing up your Subversion (SVN) repository on Dreamhost with cron`: http://blog.localkinegrinds.com/2008/02/10/backing-up-your-subversion-svn-repository-on-dreamhost-with-cron/
 .. _`by Scott Spear`: http://www.webmastersbydesign.com/2008/06/14/discover-the-power-of-cron-jobs/
+.. _`configs with dots in file name not working in /etc/cron.d`: https://bugs.launchpad.net/ubuntu/+source/cron/+bug/706565
 .. _`Discover the Power of Cron Jobs`: ../../misc/howto/linux/discover-the-power-of-cron-jobs.htm
 .. _`Linux Crontab: 15 Awesome Cron Job Examples`: http://www.thegeekstuff.com/2009/06/15-practical-crontab-examples/
 .. _`Newbie: Intro to cron`: http://www.unixgeeks.org/security/newbie/unix/cron-1.html
