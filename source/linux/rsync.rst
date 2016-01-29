@@ -30,24 +30,18 @@ Edit:
 
   /etc/default/rsync
 
-and change ``RSYNC_ENABLE=false`` to:
-
-::
+and change ``RSYNC_ENABLE=false`` to::
 
   RSYNC_ENABLE=true
 
-Re-start the daemon:
-
-::
+Re-start the daemon::
 
   /etc/init.d/rsync restart
 
 ssh
 ===
 
-Create a key for the user who will be doing the backup on the source machine:
-
-::
+Create a key for the user who will be doing the backup on the source machine::
 
   ssh-keygen -t rsa
   Generating public/private rsa key pair.
@@ -77,9 +71,7 @@ Now, go into ``/home/patrickk/.ssh/`` and copy the file ``id_rsa.pub`` to the
 target machine.  Copy the key into the file ``~/.ssh/authorized_keys`` (create
 it if necessary).
 
-Update the permissions on the folder (and file) if required:
-
-::
+Update the permissions on the folder (and file) if required::
 
   chmod 700 ~/.ssh
   chmod 600 ~/.ssh/authorized_keys
@@ -120,9 +112,7 @@ Here are a some sample ``rsync`` command lines::
 Command
 =======
 
-`rsync man page:`_
-
-::
+`rsync man page:`_::
 
   rsync [OPTION]... SRC [SRC]... DEST
 
