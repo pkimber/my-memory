@@ -1,7 +1,7 @@
 Notebook
 ********
 
-See doc:`django` for Django integration...
+See :doc:`django` for Django integration...
 
 Install
 =======
