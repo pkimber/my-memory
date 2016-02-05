@@ -79,7 +79,9 @@ module looked like this::
   # ... do some work...
   for resp in msg.mandrill_response:
 
-To test this::
+Here is the test code::
+
+  from unittest import mock
 
   with mock.patch('django.core.mail.EmailMultiAlternatives') as mock_mail:
       mock_mail.return_value.mandrill_response = [{
@@ -90,11 +92,11 @@ To test this::
       }]
 
 .. note:: I was surprised to see that setting up the return value for the
-          ``mandrill_response`` was written as above rather than
-          ``mock_mail.mandrill_response.return_value``.
+          ``mandrill_response`` was written with the ``return_value`` before
+          the function name.
 
-.. note:: You have to patch the correct import path (see `Where to patch`).  I
-          spent hours trying to find where to patch, but the issue was a
+.. note:: You have to patch the correct import path (see `Where to patch_`).
+          I spent hours trying to find where to patch, but the issue was a
           completely different one (I hadn't got my test code inside the
           ``with`` block).
 
