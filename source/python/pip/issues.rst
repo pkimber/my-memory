@@ -63,6 +63,14 @@ Index
 =====
 
 If you have a local PyPI server, and you don't want to use it, then comment out
-``index-url`` in::
+the url in::
 
+  ~/.buildout/default.cfg
   ~/.pip/pip.conf
+  ~/.pydistutils.cfg
+
+To set the index again::
+
+  devpi use --set-cfg https://devpi.yourbiz.co.uk/root/pypi/
+  # or
+  devpi use --set-cfg https://devpi.yourbiz.co.uk/root/pypi/+simple/

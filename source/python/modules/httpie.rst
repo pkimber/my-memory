@@ -29,6 +29,16 @@ Headers
 ::
 
   http --headers GET http://www.google.co.uk/
+  # I don't know how to send plain text!
+  http POST http://localhost:5000/messages "Content-type:text/plain"
+
+POST
+----
+
+::
+
+  # json
+  http POST http://localhost:5000/messages name=Patrick
 
 SSL
 ---
