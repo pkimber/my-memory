@@ -95,7 +95,7 @@ Here is the test code::
           ``mandrill_response`` was written with the ``return_value`` before
           the method name.
 
-.. note:: You have to patch the correct import path (see `Where to patch_`).
+.. note:: You have to patch the correct import path (see `Where to patch`_).
           I spent hours trying to find where to patch, but the issue was a
           completely different one (I hadn't got my test code inside the
           ``with`` block).
