@@ -93,7 +93,7 @@ Here is the test code::
 
 .. note:: I was surprised to see that setting up the return value for the
           ``mandrill_response`` was written with the ``return_value`` before
-          the function name.
+          the method name.
 
 .. note:: You have to patch the correct import path (see `Where to patch_`).
           I spent hours trying to find where to patch, but the issue was a
