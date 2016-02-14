@@ -18,21 +18,15 @@ Usage
   fromdos wip.rst
   todos README.txt
 
-To convert a Mac file to Linux format:
-
-::
+To convert a Mac file to Linux format::
 
   dos2unix -c mac detail.html
 
-Note: the ``fromdos`` command used to be:
-
-::
+Note: the ``fromdos`` command used to be::
 
   dos2unix tools.txt
 
-`To run dos2unix recursively`_
-
-::
+`To run dos2unix recursively`_::
 
   find . -type f -exec dos2unix {} \;
 

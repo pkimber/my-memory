@@ -3,6 +3,33 @@ Files
 
 .. highlight:: bash
 
+Attributes
+==========
+
+Size
+====
+
+Human readable (``h``)::
+
+  ls -lhrt
+
+Type
+====
+
+- `Don't Judge a File by its Filename`_
+- `Linux vs Windows: file names and file type associations`_
+
+::
+
+  $ man file
+  ...file - determine file type
+  ...
+  $ file temp/myfile.zip
+  temp/myfile.zip: Zip archive data, at least v1.0 to extract
+  $ file temp/logs/logger.log
+  temp/logs/logger.log: ASCII English text
+  $
+
 Duplicate
 =========
 
@@ -39,23 +66,6 @@ Remove olde Windows ``ini`` files::
 To remove all empty directories under the current directory::
 
   find . -type d -empty -delete
-
-File Type
-=========
-
-- `Don't Judge a File by its Filename`_
-- `Linux vs Windows: file names and file type associations`_
-
-::
-
-  $ man file
-  ...file - determine file type
-  ...
-  $ file temp/myfile.zip
-  temp/myfile.zip: Zip archive data, at least v1.0 to extract
-  $ file temp/logs/logger.log
-  temp/logs/logger.log: ASCII English text
-  $
 
 Script
 ======
