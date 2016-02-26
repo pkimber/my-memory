@@ -10,6 +10,7 @@ Contents
    devpi
    fabric/index
    jinja
+   odoo/index
    proxypypi
    pykaboo
    requests

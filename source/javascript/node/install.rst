@@ -9,6 +9,17 @@ http://nodejs.org/
 Install
 =======
 
+Using a repository
+------------------
+
+From `Installing Node.js via package manager`_::
+
+  curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash -
+  sudo apt-get install -y nodejs
+
+Using Node Version Manager
+--------------------------
+
 From `Node Version Manager`_ and
 `How To Install Node.js on an Ubuntu 14.04 server`_
 
@@ -25,6 +36,7 @@ Install node version manager::
 Install node::
 
   nvm install 0.10.29
+  nvm install 4.3.1
 
 To use this version of node in another shell::
 
@@ -43,6 +55,7 @@ Here is the sample code from the node home page: example-web-server.js_::
 
 .. _`How To Install Node.js on an Ubuntu 14.04 server`: https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-an-ubuntu-14-04-server
 .. _`Installing Node and npm`: http://joyeur.com/2010/12/10/installing-node-and-npm/
+.. _`Installing Node.js via package manager`: https://nodejs.org/en/download/package-manager/#debian-and-ubuntu-based-linux-distributions
 .. _`Node Package Manager`: http://npmjs.org/
 .. _`Node Version Manager`: https://github.com/creationix/nvm
 .. _`use-nave.sh`: https://gist.github.com/579814#file_use_nave.sh

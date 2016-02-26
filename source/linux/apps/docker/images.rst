@@ -42,6 +42,10 @@ Create a container from the image::
 
   docker run -t -i pkimber/gitlab-pytest /bin/bash
 
+Log into Docker hub::
+
+  docker login
+
 Push to Docker hub::
 
   docker push pkimber/gitlab-pytest
