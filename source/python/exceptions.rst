@@ -76,6 +76,8 @@ To solve this problem nest a try, except within a try, finally e.g::
       if cursor != None:
           c.close()
 
+.. _python_exceptions_throw:
+
 Throw
 =====
 

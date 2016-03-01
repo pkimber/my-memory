@@ -9,6 +9,8 @@ Custom
 Sample
 ------
 
+:ref:`python_exceptions_throw`
+
 ::
 
   class DefaultShopDoesNotExist(Exception):
