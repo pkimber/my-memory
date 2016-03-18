@@ -4,7 +4,7 @@ Issues
 Narrator
 ========
 
-`How do I turn OFF Windows Narrator?`
+`How do I turn OFF Windows Narrator?`_
 
 *Control Panel*, *Ease of Access Center*, *Use the computer without a display*,
 remove the check from *Turn on Narrator*.
@@ -13,8 +13,8 @@ or...
 
 Press the *Windows Logo* and the *Enter* key...
 
-To get rid of the blue boxes, find *Narrator* in the tool-bar (it is a running
-application) and *Exit* from it.
+.. important:: To get rid of the blue boxes, find *Narrator* in the tool-bar
+               (it is a running application) and *Exit* from it.
 
 Recycle Bin
 ===========
