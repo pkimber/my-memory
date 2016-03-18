@@ -23,6 +23,12 @@ Client
 
   \\tsclient\c\
 
+Issues
+======
+
+If you have a blue box highlighting areas of the screen and preventing you from
+using the keyboard, then switch off *Narrator*: See :doc:`windows/issues`.
+
 Recover
 =======
 
@@ -44,18 +50,13 @@ Users
 =====
 
 User sessions showing idle time etc (you need to be an administrator on the
-target machine):
-
-::
+target machine)::
 
   quser /server:<serverName>
 
-List user sessions (you need to be an administrator on the target machine):
-
-::
+List user sessions (you need to be an administrator on the target machine)::
 
   qwinsta /server:<serverName>
 
 
 .. _`How To Switch Between Remote Desktop Sessions on Win2k3`: http://www.allbacktomine.com/blog/2008/07/18/HowToSwitchBetweenRemoteDesktopSessionsOnWin2k3.aspx
-

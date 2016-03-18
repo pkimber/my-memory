@@ -10,6 +10,7 @@ Contents
    ack
    autojump
    avconv
+   corebird
    docker/index
    ecryptfs
    gimp/index
