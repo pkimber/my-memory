@@ -17,9 +17,7 @@ list:
 
 *Computer Management*, *Services and Applications*, *Internet Information
 Services*, right click on *Default Web Site*, select *Properties*, select the
-*Web Site* tab and click *Advanced*:
-
-::
+*Web Site* tab and click *Advanced*::
 
   ../../images/howto/microsoft/iis-config.gif
 
@@ -35,9 +33,7 @@ Process
 Restart
 =======
 
-To restart IIS from the command line:
-
-::
+To restart IIS from the command line::
 
   iisreset
 
@@ -55,4 +51,3 @@ The *Directory* is the folder containing the content...
 
 
 .. _`What is w3svc.dll?`: http://www.processlist.com/info/w3svc.html
-

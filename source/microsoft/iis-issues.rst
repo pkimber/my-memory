@@ -56,6 +56,4 @@ To stop this happening again, see the notes in Apache 2 - Issues, could not
 bind to address, :doc:`../apache/http/issues`.
 
 
-
 .. _`IIS, Application Pools`: ../../companies/j1/iis.html
-

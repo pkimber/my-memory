@@ -32,5 +32,4 @@ Contents
    sourcesafe
    terminal-server
    tips
-   visual-studio-tips
    web-services

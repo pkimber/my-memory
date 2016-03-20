@@ -17,9 +17,7 @@ Install
 =======
 
 The zip file contains different DLL's for each version of .NET.  Extract the
-appropriate ``log4net.dll`` e.g:
-
-::
+appropriate ``log4net.dll`` e.g::
 
   bin\net\1.1\release\
   bin\net\2.0\release\
@@ -41,9 +39,7 @@ Assembly
 --------
 
 In ``AssemblyInfo.cs``, tell log4net to get its configuration from the
-application ``.config`` file:
-
-::
+application ``.config`` file::
 
   [assembly: log4net.Config.XmlConfigurator(Watch=true)]
 
@@ -59,28 +55,23 @@ will be called ``ConsoleApp.exe.config``.
 
 Note:
 
-- This is different for web applications: :doc:`web-app`.
-- The ``.config`` file must be copied to the same folder as the ``exe`` or
-  ``dll``.
+This is different for web applications: :doc:`web-app`.
 
-  For notes on how to do this... see Visual Studio - Tips - Build Events,
-  :doc:`../microsoft/visual-studio-tips`.
+The ``.config`` file must be copied to the same folder as the ``exe`` or
+``dll``.
 
-  A sample sample.exe.config file:
+For notes on how to do this... see Visual Studio - Tips - Build Events,
+:doc:`../microsoft/dev/visual-studio/tips`.
 
-  ::
+A sample sample.exe.config file::
 
-    ../../misc/howto/log4net/sample.exe.config
+  ../../misc/howto/log4net/sample.exe.config
 
-  ...another (more complicated sample):
+...another (more complicated sample)::
 
-  ::
+  ../../misc/howto/log4net/ApplicationName.exe.config
 
-    ../../misc/howto/log4net/ApplicationName.exe.config
-
-  To change the log level for a specific class:
-
-::
+To change the log level for a specific class::
 
   <logger name="HelloWorld">
     <level value="ALL" />
@@ -92,9 +83,7 @@ Sample Code
 
 A sample project: https://weezy/svn/development/sample/c-sharp/sample-log4net
 
-To add logging to your class (not sure which of the next two is best):
-
-::
+To add logging to your class (not sure which of the next two is best)::
 
   public class HelloWorld
   {
@@ -108,9 +97,7 @@ To add logging to your class (not sure which of the next two is best):
       }
   }
 
-or:
-
-::
+or::
 
   public class HelloWorld
   {

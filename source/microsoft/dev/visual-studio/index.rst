@@ -10,3 +10,4 @@ Contents
    debug
    dependencies
    keyboard-shortcuts
+   tips

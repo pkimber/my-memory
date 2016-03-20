@@ -7,4 +7,4 @@ Contents
    :maxdepth: 1
 
   getting-started
-  wix
+  visual-studio
