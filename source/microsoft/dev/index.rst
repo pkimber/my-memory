@@ -17,5 +17,4 @@ Contents
    visual-studio-debug
    visual-studio-dependencies
    visual-studio-keyboard-shortcuts
-   wix
-
+   wix/index
