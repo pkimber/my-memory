@@ -13,8 +13,5 @@ Contents
    internet-explorer
    msbuild
    sql-server/index
-   visual-csharp-express
-   visual-studio-debug
-   visual-studio-dependencies
-   visual-studio-keyboard-shortcuts
+   visual-studio/index
    wix/index
