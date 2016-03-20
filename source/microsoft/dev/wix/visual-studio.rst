@@ -1,21 +1,15 @@
-Windows Installer XML (WiX) toolset
-***********************************
+Visual Studio
+*************
 
 Links
 =====
 
-- http://wix.sourceforge.net/
-- Sample wxs file:
-
-  ::
-
-    ../../../misc/howto/microsoft/dev/Product.wxs
+Sample wxs file :download:`../../../misc/howto/microsoft/dev/Product.wxs`
 
 Install
 =======
 
-Download and install WiX version 3 or above from
-http://sourceforge.net/projects/wix/
+Download and install WiX (:doc:`getting-started`).
 
 Re-start Visual Studio and you will be able to create a new *WiX Project*.
 
@@ -91,4 +85,3 @@ heat
 
 .. _`Performing a logged MSI install to debug WiX errors`: http://www.fscked.co.uk/index.php/2008/11/performing-a-logged-msi-install-to-debug-wix-errors/
 .. _`Using Built-in WixUI Dialog Sets`: http://wix.sourceforge.net/manual-wix3/WixUI_dialog_library.htm
-
