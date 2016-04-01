@@ -20,6 +20,7 @@ Contents
    contenttypes
    crispy-forms
    cloudfiles
+   django-shop
    extensions
    factory-boy
    flatpages
