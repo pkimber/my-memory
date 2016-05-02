@@ -28,36 +28,18 @@ Diagnostics::
 Windows
 =======
 
-Download the *Windows Bundle* of RabbitMQ from
-http://www.rabbitmq.com/download.html
+Download and run the Erland installer, ``otp_win64_18.3.exe``.  It installs to::
 
-I downloaded ``complete-rabbitmq-bundle-1.6.0.zip``.
+  C:\Program Files\erl7.3\
 
-Open the archive and run the Erlang installer (``otp_win32_R11B-5.exe`` ).  I
-installed to::
+Download and install the RabbitMQ Windows installer,
+``rabbitmq-server-3.6.1.exe`` from https://www.rabbitmq.com/install-windows.html
+It installs to::
 
-  C:\tools\erl5.5.5\
+  C:\Program Files\RabbitMQ Server\
 
-Open the archive and extract the ``rabbitmq-server-windows-1.6.0.zip``.  I
-extracted to::
-
-  C:\tools\rabbitmq_server-1.6.0\
-
-Set the ``ERLANG_HOME`` environment variable to point to your Erlang
-installation::
-
-  SET ERLANG_HOME=C:\tools\erl5.5.5\
-
-To run the RabbitMQ server as an application, change into the ``sbin`` folder::
-
-  c:
-  cd \tools\rabbitmq_server-1.6.0\sbin\
-
-Start the server::
-
-  rabbitmq-server.bat
-
-You should see a success message, ``broker running``...
+The RabbitMQ service starts automatically. You can stop/reinstall/start the
+RabbitMQ service from the Start Menu.
 
 Test
 ====
