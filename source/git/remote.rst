@@ -12,6 +12,8 @@ To change the URI::
 Server
 ======
 
+.. note:: I don't think we need the ``.git`` on the end of the ssh path.
+
 To create an empty repository on a remote server::
 
   cd ~/repo/temp/

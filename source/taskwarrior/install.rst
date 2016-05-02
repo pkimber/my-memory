@@ -12,7 +12,7 @@ Prequisites
 
 Install *CMake* using ``apt-get``::
 
-  sudo apt-get install cmake
+  sudo apt-get install cmake libgnutls-dev uuid-dev
 
 Download
 --------

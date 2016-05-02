@@ -8,5 +8,5 @@ Contents
 
    links
    getting-started
+   issues
    test-python
-
