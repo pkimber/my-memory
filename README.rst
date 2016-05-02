@@ -3,10 +3,8 @@ My Memory
 
 ::
 
-  pyvenv-3.4 --without-pip venv-my-memory
+  virtualenv --python=python3 venv-my-memory
   source venv-my-memory/bin/activate
-  wget https://raw.githubusercontent.com/pypa/pip/master/contrib/get-pip.py
-  python get-pip.py
 
   pip install -r requirements.txt
 

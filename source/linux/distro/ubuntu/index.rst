@@ -13,6 +13,7 @@ Contents
    issues
    java
    juju
+   keyboard
    multimedia
    python
    server
