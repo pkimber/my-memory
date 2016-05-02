@@ -11,23 +11,12 @@ Links
 Linux
 =====
 
-From `Installing on Debian / Ubuntu`_
+.. note:: I had some issues following the `Installing on Debian / Ubuntu`_
+          instructions, so just installed the standard versions on Ubuntu
+          16.04.
 
-To add the APT repository to your ``/etc/apt/sources.list.d``::
+::
 
-  echo 'deb http://www.rabbitmq.com/debian/ testing main' | sudo tee /etc/apt/sources.list.d/rabbitmq.list
-
-.. note:: The release is described as ``testing`` to emphasise that they
-          release frequently.
-
-To avoid warnings about unsigned packages, add the public key to your trusted
-key list using apt-key(8)::
-
-  wget -O- https://www.rabbitmq.com/rabbitmq-signing-key-public.asc | sudo apt-key add -
-
-Update the package list and install::
-
-  sudo apt-get update
   sudo apt-get install rabbitmq-server
 
 Diagnostics::
