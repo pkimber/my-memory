@@ -6,11 +6,12 @@ Contents
 .. toctree::
    :maxdepth: 1
 
-   links
    fields
    introspection
    legacy
+   links
    manager
+   many_to_many
    meta
    methods
    query-set/index

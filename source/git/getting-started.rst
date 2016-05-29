@@ -12,7 +12,6 @@ Links
 - `Setting up GIT to use a Subversion (SVN) style workflow`_
   ...also has useful information on configuring an empty repository...
 
-
 Configuration
 =============
 
@@ -148,6 +147,15 @@ commit you want to back up to, and then do this::
 If you already pushed it, you will need to do a force push to get rid of it::
 
   git push origin HEAD --force
+
+Stash
+-----
+
+::
+
+  git stash
+  git stash list
+  git stash apply
 
 Status
 ------

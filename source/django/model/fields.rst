@@ -255,6 +255,10 @@ To create an ``IntegerField`` which can be ``blank``, specify ``blank``
 ManyToManyField
 ---------------
 
+See :doc:`many_to_many`...
+
+.. tip:: To use a ``through`` table, see :doc:`many_to_many`
+
 ::
 
   class DatabaseModule(models.Model):

@@ -32,7 +32,6 @@ To convert a dictionary to a named tuple, use the double-star-operator:
 
 ::
 
-  >>>
   >>> d = {'x': 11, 'y': 22}
   >>> Point(**d)
   Point(x=11, y=22)

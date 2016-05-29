@@ -86,6 +86,12 @@ If you want to rename the current branch, you can simply do::
 
   git branch -m <newname>
 
+You can use this command to rename ``master`` e.g::
+
+  git branch -m master 1010-angular
+  git checkout live-site
+  git branch -m live-site master
+
 Tags
 ====
 
