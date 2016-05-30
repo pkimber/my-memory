@@ -147,10 +147,10 @@ Framework
   PyF is a python open source framework and platform dedicated to large data
   processing, mining, transforming, reporting and more.
 
-Geocoding
-=========
+GIS and Geocoding
+=================
 
-- :doc:`geo`
+:doc:`geo`
 
 Google
 ======
