@@ -257,49 +257,6 @@ ManyToManyField
 
 See :doc:`many_to_many`...
 
-.. tip:: To use a ``through`` table, see :doc:`many_to_many`
-
-::
-
-  class DatabaseModule(models.Model):
-
-      code = models.CharField(max_length=10)
-      description = models.CharField(max_length=100)
-
-      def __unicode__(self):
-          return '%s %s' % (self.code, self.description,)
-
-      class Meta:
-          verbose_name = 'Database Module Type'
-          verbose_name_plural = 'Database Module Types'
-
-
-  class DatabaseConfig(models.Model):
-
-      description = models.CharField(max_length=100)
-      database_name = models.CharField(max_length=100)
-      modules = models.ManyToManyField(DatabaseModule)
-
-      def __unicode__(self):
-          return '%s %s' % (self.database_name, self.description,)
-
-      class Meta:
-          ordering = ['database_name']
-          verbose_name = 'Database Configuration'
-          verbose_name_plural = 'Database Configurations'
-
-To add a model instance (or primary key) to a many to many field::
-
-  config.modules.add(module)
-
-  # modules is a list of modules
-  config.modules.add(*modules)
-
-.. warning:: I think the ``add`` method allows you to add an object instance or
-             a primary key.  If you try and add an invalid primary key, the
-             ``add`` method will fail silently!!  I can't find this in the
-             official documents, but it is hinted at here: django_conduit_
-
 OneToOneField
 -------------
 
