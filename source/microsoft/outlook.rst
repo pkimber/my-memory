@@ -4,9 +4,7 @@ Outlook
 Conversations
 =============
 
-`Make Outlook thread conversations like Gmail`_
-
-::
+`Make Outlook thread conversations like Gmail`_::
 
   To mimic Gmail's threads we need a way for Outlook to group by subject, but
   ignore the FW: and RE:. Luckily, it has just such a feature.  It's called
@@ -28,6 +26,15 @@ Out of Office
 =============
 
 `Cool Trick: Making Miniature Calendars`_
+
+PST
+===
+
+For use when migrating from Outlook to Google Mail, :doc:`../google/gmail`.
+
+Highlight the ``Inbox`` you want to use, File, Import and Export, Export to a
+file, Personal Folder File (.pst), Include subfolders, Filter (if required)
+(received last month), Replace duplicates with items exported.
 
 RSS Feeds
 =========
@@ -100,4 +107,3 @@ voting buttons* and enter a ``;`` separated list of options.
 .. _`Make Outlook thread conversations like Gmail`: http://lifehacker.com/157042/make-outlook-thread-conversations-like-gmail
 .. _`How to View Email Headers`: http://128.175.24.251/headers.htm
 .. _`Cool Trick: Making Miniature Calendars`: http://blogs.msdn.com/outlook/archive/2008/12/15/making-miniature-calendars.aspx
-

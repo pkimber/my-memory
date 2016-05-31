@@ -32,10 +32,17 @@ Commands
 ?     for help on keyboard shortcuts.
 ====  =================================
 
+Import
+======
+
+Using `Google Apps Migration for Microsoft Outlook`_:
+
+- Create an Outlook PST file, :doc:`../microsoft/outlook`.
+- Migrate only new data
 
 
 .. _`2 hidden ways to get more from your Gmail address`: http://gmailblog.blogspot.com/2008/03/2-hidden-ways-to-get-more-from-your.html
-.. _`How to back up your Gmail on Linux in four easy steps`: http://www.mattcutts.com/blog/backup-gmail-in-linux-with-getmail/
 .. _`Backup (arhive) your Gmail IMAP folders`: http://www.commandlinefu.com/commands/view/6748/backup-arhive-your-gmail-imap-folders
 .. _`Backup your Gmail in a few easy steps!`: http://blogs.gnome.org/woody/2011/07/26/backup-your-gmail-in-a-few-easy-steps/
-
+.. _`Google Apps Migration for Microsoft Outlook`: https://tools.google.com/dlpage/outlookmigration
+.. _`How to back up your Gmail on Linux in four easy steps`: http://www.mattcutts.com/blog/backup-gmail-in-linux-with-getmail/
