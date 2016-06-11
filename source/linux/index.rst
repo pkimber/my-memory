@@ -53,6 +53,7 @@ Contents
    dos2unix
    files
    find
+   fish
    folders
    font
    gcc
