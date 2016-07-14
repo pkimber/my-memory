@@ -14,6 +14,22 @@ Links
 Sample
 ======
 
+Write::
+
+  import csv
+  with open('temp.csv', 'w', newline='') as out:
+      csv_writer = csv.writer(out, dialect='excel-tab')
+      for a, b in data.items():
+          csv_writer.writerow([a, b])
+
+Read::
+
+  import csv
+  reader = csv.reader(open('temp.csv'), 'excel-tab')
+
+Older Examples
+--------------
+
 Read::
 
   import csv

@@ -3,6 +3,8 @@ Reports
 
 .. highlight:: bash
 
+From https://taskwarrior.org/docs/report.html
+
 Here is my custom ``pk`` report::
 
   task config report.pk.description 'Tasks for patrick'
@@ -11,7 +13,8 @@ Here is my custom ``pk`` report::
   task config report.pk.sort 'urgency-'
   task config report.pk.filter 'status:pending username:patrick.kimber limit:page'
 
-.. note:: ``username`` is one of our custom fields
+.. note:: ``username`` and ``ticket`` are two of our custom fields
+          See https://github.com/pkimber/tasksync
 
 To see available columns::
 

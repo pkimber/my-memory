@@ -3,7 +3,7 @@ Methods (and functions)
 
 .. highlight:: python
 
-.. tip:: For string formatting, check out the Cookbook_
+.. tip:: For string formatting, check out PyFormat_ and the Cookbook_
 
 Links
 =====
@@ -43,6 +43,8 @@ are interpreted as in slice notation. Return -1 if sub is not found::
 
 format
 ======
+
+.. tip:: For string formatting, check out PyFormat_ and the Cookbook_
 
 New
 ---
@@ -263,5 +265,6 @@ methods of string types now accept tuples of strings to check for::
   return filename.endswith(('.gif', '.jpg', '.tiff'))
 
 
-.. _Cookbook: http://mkaz.com/2012/10/10/python-string-format/
 .. _`String Formatting Operations`: http://docs.python.org/library/stdtypes.html#string-formatting
+.. _Cookbook: http://mkaz.com/2012/10/10/python-string-format/
+.. _PyFormat: https://pyformat.info/
