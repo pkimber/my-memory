@@ -10,6 +10,20 @@ Program stopping after adverts:
 
   sudo apt-get install hal
 
+Dual Boot - Linux and Windows
+=============================
+
+From
+`Fix Incorrect Clock Settings in Windows When Dual-Booting with OS X or Linux`_
+
+Run ``regedit.exe``, navigate to::
+
+  HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\TimeZoneInformation
+
+Right click anywhere in the right pane and hit *New*, ``DWORD (32-bit) Value``.
+Name it ``RealTimeIsUniversal``, then double click on it and give it a value of
+``1``.
+
 Flash
 =====
 
@@ -60,4 +74,5 @@ To solve the problem, I followed these instructions:
   sudo apt-get autoremove
 
 
+.. _`Fix Incorrect Clock Settings in Windows When Dual-Booting with OS X or Linux`: http://lifehacker.com/5742148/fix-windows-clock-issues-when-dual-booting-with-os-x
 .. _`Ubuntu yelp package Questions Question #100167`: https://answers.launchpad.net/ubuntu/+source/yelp/+question/100167

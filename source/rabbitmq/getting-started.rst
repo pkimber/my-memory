@@ -25,6 +25,11 @@ Diagnostics::
   journalctl -xe
   rabbitmqctl status
 
+To list queues::
+
+  rabbitmqctl list_queues
+  rabbitmqctl list_queues name messages messages_ready messages_unacknowledged
+
 Windows
 =======
 

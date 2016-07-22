@@ -18,6 +18,7 @@ To create an empty repository on a remote server::
 
   cd ~/repo/temp/
   mkdir pillar.git
+  cd pillar.git
   git init --bare
 
 To push to this repository::
