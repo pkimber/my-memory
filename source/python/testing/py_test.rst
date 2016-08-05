@@ -51,6 +51,9 @@ Select tests::
 
   py.test -k test_simple
 
+  # to select a function in a module, remove '-k'
+  py.test dash/tests/test_view.py::test_document_detail
+
 Modify traceback::
 
   py.test -x --tb=short
