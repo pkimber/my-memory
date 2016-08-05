@@ -1,6 +1,10 @@
 Ember - Getting Started
 ***********************
 
+.. highlight:: bash
+
+From `Quick Start`_
+
 Install Node and ``npm``::
 
   curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -e
@@ -19,6 +23,9 @@ Run the application::
   cd ember-quickstart
   ember server
 
+.. note:: ``watchman`` doesn't seem to work.
+          The error message is here, `Linux inotify Limits`_
+
 To build and install ``watchman``::
 
   cd ~/repo/src/
@@ -31,9 +38,6 @@ To build and install ``watchman``::
   make
   sudo make install
 
-.. note:: ``watchman`` doesn't seem to work.  The error message is here,
-          `Linux inotify Limits`
-
 To remove ``watchman``::
 
   cd watchman/
@@ -41,3 +45,4 @@ To remove ``watchman``::
 
 
 .. _`Linux inotify Limits`: https://facebook.github.io/watchman/docs/install.html#system-specific-preparation
+.. _`Quick Start`: https://guides.emberjs.com/v2.7.0/getting-started/quick-start/
