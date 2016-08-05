@@ -14,14 +14,21 @@ Using a repository
 
 From `Installing Node.js via package manager`_::
 
-  curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash -
+  sudo apt-get install nodejs npm
+
+or::
+
+  curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
   sudo apt-get install -y nodejs
+
+Update ``npm``::
+
+  sudo npm install npm -g
 
 Using Node Version Manager
 --------------------------
 
-From `Node Version Manager`_ and
-`How To Install Node.js on an Ubuntu 14.04 server`_
+From `Node Version Manager`_ and `How To Install Node.js on Ubuntu`_
 
 Prerequisites::
 
@@ -53,7 +60,7 @@ Here is the sample code from the node home page: example-web-server.js_::
 ...browse to http://127.0.0.1:8000/
 
 
-.. _`How To Install Node.js on an Ubuntu 14.04 server`: https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-an-ubuntu-14-04-server
+.. _`How To Install Node.js on Ubuntu`: https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-16-04
 .. _`Installing Node and npm`: http://joyeur.com/2010/12/10/installing-node-and-npm/
 .. _`Installing Node.js via package manager`: https://nodejs.org/en/download/package-manager/#debian-and-ubuntu-based-linux-distributions
 .. _`Node Package Manager`: http://npmjs.org/

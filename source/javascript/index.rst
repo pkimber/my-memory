@@ -12,6 +12,7 @@ Contents
    :maxdepth: 2
 
    angular/index
+   ember/index
    ext/index
    fckeditor/index
    jquery/index
