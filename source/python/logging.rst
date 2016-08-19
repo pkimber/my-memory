@@ -27,6 +27,8 @@ From `Become a logging expert in 30 minutes`_:
 - Filters are applied to loggers e.g. if you want to log output from one IP
   address.
 
+.. tip:: YAML config looks very clean.  Check the video for an example.
+
 Setup
 =====
 
