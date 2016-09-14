@@ -75,6 +75,22 @@ To see the branch on the log::
 
   git log --decorate
 
+Remote
+======
+
+From `How to check out a remote Git branch?`_::
+
+  git fetch origin
+  git branch -v -a
+  git checkout -b test origin/test
+
+With Git versions ≥ 1.6.6, you can just do::
+
+  git fetch
+  git checkout test
+
+.. _`How to check out a remote Git branch?`: http://stackoverflow.com/questions/1783405/how-to-check-out-a-remote-git-branch
+
 Rename
 ======
 

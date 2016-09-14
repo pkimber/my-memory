@@ -1,20 +1,22 @@
 MySQL
 *****
 
-Note MySQL-Python and MySQLdb are the **same module**.
-
 Links
 =====
 
+- PyMySQL_
+- https://mysqlclient.readthedocs.io/en/latest/
 - :doc:`../pip/install-modules`.
-- http://mysql-python.sourceforge.net/
 - `MySQL Python tutorial`_
 - `Returning Rows as Dicts in MySQLdb`_
 
 Install
 =======
 
-:doc:`../pip/install-modules`
+From PyMySQL_::
+
+  sudo apt-get install python-dev libmysqlclient-dev
+  pip install mysqlclient
 
 Sample
 ======
@@ -47,9 +49,7 @@ Issues
 sh: mysql_config: not found
 ---------------------------
 
-To solve this issue, I installed some MySQL dev packages:
-
-::
+To solve this issue, I installed some MySQL dev packages::
 
   sudo apt-get install libmysqlclient16-dev
 
@@ -60,3 +60,4 @@ Not sure if this is correct, but for more information see
 .. _`MySQL Python tutorial`: http://zetcode.com/databases/mysqlpythontutorial/
 .. _`mysql_config question`: http://ubuntuforums.org/showthread.php?t=573286
 .. _`Returning Rows as Dicts in MySQLdb`: http://www.halfcooked.com/mt/archives/000969.html
+.. _PyMySQL: https://github.com/PyMySQL/mysqlclient-python

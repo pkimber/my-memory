@@ -26,6 +26,17 @@ Password
 
 See :doc:`state`
 
+top.sls
+=======
+
+To add a configuration section for a list of servers::
+
+  'folland,vickers':
+    - match: list
+
+.. note:: Our fabric task does not know how to read a list, so this won't work
+          for now.  We will need to update ``_load`` in ``lib/siteinfo.py``.
+
 View
 ====
 
