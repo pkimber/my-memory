@@ -106,6 +106,10 @@ current distro::
   apt-get update
   apt-get upgrade
 
+If the system needs a re-start, then the following file will be created::
+
+  /var/run/reboot-required
+
 Version
 =======
 

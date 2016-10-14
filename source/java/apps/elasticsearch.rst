@@ -41,6 +41,24 @@ Using HTTPie::
 
   http GET http://localhost:9200/job-index/_analyze analyzer=my_analyzer text="Plymouth"
 
+Stats
+=====
+
+Using the python API:
+
+.. code-block:: python
+
+  from elasticsearch import Elasticsearch
+  es = ElasticSearch()
+  stats = es.indices.stats('my-index')
+
+  import pprint
+  pp = pprint.PrettyPrinter(indent=4)
+  pp.pprint(stats)
+
+  stats['_all']['primaries']['docs']
+  # {'count': 6, 'deleted': 0}
+
 DjangoConEU 2015
 ================
 

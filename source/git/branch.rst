@@ -84,7 +84,7 @@ From `How to check out a remote Git branch?`_::
   git branch -v -a
   git checkout -b test origin/test
 
-With Git versions ≥ 1.6.6, you can just do::
+With Git versions ≥ 1.6.6, you can just do (doesn't work for me)!::
 
   git fetch
   git checkout test

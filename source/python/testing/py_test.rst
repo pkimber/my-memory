@@ -36,6 +36,20 @@ Exception:
       f()
   assert 'maximum recursion' in str(excinfo.value)
 
+
+Parametrize
+===========
+
+.. code-block:: python
+
+  @pytest.mark.parametrize("state,expected", [
+      (Document.SYNCED, True),
+      (Document.MODIFIED, False),
+      (Document.NEW, True),
+  ])
+  def test_can_edit(state, expected):
+
+
 Parameters
 ==========
 
