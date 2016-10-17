@@ -19,9 +19,12 @@ Create a folder for the keys (if it doesn't already exist)::
 
 To create your key::
 
-  ssh-keygen -t rsa
+  ssh-keygen -o -a 100 -t ed25519
 
 .. note:: Do not enter a password here.
+
+.. note:: The old command line was ``ssh-keygen -t rsa``.  I updated on the
+          advice of this article, `Upgrade your SSH keys!`_
 
 To add your key to the authentication agent::
 
@@ -51,3 +54,4 @@ To use SSH agent forwarding for ``example.co.uk``::
 
 .. _`OpenSSH key management`: http://www.ibm.com/developerworks/library/l-keyc2/
 .. _`ubuntu documentation - SSH Keys`: https://help.ubuntu.com/community/SSH/OpenSSH/Keys
+.. _`Upgrade your SSH keys!`: https://blog.g3rt.nl/upgrade-your-ssh-keys.html
