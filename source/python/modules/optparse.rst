@@ -1,6 +1,10 @@
 optparse
 ********
 
+.. important:: I think :doc:`argparse` is the module to use for python 3
+
+.. highlight:: python
+
 Links
 =====
 

@@ -13,4 +13,5 @@ Contents
    modules
    output-pdf
    template
+   theme
    tips

@@ -13,8 +13,10 @@ Contents
 .. toctree::
    :maxdepth: 1
 
+   argparse
    barcode
    beautiful-soup
+   click
    cloudfiles
    code
    csv

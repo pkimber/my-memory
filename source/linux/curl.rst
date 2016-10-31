@@ -38,15 +38,11 @@ Note: ``--head`` and ``-I`` will just display the response headers.
 Download
 --------
 
-To download a file:
-
-::
+To download a file::
 
   curl -O http://server/repository/appname-0.2.jar
 
-or - how about these options (I don't know what they do)?
-
-::
+or - how about these options (I don't know what they do)?::
 
   curl -C - -O http://www.mirror.com/path/to/file.zip
 
@@ -60,9 +56,7 @@ AJAX
 GET
 ---
 
-I think an HTTP GET request is as simple as doing:
-
-::
+I think an HTTP GET request is as simple as doing::
 
   curl "http://127.0.0.1:8888?action=CONFIG"
 
@@ -71,9 +65,7 @@ POST
 
 `Using cURL to automate HTTP jobs`_
 
-Send the specified data in a POST request to the HTTP server:
-
-::
+Send the specified data in a POST request to the HTTP server::
 
   curl http://127.0.0.1:8888 -d "action=CONFIG&site=ibm"
 
