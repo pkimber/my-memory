@@ -1,6 +1,13 @@
 Elements
 ********
 
+Page Break
+==========
+
+.. code-block:: python
+
+  elements.append(platypus.PageBreak())
+
 Paragraph
 =========
 

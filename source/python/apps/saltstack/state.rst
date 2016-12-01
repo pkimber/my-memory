@@ -24,11 +24,12 @@ Master
 
 Check out the ``sls`` and pillar files from your repository.
 
-To apply the state to all minions:
-
-::
+To apply the state to all minions::
 
   salt '*' state.highstate
+
+  # with less output
+  salt 'kb-c' state.highstate  --state-verbose=False
 
 States
 ======

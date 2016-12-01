@@ -10,6 +10,11 @@ Backup
 
 In this example, ``labs`` is the database name.
 
+From Tim, 03/11/2016, I don't know if they use functions or stored procedures,
+but if they do the command for backup is::
+
+  mysqdump --user=xxxxx --password=xxxx --routines --quick --single-transaction mydb > mydb.sql
+
 Table
 -----
 
@@ -42,6 +47,8 @@ Restore
   mysql --user=root --password=mylabs --database=templabs < labs_2010-01-04.sql
   mysql -u root -p < fullDump.sql
   mysql --user=root --database=tropicana < fullDump.sql
+
+.. tip:: To ignore errors and force a restore, use the ``-f`` flag.
 
 Note: You might need to create the database first e.g::
 

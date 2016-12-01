@@ -4,17 +4,19 @@ Issues
 Access denied
 =============
 
-This error message when trying to run ``mysql`` from the command line:
-
-::
+This error message when trying to run ``mysql`` from the command line::
 
   ERROR 1045 (28000): Access denied for user 'root'@'localhost' (using password: NO)
 
-To solve the problem:
-
-::
+To solve the problem::
 
   mysql -u root -p
+
+Nothing Happens
+===============
+
+I was running ``mysql`` and nothing happened!  This is because I had a
+``~/.my.cnf`` file which listed an old remote server...
 
 Operating System
 ================
@@ -23,15 +25,11 @@ Linux
 -----
 
 When copying files from Windows to Linux, then change the folder name
-containing the data files to lower case e.g:
-
-::
+containing the data files to lower case e.g::
 
   /var/lib/mysql/MyDatabase/
 
-to...
-
-::
+to::
 
   /var/lib/mysql/mydatabase/
 
@@ -52,4 +50,3 @@ Missing Tables
 
 If a user reports missing tables in *MySQL Workbench*, then make sure they have
 refreshed their table list.
-

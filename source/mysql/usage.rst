@@ -1,6 +1,12 @@
 Usage
 *****
 
+.. highlight:: bash
+
+::
+
+  mysql --user=root --pass=mypass --host=192.168.0.21 mydb
+
 Database
 ========
 
@@ -9,7 +15,7 @@ Create
 
 ::
 
-  mysql --user=root --password=mypass
+  mysql --user=root --pass=mypass
   CREATE DATABASE quickstart;
 
 List
@@ -19,6 +25,8 @@ List
 
   bin\mysql
   SHOW DATABASES;
+  SHOW TABLES;
+  SHOW COLUMNS FROM my_table;
 
 Use
 ---

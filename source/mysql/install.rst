@@ -82,4 +82,5 @@ Test
 
 Once the server is running, you can test it using the command::
 
+  service mysql status
   bin\mysqlshow

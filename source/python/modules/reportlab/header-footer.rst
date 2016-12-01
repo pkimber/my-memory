@@ -1,6 +1,8 @@
 Headers and Footers
 *******************
 
+.. note:: Check this recipe first: http://code.activestate.com/recipes/576832/
+
 From
 `StackOverflow, ReportLab.Platypus SimpleDocTemplate, date/time in header`_::
 

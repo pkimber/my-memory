@@ -36,6 +36,28 @@ Exception
 Issues
 ======
 
+import
+------
+
+I tried to mock a function like this::
+
+  def search(index_name, criteria, page_number=None):
+
+But it didn't seem to work, so I made a private function e.g. ``_search`` and
+mocked that instead::
+
+  def search(index_name, criteria, page_number=None):
+      # call the private function
+      return _search(index_name, criteria, page_number)
+
+  # the mock
+  with mock.patch('search.service._search') as m:
+
+.. note:: I don't understand why this works, but it does!
+
+with
+----
+
 I was using ``with mock`` and put the code I was testing after the ``with``
 block... so there was no mocking by the time my code was running!
 
