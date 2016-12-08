@@ -29,14 +29,14 @@ current *best attempt* at setting up a Linux Java environment.
 Debian
 ------
 
-Follow the Debian Java notes, :doc:`../linux/debian/java`.
+Follow the Debian Java notes, :doc:`../linux/distro/debian/java`.
 
 SuSE
 ----
 
-Follow the SuSE Java notes, :doc:`../linux/suse/java`.
+Follow the SuSE Java notes, :doc:`../linux/distro/suse/java`.
 
 Ubuntu
 ------
 
-Follow the Ubuntu Java notes, :doc:`../linux/ubuntu/java`
+Follow the Ubuntu Java notes, :doc:`../linux/distro/ubuntu/java`

@@ -15,8 +15,8 @@ Add to the list of sources::
 
 Install::
 
-  sudo apt-get update
-  sudo apt-get install elasticsearch
+  sudo apt update
+  sudo apt install elasticsearch
   sudo service elasticsearch start
 
 .. tip:: See https://www.kbsoftware.co.uk/open/app-search.html for diagnostics

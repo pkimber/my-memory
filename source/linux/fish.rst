@@ -1,6 +1,29 @@
 Fish Shell
 **********
 
+.. highlight:: bash
+
+Install
+=======
+
+::
+
+  apt install fish
+
+Make fish your default shell::
+
+  chsh -s /usr/bin/fish
+
+Configure
+=========
+
+Make sure the fish shell is active, and then run::
+
+  fish_config
+
+Commands
+========
+
 To merge history::
 
   history --merge

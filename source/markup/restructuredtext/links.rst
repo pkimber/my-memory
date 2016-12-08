@@ -8,7 +8,7 @@ Convert
 =======
 
 - http://rst2a.com/
-- rst2pdf_
+- :doc:`../../python/modules/rst2pdf`
 - WeasyPrint_ is a visual rendering engine for HTML and CSS that can export to
   PDF
 
@@ -32,13 +32,11 @@ Presentation
 Sphinx
 ======
 
-- `SPHINX - python Documentation Generator`_
+- :doc:`../../python/apps/sphinx/index`
 
 
 .. _`Easy Slide Shows With reST & S5`: http://docutils.sourceforge.net/docs/user/slide-shows.html
 .. _`rst-cheatsheet.pdf, A two-page cheatsheet for restructured text`: http://github.com/ralsina/rst-cheatsheet/commit/bf5fa29a471401ab6c3ee124e5a167c5da469de8
-.. _`SPHINX - python Documentation Generator`: ../python/sphinx.html
 .. _`XML Matters: reStructuredText`: http://www.ibm.com/developerworks/library/x-matters24/
 .. _reStructuredText: http://docutils.sourceforge.net/rst.html
-.. _rst2pdf: ../../python/modules/rst2pdf.html
 .. _WeasyPrint: http://weasyprint.org/

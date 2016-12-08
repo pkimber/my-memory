@@ -28,25 +28,19 @@ Ubuntu
 ------
 
 It is probably a good idea to remove ``ack`` (Kanji code checker) from your
-system:
+system::
 
-::
+  sudo apt remove ack
 
-  sudo apt-get remove ack
+Note: Create a new bash shell after removing this application::
 
-Note: Create a new bash shell after removing this application
-
-::
-
-  sudo apt-get install ack-grep
+  sudo apt install ack-grep
 
 Configuration
 =============
 
 We want to use ``ack`` rather than ``ack-grep`` as it is shorter to type - so
-either create a symlink (as suggested above), or create a bash script e.g.
-
-::
+either create a symlink (as suggested above), or create a bash script e.g::
 
   vim ~/opt/ack
 
@@ -55,9 +49,7 @@ either create a symlink (as suggested above), or create a bash script e.g.
 
   chmod +x ~/opt/ack
 
-The contents of my ``~/.ackrc`` file are as follows:
-
-::
+The contents of my ``~/.ackrc`` file are as follows::
 
   # Create txt file type:
   --type-set=rst=.rst
@@ -84,9 +76,7 @@ set-up a symbolic link or script.
 Shortcut
 ========
 
-Add the following to ``~/.bashrc``:
-
-::
+Add the following to ``~/.bashrc``::
 
   alias grepp='ack-grep --type python'
   alias grepx='ack-grep --type xml'

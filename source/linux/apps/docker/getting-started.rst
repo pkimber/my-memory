@@ -6,6 +6,16 @@ Getting Started
 Install
 =======
 
+Ubuntu 16.10
+------------
+
+::
+
+  sudo apt install docker.io
+
+Ubuntu 16.04
+------------
+
 .. important:: Make sure you have Ubuntu 14.04 (64 bit)
 
 .. important:: Install Docker on a **64 bit** operating system.
@@ -17,6 +27,9 @@ Verify that you have wget installed::
 Install Docker::
 
   wget -qO- https://get.docker.com/ | sh
+
+Configure
+---------
 
 If you would like to use Docker as a non-root user, you should now consider
 adding your user to the ``docker`` group with something like::

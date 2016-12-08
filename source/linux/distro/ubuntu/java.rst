@@ -9,11 +9,11 @@ Install
 `Install Oracle Java 7 in Ubuntu`_::
 
   sudo add-apt-repository ppa:webupd8team/java
-  sudo apt-get update
+  sudo apt update
   # java 7
-  sudo apt-get install oracle-java7-installer
+  sudo apt install oracle-java7-installer
   # java 8
-  sudo apt-get install oracle-java8-installer
+  sudo apt install oracle-java8-installer
 
 Check the version of Java::
 
@@ -28,13 +28,15 @@ the following command::
 To automatically set up the Java 7 environment variables, you can install the
 following package::
 
-  sudo apt-get install oracle-java7-set-default
+  sudo apt install oracle-java7-set-default
+  # or
+  sudo apt install oracle-java8-set-default
 
 If you don't want to use Oracle Java (JDK) 7 anymore and want to go back to
 OpenJDK, all you have to do is remove the Oracle JDK7 Installer and the
 previous Java (OpenJDK, etc.) version will be used::
 
-  sudo apt-get remove oracle-java7-installer
+  sudo apt remove oracle-java7-installer
 
 Configuration
 =============

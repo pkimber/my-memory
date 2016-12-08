@@ -1,10 +1,22 @@
 usb
 ***
 
+.. highlight:: bash
+
 ISO
 ===
 
 To copy an ``iso`` to a USB drive, see `install/usb`
+
+Issues
+======
+
+Read only USB::
+
+  sudo -i
+  df -Th
+  umount /media/patrick/KINGSTON
+  dosfsck -a /dev/sdc1
 
 List
 ====

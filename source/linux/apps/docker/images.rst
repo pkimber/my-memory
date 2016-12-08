@@ -32,7 +32,7 @@ Edit ``Dockerfile`` so it contains the following::
   FROM ubuntu:14.04
   MAINTAINER Patrick Kimber <code@pkimber.net>
   RUN apt-get update
-  RUN apt-get install -y libpq-dev python3-dev libxml2-dev libxslt-dev libjpeg8-dev python3-pip git postgresql-client
+  RUN apt-get install -y libpq-dev python3-dev libxml2-dev libxslt-dev libjpeg8-dev python3-pip git postgresql-client libmysqlclient-dev tdsodbc
 
 Build::
 
