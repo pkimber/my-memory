@@ -19,6 +19,7 @@ Contents
    inxi
    irssi
    python-window-organizer
+   remmina
    shorewall
    shutter
    teamviewer

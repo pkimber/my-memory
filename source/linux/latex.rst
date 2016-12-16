@@ -16,7 +16,7 @@ Install
 
 ::
 
-  sudo apt-get install texlive-full
+  sudo apt install texlive-full
 
 Getting Started
 ===============

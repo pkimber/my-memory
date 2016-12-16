@@ -4,6 +4,19 @@ Shortcuts
 Keyboard
 ========
 
+I installed the *Put Windows* extension (09/12/2016):
+https://extensions.gnome.org/extension/39/put-windows/
+
+::
+
+  Super + 4         Move to left
+  Super + 6         Move to right
+
+Check *Extensions* in the Tweak Tool for detail.
+
+Legacy
+------
+
 View under *User Menu*, *System Settings*, *Keyboard*, *Shortcuts*::
 
   Ctrl+Super+Up                 Maximise
