@@ -8,6 +8,6 @@ Contents
 
    activiti/install
    alfresco/index
-   elasticsearch
+   elasticsearch/index
    james/index
    nuxeo/index

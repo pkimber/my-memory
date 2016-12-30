@@ -1,6 +1,8 @@
 Install
 *******
 
+.. highlight:: bash
+
 Links
 =====
 
@@ -12,18 +14,29 @@ Install
 Using a repository
 ------------------
 
-From `Installing Node.js via package manager`_::
+.. note:: Ember requires node version 4.
 
-  sudo apt-get install nodejs npm
+From https://github.com/nodesource/distributions::
 
-or::
-
-  curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
-  sudo apt-get install -y nodejs
+  curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash -
+  sudo apt install nodejs
 
 Update ``npm``::
 
-  sudo npm install npm -g
+  sudo npm install -g npm
+
+or:
+
+.. note:: The following command installs ``nodejs`` which is the same as the
+          old ``node`` command.  If you need to use the ``node`` command, then
+          install ``nodejs-legacy`` as well.
+
+.. note:: The version of node installed by Ubuntu 16.10 is not supported by
+          Ember.
+
+From `Installing Node.js via package manager`_::
+
+  sudo apt install nodejs npm
 
 Using Node Version Manager
 --------------------------
