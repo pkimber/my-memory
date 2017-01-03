@@ -3,6 +3,9 @@ Field Type
 
 .. highlight:: python
 
+.. note:: Documentation for ``blank`` and ``null`` can be found at
+          `Django blank and null`_
+
 Links
 =====
 
@@ -38,19 +41,6 @@ For the other field types (``ForeignKey``, ``ManyToManyField`` and
 
   poll = models.ForeignKey(Poll, verbose_name="the related poll")
 
-``blank``
----------
-
-If ``True``, the field is allowed to be blank.  Default is ``False``.
-
-**Note**: See ``null`` notes below.  To allow a date to be empty, you will need
-to set both ``blank`` and ``null`` (see *Sample* below):
-
-*Sample*::
-
-  completed = models.DateTimeField(blank=True, null=True)
-  notes = models.TextField(blank=True)
-
 ``editable``
 ------------
 
@@ -63,25 +53,6 @@ If ``False``, the field will not be displayed in the admin or any other
 -------------
 
 Extra "help" text to be displayed under the field on the object's admin form.
-
-``null``
---------
-
-If ``True``, Django will store empty values as ``NULL`` in the database.
-Default is ``False``.
-
-**Note**:
-
-- Empty string values will always get stored as empty strings, not as ``NULL``.
-- Only use ``null=True`` for non-string fields such as integers, booleans and
-  dates.
-- For both types of fields, you will also need to set ``blank=True`` if you
-  wish to permit empty values in forms, as the ``null`` parameter only affects
-  database storage (see ``blank`` above).
-
-Sample::
-
-  num_pages = models.IntegerField(blank=True, null=True)
 
 ``primary_key``
 ---------------
@@ -113,8 +84,6 @@ BooleanField
 From Django 1.6, set ``default=False`` (if you want the default value to be
 ``False``).
 
-If you need to accept null values then use ``NullBooleanField`` instead.
-
 CharField
 ---------
 
@@ -134,8 +103,6 @@ To add a simple lookup::
 
   country = models.CharField(max_length=2, choices=COUNTRY_CHOICES)
 
-To create a ``CharField`` which can be ``blank``, specify **only** ``blank``.
-
 A field with ``choices`` will automatically get a get_FOO_display_ method.
 
 DateTimeField
@@ -147,9 +114,6 @@ A date and time field.
 
   created = models.DateTimeField(auto_now_add=True)
   modified = models.DateTimeField(auto_now=True)
-
-To create a ``DateTimeField`` which can be ``blank``, specify ``blank`` **AND**
-``null``.
 
 Every ``DateField`` and ``DateTimeField`` that does not have ``null=True``, the
 object will have get_next_by_FOO_ and ``get_previous_by_FOO()`` methods,
@@ -170,10 +134,6 @@ Has two required arguments:
 For example, to store numbers up to 999 with a resolution of 2 decimal places::
 
   models.DecimalField(max_digits=5, decimal_places=2)
-
-.. note:: For now (because I can't find it in the docs), I am creating a
-          ``DecimalField`` which can be ``blank`` with ``blank`` **AND**
-          ``null`` (the same as an ``IntegerField``).
 
 FileField (and ImageField)
 --------------------------
@@ -204,14 +164,6 @@ ForeignKey
 ::
 
   artist = models.ForeignKey(Musician)
-
-To create an optional ``ForeignKey``, specify ``blank`` **AND** ``null`` e.g::
-
-  mentor = models.ForeignKey(
-      MentorModel,
-      blank=True,
-      null=True
-  )
 
 Generic Content Type Field
 --------------------------
@@ -245,12 +197,6 @@ sample_image_field_
 To use in a template::
 
    {{ object.headshot.url }}
-
-IntegerField
-------------
-
-To create an ``IntegerField`` which can be ``blank``, specify ``blank``
-**AND** ``null``.
 
 ManyToManyField
 ---------------
@@ -301,8 +247,6 @@ A large text field.
 
 The admin represents this as a ``<textarea>`` (a multi-line input).
 
-To create a ``TextField`` which can be ``blank``, specify **only** ``blank``.
-
 URLField
 --------
 
@@ -319,6 +263,7 @@ UUIDField
   id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
 
 
+.. _`Django blank and null`: https://www.kbsoftware.co.uk/docs/dev-django.html#field-types
 .. _`How can I get access to a Django Model field verbose name dynamically?`: http://stackoverflow.com/questions/2429074/how-can-i-get-access-to-a-django-model-field-verbose-name-dynamically
 .. _`Model reference`: http://www.djangoproject.com/documentation/model-api/
 .. _`Model Style`: http://docs.djangoproject.com/en/dev/internals/contributing/#model-style
