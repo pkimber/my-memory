@@ -3,6 +3,35 @@ Factory Boy
 
 .. highlight:: python
 
+FileField
+=========
+
+::
+
+  class Record(TimeStampedModel):
+
+      original_file = models.FileField(
+          blank=True,
+          upload_to='record/original',
+          storage=private_file_store,
+      )
+
+::
+
+  import factory
+
+  class RecordFactory(factory.django.DjangoModelFactory):
+
+      class Meta:
+          model = Record
+
+      original_file = factory.django.FileField()
+
+::
+
+  # put some data into the file
+  RecordFactory(original_file__data=b'abc')
+
 Many to Many
 ============
 

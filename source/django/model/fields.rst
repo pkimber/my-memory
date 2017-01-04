@@ -15,6 +15,16 @@ Links
 Attributes
 ==========
 
+``blank``
+---------
+
+Documentation for ``blank`` can be found at `Django blank and null`_
+
+``null``
+--------
+
+Documentation for ``null`` can be found at `Django blank and null`_
+
 ``verbose_name``
 ----------------
 
