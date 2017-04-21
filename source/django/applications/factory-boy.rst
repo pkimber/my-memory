@@ -32,6 +32,9 @@ FileField
   # put some data into the file
   RecordFactory(original_file__data=b'abc')
 
+.. note:: For the ``__data=b'`` feature to work, we need to set the field to a
+          ``factory.django.FileField()`` in the factory.
+
 Many to Many
 ============
 

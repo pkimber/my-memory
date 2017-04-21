@@ -19,9 +19,11 @@ Create
 ======
 
 .. note:: The following image is used for our continuous integration server:
-          :doc:`../../../git/gitlab`
+          https://gitlab.com/kb/gitlab-pytest
+          The build instructions are in the ``README.rst`` file in the
+          repository.
 
-::
+It was created using the following commands::
 
   mkdir gitlab-pytest
   cd gitlab-pytest
@@ -104,3 +106,5 @@ e.g. to run ``ubuntu``, ``14.04``::
   ubuntu      14.04    e54ca5efa2e9  4 weeks ago  276.5 MB
 
   sudo docker run -i -t ubuntu:14.04 /bin/bash
+
+

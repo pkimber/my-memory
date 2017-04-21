@@ -22,6 +22,21 @@ If you are **not** using a virtual environment, then this will work::
 Sample
 ------
 
+Using a context manager::
+
+  import psycopg2
+
+  DSN = 'dbname=conversion user=postgres'
+
+  conn = psycopg2.connect(DSN)
+
+  with conn:
+      with conn.cursor() as curs:
+          sql = 'select * from client'
+          curs.execute(sql)
+          data = curs.fetchone()
+          print(data)
+
 ::
 
   import psycopg2

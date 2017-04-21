@@ -7,58 +7,6 @@ GitLab
           Elementary OS.  I am installing onto a cloud server running Ubuntu
           14.04.
 
-Continuous Integration
-======================
-
-From `Install using official GitLab repositories`_
-
-Install Docker, :doc:`../../linux/apps/docker/getting-started`
-
-Create a Docker image :doc:`../linux/apps/docker/images`
-
-Install ``gitlab-ci-multi-runner``::
-
-  curl -L https://packages.gitlab.com/install/repositories/runner/gitlab-ci-multi-runner/script.deb.sh | sudo bash
-  apt-get install gitlab-ci-multi-runner
-
-.. tip:: Register the runner using ``sudo`` because you cannot enable the
-         service unless you are ``root``.
-
-Set-up::
-
-  sudo -i
-  gitlab-ci-multi-runner register
-
-Sample output::
-
-  Please enter the gitlab-ci coordinator URL (e.g. https://gitlab.com/ci):
-  https://gitlab.com/ci
-  Please enter the gitlab-ci token for this runner:
-  eaeae123ababa
-  Please enter the gitlab-ci description for this runner:
-  [master-b]: ci.kbsoftware.co.uk
-  Please enter the gitlab-ci tags for this runner (comma separated):
-  INFO[0204] eabd2c42 Registering runner... succeeded
-  Please enter the executor: shell, parallels, docker, docker-ssh, ssh:
-  docker
-  Please enter the Docker image (eg. ruby:2.1):
-  pkimber/gitlab-pytest
-  If you want to enable mysql please enter version (X.Y) or enter latest?
-  If you want to enable postgres please enter version (X.Y) or enter latest?
-  If you want to enable redis please enter version (X.Y) or enter latest?
-  If you want to enable mongo please enter version (X.Y) or enter latest?
-  INFO[0498] Runner registered successfully. Feel free to start it, but if it's running already the config should be automatically reloaded!
-
-Run in debug mode::
-
-  gitlab-runner --debug run
-
-To start the service::
-
-  gitlab-runner start
-
-To set-up `Continuous Integration`_ for the project...
-
 Migrate from GitHub
 ===================
 
@@ -93,6 +41,4 @@ Rename the GitHub repository to stop it from being used e.g.
 ``contact`` to ``old-contact-migrated-to-gitlab``
 
 
-.. _`Continuous Integration`: https://www.pkimber.net/open/dev-git.html#continuous-integration
 .. _`How do I import an existing git project into GitLab?`: http://stackoverflow.com/questions/20359936/how-do-i-import-an-existing-git-project-into-gitlab
-.. _`Install using official GitLab repositories`: https://gitlab.com/gitlab-org/gitlab-ci-multi-runner/blob/master/docs/install/linux-repository.md

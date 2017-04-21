@@ -60,6 +60,12 @@ To run SQL from a file::
 
   psql mydbname -f ~/temp/sales_order.sql
 
+Or from within the shell::
+
+  # \i filename
+  or
+  # \include filename
+
 To hide the column headers etc::
 
   psql mydbname -A -t -f ~/temp/sales_order.sql
