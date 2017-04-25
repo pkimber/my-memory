@@ -23,6 +23,14 @@ Create a new (empty) repository in GitLab:
   *Visibility Level* and click *Create Project* e.g.
   ``git@gitlab.com:kb/contact.git``
 
+By default GitLab does not allow developers to push to the ``master`` branch.
+To unprotect the ``master`` branch:
+
+- Use the GitLab web UI to create a temporary file in the empty repository e.g.
+  ``REMOVEME.rst``.
+- Navigate to the project, select *Settings*, *Repository*, scroll down to
+  *Protected Branches* and unprotect the ``master`` branch.
+
 In a **temporary** directory::
 
   git clone --mirror git@github.com:pkimber/contact.git
