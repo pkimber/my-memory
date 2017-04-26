@@ -17,6 +17,7 @@ Contents
    apache
    build
    bundle
+   git
    hooks
    issues
    server

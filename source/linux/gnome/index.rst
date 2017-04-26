@@ -12,6 +12,7 @@ Contents
    :maxdepth: 1
 
    links
+   boxes
    displays
    empathy
    gnome

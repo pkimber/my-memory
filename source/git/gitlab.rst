@@ -45,8 +45,23 @@ the new remote, run the following commands there::
   git remote add origin git@gitlab.com:kb/contact.git
   git fetch --all
 
+If you try a ``git pull`` on the folder with the new repository, and you get
+the following error::
+
+  There is no tracking information for the current branch
+
+.. warning:: I don't really understand what the ``origin/master`` is, so use
+             this with care.  For more information, see:
+             `git pull: no tracking information for the current branch`_
+
+Then, you can fix it (if you are on the ``master`` branch) using the following
+command::
+
+  git branch --set-upstream-to=origin/master master
+
 Rename the GitHub repository to stop it from being used e.g.
 ``contact`` to ``old-contact-migrated-to-gitlab``
 
 
+.. _`git pull: no tracking information for the current branch`: http://stackoverflow.com/questions/32056324/git-pull-there-is-no-tracking-information-for-the-current-branch
 .. _`How do I import an existing git project into GitLab?`: http://stackoverflow.com/questions/20359936/how-do-i-import-an-existing-git-project-into-gitlab
