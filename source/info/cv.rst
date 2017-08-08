@@ -14,6 +14,30 @@ CV - Patrick Kimber
 Employment History
 ==================
 
+KB Software Ltd, Director
+-------------------------
+
+| March 2014 until today
+
+https://www.kbsoftware.co.uk/
+
+Cloud based workflow and document management systems.
+
+Database and API for health tracking software.
+
+Continued work on a web site which manages membership, purchase and management
+of on-line courses and a jobs board.
+
+Various web sites written using Django, Linux and Postgres databases.
+
+Freelance
+---------
+
+| Aug 2012 - March 2014
+
+Web site to membership, purchase and management of on-line courses and a
+jobs board.
+
 DataCapture Ltd, Web Developer
 ------------------------------
 
@@ -126,23 +150,23 @@ Domain Knowledge
 I have been involved in gathering user requirements, designing and
 implementing various systems including:
 
+- Workflow
 - eCommerce/on-line shopping.
-- Content Management Systems.
+- Content Management
 - Text Search Engine and Classification Systems.
 - Marketing and Customer Relationship Management.
 - Legal and Commercial Accounts Systems.
 - Document Production and Management.
 - Property Development Management Systems
 - Stock Control
-- Work flow Procedures.
 
 Product Design
 --------------
 
-- Cloud Architecture (Rackspace, CDN).
-- Multi user, client server, web and mobile systems.
+- Cloud Architecture (Linode, Digital Ocean, Amazon, Rackspace, CDN).
+- Multi-user, client server, web and mobile systems.
 - Reporting
-- Third party product integration.
+- Third party product and API integration.
 - Software upgrades, change management and deployment.
 
 Development
@@ -151,17 +175,17 @@ Development
 I will design, build and document efficient, reliable and easy to maintain
 products, which meet customer requirements.
 
-Where appropriate, I use agile processes including unit testing and
-refactoring.  I utilise design patterns and reuse existing components.
+I use agile processes including unit testing and refactoring.  I utilise design
+patterns and reuse existing components.
 
 I am always looking for new ways to improve quality and procedures at all
 stages of the product lifecycle.
 
-- Languages: python, Java, C++, C#, Basic.
-- Framework: Django (Satchmo), SOLR and Lucene, Spring.
+- Languages: python, Java
+- Framework: Django, ElasticSearch, SOLR and Lucene, Spring.
+- Libraries: Django REST Framework, Activiti Workflow
 - Database: SQL, JDBC, Python DB-API, ODBC.
-- Secondary Language: JavaScript, CSS, ASP.NET, C, XML.
-- Design: Object oriented, Patterns.
+- Secondary Language: JavaScript, CSS, C++, C#, ASP.NET, C, XML, Basic
 
 .. raw:: pdf
 
@@ -185,7 +209,7 @@ management, unit testing, logging and continuous integration.
 - Unit Testing: ``py.test``, ``nose``, junit, nunit, boost test.
 - Logging: log4j, log4net, commons logging
 - Performance Testing: JMeter, Netbeans, Grinder
-- Version Control: Subversion, Mercurial, GIT, CVS, StarTeam.
+- Version Control: GIT, Mercurial, Subversion, CVS, StarTeam.
 
 Communication
 -------------
@@ -248,6 +272,6 @@ Education
 Personal
 --------
 
-- Age 49.  Married.
+- Age 52.  Married.
 - Full clean driving licence.
-- Interests: Cycling, squash, friends, programming and open source software.
+- Interests: Cycling, friends, community, programming and open source software.

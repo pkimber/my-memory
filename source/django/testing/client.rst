@@ -29,6 +29,8 @@ add the ``HTTP_X_REQUESTED_WITH`` parameter::
       HTTP_X_REQUESTED_WITH='XMLHttpRequest'
   )
 
+.. tip:: I don't think ``content_type`` is required for AJAX views.
+
 For details see `Testing AJAX Views in Django`_
 
 File Upload

@@ -12,7 +12,7 @@ Install Node and ``npm``::
 
 Install ``ember-cli``::
 
-  sudo npm install -g ember-cli@2.7
+  sudo npm install -g ember-cli@2.14.0
 
 Create an application::
 
@@ -27,6 +27,8 @@ Run the application::
           The error message is here, `Linux inotify Limits`_
 
 To build and install ``watchman``::
+
+  sudo apt-get install libtool m4 automake pkg-config
 
   cd ~/repo/src/
   git clone https://github.com/facebook/watchman.git

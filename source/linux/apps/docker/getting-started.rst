@@ -3,11 +3,23 @@ Getting Started
 
 .. highlight:: bash
 
+Docker Community Edition (CE) (**Docker CE**) is the version we are using.
+
 Install
 =======
 
+.. tip:: If you are using the Docker files created by Django CookieCutter, then
+         the version from the Ubuntu repositories is not new enough, so it is
+         better to follow the official instructions to install Docker:
+         https://docs.docker.com/engine/installation/linux/ubuntu/
+
+.. note:: ``docker-compose`` is installed using ``pip``!
+          Add ``docker-compose`` to ``requirements/local.txt``.
+
 Ubuntu 16.10
 ------------
+
+.. note:: See ``tip`` above...
 
 ::
 
@@ -19,6 +31,10 @@ Ubuntu 16.04
 .. important:: Make sure you have Ubuntu 14.04 (64 bit)
 
 .. important:: Install Docker on a **64 bit** operating system.
+
+Remove old versions::
+
+  sudo apt-get remove docker docker-engine
 
 Verify that you have wget installed::
 

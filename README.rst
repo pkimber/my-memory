@@ -24,4 +24,5 @@ To deploy the project::
 
 To convert my CV into a PDF::
 
-  rst2pdf source/info/cv.rst -o cv.pdf
+  apt install pandoc
+  pandoc source/info/cv.rst -o test.pdf -V papersize:a4

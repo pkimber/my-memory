@@ -66,6 +66,16 @@ Delete/Remove
   >> s
   [1, 3]
 
+Duplicates
+----------
+
+From `StackOverflow: Remove duplicates and preserve order`_
+
+To remove duplicate entries from a list and preserve the order::
+
+  from collections import OrderedDict
+  list(OrderedDict.fromkeys([4, 3, 4, 2, 4, 1]))
+
 Get
 ---
 
@@ -158,3 +168,4 @@ Sorting (python 3) - with a function (I prefer this)::
 
 
 .. _`good primer for python slice notation`: http://stackoverflow.com/questions/509211/good-primer-for-python-slice-notation
+.. _`StackOverflow: Remove duplicates and preserve order`: https://stackoverflow.com/a/39835527
