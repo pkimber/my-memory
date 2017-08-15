@@ -37,6 +37,7 @@ Simple (from `Writing custom django-admin commands`_):
   from example.polls.models import Poll
 
   class Command(BaseCommand):
+
       args = '<poll_id poll_id ...>'
       help = 'Closes the specified poll for voting'
 
