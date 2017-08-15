@@ -133,7 +133,7 @@ Home Folder
   import os
   home_folder = os.getenv('USERPROFILE') or os.getenv('HOME')
 
-Note: Also see :doc:`os` for the ``expanduser`` method.
+.. note:: Also see :doc:`os` for the ``expanduser`` method.
 
 Module Folder
 -------------
@@ -298,6 +298,27 @@ or... to delete an entire directory tree::
 Statistics
 ==========
 
+To get the file size::
+
+  import os
+  size = os.path.getsize(file_path)
+
+To convert the file size to a human readable format, use ``humanize``::
+
+  # pip install humanize
+  import humanize
+  size = humanize.naturalsize(os.path.getsize(file_path))
+
+or, try this function
+from StackOverflow to `get human readable version of file size`_::
+
+  def sizeof_fmt(num, suffix='B'):
+      for unit in ['','Ki','Mi','Gi','Ti','Pi','Ei','Zi']:
+          if abs(num) < 1024.0:
+              return "%3.1f%s%s" % (num, unit, suffix)
+          num /= 1024.0
+      return "%.1f%s%s" % (num, 'Yi', suffix)
+
 Date/time created/modified/accessed and size::
 
   import os
@@ -366,6 +387,7 @@ touch
           os.utime(file_name, times)
 
 
+.. _`get human readable version of file size`: https://stackoverflow.com/questions/1094841/reusable-library-to-get-human-readable-version-of-file-size
 .. _`os.path -- Common pathname manipulations, split`: http://docs.python.org/lib/module-os.path.html
 .. _`PyMOTW: glob`: http://blog.doughellmann.com/2007/07/pymotw-glob.html
 .. _`Recipe 474083`: http://code.activestate.com/recipes/474083/
