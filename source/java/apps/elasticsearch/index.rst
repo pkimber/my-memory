@@ -8,3 +8,4 @@ Contents
 
    getting-started
    commands
+   kibana
