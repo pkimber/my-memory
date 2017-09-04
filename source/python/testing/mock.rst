@@ -33,6 +33,25 @@ Exception
       with mock.patch('stripe.Customer.create') as mock_customer:
           mock_customer.side_effect = CheckoutError('Mock')
 
+Property
+--------
+
+To mock a property e.g::
+
+  class SalesLedger(models.Model):
+      @property
+      def checkout_can_charge(self):
+          return True
+
+Use the ``PropertyMock`` e.g::
+
+  with mock.patch(
+          'example_checkout.models.SalesLedger.checkout_can_charge',
+          new_callable=mock.PropertyMock,
+      ) as mock_checkout_can_charge:
+      # mock return
+      mock_checkout_can_charge.return_value = False
+
 Issues
 ======
 
