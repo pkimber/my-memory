@@ -154,15 +154,17 @@ Pop
 Sort
 ====
 
-Return the keys as a list... (and sort in place).
+Sort the whole dictionary in python 3::
 
-::
+  from collections import namedtuple, OrderedDict
+
+  def url(self, path, **kwargs):
+      ordered = OrderedDict(sorted(kwargs.items()))
+
+Return the keys as a list... (and sort in place)::
 
   l = results.keys();
   l.sort()
-
-**Note**: There is also a ``sorted`` function which will sort a copy of the
-list (i.e. not in place).
 
 Reverse
 =======
