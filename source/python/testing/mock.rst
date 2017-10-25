@@ -15,6 +15,25 @@ To use the mock module with ``py.test``, install the `pytest-mock`_ module::
 Examples (using ``py.test``)
 ============================
 
+I like this syntax::
+
+  from unittest.mock import patch, Mock, mock_open
+
+  def mock_ip():
+      return '12.13.14.15'
+
+  @patch('customer.Customer.create', return_value='153356')
+  @patch('service.ip_address_from_url', return_value=mock_ip())
+  @patch.multiple('customer.Customer',
+      id_for_email=Mock(return_value=46419),
+      get_customer=Mock(side_effect=[{}, mock_simple]),
+      )
+  def test_register(self, patch_ip, patch_create):
+
+.. tip:: The patch variables e.g. ``patch_ip`` are in *reverse* order i.e.
+         The first ``@patch`` decorator is passed to the function in the
+         second position.
+
 ::
 
   @pytest.mark.django_db

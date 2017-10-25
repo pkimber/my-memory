@@ -208,6 +208,19 @@ Title
   >>> "hello world".title()
   'Hello World'
 
+Translate
+=========
+
+Remove punctuation::
+
+  >>> import string
+  >>> x = 'A-B & C'
+  >>> x.translate(str.maketrans('', '', string.punctuation))
+  'AB  C'
+
+.. note:: If there is a third argument to ``translate``, it must be a string,
+          whose characters will be mapped to ``None`` in the result.
+
 Trim Strip
 ==========
 
