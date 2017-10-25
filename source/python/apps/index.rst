@@ -7,6 +7,7 @@ Contents
    :maxdepth: 1
 
    apache-libcloud
+   borgbackup
    devpi
    fabric/index
    jinja
