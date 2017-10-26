@@ -1,6 +1,8 @@
 Borg Backup
 ***********
 
+.. highlight:: bash
+
 https://borgbackup.readthedocs.io/
 
 This backup failed::
@@ -15,9 +17,17 @@ Try ``pip``::
   pip install Cython
   pip install borgbackup
 
-Issues::
+Using this script: :download:`misc/borg.sh`
+
+Try ``borgmatic``::
+
+  pip install borgmatic
+  generate-borgmatic-config --destination borg.yaml
+
+Issues
+======
+
+::
 
   distutils.errors.DistutilsError: Could not find suitable distribution for Requirement.parse('setuptools_scm>=1.7')
   pip install setuptools_scm
-
-Using this script: :download:`misc/borg.sh`
