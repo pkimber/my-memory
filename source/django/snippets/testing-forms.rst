@@ -19,13 +19,13 @@ For unit testing forms::
 Model forms::
 
   @pytest.mark.django_db
-  def test_mapping_config_form():
+  def test_mapping_form():
       mapping = MappingFactory()
       data = {
           'data_download': True,
           'mapping_type': Mapping.LIST_KEY,
       }
-      form = MappingConfigForm(
+      form = MappingForm(
           data=data,
           instance=mapping,
       )
