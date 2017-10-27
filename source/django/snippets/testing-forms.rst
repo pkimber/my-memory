@@ -16,6 +16,25 @@ For unit testing forms::
   self.assertTrue(form.is_valid(), form.errors)
   self.assertEquals(form.cleaned_data['name'], 'Sam')
 
+Model forms::
+
+  @pytest.mark.django_db
+  def test_mapping_config_form():
+      mapping = MappingFactory()
+      data = {
+          'data_download': True,
+          'mapping_type': Mapping.LIST_KEY,
+      }
+      form = MappingConfigForm(
+          data=data,
+          instance=mapping,
+      )
+      assert form.is_valid(), form.errors
+      assert {
+          'data_download': True,
+          'mapping_type': 'list_key',
+      } == form.cleaned_data
+
 Sample
 ======
 
