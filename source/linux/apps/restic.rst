@@ -24,11 +24,17 @@ Set the ``RESTIC_PASSWORD`` environment variable::
 
 Initialise the repository::
 
+  # local
   restic_0.7.3_linux_amd64 init --repo ./my-first-repo
+  # ssh
+  restic_0.7.3_linux_amd64 -r sftp:123@usw-s001.rsync.net:restic/my-repo init
 
 Backup::
 
+  # local
   restic_0.7.3_linux_amd64 -r ./my-first-repo backup ~/media
+  # ssh
+  restic_0.7.3_linux_amd64 -r sftp:123@usw-s001.rsync.net:restic/my-repo backup ~/media
 
 .. note:: This will create a snapshot.  The identifier is displayed at the end
           of the backup e.g. ``snapshot 5b49043d saved``
