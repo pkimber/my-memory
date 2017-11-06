@@ -20,6 +20,7 @@ Contents
    irssi
    python-window-organizer
    remmina
+   restic
    shorewall
    shutter
    teamviewer
