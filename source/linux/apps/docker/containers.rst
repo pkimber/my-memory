@@ -19,6 +19,10 @@ List::
 
   docker ps -aq
 
+Remove all exited containers::
+
+  docker rm $(docker ps -a -f status=exited -q)
+
 Kill all::
 
   docker kill `docker ps -q`
