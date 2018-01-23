@@ -16,7 +16,16 @@ Status::
 
   sqlcmd -S localhost -U SA -P 'Your Password'
 
-Restore::
+Restore
+
+.. warning:: When you do a SQL Server backup, be sure to select
+             *Media Options*, *Overwrite all existing backup sets* (or find
+             some other way to restore the latest backup)!
+
+::
+
+  # Copy the backup file to the SQL Server backup folder
+  sudo mv ~/Downloads/MyDB.bak /var/opt/mssql/backup/
 
   sqlcmd -S localhost -U SA -P 'Your Password'
 

@@ -25,6 +25,7 @@ Contents
    linux-gnu
    network
    processes
+   security
    services
    shortcut-keys
    ssh
