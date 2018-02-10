@@ -36,11 +36,11 @@ Install
 Tips
 ----
 
-.. tip:: See https://www.kbsoftware.co.uk/open/app-search.html for diagnostics
-         etc.
+.. tip:: See https://www.kbsoftware.co.uk/docs/app-search.html
+         for diagnostics etc.
 
-.. tip:: See https://www.kbsoftware.co.uk/open/dev-elasticsearch.html for how
-         to install the Phoentic Analysis plugins.
+.. tip:: See https://www.kbsoftware.co.uk/docs/dev-elasticsearch.html
+         for how to install the Phoentic Analysis plugins.
 
 Query
 =====
