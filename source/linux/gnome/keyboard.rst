@@ -5,9 +5,10 @@ Keyboard
 
 Run the *Tweak Tool*
 
-- Typing
+- *Keyboard and Mouse*
+- *Additional Layout Options*
 - *Ctrl key position* to *Caps Lock as Ctrl*
-- *Caps Lock key behaviour* to *Make Caps Lock an additional Ctrl*
+- *Caps Lock key behaviour* to *Caps is also a Ctrl*
 
 Issues
 ======

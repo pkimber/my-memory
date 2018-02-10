@@ -38,3 +38,10 @@ Environment Variables
 Erase::
 
   set -e myvar
+
+PATH
+----
+
+Add the following to ``~/.config/fish/config.fish``::
+
+  set -x PATH $PATH ~/bin/

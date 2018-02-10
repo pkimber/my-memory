@@ -3,6 +3,9 @@ elasticsearch
 
 .. highlight:: bash
 
+ElasticSearch 5
+---------------
+
 From Repositories_
 
 Install :doc:`../../linux/distro/ubuntu/java`::
@@ -13,11 +16,25 @@ Add to the list of sources::
 
   echo "deb http://packages.elastic.co/elasticsearch/2.x/debian stable main" | sudo tee -a /etc/apt/sources.list.d/elasticsearch-2.x.list
 
-Install::
+ElasticSearch 6
+---------------
+
+::
+
+  wget -qO - https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add -
+  echo "deb https://artifacts.elastic.co/packages/6.x/apt stable main" | sudo tee -a /etc/apt/sources.list.d/elastic-6.x.list
+
+Install
+-------
+
+::
 
   sudo apt update
   sudo apt install elasticsearch
   sudo service elasticsearch start
+
+Tips
+----
 
 .. tip:: See https://www.kbsoftware.co.uk/open/app-search.html for diagnostics
          etc.

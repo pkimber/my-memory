@@ -7,16 +7,22 @@ From `Quick Start`_
 
 Install Node and ``npm``::
 
-  curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -e
-  sudo npm install npm -g
+  curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
+  apt install -y nodejs
+
+To uninstall old versions of ember::
+
+  sudo npm uninstall -g ember-cli
+  sudo npm cache verify
 
 Install ``ember-cli``::
 
-  sudo npm install -g ember-cli@2.14.0
+  sudo npm install -g ember-cli@3.0.0-beta.2
+  sudo npm install -g yarn
 
-Create an application::
+Create an application (``--yarn`` makes the application *yarn aware*)::
 
-  ember new ember-quickstart
+  ember new myapp --no-welcome --yarn
 
 Run the application::
 
