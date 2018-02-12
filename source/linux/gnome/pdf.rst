@@ -1,5 +1,5 @@
-PDF
-***
+Gnome PDF
+*********
 
 Links
 =====

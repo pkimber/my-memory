@@ -5,6 +5,23 @@ PDF
 
 :doc:`gnome/pdf`
 
+Compress
+========
+
+Thank you `Alfred Klomp`_ for this script...
+
+Download ``shrinkpdf.sh`` from:
+http://www.alfredklomp.com/programming/shrinkpdf/
+
+Move to ``~/bin/`` and make it executable.
+
+A sample command::
+
+ shrinkpdf.sh  setup.pdf out.pdf 100
+
+.. note:: The output resolution in this example is ``100``.
+          The parameter is option and the default is 72 DPI.
+
 Images
 ======
 
@@ -34,3 +51,6 @@ Pages
 Merge::
 
   pdftk pg01.pdf pg02.pdf pg04.pdf pg05.pdf output mynewfile.pdf
+
+
+.. _`Alfred Klomp`: http://www.alfredklomp.com/
