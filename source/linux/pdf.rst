@@ -13,14 +13,15 @@ Thank you `Alfred Klomp`_ for this script...
 Download ``shrinkpdf.sh`` from:
 http://www.alfredklomp.com/programming/shrinkpdf/
 
-Move to ``~/bin/`` and make it executable.
+Move it to ``~/bin/`` and make it executable.
 
 A sample command::
 
  shrinkpdf.sh  setup.pdf out.pdf 100
 
-.. note:: The output resolution in this example is ``100``.
-          The parameter is option and the default is 72 DPI.
+.. tip:: The output resolution in this example is ``100``.
+         The parameter is optional.
+         The default resolution is 72 DPI.
 
 Images
 ======
