@@ -1,6 +1,10 @@
 Gnome PDF
 *********
 
+.. highlight:: bash
+
+:doc:`../pdf`
+
 Links
 =====
 

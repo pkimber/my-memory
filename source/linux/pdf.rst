@@ -1,5 +1,5 @@
-PDF
-***
+PDF (Command Line)
+******************
 
 .. highlight:: bash
 
