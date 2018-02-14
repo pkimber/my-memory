@@ -1,11 +1,11 @@
 Startup
 *******
 
-`systemd-analyze - Analyze system boot-up performance`_
-
-`Really slow boot on 16.04_`::
+`Really slow boot on 16.04`_::
 
   systemd-analyze blame
+
+`systemd-analyze - Analyze system boot-up performance`_:
 
 Prints a list of all running units, ordered by the time they took to initialize.
 This information may be used to optimize boot-up times.
