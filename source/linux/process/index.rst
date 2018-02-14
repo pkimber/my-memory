@@ -11,4 +11,5 @@ Contents
    getting-started
    kill
    priority
+   startup
    swap
