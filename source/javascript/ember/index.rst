@@ -8,4 +8,5 @@ Contents
 
    links
    getting-started
+   add-ons
    issues

@@ -12,12 +12,13 @@ Contents
    checklist
    configuration
    import-export
-   java
    issues
+   java
    libpqxx
    psql
    schema
    security
+   service
    sql-commands
    sql-data-definition
    sql-info
