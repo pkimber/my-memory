@@ -6,6 +6,8 @@ Restic
 Install
 =======
 
+.. note:: Update for 03/03/2018, I downloaded ``restic_0.8.3_linux_amd64.bz2``.
+
 Download ``restic_0.7.3_linux_amd64.bz2`` from
 https://github.com/restic/restic/releases/latest
 
@@ -53,4 +55,3 @@ Restore::
   restic_0.7.3_linux_amd64 -r ./my-first-repo restore latest --target ~/repo/temp/restic-restore-my-first-repo
   # ssh
   restic_0.7.3_linux_amd64 -r sftp:123@ch-s011.rsync.net:restic/patrick restore latest --target ~/repo/temp/restic-restore-my-first-repo
-
