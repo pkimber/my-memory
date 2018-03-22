@@ -1,8 +1,7 @@
-Django REST Framework
-*********************
+Issues
+******
 
 .. highlight:: python
-
 
 JSON API
 ========
