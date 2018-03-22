@@ -25,6 +25,30 @@ command line:
 
   google-chrome --user-data-dir=~/repo/temp/disable-web-security --disable-web-security
 
+Uncaught TypeError: Cannot call a class as a function
+=====================================================
+
+I need to learn this...  This code::
+
+  let address = get(this, 'address');
+
+Was throwing::
+
+  Uncaught TypeError: Cannot call a class as a function
+
+To solve the issue, I replaced::
+
+  import get from '@ember/object';
+
+with::
+
+  import { computed, get } from '@ember/object';
+
+Django REST - JSON API - ``ResourceRelatedField``
+=================================================
+
+:doc:`../../django/apps/rest-framework/issues`
+
 Resource Type
 =============
 

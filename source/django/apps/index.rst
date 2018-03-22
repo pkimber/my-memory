@@ -28,7 +28,7 @@ Contents
    notification
    nvd3
    pagination
-   rest-framework
+   rest-framework/index
    reusable
    sentry
    staticfiles

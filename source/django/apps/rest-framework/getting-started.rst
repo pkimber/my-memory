@@ -1,5 +1,5 @@
-Rest Framework
-**************
+Getting Started
+***************
 
 .. highlight:: python
 

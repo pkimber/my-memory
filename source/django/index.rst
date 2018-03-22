@@ -8,7 +8,7 @@ Contents
 
    admin/index
    ajax/index
-   applications/index
+   apps/index
    conference/index
    course/index
    database/index
