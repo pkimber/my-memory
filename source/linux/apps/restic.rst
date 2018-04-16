@@ -16,6 +16,10 @@ suitable)::
 
   chmod +x restic_0.7.3_linux_amd64
 
+Create a symbolic link so we can use ``restic`` from the command line::
+
+  ln -s /home/patrick/bin/restic_0.8.3_linux_amd64 /home/patrick/bin/restic
+
 Usage
 =====
 
