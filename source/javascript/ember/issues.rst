@@ -25,25 +25,6 @@ command line:
 
   google-chrome --user-data-dir=~/repo/temp/disable-web-security --disable-web-security
 
-Uncaught TypeError: Cannot call a class as a function
-=====================================================
-
-I need to learn this...  This code::
-
-  let address = get(this, 'address');
-
-Was throwing::
-
-  Uncaught TypeError: Cannot call a class as a function
-
-To solve the issue, I replaced::
-
-  import get from '@ember/object';
-
-with::
-
-  import { computed, get } from '@ember/object';
-
 Django REST - JSON API - ``ResourceRelatedField``
 =================================================
 
@@ -81,3 +62,39 @@ To solve the issue, I added the ``resource_name`` to the ``ModelViewSet``:
 
 .. note:: I tried adding ``JSON_API_PLURALIZE_RELATION_TYPE = True`` to
           ``settings/base.py``, but this didn't help.
+
+RSVP.hash
+=========
+
+If you return more than one model::
+
+  return RSVP.hash({
+      contact: contact,
+      detail: detail
+  })
+
+Then you will need to set models for the controller::
+
+  setupController(controller, models) {
+      controller.setProperties(models);
+  }
+
+Uncaught TypeError: Cannot call a class as a function
+=====================================================
+
+I need to learn this...  This code::
+
+  let address = get(this, 'address');
+
+Was throwing::
+
+  Uncaught TypeError: Cannot call a class as a function
+
+To solve the issue, I replaced::
+
+  import get from '@ember/object';
+
+with::
+
+  import { computed, get } from '@ember/object';
+
