@@ -53,7 +53,7 @@ Merge::
 
   pdftk pg01.pdf pg02.pdf pg04.pdf pg05.pdf output mynewfile.pdf
 
-Test
+Text
 ====
 
 To extract text from a PDF file (I am not sure where ``pdftotext`` came from!)::
