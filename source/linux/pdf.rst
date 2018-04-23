@@ -53,5 +53,14 @@ Merge::
 
   pdftk pg01.pdf pg02.pdf pg04.pdf pg05.pdf output mynewfile.pdf
 
+Test
+====
+
+To extract text from a PDF file (I am not sure where ``pdftotext`` came from!)::
+
+  pdftotext fundraising.pdf
+
+.. note:: This command will create a ``fundraising.txt`` output file.
+
 
 .. _`Alfred Klomp`: http://www.alfredklomp.com/
