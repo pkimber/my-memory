@@ -211,6 +211,12 @@ http://pivotfinland.com/pytest-sugar/::
 
 Nothing else to do.
 
+Time
+----
+
+Freeze time!
+https://github.com/ktosiek/pytest-freezegun
+
 Watch
 -----
 
