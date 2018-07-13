@@ -11,6 +11,20 @@ Links
 Sample
 ======
 
+::
+
+  from django.db import models
+
+  q = models.Q()
+  if user_to_forget.email:
+      q |= models.Q(email__icontains=user_to_forget.email)
+  if user_to_forget.username:
+      q |= models.Q(email__icontains=user_to_forget.username)
+  return self.model.objects.filter(q).order_by("email")
+
+.. note:: ``q`` can be initialised using ``models.Q()`` or by using a filter:
+          ``models.Q(pk__in=selection)``.
+
 Using the Satchmo product database::
 
   from django.db.models import Q

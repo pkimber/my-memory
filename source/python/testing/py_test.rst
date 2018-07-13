@@ -1,5 +1,5 @@
-py.test
-*******
+pytest
+******
 
 .. highlight:: bash
 

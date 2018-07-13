@@ -130,16 +130,12 @@ To create a link to another document:
 Note: In this example, ``unison.rst`` is the name of the other document.
 
 To link to a document in another folder, include the folder name in the path
-e.g:
-
-::
+e.g::
 
   :doc:`../asset-register`
 
 To create a link to a section in another document, first mark the section
-heading:
-
-::
+heading::
 
   .. _build_prerequisites:
 
