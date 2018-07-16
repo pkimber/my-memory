@@ -59,3 +59,8 @@ Restore::
   restic_0.7.3_linux_amd64 -r ./my-first-repo restore latest --target ~/repo/temp/restic-restore-my-first-repo
   # ssh
   restic_0.7.3_linux_amd64 -r sftp:123@ch-s011.rsync.net:restic/patrick restore latest --target ~/repo/temp/restic-restore-my-first-repo
+
+Retention Policy
+================
+
+To free disk space, run the ``prune`` command...
