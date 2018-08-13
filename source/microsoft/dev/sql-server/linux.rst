@@ -12,11 +12,15 @@ Docker
 
   sudo docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=<Cognito123>' -p 1433:1433 --name sql1 -d microsoft/mssql-server-linux:2017-latest
 
+.. tip::
+
+  The password for this database is ``<Cognito123>`` **not** ``Cognito123``.
+
 View logs::
 
   docker logs -f f71a08c580422335b498953bd0e6a9
 
-::
+Run ``sqlcmd``::
 
   docker exec -it sql1 "bash"
   /opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P '<Cognito123>'
@@ -24,12 +28,12 @@ View logs::
 Restore Backup
 --------------
 
-Create a folder for the backup file::
+Create a folder in your Docker container for the backup file::
 
   docker exec -it sql1 "bash"
   mkdir /var/opt/mssql/backup
 
-Copy the backup file to the Docker folder::
+Copy the SQL Server backup file to the Docker folder::
 
   docker cp ~/Downloads/DocRecord.bak sql1:/var/opt/mssql/backup/
 
@@ -44,18 +48,24 @@ Restore the backup::
   docker exec -it sql1 "bash"
   /opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P "<Cognito123>" -Q "RESTORE DATABASE DocRecord FROM DISK = '/var/opt/mssql/backup/DocRecord.bak' WITH MOVE 'DocRecord' TO '/var/opt/mssql/data/DocRecord.mdf', MOVE 'DocRecord_log' TO '/var/opt/mssql/data/DocRecord_log.ldf'"
 
-Ubuntu 16.04
-============
-
-Set-up command line tools::
-
-  cd ~/bin/
-  ln -s /opt/mssql-tools/bin/sqlcmd .
-
 Ubuntu 18.04
 ============
 
+Install ``sqlcmd`` and the Microsoft ODBC Driver for SQL Server::
+
+  sudo -
+  curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add -
+  curl https://packages.microsoft.com/config/ubuntu/18.04/prod.list > /etc/apt/sources.list.d/mssql-release.list
+
+  apt-get update
+  ACCEPT_EULA=Y apt-get install msodbcsql17
+  ACCEPT_EULA=Y apt-get install mssql-tools
+
 From `Install SQL Server and create a database on Ubuntu`_
+
+.. tip::
+
+  I couldn't get this working, so switched to using Docker (see above).
 
 .. tip::
 
@@ -70,6 +80,14 @@ From `Install SQL Server and create a database on Ubuntu`_
     ...hostname, openssl (>= 1.0.1), openssl (<= 1.1.0), python (<= 2.7.0)...
     # to
     ...hostname, openssl (>= 1.0.1), openssl (< 1.1.1), python (<= 2.7.0)...
+
+Ubuntu 16.04
+============
+
+Set-up command line tools::
+
+  cd ~/bin/
+  ln -s /opt/mssql-tools/bin/sqlcmd .
 
 Commands
 ========
