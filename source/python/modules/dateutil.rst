@@ -45,10 +45,8 @@ Iterate
 
 ::
 
-  from dateutil.rrule import (
-      DAILY,
-      rrule,
-  )
+  from dateutil.rrule import DAILY, rrule
+
   for day in rrule(DAILY, dtstart=date(2015, 1, 1), until=date(2015, 1, 3)):
       print(day)
 
@@ -84,6 +82,11 @@ Last day of the previous month::
 Last day of this month::
 
   >>> d + relativedelta(months=+1, day=1, days=-1)
+
+Monday::
+
+  >>> from dateutil.relativedelta import MO, relativedelta
+  >>> d + relativedelta(weekday=MO(-1))
 
 Tomorrow::
 
