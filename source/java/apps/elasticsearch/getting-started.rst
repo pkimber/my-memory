@@ -1,26 +1,17 @@
-elasticsearch
-*************
+Getting Started
+***************
 
 .. highlight:: bash
+
+- Click here for :doc:`commands`
+- Click here for :doc:`docker`
+- Click here for :doc:`kibana`
 
 .. tip:: To install ElasticSearch, just follow the instructions on their web
          site, `The Debian package for Elasticsearch`_.
 
-ElasticSearch 5
----------------
-
-From Repositories_
-
-Install :doc:`../../linux/distro/ubuntu/java`::
-
-  sudo wget -qO - https://packages.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add -
-
-Add to the list of sources::
-
-  echo "deb http://packages.elastic.co/elasticsearch/2.x/debian stable main" | sudo tee -a /etc/apt/sources.list.d/elasticsearch-2.x.list
-
 ElasticSearch 6
----------------
+===============
 
 ::
 
@@ -37,7 +28,7 @@ Install
   sudo service elasticsearch start
 
 Tips
-----
+====
 
 .. tip:: See https://www.kbsoftware.co.uk/docs/app-search.html
          for diagnostics etc.
@@ -178,4 +169,3 @@ called *split brain*.
 
 
 .. _`The Debian package for Elasticsearch`: https://www.elastic.co/guide/en/elasticsearch/reference/current/deb.html
-.. _Repositories: https://www.elastic.co/guide/en/elasticsearch/reference/current/setup-repositories.html

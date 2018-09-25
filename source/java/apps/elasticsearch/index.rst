@@ -8,4 +8,5 @@ Contents
 
    getting-started
    commands
+   docker
    kibana
