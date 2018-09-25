@@ -3,6 +3,9 @@ elasticsearch
 
 .. highlight:: bash
 
+.. tip:: To install ElasticSearch, just follow the instructions on their web
+         site, `The Debian package for Elasticsearch`_.
+
 ElasticSearch 5
 ---------------
 
@@ -174,4 +177,5 @@ You should have 1 server or more than 2.  Do not have 2 servers.  This is
 called *split brain*.
 
 
+.. _`The Debian package for Elasticsearch`: https://www.elastic.co/guide/en/elasticsearch/reference/current/deb.html
 .. _Repositories: https://www.elastic.co/guide/en/elasticsearch/reference/current/setup-repositories.html
