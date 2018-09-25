@@ -36,7 +36,6 @@ Exception:
       f()
   assert 'maximum recursion' in str(excinfo.value)
 
-
 Parametrize
 ===========
 
@@ -55,22 +54,26 @@ Parameters
 
 Stop on first failure::
 
-  py.test -x
+  pytest -x
 
 Disable capturing::
 
-  py.test -s
+  pytest -s
+  # no stdout or stderr
+  pytest -x --show-capture=no
+  # no stderr
+  pytest -x --show-capture=stdout
 
 Select tests::
 
-  py.test -k test_simple
+  pytest -k test_simple
 
   # to select a function in a module, remove '-k'
-  py.test dash/tests/test_view.py::test_document_detail
+  pytest dash/tests/test_view.py::test_document_detail
 
 Modify traceback::
 
-  py.test -x --tb=short
+  pytest -x --tb=short
 
 For more information, see `Modifying Python traceback printing`_
 
@@ -103,7 +106,7 @@ Issues
 
 I had this error: `IndexError: list index out of range`_.  To solve the issue::
 
-  py.test -x --tb=native
+  pytest -x --tb=native
 
 Mark
 ====
@@ -138,14 +141,14 @@ https://pypi.python.org/pypi/pytest-cov::
 
   pip install pytest-cov
 
-  py.test --cov .
+  pytest --cov .
 
 .. note:: The ``.`` is important.  This needs to be the folder you want
           coverage to report on.
 
 Django app example::
 
-  py.test -x --reuse-db --cov-report html --cov job
+  pytest -x --reuse-db --cov-report html --cov job
 
 Django
 ------
@@ -165,23 +168,23 @@ To write a test which needs to access the database::
 To run the Django tests, make sure ``DJANGO_SETTINGS_MODULE`` is defined,
 then::
 
-  py.test -x
+  pytest -x
 
 The ``-x`` option stops the tests on the first failure.
 
 To ``print`` or use ``ipdb``, use the ``-s`` option::
 
-  py.test -x -s
+  pytest -x -s
   # or
   import pytest
   pytest.set_trace()
 
 .. note::
 
-  ``py.test`` will cache the database structure to speed up test runs.  To
+  ``pytest`` will cache the database structure to speed up test runs.  To
   re-initialise the database, use the ``--create-db`` option::
 
-    py.test -x --create-db
+    pytest -x --create-db
 
 Flakes
 ------
@@ -189,7 +192,7 @@ Flakes
 ::
 
   pip install pytest-flakes
-  py.test --flakes
+  pytest --flakes
 
 PEP 8
 -----
@@ -198,9 +201,9 @@ http://pypi.python.org/pypi/pytest-pep8/::
 
   pip install pytest-pep8
 
-  py.test --pep8
+  pytest --pep8
   # to clear the cache
-  py.test --pep8 --clearcache
+  pytest --pep8 --clearcache
 
 Sugar
 -----

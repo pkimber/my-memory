@@ -12,12 +12,12 @@ Contents
 .. toctree::
    :maxdepth: 1
 
-   links
    coverage
    lettuce
+   links
    mock
    nose
    pep8
-   py_test-distutils
-   py_test
    pylint
+   pytest
+   pytest-distutils
