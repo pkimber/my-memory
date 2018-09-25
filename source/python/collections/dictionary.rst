@@ -161,6 +161,11 @@ Sort the whole dictionary in python 3::
   def url(self, path, **kwargs):
       ordered = OrderedDict(sorted(kwargs.items()))
 
+Sort a dictionary by the values::
+
+  import operator
+  sorted(descriptions.items(), key=operator.itemgetter(1))
+
 Return the keys as a list... (and sort in place)::
 
   l = results.keys();
