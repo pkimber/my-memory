@@ -1,6 +1,8 @@
 Custom Commands
 ***************
 
+.. highlight:: python
+
 Links
 =====
 
@@ -27,74 +29,32 @@ Folder structure
 Sample
 ------
 
-`run_monitor.py`_
+From `Parsing boolean values with argparse`_::
 
-Simple (from `Writing custom django-admin commands`_):
+  # -*- encoding: utf-8 -*-
+  import csv
 
-::
+  from django.core.management.base import BaseCommand
 
-  from django.core.management.base import BaseCommand, CommandError
-  from example.polls.models import Poll
-
-  class Command(BaseCommand):
-
-      args = '<poll_id poll_id ...>'
-      help = 'Closes the specified poll for voting'
-
-      def handle(self, *args, **options):
-          for poll_id in args:
-              try:
-                  poll = Poll.objects.get(pk=int(poll_id))
-              except Poll.DoesNotExist:
-                  raise CommandError('Poll "%s" does not exist' % poll_id)
-
-              poll.opened = False
-              poll.save()
-
-              self.stdout.write('Successfully closed poll "%s"\n' % poll_id)
-
-Arguments.  This is a more complicated sample, which takes a command line
-parameter:
-
-::
-
-  from django.core.management.base import BaseCommand, CommandError
-  from optparse import OptionParser, make_option
-  import os
 
   class Command(BaseCommand):
 
-      option_list = BaseCommand.option_list + (
-          make_option(
-              "-f",
-              "--folder",
-              dest="folder",
-              help='''Output folder.'''),
-          )
+      help = "Convert 'username' #1234"
 
-      def create_parser(self, prog_name, subcommand):
-          """
-          Create and return the ``OptionParser`` which will be used to
-          parse the arguments to this command.
-          See this blog article for details of why we need to do this:
-          http://oebfare.com/blog/2008/nov/03/writing-custom-management-command/
-          """
-          return OptionParser(prog=prog_name,
-              usage=self.usage(subcommand),
-              version = self.get_version(),
-              option_list = self.option_list,
-              conflict_handler = "resolve")
+      def add_arguments(self, parser):
+          parser.add_argument("--update", dest="update", action="store_true")
+          parser.set_defaults(update=False)
 
       def handle(self, *args, **options):
-          folder = options['folder']
-          if folder:
-              self._backup(folder)
-          else:
-              raise CommandError('''Missing folder parameter...''')
+          self.stdout.write(self.help)
+          update = options["update"]
+          if update:
+              # do something useful
+              pass
+          self.stdout.write("\n{} - Complete".format(self.help))
 
-      def _backup(self, folder):
-          # do the stuff you want to do...
-          pass
+Script
+======
 
 To create a simple python script which will run from the root of the site:
 
@@ -119,6 +79,7 @@ To create a simple python script which will run from the root of the site:
           print "%s,%s" % (s.type, s.user.email)
 
 
+.. _`Parsing boolean values with argparse`: https://stackoverflow.com/questions/15008758/parsing-boolean-values-with-argparse
 .. _`run_monitor.py`: http://toybox/hg/dev/file/tip/simple_url_monitor/monitor/management/commands/run-monitor.py
 .. _`Source code (trunk)`: http://code.djangoproject.com/svn/django/trunk/django/core/management/base.py
 .. _`Writing a custom management command`: http://oebfare.com/blog/2008/nov/03/writing-custom-management-command/
