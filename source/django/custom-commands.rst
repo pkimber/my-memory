@@ -53,6 +53,8 @@ From `Parsing boolean values with argparse`_::
               pass
           self.stdout.write("\n{} - Complete".format(self.help))
 
+.. tip:: Call this command with ``--update`` (or nothing for ``False``).
+
 Script
 ======
 
