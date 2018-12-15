@@ -1,4 +1,4 @@
-Powershall Commands
+Powershell Commands
 *******************
 
 From `Unix tail equivalent command in Windows Powershell`_
