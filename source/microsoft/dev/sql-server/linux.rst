@@ -33,7 +33,8 @@ Create a folder in your Docker container for the backup file::
   docker exec -it sql1 "bash"
   mkdir /var/opt/mssql/backup
 
-Copy the SQL Server backup file to the Docker folder::
+*From your command prompt* (exit Docker), copy the SQL Server backup file to the
+Docker folder::
 
   docker cp ~/Downloads/DocRecord.bak sql1:/var/opt/mssql/backup/
 
@@ -42,6 +43,10 @@ This is done with the ``RESTORE FILELISTONLY`` Transact-SQL statement::
 
   docker exec -it sql1 "bash"
   /opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P "<Cognito123>" -Q "RESTORE FILELISTONLY FROM DISK = '/var/opt/mssql/backup/DocRecord.bak'"
+
+If you need to, drop the existing database::
+
+  /opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P "<Cognito123>" -Q "DROP DATABASE DocRecord"
 
 Restore the backup::
 
