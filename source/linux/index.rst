@@ -24,6 +24,7 @@ Contents
    course/index
    dsl/index
    gnome/index
+   i3/index
    install/index
    kernel/index
    kvm/index
