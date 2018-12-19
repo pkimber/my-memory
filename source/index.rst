@@ -51,6 +51,7 @@ of date or incorrect*):
    postgresql/index
    project/index
    python/index
+   r/index
    rabbitmq/index
    raspberrypi/index
    redis/index
