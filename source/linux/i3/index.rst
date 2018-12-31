@@ -6,4 +6,7 @@ Contents
 .. toctree::
    :maxdepth: 1
 
+   blocks
    keyboard
+   monitor
+   power
