@@ -10,3 +10,4 @@ Contents
    keyboard
    monitor
    power
+   sound
