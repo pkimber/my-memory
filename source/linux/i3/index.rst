@@ -6,6 +6,7 @@ Contents
 .. toctree::
    :maxdepth: 1
 
+   apps
    blocks
    keyboard
    monitor
