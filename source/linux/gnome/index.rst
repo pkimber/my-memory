@@ -19,7 +19,7 @@ Contents
    image
    install
    issues
-   keyboard
+   keyboard-mouse
    nautilus
    notifications
    pdf

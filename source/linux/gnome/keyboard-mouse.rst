@@ -1,5 +1,8 @@
+Keyboard and Mouse
+******************
+
 Keyboard
-********
+========
 
 :doc:`shortcuts`
 
@@ -10,8 +13,8 @@ Run the *Tweak Tool*
 - *Ctrl key position* to *Caps Lock as Ctrl*
 - *Caps Lock key behaviour* to *Caps is also a Ctrl*
 
-Issues
-======
+Keyboard Issues
+===============
 
 Caps Lock
 ---------
@@ -45,6 +48,16 @@ Losing the UK keyboard layout:
 .. - *Options...* button (bottom right of the dialog).
 .. - *Caps Lock key behaviour*
 .. - Select *Make Caps Lock an additional Control but keep the Caps_Lock keysym*
+
+Mouse
+=====
+
+Enable the right click
+
+- Run the *Tweak Tool*
+- *Keyboard and Mouse*
+- *Mouse Click Emulation*
+- Tick *Area*
 
 
 .. _`Sometimes Caps Lock works inverted`: https://bugs.launchpad.net/ubuntu/+source/linux/+bug/267999

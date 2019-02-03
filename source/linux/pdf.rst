@@ -23,6 +23,12 @@ A sample command::
          The parameter is optional.
          The default resolution is 72 DPI.
 
+Data
+====
+
+I haven't tried https://github.com/measuresforjustice/textricator,
+but this article recommends it, `Textricator: Data extraction made simple`_
+
 Images
 ======
 
@@ -64,3 +70,4 @@ To extract text from a PDF file (I am not sure where ``pdftotext`` came from!)::
 
 
 .. _`Alfred Klomp`: http://www.alfredklomp.com/
+.. _`Textricator: Data extraction made simple`: https://opensource.com/article/18/7/textricator
