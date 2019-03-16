@@ -8,6 +8,7 @@ Contents
 
    apps
    blocks
+   install
    keyboard
    monitor
    power
