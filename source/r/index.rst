@@ -3,6 +3,8 @@ R programming language
 
 .. highlight:: bash
 
+- Click here for my notes on Shiny_
+
 Issues
 ======
 
@@ -10,8 +12,23 @@ If you get ``The application failed to start`` followed by::
 
   The application exited during initialization.
 
-Then you probably have a missing package.  To find the missing package, run the
-script (see Script_ below)...
+1. Edit ``/etc/shiny-server/shiny-server.conf`` and add
+   ``sanitize_errors off;``::
+
+     run_as shiny;
+     server {
+       listen 3838 127.0.0.1;
+       # Define a location at the base URL
+       location / {
+         sanitize_errors off;
+         # Host the directory of Shiny Apps stored in this directory
+         site_dir /srv/shiny-server;
+
+   When you refresh the browser, you should see a useful (green on black)
+   traceback...
+
+2. You may have a missing package.
+   To find the missing package, run the script (see Script_ below)...
 
 Packages
 ========
@@ -37,6 +54,13 @@ To run a script::
 
   sudo -i -u shiny
   Rscript /srv/shiny-server/app.R
+
+Logging
+-------
+
+::
+
+  cat(file=stderr(), "loading...\n")
 
 Shiny Server
 ============
@@ -80,3 +104,6 @@ If you want to ``preserve_logs`` (as suggested in several forums) add
   run_as shiny;
 
 .. note:: Adding ``preserve_logs`` didn't seem to change the logging for me.
+
+
+.. _Shiny: https://www.kbsoftware.co.uk/docs/dev-shiny.html
