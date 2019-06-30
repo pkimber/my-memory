@@ -6,8 +6,19 @@ Startup:
 .. code-block:: bash
 
   xmodmap ~/.Xmodmap
-  wicd-curses
   xinput disable "SynPS/2 Synaptics TouchPad"
+
+If wireless networking no longer works after resuming from suspend:
+
+.. code-block:: bash
+
+  sudo systemctl restart network-manager.service
+
+WiFi Connections
+
+.. code-block:: bash
+
+  wicd-curses
 
 Contents
 
