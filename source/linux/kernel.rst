@@ -4,7 +4,7 @@ Kernel
 Distribution
 ============
 
-- :doc:`distribution`
+- :doc:`distro/which`
 
 Platform
 ========
