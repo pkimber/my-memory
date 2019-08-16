@@ -35,6 +35,7 @@ Contents
    security/index
    ssh/index
    ssl/index
+   suckless/index
    zsh/index
 
 .. toctree::
