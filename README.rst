@@ -3,8 +3,10 @@ My Memory
 
 ::
 
-  virtualenv --python=python3 venv-my-memory
-  source venv-my-memory/bin/activate
+  virtualenv --python=python3 venv-sphinx
+  # or
+  python3 -m venv venv-sphinx
+  source venv-sphinx/bin/activate
 
   pip install -r requirements.txt
 
