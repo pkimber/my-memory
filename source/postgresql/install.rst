@@ -11,7 +11,11 @@ Debian
 
   apt-get install postgresql
 
-Follow the configuration notes..., :doc:`configuration`.
+Follow the :doc:`configuration` notes...
+
+To check the version::
+
+  pg_config --version
 
 Gentoo
 ------
