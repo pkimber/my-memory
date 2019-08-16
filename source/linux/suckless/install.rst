@@ -118,10 +118,23 @@ Patches
 
   cd ~/dev/src/st/
   wget https://st.suckless.org/patches/scrollback/st-scrollback-20190331-21367a0.diff
+  wget https://st.suckless.org/patches/solarized/st-no_bold_colors-20170623-b331da5.diff
+  wget https://st.suckless.org/patches/solarized/st-solarized-light-20190306-ed68fe7.diff
+
+::
+
+  cd ~/dev/src/st/
+  git apply st-no_bold_colors-20170623-b331da5.diff
+  git apply st-solarized-light-20190306-ed68fe7.diff
   git apply st-scrollback-20190331-21367a0.diff
 
 If you haven't made changes to ``config.h``::
 
   cp config.def.h config.h
+
+I like to use a font size of 14::
+
+  vim config.h
+  static char *font = "Liberation Mono:pixelsize=14:antialias=true:autohint=true";
 
 Then run `Make and Install`_ (see above)...
