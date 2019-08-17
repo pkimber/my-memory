@@ -1,5 +1,5 @@
-Suckless
-********
+Suckless - Install
+******************
 
 dwm
 ===
@@ -48,7 +48,7 @@ Add the following::
   Exec=/etc/X11/Xsession
   Type=Application
 
-Edit ``~/.xsession`` and add the following:
+**As your own user**, edit ``~/.xsession`` and add the following for ``bash``:
 
 .. code-block:: bash
 
@@ -66,6 +66,11 @@ Edit ``~/.xsession`` and add the following:
     sleep 10
   done &
 
+  exec dwm
+
+Or the following for ``fish``:
+
+  xrdb -merge .Xresources
   exec dwm
 
 Patches
