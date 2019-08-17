@@ -68,7 +68,7 @@ Add the following::
 
   exec dwm
 
-Or the following for ``fish``:
+Or the following for ``fish``::
 
   xrdb -merge .Xresources
   exec dwm

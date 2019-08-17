@@ -45,3 +45,10 @@ PATH
 Add the following to ``~/.config/fish/config.fish``::
 
   set -x PATH $PATH ~/bin/
+
+Startup
+=======
+
+Caps lock as *Ctrl*::
+
+  xmodmap ~/.Xmodmap
