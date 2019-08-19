@@ -16,6 +16,15 @@ Move to another window:
 Quit:
   *Shift*, *Alt*, *Q*
 
+Mode
+====
+
+Full screen:
+  *Ctrl*, *M*
+
+Tiled:
+  *Ctrl*, *T*
+
 Tags
 ====
 
