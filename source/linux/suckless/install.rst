@@ -148,3 +148,22 @@ I like to use a font size of 14::
   static char *font = "Ubuntu Mono:pixelsize=14:antialias=true:autohint=true";
 
 Then run `Make and Install`_ (see above)...
+
+surf
+====
+
+.. warning:: I cannot get this to work on my Ubuntu laptop...
+             Here are my notes so far...
+
+::
+
+  apt install libgcr-3-dev
+  # not sure if you need the following:
+  apt install libglib2.0-dev
+
+::
+
+  git clone https://git.suckless.org/surf
+  sudo -i
+  cd /home/patrick/dev/src/surf/
+  make clean install

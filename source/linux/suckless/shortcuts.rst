@@ -22,10 +22,13 @@ Mode
 ====
 
 Full screen:
-  *Ctrl*, *M*
+  *Alt*, *M*
 
 Tiled:
-  *Ctrl*, *T*
+  *Alt*, *T*
+
+Toggle the top bar:
+  *Alt*, *B*
 
 Tags
 ====
@@ -35,6 +38,21 @@ Move a window to another tag:
 
 Switch to another tag:
   *Alt*, *2* or *Alt*, *3* etc...
+
+Screens
+=======
+
+Focus previous screen:
+  *Alt*, *,*
+
+Focus next screen:
+  *Alt*, *.*
+
+Send window to previous screen:
+  *Alt*, *Shift*, *,*
+
+Send window to next screen:
+  *Alt*, *Shift*, *.*
 
 
 .. _`Dave's Visual Guide to dwm`: https://ratfactor.com/slackware/dwm/
