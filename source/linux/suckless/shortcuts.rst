@@ -57,5 +57,13 @@ Send window to previous screen:
 Send window to next screen:
   *Alt*, *Shift*, *.*
 
+Stack
+=====
+
+Increment master:
+  *Alt*, *i*
+
+Decrement master:
+  *Alt*, *d*
 
 .. _`Dave's Visual Guide to dwm`: https://ratfactor.com/slackware/dwm/
