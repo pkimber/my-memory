@@ -9,6 +9,9 @@ Create a new terminal:
 Toggle window:
   *Alt*, *Enter*
 
+Close window:
+  *Alt*, *Shift*, *C*
+
 Menu (``dmenu``):
   *Alt*, *P* (only if it is installed)...
 

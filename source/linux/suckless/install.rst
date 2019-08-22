@@ -152,14 +152,15 @@ Then run `Make and Install`_ (see above)...
 surf
 ====
 
-.. warning:: I cannot get this to work on my Ubuntu laptop...
-             Here are my notes so far...
-
 ::
 
   apt install libgcr-3-dev
   # not sure if you need the following:
   apt install libglib2.0-dev
+
+  add-apt-repository ppa:webkit-team/ppa
+  apt update
+  apt install libwebkit2gtk-4.0-dev
 
 ::
 
