@@ -37,6 +37,15 @@ To merge two or more commits into one::
 
 See `How to squash commits by git`
 
+Remove file from the repository but keep it locally
+===================================================
+
+::
+
+  git rm --cached somefile.ext
+
+See `Remove file from the repository but keep it locally`_ ...
+
 Reset or revert a specific file to a specific revision
 ======================================================
 
@@ -51,4 +60,5 @@ Reset or revert a specific file to a specific revision
 
 
 .. _`How to squash commits by git`: https://asciinema.org/a/11269
+.. _`Remove file from the repository but keep it locally`: https://stackoverflow.com/questions/3469741/remove-file-from-the-repository-but-keep-it-locally
 .. _`Reset or revert a specific file to a specific revision using Git`: http://stackoverflow.com/questions/215718/reset-or-revert-a-specific-file-to-a-specific-revision-using-git
