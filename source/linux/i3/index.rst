@@ -32,9 +32,7 @@ WiFi Connections
 
 .. code-block:: bash
 
-  # I can't get this to work.  I also tried ``apt install wicd``, but that
-  # didn't work!
-  wicd-curses
+  nmtui
 
 Contents
 
