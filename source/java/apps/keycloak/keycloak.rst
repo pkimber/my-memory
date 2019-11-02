@@ -51,7 +51,10 @@ e.g.
 - https://localhost:8443/auth/realms/master/protocol/openid-connect/logout
 - https://localhost:8443/auth/realms/master/protocol/openid-connect/userinfo
 
-Here is a sample ``.private`` file for a Django project::
+Here is a sample ``.private`` file for a Django project using
+https://mozilla-django-oidc.readthedocs.io/
+
+::
 
   set -x OIDC_OP_TOKEN_ENDPOINT "https://localhost:8443/auth/realms/master/protocol/openid-connect/token"
   set -x OIDC_OP_AUTHORIZATION_ENDPOINT "https://localhost:8443/auth/realms/master/protocol/openid-connect/auth"
@@ -65,6 +68,9 @@ Here is a sample ``.private`` file for a Django project::
   set -x OIDC_RP_SIGN_ALGO "RS256"
   # certificate is generated locally
   set -x OIDC_VERIFY_SSL "False"
+
+.. tip:: Using the default configuration will only work if the user in Keycloak
+         has the same email address as the Django user.
 
 
 .. _`Keycloak Server OIDC URI Endpoints`: https://www.keycloak.org/docs/latest/server_admin/index.html#keycloak-server-oidc-uri-endpoints
