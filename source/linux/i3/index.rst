@@ -8,6 +8,20 @@ Startup:
   xmodmap ~/.Xmodmap
   xinput disable "SynPS/2 Synaptics TouchPad"
 
+Screens:
+
+.. code-block:: bash
+
+  xrandr --output eDP-1 --auto --output DP-1 --auto --left-of eDP-1
+
+Sound:
+
+.. code-block:: bash
+
+  alsamixer
+  # toggle sound
+  amixer -q -D pulse sset Master toggle
+
 If wireless networking no longer works after resuming from suspend:
 
 .. code-block:: bash
@@ -24,7 +38,7 @@ WiFi Connections
 
 .. code-block:: bash
 
-  wicd-curses
+  nmtui
 
 Contents
 
