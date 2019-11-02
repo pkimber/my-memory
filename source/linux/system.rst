@@ -5,6 +5,13 @@ System
 
 Also see :doc:`./apps/inxi`...
 
+Battery
+=======
+
+Percentage left::
+
+  cat /sys/class/power_supply/BAT1/capacity
+
 Hard Disk
 =========
 
