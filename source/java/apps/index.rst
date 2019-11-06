@@ -10,4 +10,5 @@ Contents
    alfresco/index
    elasticsearch/index
    james/index
+   keycloak/keycloak
    nuxeo/index

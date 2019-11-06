@@ -46,6 +46,12 @@ If wireless networking no longer works after resuming from suspend:
 
   sudo systemctl restart network-manager.service
 
+Sound
+
+.. code-block:: bash
+
+  alsamixer
+
 WiFi Connections
 
 .. code-block:: bash
