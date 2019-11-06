@@ -1,26 +1,44 @@
 i3 Window Manager
 *****************
 
-Startup:
+Startup
+=======
 
 .. code-block:: bash
 
   xmodmap ~/.Xmodmap
   xinput disable "SynPS/2 Synaptics TouchPad"
 
-Screens:
+Screens
+=======
+
+List:
+
+.. code-block:: bash
+
+  xrandr -q
 
 .. code-block:: bash
 
   xrandr --output eDP-1 --auto --output DP-1 --auto --left-of eDP-1
 
-Sound:
+Duplicate (did not work for me):
+
+.. code-block:: bash
+
+  xrandr --output DP-1 --same-as eDP-1
+
+Sound
+=====
 
 .. code-block:: bash
 
   alsamixer
   # toggle sound
   amixer -q -D pulse sset Master toggle
+
+Networking
+==========
 
 If wireless networking no longer works after resuming from suspend:
 
