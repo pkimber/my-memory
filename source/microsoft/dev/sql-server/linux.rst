@@ -1,6 +1,9 @@
 SQL Server - Linux
 ******************
 
+.. tip:: We have `Microsoft SQL Server running in Kubernetes`_,
+         so no need to use Docker...
+
 Docker
 ======
 
@@ -27,6 +30,9 @@ Run ``sqlcmd``::
 
 Restore Backup
 --------------
+
+.. tip:: We have `Microsoft SQL Server running in Kubernetes`_,
+         so no need to use Docker (unless you want to)...
 
 Create a folder in your Docker container for the backup file::
 
@@ -136,3 +142,4 @@ Restore
 
 .. _`How do I install MS SQL for ubuntu 18.04 LTS?`: https://askubuntu.com/questions/1032532/how-do-i-install-ms-sql-for-ubuntu-18-04-lts/1037127#1037127
 .. _`Install SQL Server and create a database on Ubuntu`: https://docs.microsoft.com/en-us/sql/linux/quickstart-install-connect-ubuntu
+.. _`Microsoft SQL Server running in Kubernetes`: https://www.kbsoftware.co.uk/docs/dev-kubernetes-install.html#microsoft-sql-server
