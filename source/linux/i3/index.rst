@@ -22,11 +22,11 @@ List:
 
   xrandr --output eDP-1 --auto --output DP-1 --auto --left-of eDP-1
 
-Duplicate (did not work for me):
+Duplicate (James's ACER CB270HU Monitor):
 
 .. code-block:: bash
 
-  xrandr --output DP-1 --same-as eDP-1
+  xrandr --output DP-1 --same-as eDP-1 --mode 1920x1080
 
 Sound
 =====
