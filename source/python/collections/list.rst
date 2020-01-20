@@ -140,6 +140,12 @@ Sorting (in place)::
 
   l.sort()
 
+
+Sorting a ``list`` of ``dict`` (the ``dict`` contains the ``created`` key)::
+
+  from operator import itemgetter
+  return sorted(result, key=itemgetter("created"), reverse=True)
+
 Sorting (python 3)::
 
   from datetime import date
