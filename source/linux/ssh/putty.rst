@@ -4,6 +4,7 @@ putty
 Links
 =====
 
+- :doc:`keys`
 - `PuTTY Download Page`_
 - `Key-Based SSH Logins With PuTTY`_
 - `Secure Linux/UNIX access with PuTTY and OpenSSH`_
@@ -14,8 +15,8 @@ Utility
 - `PuTTY Tray`_
 - `Customizing color schemes in PuTTY`_
 
-Setup
-=====
+ssh
+===
 
 - Download ``puttygen.exe`` from the putty download page:
   http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html
@@ -55,6 +56,31 @@ Setup
   password.
 
 .. image:: ./misc/putty-user-host.png
+
+.. tip:: To create a shortcut to that automatically opens a session:
+         ``putty.exe -load "mysession"``.
+
+ssh tunnel
+==========
+
+To create a tunnel, start by following the steps in the previous section:
+
+- *Source port*
+  The port you want to use in your browser
+  e.g. ``8080`` if you want to access your content via http://localhost:8080.
+- *Destination*
+  The host name of your server and the port you want to tunnel to
+
+.. note:: I find this weird because we already added the host name when we
+          setup the ``ssh`` configuration.
+
+- Click *Add* to configure the tunnel.
+
+.. image:: ./misc/putty-tunnel.png
+
+Click *Open* to open the tunnel...
+
+To close the session, close the terminal...
 
 
 .. _`PuTTY Download Page`: http://www.chiark.greenend.org.uk/%7Esgtatham/putty/download.html

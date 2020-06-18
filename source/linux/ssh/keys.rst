@@ -8,6 +8,7 @@ Links
 
 - `OpenSSH key management`_
 - `ubuntu documentation - SSH Keys`_
+- :doc:`putty`
 
 Usage
 =====
