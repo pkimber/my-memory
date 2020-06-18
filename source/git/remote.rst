@@ -17,11 +17,14 @@ Server
 To create an empty repository on a remote server::
 
   cd ~/repo/temp/
-  mkdir pillar.git
-  cd pillar.git
+  mkdir pillar
+  cd pillar
   git init --bare
 
 To push to this repository::
 
-  git remote set-url origin ssh://patrick@46.10.8.55:/home/patrick/repo/temp/pillar.git
+  git remote set-url origin ssh://patrick@46.10.8.55:/home/patrick/repo/temp/pillar
   git push origin master
+  # or
+  git push ssh://www.hatherleigh.info/home/patrick/repo/temp/pillar master
+
