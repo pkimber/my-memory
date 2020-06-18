@@ -32,7 +32,11 @@ but this article recommends it, `Textricator: Data extraction made simple`_
 Images
 ======
 
-To extract images from a PDF file::
+To extract PNG images from a PDF file::
+
+  pdftoppm briefing.pdf briefing -png
+
+or::
 
   pdfimages -j ..plan.pdf out
 
