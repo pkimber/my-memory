@@ -35,6 +35,13 @@ Use
 
   USE quickstart;
 
+Pagination
+----------
+
+Use ``less`` for paging::
+
+  pager less
+
 Script
 ======
 
