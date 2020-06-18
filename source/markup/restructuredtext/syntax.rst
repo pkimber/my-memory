@@ -134,10 +134,10 @@ e.g::
 
   :doc:`../asset-register`
 
-To create a link to a section in another document, first mark the section
+To create a link to a **section in another document**, first mark the section
 heading::
 
-  .. _build_prerequisites:
+  .. _build-prerequisites:
 
   Prerequisites
   -------------
@@ -146,7 +146,9 @@ heading::
 
 ::
 
-  :ref:`build_prerequisites`
+  :ref:`build-prerequisites`
+
+.. tip:: Use dashes to separate words (other than the initial ``_``).
 
 This works just as well when section and reference are in different source
 files.
