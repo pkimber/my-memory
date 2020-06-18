@@ -1,10 +1,12 @@
 i3 Window Manager
 *****************
 
+.. highlight:: bash
+
 Startup
 =======
 
-.. code-block:: bash
+::
 
   xmodmap ~/.Xmodmap
   xinput disable "SynPS/2 Synaptics TouchPad"
@@ -12,49 +14,39 @@ Startup
 Screens
 =======
 
-List:
-
-.. code-block:: bash
+List::
 
   xrandr -q
 
-.. code-block:: bash
+Example::
 
   xrandr --output eDP-1 --auto --output DP-1 --auto --left-of eDP-1
 
-Duplicate (James's ACER CB270HU Monitor):
-
-.. code-block:: bash
+Duplicate (James's ACER CB270HU Monitor)::
 
   xrandr --output DP-1 --same-as eDP-1 --mode 1920x1080
 
 Sound
 =====
 
-.. code-block:: bash
+::
 
   alsamixer
   # toggle sound
   amixer -q -D pulse sset Master toggle
 
+List devices::
+
+  aplay -l
+
 Networking
 ==========
 
-If wireless networking no longer works after resuming from suspend:
-
-.. code-block:: bash
+If wireless networking no longer works after resuming from suspend::
 
   sudo systemctl restart network-manager.service
 
-Sound
-
-.. code-block:: bash
-
-  alsamixer
-
-WiFi Connections
-
-.. code-block:: bash
+WiFi Connections::
 
   nmtui
 
