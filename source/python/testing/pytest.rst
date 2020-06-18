@@ -36,6 +36,17 @@ Exception:
       f()
   assert 'maximum recursion' in str(excinfo.value)
 
+Multi-line string:
+
+To compare a multi-line string with newlines and lots of spaces...
+
+.. code-block:: python
+
+  def _clean(x):
+      result = textwrap.dedent(x)
+      result = " ".join(result.split())
+      return result
+
 Parametrize
 ===========
 
