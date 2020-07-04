@@ -1,11 +1,12 @@
-Install
-*******
+KVM Install
+***********
 
 Links
 =====
 
-https://help.ubuntu.com/community/KVM/Installation
-Ubuntu, KVM Installation
+- https://help.ubuntu.com/community/KVM/Installation
+  Ubuntu, KVM Installation
+- `DistroTube, Virt-Manager Is The Better Way To Manage VMs`_
 
 .. note:: Use a 64 bit kernel (if possible)
 
@@ -21,6 +22,13 @@ To see if your processor supports hardware virtualization::
 - If 0 is printed, it means that your CPU is not 64-bit.
 - If 1 or higher, it supports virtualization.
 
+Check to see if hardware acceleration is enabled::
+
+  kvm-ok
+
+  INFO: /dev/kvm exists
+  KVM acceleration can be used
+
 Now see if your running kernel is 64-bit, just issue the following
 command::
 
@@ -35,11 +43,24 @@ Install
 
 Install::
 
-  sudo apt install qemu-kvm libvirt-bin ubuntu-vm-builder bridge-utils virt-viewer
+  sudo apt install qemu-kvm libvirt-daemon-system libvirt-clients bridge-utils
 
-Test::
+If you are working on a desktop computer you might want to install a GUI tool to
+manage virtual machines::
 
-  sudo -i
+  sudo apt install virt-manager
+
+Add your user name to the ``libvirt`` and ``kvm`` groups::
+
+  sudo adduser `id -un` libvirt
+  sudo adduser `id -un` kvm
+
+.. tip:: logout and login so your user becomes an effective member of ``kvm``
+         and ``libvirt`` user groups.
+
+Test (no need for ``sudo`` because members of the ``kvm``/``libvirt`` groups can
+run virtual machines)::
+
   virsh list --all
 
   Id Name                 State
@@ -106,3 +127,6 @@ Guest
 =====
 
   Follow the :doc:`guest` instructions for creating a guest...
+
+
+.. _`DistroTube, Virt-Manager Is The Better Way To Manage VMs`: https://www.youtube.com/watch?v=p1d_b_91YlU
