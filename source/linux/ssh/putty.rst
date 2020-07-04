@@ -24,6 +24,13 @@ ssh
 - Select *Type of key to generate*, ``RSA``
 
 .. note:: 18/01/2020, I can't get ``Ed25519`` working with Ubuntu 18.04.
+          I get errors like this::
+
+            sshd[1556]: rexec line 15: Deprecated option UsePrivilegeSeparation
+            sshd[1556]: rexec line 18: Deprecated option KeyRegenerationInterval
+            sshd[1556]: rexec line 19: Deprecated option ServerKeyBits
+            sshd[1556]: rexec line 30: Deprecated option RSAAuthentication
+            sshd[1556]: rexec line 37: Deprecated option RhostsRSAAuthentication
 
 - *Generate* the key pair.  Do not enter a *passphrase* or you will need to
   enter the password each time you want to use the key.
