@@ -1,6 +1,8 @@
 KVM Install
 ***********
 
+.. highlight:: bash
+
 Links
 =====
 

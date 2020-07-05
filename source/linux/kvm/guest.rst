@@ -1,18 +1,40 @@
 KVM Guest
 *********
 
+.. highlight:: bash
+
 Links
 =====
 
 - https://help.ubuntu.com/community/KVM/CreateGuests
+- `DistroTube, Virt-Manager Is The Better Way To Manage VMs`_
 
 Prerequisites
 =============
 
 Follow the :doc:`install` instructions...
 
-Ubuntu VM
-=========
+Bridge Network
+==============
+
+I am using a NAT network, so we can ssh in from the host to the guest and from
+the guest to the host.
+
+I failed trying to setup a bridge network using the
+`ArchWiki, Network bridge With iproute2` instructions.  I think I created the
+bridge, but couldn't get an IP4 address on the guest (probably a firewall
+issue).
+
+virt-manager GUI
+================
+
+Convert from VirtualBox (``vdi``) format to Virt-Manager (``qcow2``) format
+(from `DistroTube, Virt-Manager Is The Better Way To Manage VMs`_)::
+
+  sudo qemu-img convert -f vdi -O qcow2 Ubuntu-20-04.vdi /var/lib/libvirt/images/ubuntu-20-04.qcow2
+
+Command Line - Ubuntu VM
+========================
 
 Create
 ------
@@ -94,3 +116,7 @@ To connect to your machine console, find the ``Id`` (see previous step)::
 
 Note: You have to click on the window to activate keyboard input.  *Ctrl*,
 *Alt* to exit from this mode.
+
+
+.. _`ArchWiki, Network bridge With iproute2`: https://wiki.archlinux.org/index.php/Network_bridge#With_iproute2
+.. _`DistroTube, Virt-Manager Is The Better Way To Manage VMs`: https://www.youtube.com/watch?v=p1d_b_91YlU
