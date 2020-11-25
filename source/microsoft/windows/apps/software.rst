@@ -93,6 +93,10 @@ http://windirstat.info/
 is a disk usage statistics viewer and cleanup tool for Microsoft Windows
 (very nice... I used it for a friends computer... well worth installing).
 
+  24/07/2020, I am not sure if *WinDirStat* is supported any more.
+  One of our corporate customers uses TreeSize Free!
+  https://www.jam-software.com/treesize_free
+
 Firewall
 ========
 
