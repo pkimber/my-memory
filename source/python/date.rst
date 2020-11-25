@@ -92,6 +92,9 @@ To convert a ``timedelta`` into milliseconds and minutes::
   def timedelta_minutes(td):
       return td.days * 1440 + td.seconds / 60
 
+  def timedelta_seconds(td):
+      return td.total_seconds()
+
   def timedelta_milliseconds(td):
       return td.days * 86400000 + td.seconds * 1000 + td.microseconds / 1000
 
