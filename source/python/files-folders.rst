@@ -85,6 +85,13 @@ File/folder exists
 
 ::
 
+  import pathlib
+  file_name = pathlib.Path("1-2-3.doc")
+  if file_name.exists():
+      pass
+
+::
+
   import os
   if not os.path.exists(self.binFolder):
       # etc
@@ -119,6 +126,15 @@ File or Folder
 
 ::
 
+  import pathlib
+  file_name = pathlib.Path("1-2-3.doc")
+  if file_name.is_dir():
+      pass
+  if file_name.is_file():
+      pass
+
+::
+
   import os
   if not os.path.isdir('temp'):
       pass
@@ -127,6 +143,11 @@ File or Folder
 
 Home Folder
 -----------
+
+::
+
+  import pathlib
+  pathlib.Path.home()
 
 ::
 
@@ -185,6 +206,11 @@ Pathname/Filename Manipulations
 
 Append folder/file names...
 ---------------------------
+
+::
+
+  import pathlib
+  file_name = pathlib.Path("data", "1-2-3.doc")
 
 The second example builds "``\\tools\\wrapper_win32_3.1.2``" on Windows::
 
