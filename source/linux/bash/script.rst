@@ -24,6 +24,12 @@ Sample script with some basic error checking::
   # Do the work.
   echo Hello world
 
+.. tip:: Look at this wonderful comic
+         https://wizardzines.com/comics/bash-errors/
+         (it explains everything you need to know)...
+
+.. image:: ./misc/julia-evans-bash-errors.jpg
+
 Permissions::
 
   chmod 755 scriptname
