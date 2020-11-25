@@ -33,6 +33,20 @@ Convert from VirtualBox (``vdi``) format to Virt-Manager (``qcow2``) format
 
   sudo qemu-img convert -f vdi -O qcow2 Ubuntu-20-04.vdi /var/lib/libvirt/images/ubuntu-20-04.qcow2
 
+Windows 10 - Development
+------------------------
+
+.. warning:: This takes up a massive amount of space, so unless you have
+             capacity, I would try the `Windows 10 Disc Image (ISO File)`_.
+
+- Get a `Windows 10 development environment`_
+- Extract the first archive to get an ``ova`` file.
+- Extract the next archive to get an ``vmdk`` file (takes a long time).
+
+Convert the ``vmdk`` file to ``qcow2`` format::
+
+  sudo qemu-img convert -O qcow2 ./WinDev2006Eval-disk001.vmdk /var/lib/libvirt/images/WinDev2006Eval.qcow2
+
 Command Line - Ubuntu VM
 ========================
 
@@ -120,3 +134,5 @@ Note: You have to click on the window to activate keyboard input.  *Ctrl*,
 
 .. _`ArchWiki, Network bridge With iproute2`: https://wiki.archlinux.org/index.php/Network_bridge#With_iproute2
 .. _`DistroTube, Virt-Manager Is The Better Way To Manage VMs`: https://www.youtube.com/watch?v=p1d_b_91YlU
+.. _`Windows 10 development environment`: https://developer.microsoft.com/en-us/windows/downloads/virtual-machines/
+.. _`Windows 10 Disc Image (ISO File)`: https://www.microsoft.com/en-gb/software-download/windows10ISO
