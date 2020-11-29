@@ -11,6 +11,7 @@ Contents
    command-t
    ctags
    ctags-windows
+   fzf
    hg-git
    links
    nerd-tree

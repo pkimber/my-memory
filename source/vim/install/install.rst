@@ -10,18 +10,26 @@ Links
 Linux
 =====
 
-Debian
-------
+Neovim::
 
-Command line
+  apt install neovim
 
-::
+Plugins
+https://gitlab.com/pkimber/cfg/-/blob/master/.cfg/README.rst::
+
+  nvim
+  :PlugInstall
+
+:doc:`plugin/fzf`
+
+Older Notes
+-----------
+
+Command line::
 
   apt-get install vim-nox
 
-Gnome
-
-::
+Gnome::
 
   apt-get install vim-gnome
 
