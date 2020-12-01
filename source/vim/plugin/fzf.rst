@@ -14,4 +14,4 @@ Commands::
   :Rg
 
 Plugins
-https://gitlab.com/pkimber/cfg/-/blob/master/.cfg/README.rst::
+https://gitlab.com/pkimber/cfg/-/blob/master/.cfg/README.rst
