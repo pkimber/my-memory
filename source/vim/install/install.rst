@@ -20,7 +20,7 @@ https://gitlab.com/pkimber/cfg/-/blob/master/.cfg/README.rst::
   nvim
   :PlugInstall
 
-:doc:`plugin/fzf`
+:doc:`../plugin/fzf`
 
 Older Notes
 -----------
