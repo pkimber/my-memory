@@ -8,6 +8,7 @@ Contents
 
    links
    assemblies
+   core
    errors
    fxcop
    log4net/index
