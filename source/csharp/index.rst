@@ -24,3 +24,6 @@ Contents
    timer
    web-service
 
+Other
+
+  - :doc:`../microsoft/dev/dotnet/core`

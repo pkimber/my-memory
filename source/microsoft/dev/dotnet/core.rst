@@ -1,6 +1,8 @@
 .NET Core
 *********
 
+- Also see :doc:`../../../csharp/index`
+
 Download and install *.NET 5.0 (Current)* from
 https://dotnet.microsoft.com/download
 (.NET 5 also supports some major sub-framework for desktop development like
