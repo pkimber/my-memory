@@ -1,6 +1,8 @@
 Distribution
 ************
 
+.. highlight:: bash
+
 Links
 =====
 
@@ -9,9 +11,11 @@ Links
 Usage
 =====
 
-Three different methods:
-
 ::
+
+  lsb_release -a
+
+Three different methods::
 
   cat /proc/version
   cat /etc/issue
