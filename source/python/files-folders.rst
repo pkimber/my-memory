@@ -235,6 +235,11 @@ Filename
   >>> os.path.basename(f)
   'temp.txt'
 
+or...::
+
+  from pathlib import Path
+  Path(file_name).name
+
 Normalise
 ---------
 
@@ -328,6 +333,11 @@ To get the file size::
 
   import os
   size = os.path.getsize(file_path)
+
+or...::
+
+  from pathlib import Path
+  size = Path(file_name).stat().st_size
 
 To convert the file size to a human readable format, use ``humanize``::
 
