@@ -34,7 +34,7 @@ From `MySQL, Scaffolding an Existing Database in EF Core`_::
   dotnet add package MySql.EntityFrameworkCore --version 5.0.0-m8.0.23
   dotnet ef dbcontext scaffold "server=127.0.0.1;uid=root;database=FMS" MySql.EntityFrameworkCore -o sakila -f
 
-Check the (e.g. ``sakila``) folder for which contains all the tables mapped to
+Check the (e.g. ``sakila``) folder which contains all the tables mapped to
 entities and the ``Context.cs`` file
 
 
