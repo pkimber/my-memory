@@ -22,6 +22,7 @@ of date or incorrect*):
 
    amazon/index
    android/index
+   apple/index
    apache/index
    c++/index
    csharp/index
