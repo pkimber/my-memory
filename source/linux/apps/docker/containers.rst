@@ -17,11 +17,23 @@ Run::
 
 List::
 
+  docker ps -a
   docker ps -aq
+
+Run bash::
+
+  ❯ docker ps -a
+  CONTAINER ID    IMAGE             COMMAND
+  e33f95652391    apple_apple       "/srv/apple/docker"
+  ❯ docker exec -it e33f95652391 bash
+  root@e33f95652391:/srv/apple# python3 manage.py shell
 
 Remove all exited containers::
 
+  # bash
   docker rm $(docker ps -a -f status=exited -q)
+  # fish
+  docker rm (docker ps -a -f status=exited -q)
 
 Kill all::
 
