@@ -11,6 +11,9 @@ Links
 Organise
 ========
 
+.. tip:: I used ``pdfarranger`` (``pdfshuffler`` doesn't seem to be working
+         any more): https://github.com/pdfarranger/pdfarranger
+
 pdfshuffler_ is very nice for moving and deleting pages.  It is in the Ubuntu
 Software Centre::
 
