@@ -1,0 +1,14 @@
+7-Zip
+*****
+
+.. highlight:: bash
+
+- https://www.7-zip.org/
+
+Folder
+======
+
+Add the contents of my ``Dropbox`` folder to the
+``2021-04-12-dropbox.7z`` archive::
+
+  7z a 2021-04-12-dropbox /home/patrick/Dropbox/*

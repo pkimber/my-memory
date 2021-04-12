@@ -41,6 +41,7 @@ Contents
 .. toctree::
    :maxdepth: 1
 
+   7z
    links
    awk
    cd
