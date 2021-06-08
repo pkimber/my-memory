@@ -11,6 +11,11 @@ Simple
 
 ::
 
+  import pathlib
+  INFO_FOLDER = pathlib.Path.home().joinpath("Private", "deploy")
+
+::
+
   file_names = os.listdir(folder)
   for name in file_names:
       print os.path.join(folder, name)
