@@ -8,6 +8,8 @@ Contents
 
    links
    ack
+   alacritty
+   atom
    autojump
    avconv
    corebird
