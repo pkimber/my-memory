@@ -13,6 +13,7 @@ Linux
 Neovim::
 
   apt install neovim
+  apt install ripgrep
 
 Plugins
 https://gitlab.com/pkimber/cfg/-/blob/master/.cfg/README.rst::
@@ -21,17 +22,6 @@ https://gitlab.com/pkimber/cfg/-/blob/master/.cfg/README.rst::
   :PlugInstall
 
 :doc:`../plugin/fzf`
-
-Older Notes
------------
-
-Command line::
-
-  apt-get install vim-nox
-
-Gnome::
-
-  apt-get install vim-gnome
 
 Configuration
 =============
