@@ -8,7 +8,7 @@ https://dwm.suckless.org/
 
 ::
 
-  apt install libxinerama-dev
+  apt install libxft-dev
 
 ::
 
@@ -20,73 +20,6 @@ Compile and install::
   sudo -i
   cd /home/patrick/dev/src/dwm/
   make clean install
-
-.. How to get it running.  From https://wiki.ubuntu.com/CustomXSession:
-.. ln -s ~/.xinitrc ~/.xsession
-.. chmod +x ~/.xinitrc
-.. # log out of your window manager
-.. # Ctrl Alt F1
-.. # login
-.. # stop your graphical login manager
-.. sudo /etc/init.d/gdm stop
-.. startx
-.. # to restart your graphical login manager
-.. sudo /etc/init.d/gdm start
-
-From https://rhunter.org/blog/2012/04/17/dwm-a-tutorial-for-beginners/
-
-Edit::
-
-  sudo vim /usr/share/xsessions/user-session.desktop
-
-Add the following::
-
-  [Desktop Entry]
-  Encoding=UTF-8
-  Name=WM from xsession script
-  Comment=Runs the window manager defined by xsession script
-  Exec=/etc/X11/Xsession
-  Type=Application
-
-**As your own user**, edit ``~/.xsession`` and add the following for ``bash``:
-
-.. code-block:: bash
-
-  #!/bin/bash
-
-  xrdb -merge .Xresources
-
-  if [ -x /usr/bin/xfce4-power-manager ] ; then
-    sleep 1
-    xfce4-power-manager &
-  fi
-
-  while true; do
-    xsetroot -name "$( date + "%F %I:%M %p" )"
-    sleep 10
-  done &
-
-  exec dwm
-
-Or the following for ``fish``::
-
-  xrdb -merge .Xresources
-  exec dwm
-
-Patches
--------
-
-::
-
-  cd ~/dev/src/dwm/
-  wget https://dwm.suckless.org/patches/fibonacci/dwm-fibonacci-5.8.2.diff
-  git apply dwm-fibonacci-5.8.2.diff
-
-If you haven't made changes to ``config.h``::
-
-  cp config.def.h config.h
-
-Then run `Make and Install`_ (see above)...
 
 dmenu
 =====
@@ -101,6 +34,61 @@ dmenu
   sudo -i
   cd /home/patrick/dev/src/dmenu/
   make clean install
+
+I had to edit line 637 of ``demnu.c``:
+
+.. code-block:: c
+
+                        for (i = 0; i < n; i++)
+  -                               if (INTERSECT(x, y, 1, 1, info[i]))
+  +                               if (INTERSECT(x, y, 1, 1, info[i]) != 0)
+                                        break;
+
+.. tip:: For details, see:
+         https://www.reddit.com/r/suckless/comments/ll3bm1/dmenu_installation_issue/
+
+Startup
+=======
+
+Edit::
+
+  sudo vim /usr/share/xsessions/xsession.desktop
+
+Add the following::
+
+  [Desktop Entry]
+  Encoding=UTF-8
+  Name=WM from xsession script
+  Comment=Runs the window manager defined by xsession script
+  Exec=/etc/X11/Xsession
+  Type=Application
+
+Login manager::
+
+  vim ~/.xsession
+  exec dwm
+
+To set Caps Lock to Ctrl::
+
+  setxkbmap -option ctrl:nocaps
+
+.. tip:: From
+         https://askubuntu.com/questions/445099/whats-the-opposite-of-setxkbmap-option-ctrlnocaps
+
+Patches
+=======
+
+::
+
+  cd ~/dev/src/dwm/
+  wget https://dwm.suckless.org/patches/fibonacci/dwm-fibonacci-5.8.2.diff
+  git apply dwm-fibonacci-5.8.2.diff
+
+If you haven't made changes to ``config.h``::
+
+  cp config.def.h config.h
+
+Then run `Make and Install`_ (see above)...
 
 st - terminal
 =============
