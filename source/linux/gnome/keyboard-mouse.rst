@@ -6,18 +6,21 @@ Keyboard
 
 :doc:`shortcuts`
 
-Run the *Tweak Tool*
+Run the *Tweak Tool* (``apt install gnome-tweak-tool``):
 
 - *Keyboard and Mouse*
 - *Additional Layout Options*
-- *Ctrl key position* to *Caps Lock as Ctrl*
-- *Caps Lock key behaviour* to *Caps is also a Ctrl*
+- *Ctrl position* to *Caps Lock as Ctrl*
+- *Caps Lock behaviour* to *Caps is also a Ctrl*
 
 Keyboard Issues
 ===============
 
 Caps Lock
 ---------
+
+- :doc:`../../linux/i3/keyboard`
+- :doc:`../../linux/distro/ubuntu/keyboard`
 
 Inverted on start-up.
 

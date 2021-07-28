@@ -30,7 +30,7 @@ To merge history::
 
 To set a universal variable (preserved across reboot)::
 
-  set -U EDITOR vim
+  set -U EDITOR nvim
 
 Environment Variables
 =====================
@@ -49,6 +49,4 @@ Add the following to ``~/.config/fish/config.fish``::
 Startup
 =======
 
-Caps lock as *Ctrl*::
-
-  xmodmap ~/.Xmodmap
+:ref:`linux-keyboard-caps-lock-control`
