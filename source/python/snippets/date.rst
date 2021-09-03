@@ -29,8 +29,17 @@ To add one month is a little awkward e.g::
       dt3 = dt2.replace(day=1)
       return dt3
 
+.. _datetime-combine:
+
 Combine
 =======
+
+To set the time to the start or end of the day::
+
+  from datetime import datetime, time
+
+  from_date = datetime.combine(from_date.date(), time.min)
+  to_date = datetime.combine(to_date.date(), time.max)
 
 ::
 

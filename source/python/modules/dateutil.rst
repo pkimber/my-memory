@@ -22,6 +22,18 @@ Import
   from datetime import date
   from dateutil.relativedelta import relativedelta
 
+parse
+=====
+
+::
+
+  from dateutil import parser
+
+  result = parser.parse(date_as_str)
+
+.. tip:: ``parser.parse`` returns a ``datetime``.  To set this ``datetime`` to
+         the first or last second in the day, see :ref:`datetime-combine`
+
 rrule
 =====
 
