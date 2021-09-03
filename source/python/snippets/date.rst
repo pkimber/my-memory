@@ -6,6 +6,8 @@ Date
 .. note::
 
   Check :doc:`../modules/dateutil` before using these snippets...
+  (although using `Combine`_ to set the time to the start or end of the day is
+  very clever)!
 
 Adding
 ======
@@ -34,7 +36,9 @@ To add one month is a little awkward e.g::
 Combine
 =======
 
-To set the time to the start or end of the day::
+To set the time to the start or end of the day
+(from `How to get the first and last second in python using datetime module`_)
+::
 
   from datetime import datetime, time
 
@@ -83,3 +87,4 @@ To remove the time from a ``datetime`` value:
 
 
 .. _`Get last day of the month`: http://stackoverflow.com/questions/42950/get-last-day-of-the-month-in-python
+.. _`How to get the first and last second in python using datetime module`: https://stackoverflow.com/questions/13661641/how-to-get-the-first-and-last-second-in-python-using-datetime-module
