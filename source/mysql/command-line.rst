@@ -23,18 +23,14 @@ To log into a ``test`` database on start-up::
   cd C:\mysql-5.1.35-win32\bin
   mysql test
 
-Exit
-====
+Commands
+========
 
 ::
 
+  # exit
   mysql> \q
-
-Help
-====
-
-::
-
+  # help
   mysql> \h
 
 History
