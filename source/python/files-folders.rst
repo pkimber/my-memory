@@ -120,6 +120,11 @@ Current Directory
 
 ::
 
+  import pathlib
+  pathlib.Path.cwd()
+
+::
+
   os.getcwd()
 
 I used the following code to get the name of the folder::
@@ -164,8 +169,13 @@ Home Folder
 Module Folder
 -------------
 
-`Recipe 474083`_
-: Get the path of the currently executing python script using import::
+::
+
+  import pathlib
+  pathlib.Path(__file__).resolve()
+
+`Recipe 474083`_:
+Get the path of the currently executing python script using import::
 
   os.path.dirname(os.path.realpath(__file__))
 
