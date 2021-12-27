@@ -3,6 +3,8 @@ Files and Folders - Permissions
 
 .. highlight:: bash
 
+.. tip:: See this link to :doc:`snippets/fix-permissions`...
+
 Links
 =====
 
