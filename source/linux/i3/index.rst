@@ -11,6 +11,13 @@ Startup
   xmodmap ~/.Xmodmap
   xinput disable "SynPS/2 Synaptics TouchPad"
 
+The contents of ``~/.Xmodmap``::
+
+  clear lock
+  clear control
+  keycode 66 = Control_L
+  add control = Control_L Control_R
+
 Screens
 =======
 
@@ -20,11 +27,17 @@ List::
 
 Example::
 
+  # home (left and right)
+  xrandr --output HDMI-1 --left-of eDP-1
+
+  # duplicate (James's ACER CB270HU Monitor)::
+  xrandr --output DP-1 --same-as eDP-1 --mode 1920x1080
+
   xrandr --output eDP-1 --auto --output DP-1 --auto --left-of eDP-1
 
-Duplicate (James's ACER CB270HU Monitor)::
+Refresh (auto-detect)::
 
-  xrandr --output DP-1 --same-as eDP-1 --mode 1920x1080
+  xrandr --auto
 
 Sound
 =====
