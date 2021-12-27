@@ -18,6 +18,36 @@ Links
 Install
 =======
 
+Nerd Fonts
+----------
+
+Make sure this folder exists::
+
+  ~/.local/share/fonts/
+
+Select your font from, https://github.com/ryanoasis/nerd-fonts#patched-fonts
+
+Download the regular, bold, italic and bold italic versions e.g::
+
+  patched-fonts/UbuntuMono/Regular-Italic/complete/Ubuntu Mono Italic Nerd Font Complete.ttf
+
+Update your terminal font e.g. Alacritty ``~/.config/alacritty/alacritty.yml``::
+
+  font:
+    size: 8.5
+    normal:
+      family: "Ubuntu Mono"
+      style: Regular
+    bold:
+      family: "Ubuntu Mono"
+      style: Bold
+    italic:
+      family: "Ubuntu Mono"
+      style: Italic
+    bold_italic:
+      family: "Ubuntu Mono"
+      style: Bold Italic
+
 Microsoft
 ---------
 
@@ -33,43 +63,35 @@ Note: This doesn't work...
 Following these instructions:
 `How to get ProFont working in Ubuntu`_:
 
-- Download ``profont-x11.tar.gz`` from
-  http://www.tobias-jung.de/seekingprofont/
-- Change into your fonts folder:
+Download ``profont-x11.tar.gz`` from
+http://www.tobias-jung.de/seekingprofont/
+Change into your fonts folder::
 
-  ::
+  cd ~/.fonts/
 
-    cd ~/.fonts/
+Extract the ProFont files::
 
-- Extract the ProFont files:
+  tar xzf ~/Downloads/font/profont-x11.tar.gz
 
-  ::
+Make sure the ``~/.fonts.conf`` file contains the following::
 
-    tar xzf ~/Downloads/font/profont-x11.tar.gz
+  <?xml version="1.0"?><!DOCTYPE fontconfig SYSTEM "fonts.dtd">
+  <fontconfig>
+      <selectfont>
+          <acceptfont>
+              <pattern>
+                  <patelt name="family"><string>ProFont</string></patelt>
+              </pattern>
+          </acceptfont>
+      </selectfont>
+  </fontconfig>
 
-- Make sure the ``~/.fonts.conf`` file contains the following:
-
-  ::
-
-    <?xml version="1.0"?><!DOCTYPE fontconfig SYSTEM "fonts.dtd">
-    <fontconfig>
-        <selectfont>
-            <acceptfont>
-                <pattern>
-                    <patelt name="family"><string>ProFont</string></patelt>
-                </pattern>
-            </acceptfont>
-        </selectfont>
-    </fontconfig>
-
-- Update the font cache:
-
-  ::
+Update the font cache::
 
     fc-cache -fv
 
-- Re-start your applications... and you will be able to use the font...
-  ref https://wiki.ubuntu.com/Fonts... you might need to log in and out...
+Re-start your applications... and you will be able to use the font...
+ref https://wiki.ubuntu.com/Fonts... you might need to log in and out...
 
 
 .. _`HOWTO: Ubuntu, ProFont, Emacs`: http://www.fluidscape.co.nz/?q=node/92
