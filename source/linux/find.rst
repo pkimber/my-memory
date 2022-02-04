@@ -41,6 +41,19 @@ Find files that are over a gigabyte in size::
 
   find ~/Movies -size +1024M
 
+Time
+----
+
+From Stack Overflow,
+`Find the files that have been changed in last 24 hours`_::
+
+  find /directory_path -mtime -1 -ls
+  # or
+  find ./ -newermt "-24 hours" -ls
+
+.. tip:: The ``-`` before ``1`` is important - it means anything changed
+         one day or less ago.
+
 Type
 ----
 
@@ -155,6 +168,7 @@ xargs
 
 .. _`Combining find With xargs`: http://dmiessler.com/study/find/
 .. _`DMIESSLER.COM - find`: http://dmiessler.com/study/find/
+.. _`Find the files that have been changed in last 24 hours`: https://stackoverflow.com/questions/16085958/find-the-files-that-have-been-changed-in-last-24-hours
 .. _`Mommy, I found it! - 15 Practical Linux Find Command Examples`: http://www.thegeekstuff.com/2009/03/15-practical-linux-find-command-examples/
 .. _tips...: tips.html
 .. _xargs: http://www.research.att.com/~gsf/man/man1/xargs.html
