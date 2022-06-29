@@ -15,10 +15,11 @@ search for ``black``:
 - You will find *Python - Formatting: Black Args*.
 - Click *Edit in settings.json*
 
-Add ``python.formatting.blackArgs`` to 
-{
-    "window.zoomLevel": -1,
-    "window.titleBarStyle": "custom",
-    "editor.minimap.enabled": false,
-    "python.formatting.blackArgs": ["--line-length", "80"]
-}
+Add ``python.formatting.blackArgs`` to::
+
+  {
+      "window.zoomLevel": -1,
+      "window.titleBarStyle": "custom",
+      "editor.minimap.enabled": false,
+      "python.formatting.blackArgs": ["--line-length", "80"]
+  }
