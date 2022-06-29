@@ -1,22 +1,47 @@
-SimpleJSON
-**********
+JSON
+****
 
 .. highlight:: python
 
-**Note**: python 2.6 includes the ``simplejson`` module, but has renamed it as
-``json``.
+.. tip:: python 2.6 included the ``simplejson`` module,
+         but it was renamed to ``json``.
 
 Links
 =====
 
-- simplejson_
-- `simplejson - JSON encoder and decoder`_
+- https://docs.python.org/3/library/json.html
+
+File
+====
+
+Read
+----
+
+::
+
+  import json
+
+  with open("out.json", "r") as f:
+      data = json.load(f)
+
+Write
+-----
+
+::
+
+  import json
+
+  with open("out.json", "w") as f:
+      json.dump(data, f, indent=4)
+
+Legacy
+======
 
 Install
-=======
+-------
 
-**Note**: No need to install ``simplejson`` for python 2.6 and above.  Just
-use ``json`` instead.
+.. note:: No need to install ``simplejson`` for python 2.6 and above.
+          Just use ``json`` instead.
 
 From `json and simplejson module differences in Python`_:
 
@@ -121,7 +146,6 @@ Load
 .. _`Easy Install`: ../jython/easy_install.html
 .. _`Joy of Python: Classes and Dictionaries`: http://vsbabu.org/mt/archives/2003/02/13/joy_of_python_classes_and_dictionaries.html
 .. _`json and simplejson module differences in Python`: http://stackoverflow.com/questions/712791/json-and-simplejson-module-differences-in-python
-.. _`simplejson - JSON encoder and decoder`: http://simplejson.googlecode.com/svn/tags/simplejson-2.0.9/docs/index.html
 .. _jsonpickle: http://jsonpickle.github.com/
 .. _jsonpipe: https://github.com/dvxhouse/jsonpipe
 .. _simplejson: http://www.undefined.org/python/
