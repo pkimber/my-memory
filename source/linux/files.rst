@@ -3,6 +3,8 @@ Files
 
 .. highlight:: bash
 
+- For *Where has my space gone?*, see :doc:`df`
+
 Attributes
 ==========
 
@@ -35,7 +37,7 @@ Duplicate
 
 To remove duplicate files e.g. photos::
 
-  apt-get install fdupes
+  apt install fdupes
 
 Find and remove duplicate files::
 
@@ -52,7 +54,7 @@ N     option, when used together with ``d``, preserve the first file in each
 
 To move photos into folders::
 
-  sudo apt-get install libimage-exiftool-perl
+  apt install libimage-exiftool-perl
   exiftool "-filename=%f%c.%e" '-Directory<CreateDate' -d %Y/%Y-%m -r .
 
 .. note:: The ``%c`` should add a copy number if ``exiftool`` finds a duplicate
