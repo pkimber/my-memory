@@ -27,6 +27,7 @@ Contents
    optparse
    pillow
    raze
+   rich
    rst2pdf
    soap
    xlwt
