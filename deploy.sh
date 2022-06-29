@@ -6,4 +6,4 @@ set -e
 # make
 make html
 # deploy
-rsync -av --delete --force --size-only --no-perms --omit-dir-times ./build/html/ kb-a.kb.vpn:/home/web/repo/project/www.pkimber.net/howto/
+rsync -av --delete --force --size-only --no-perms --omit-dir-times ./build/html/ web@kb-a.kb.vpn:/home/web/repo/project/www.pkimber.net/howto/
