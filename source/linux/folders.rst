@@ -95,7 +95,8 @@ you'll avoid confusion and keep things nice and clean::
 Size
 ====
 
-`How to find - Size of a directory and Free disk space`_
+- For *Where has my space gone?*, see :doc:`df`
+- `How to find - Size of a directory and Free disk space`_
 
 Display a summary of the directory size::
 
