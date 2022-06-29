@@ -8,6 +8,18 @@ Docker Community Edition (CE) (**Docker CE**) is the version we are using.
 Install
 =======
 
+How To Install and Use Docker on Ubuntu 20.04
+https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-20-04
+
+::
+
+  curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+  sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu focal stable"
+  apt install docker-ce
+
+Legacy
+======
+
 .. tip:: If you are using the Docker files created by Django CookieCutter, then
          the version from the Ubuntu repositories is not new enough, so it is
          better to follow the official instructions to install Docker:
