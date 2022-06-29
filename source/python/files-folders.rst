@@ -3,16 +3,23 @@ Files and Folders
 
 .. highlight:: python
 
-List all files in a folder
-==========================
+Best to use ``pathlib`` for new code
+====================================
 
-Simple
-------
-
-::
+e.g::
 
   import pathlib
   INFO_FOLDER = pathlib.Path.home().joinpath("Private", "deploy")
+
+List all files in a folder
+==========================
+
+::
+
+  pillar_folder = pathlib.Path.home().joinpath("Private", "deploy")
+  for folder in pillar_folder.iterdir():
+      if folder.is_dir():
+          pass
 
 ::
 
