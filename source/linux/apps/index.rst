@@ -21,6 +21,7 @@ Contents
    inxi
    irssi
    python-window-organizer
+   quickemu
    remmina
    restic
    shorewall
