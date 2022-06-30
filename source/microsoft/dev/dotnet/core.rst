@@ -2,6 +2,7 @@
 *********
 
 - Also see :doc:`../../../csharp/index`
+- Also see :doc:`../visual-studio/dotnet`
 - `.NET Core and .NET Standard: What Is the Difference?`_
 - `Demystifying .NET Core and .NET Standard`_
 

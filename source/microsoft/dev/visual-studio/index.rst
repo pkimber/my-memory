@@ -9,6 +9,7 @@ Contents
    code
    csharp-express
    debug
+   dotnet
    dependencies
    keyboard-shortcuts
    tips

@@ -1,10 +1,10 @@
 Visual Studio
 *************
 
-Links
-=====
-
-Sample wxs file :download:`../../../misc/howto/microsoft/dev/Product.wxs`
+.. Links
+.. =====
+..
+.. Sample wxs file :download:`../../../misc/howto/microsoft/dev/Product.wxs`
 
 Install
 =======

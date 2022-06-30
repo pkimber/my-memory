@@ -48,18 +48,14 @@ Global Assembly Cache
 List
 ----
 
-List the global assembly cache:
-
-::
+List the global assembly cache::
 
   "c:\Program Files\Microsoft Visual Studio .NET 2003\SDK\v1.1\Bin\gacutil.exe" /l
 
 Remove
 ------
 
-To remove an assembly from the Global Assembly Cache:
-
-::
+To remove an assembly from the Global Assembly Cache::
 
   "c:\Program Files\Microsoft Visual Studio .NET 2003\SDK\v1.1\Bin\gacutil.exe" /u CSObjects
 
