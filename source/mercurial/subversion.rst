@@ -88,7 +88,6 @@ Usage
 ..   Add the following to your <<<Mercurial.ini>>> file:
 ..
 .. ---
-.. [extensions]
 .. hgext.convert=
 .. ---
 ..
