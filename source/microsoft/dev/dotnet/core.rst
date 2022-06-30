@@ -2,6 +2,20 @@
 *********
 
 - Also see :doc:`../../../csharp/index`
+- `.NET Core and .NET Standard: What Is the Difference?`_
+- `Demystifying .NET Core and .NET Standard`_
+
+From `.NET Core and .NET Standard: What Is the Difference?`_:
+
+  .NET Standard is an API specification that defines, for a given version,
+  what Base Class Libraries must be implemented.
+
+  .NET Core is a managed framework that is optimized for building console,
+  cloud, ASP.NET Core, and UWP applications. It provides an implementation
+  of .NET Standard for the Base Class Libraries.
+
+Getting Started (09/02/2021)
+============================
 
 Download and install *.NET 5.0 (Current)* from
 https://dotnet.microsoft.com/download
@@ -38,5 +52,7 @@ Check the (e.g. ``sakila``) folder which contains all the tables mapped to
 entities and the ``Context.cs`` file
 
 
-.. _`Reverse engineering`: https://docs.microsoft.com/en-us/ef/core/managing-schemas/scaffolding
+.. _`.NET Core and .NET Standard: What Is the Difference?`: https://www.infoq.com/news/2017/10/dotnet-core-standard-difference/
+.. _`Demystifying .NET Core and .NET Standard`: https://docs.microsoft.com/en-us/archive/msdn-magazine/2017/september/net-standard-demystifying-net-core-and-net-standard
 .. _`MySQL, Scaffolding an Existing Database in EF Core`: https://dev.mysql.com/doc/connector-net/en/connector-net-entityframework-core-scaffold-example.html
+.. _`Reverse engineering`: https://docs.microsoft.com/en-us/ef/core/managing-schemas/scaffolding
