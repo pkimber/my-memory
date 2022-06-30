@@ -4,6 +4,8 @@
 - Also see :doc:`../../../csharp/index`
 - Also see :doc:`../visual-studio/dotnet`
 - `.NET Core and .NET Standard: What Is the Difference?`_
+- `.NET Standard versions`_
+- `Compatibility of dynamically loaded assemblies`_
 - `Demystifying .NET Core and .NET Standard`_
 
 From `.NET Core and .NET Standard: What Is the Difference?`_:
@@ -54,6 +56,8 @@ entities and the ``Context.cs`` file
 
 
 .. _`.NET Core and .NET Standard: What Is the Difference?`: https://www.infoq.com/news/2017/10/dotnet-core-standard-difference/
+.. _`.NET Standard versions`: https://docs.microsoft.com/en-us/dotnet/standard/net-standard?tabs=net-standard-1-0
+.. _`Compatibility of dynamically loaded assemblies`: https://stackoverflow.com/questions/59444690/compatibility-of-dynamically-loaded-assemblies
 .. _`Demystifying .NET Core and .NET Standard`: https://docs.microsoft.com/en-us/archive/msdn-magazine/2017/september/net-standard-demystifying-net-core-and-net-standard
 .. _`MySQL, Scaffolding an Existing Database in EF Core`: https://dev.mysql.com/doc/connector-net/en/connector-net-entityframework-core-scaffold-example.html
 .. _`Reverse engineering`: https://docs.microsoft.com/en-us/ef/core/managing-schemas/scaffolding
