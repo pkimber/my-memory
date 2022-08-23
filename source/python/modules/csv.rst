@@ -17,10 +17,13 @@ Sample
 Write::
 
   import csv
-  with open('temp.csv', 'w', newline='') as out:
-      csv_writer = csv.writer(out, dialect='excel-tab')
+
+  with open("temp.csv", "w", newline="", encoding="utf-8") as out:
+      csv_writer = csv.writer(out, dialect="excel-tab")
       for a, b in data.items():
           csv_writer.writerow([a, b])
+
+.. tip:: To learn more about ``encoding``, see `Unicode character encodings`_
 
 Read::
 
@@ -70,3 +73,4 @@ Write::
 
 .. _`CSV Examples`: https://docs.python.org/3.4/library/csv.html#examples
 .. _`CSV File Reading and Writing`: https://docs.python.org/3.4/library/csv.html
+.. _`Unicode character encodings`: https://www.youtube.com/watch?v=ZJ-rrJHibio
