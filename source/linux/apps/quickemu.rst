@@ -19,3 +19,14 @@ For information, find the name of the ``qcow2`` file, shutdown the VM::
 To increase the size of the hard drive::
 
   qemu-img resize windows-10/disk.qcow2 +100G
+
+virtio-win
+==========
+
+https://github.com/virtio-win
+
+In your Windows install, browse to ``CD Drive (E:) virtio-win-x.x.xxx``.
+
+Double click on ``virtio-win-guest-tools.exe`` and install all the options.
+
+Windows will behave 100% more like Windows!
