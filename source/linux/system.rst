@@ -22,6 +22,8 @@ To see free disk space::
 
   df -H
 
+.. tip:: For *Where has my space gone?*, see :doc:`df`
+
 Partitions
 ----------
 
