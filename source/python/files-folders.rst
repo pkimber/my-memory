@@ -113,6 +113,13 @@ Create a folder/directory
 
 ::
 
+  from pathlib import Path
+
+  filepath = Path("temp/test.txt")
+  filepath.parent.mkdir(parents=True, exist_ok=True)
+
+::
+
   import os
   # Make a single folder.
   os.mkdir(install_folder)
