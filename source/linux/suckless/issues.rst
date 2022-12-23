@@ -7,7 +7,7 @@ Slow startup of Gnome applications...
 =====================================
 
 From `Huge delay when opening GNOME applications`_
-(including LibreOffice and Nautilus)
+(including LibreOffice, Evince and Nautilus)
 
 My ``~/.xinitrc`` file contained::
 
