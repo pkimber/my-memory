@@ -6,19 +6,9 @@ Restic
 Install
 =======
 
-.. note:: Update for 03/03/2018, I downloaded ``restic_0.8.3_linux_amd64.bz2``.
+::
 
-Download ``restic_0.7.3_linux_amd64.bz2`` from
-https://github.com/restic/restic/releases/latest
-
-Extract ``restic_0.7.3_linux_amd64`` to your ``bin`` folder (or somewhere
-suitable)::
-
-  chmod +x restic_0.7.3_linux_amd64
-
-Create a symbolic link so we can use ``restic`` from the command line::
-
-  ln -s /home/patrick/bin/restic_0.8.3_linux_amd64 /home/patrick/bin/restic
+  apt install restic
 
 Usage
 =====
@@ -31,34 +21,46 @@ Set the ``RESTIC_PASSWORD`` environment variable::
 Initialise the repository::
 
   # local
-  restic_0.7.3_linux_amd64 init --repo ./my-first-repo
+  restic init --repo ./my-first-repo
   # ssh
-  restic_0.7.3_linux_amd64 -r sftp:123@usw-s001.rsync.net:restic/my-repo init
+  restic -r sftp:123@usw-s001.rsync.net:restic/my-repo init
 
 Backup::
 
   # local
-  restic_0.7.3_linux_amd64 -r ./my-first-repo backup ~/media
+  restic -r ./my-first-repo backup ~/media
   # ssh
-  restic_0.7.3_linux_amd64 -r sftp:123@usw-s001.rsync.net:restic/my-repo backup ~/media
+  restic -r sftp:123@usw-s001.rsync.net:restic/my-repo backup ~/media
 
 .. note:: This will create a snapshot.  The identifier is displayed at the end
           of the backup e.g. ``snapshot 5b49043d saved``
 
 Check::
 
-  restic_0.7.3_linux_amd64 -r ./my-first-repo check
+  restic -r ./my-first-repo check
 
 List snapshots::
 
-  restic_0.7.3_linux_amd64 -r ./my-first-repo snapshots
+  restic -r ./my-first-repo snapshots
 
 Restore::
 
   # local
-  restic_0.7.3_linux_amd64 -r ./my-first-repo restore latest --target ~/repo/temp/restic-restore-my-first-repo
-  # ssh
-  restic_0.7.3_linux_amd64 -r sftp:123@ch-s011.rsync.net:restic/patrick restore latest --target ~/repo/temp/restic-restore-my-first-repo
+  restic -r ./my-first-repo restore latest --target ~/repo/temp/restic-restore-my-first-repo
+
+  # ssh - restore latest
+  restic -r sftp:123@ch-s011.rsync.net:restic/patrick restore latest --target ~/repo/temp/restic-restore-my-first-repo
+
+  # ssh - list snapshots
+  restic -r sftp:123@ch-s011.rsync.net:restic/patrick snapshots
+  # e.g.
+  # ID        Time                 Host ...
+  # ----------------------------------- ...
+  # 6059b8ee  2022-02-28 01:01:51
+  # 3146d2d5  2022-03-31 01:01:07
+
+  # ssh - restore snapshot
+  restic -r sftp:123@ch-s011.rsync.net:restic/patrick restore 3146d2d5 --target ~/repo/temp/restic-restore-my-snapshot
 
 Retention Policy
 ================
