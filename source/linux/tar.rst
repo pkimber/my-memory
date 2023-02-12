@@ -35,6 +35,10 @@ To extract the archive ``filename.tar`` into the current directory::
 bz2
 ---
 
+To extract the archive ``filename.sql.bz2`` into the current directory::
+
+  bzip2 -d filename.sql.bz2
+
 To extract the archive ``filename.tar.bz2`` into the current directory::
 
   tar xjf filename.tar.bz2
