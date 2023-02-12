@@ -44,8 +44,8 @@ Create a Playbook (in YAML format) e.g:
           state: directory
           mode: '0755'
 
-The ``ansible.builtin.file module`` is one of many modules.
-For module documentation, see `Manage files and file properties`_
+.. tip:: The ``ansible.builtin.file module`` is one of many modules.
+         For documentation, see `Manage files and file properties`_
 
 To execute this Playbook::
 
