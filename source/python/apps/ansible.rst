@@ -16,6 +16,7 @@ Install Ansible::
 
 Create an ``inventory.yml`` file listing your hosts e.g::
 
+  [servers]
   122.122.222.49 ansible_user=root
 
 Create a Playbook (in YAML format) e.g:
