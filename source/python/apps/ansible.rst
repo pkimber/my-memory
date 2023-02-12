@@ -29,16 +29,16 @@ Create a Playbook (in YAML format) e.g:
   - name: Network Getting Started First Playbook
     hosts: all
     tasks:
-  
+
       - name: Hello - I will Execute the command in remote shell; stdout goes to the specified file on the remote
         ansible.builtin.shell: echo 'Hello Patrick'
-  
+
       - name: Touch a file, using symbolic modes to set the permissions (equivalent to 0644)
         ansible.builtin.file:
           path: /root/patrick.json
           state: touch
           mode: u=rw,g=r,o=r
-  
+
       - name: Create a directory if it does not exist
         ansible.builtin.file:
           path: /root/patrick
