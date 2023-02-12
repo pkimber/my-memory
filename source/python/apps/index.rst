@@ -6,6 +6,7 @@ Contents
 .. toctree::
    :maxdepth: 1
 
+   ansible
    apache-libcloud
    devpi
    fabric/index
