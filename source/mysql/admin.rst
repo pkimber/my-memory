@@ -5,7 +5,7 @@ Move Data Directory
 ===================
 
 - Stop the MySQL database service.
-- Open the ``my.ini`` file in a text editor.
+- Open the ``my.ini`` file in a text editor::
 
   ::
 
