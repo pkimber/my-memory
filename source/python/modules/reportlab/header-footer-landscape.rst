@@ -1,5 +1,19 @@
-Headers and Footers
-*******************
+Headers, Footers and Landscape
+******************************
+
+Landscape
+=========
+
+::
+
+  doc = platypus.SimpleDocTemplate(
+      f"invoice-{invoice.invoice_number}-summary.pdf",
+      title="My Title",
+      pagesize=(A4[1], A4[0]),
+  )
+
+``SimpleDocTemplate``
+=====================
 
 .. note:: Check this recipe first: http://code.activestate.com/recipes/576832/
 

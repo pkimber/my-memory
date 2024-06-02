@@ -9,4 +9,4 @@ Contents
    links
    install
    elements
-   header-footer
+   header-footer-landscape
