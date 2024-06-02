@@ -29,6 +29,15 @@ Issues
 If you have a blue box highlighting areas of the screen and preventing you from
 using the keyboard, then switch off *Narrator*: See :doc:`windows/issues`.
 
+Connection Bar
+--------------
+
+I struggled with this, but *Ctrl*, *Alt*, *Tab* does allow me to switch
+windows.
+
+For more information, see
+`How to show the Connection Bar in a remote desktop session?`_
+
 Recover
 =======
 
@@ -59,4 +68,5 @@ List user sessions (you need to be an administrator on the target machine)::
   qwinsta /server:<serverName>
 
 
+.. _`How to show the Connection Bar in a remote desktop session?`: https://superuser.com/questions/120519/how-to-show-the-connection-bar-in-a-remote-desktop-session
 .. _`How To Switch Between Remote Desktop Sessions on Win2k3`: http://www.allbacktomine.com/blog/2008/07/18/HowToSwitchBetweenRemoteDesktopSessionsOnWin2k3.aspx
