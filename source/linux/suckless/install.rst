@@ -68,12 +68,25 @@ Login manager::
   vim ~/.xsession
   exec dwm
 
+.. tip:: To switch to Gnome, ``exec gnome-session``
+
 To set Caps Lock to Ctrl::
 
   setxkbmap -option ctrl:nocaps
 
 .. tip:: From
          https://askubuntu.com/questions/445099/whats-the-opposite-of-setxkbmap-option-ctrlnocaps
+
+Create ``~/.Xmodmap``::
+
+  clear lock
+  clear control
+  keycode 66 = Control_L
+  add control = Control_L Control_R
+
+From the terminal::
+
+  xmodmap ~/.Xmodmap
 
 Patches
 =======
