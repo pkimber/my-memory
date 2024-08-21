@@ -25,6 +25,14 @@ Write::
 
 .. tip:: To learn more about ``encoding``, see `Unicode character encodings`_
 
+To create a date based file name (using Django)::
+
+  from django.utils import timezone
+
+  date_as_str = timezone.localtime(timezone.now()).strftime("%Y-%m-%d")
+  file_name = f"{date_as_str}-courses.tsv"
+  with open(file_name, "w", newline="", encoding="utf-8") as out:
+
 Read::
 
   import csv
