@@ -15,16 +15,21 @@ Neovim
 
 From `AppImage ("universal" Linux package)`_::
 
-  curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
+  curl -LO https://github.com/neovim/neovim/releases/download/v0.9.5/nvim.appimage
   chmod u+x nvim.appimage
 
-  ./nvim.appimage --appimage-extract
-  ./squashfs-root/AppRun --version
+  chmod u+x nvim.appimage
+  mkdir -p /opt/nvim
+  mv nvim.appimage /opt/nvim/nvim
 
-  # Optional: exposing nvim globally.
-  sudo mv squashfs-root /
-  sudo ln -s /squashfs-root/AppRun /usr/bin/nvim
-  nvim
+For the ``fish`` shell::
+
+  # ~/.config/fish/config.fish
+  set -gx PATH "$PATH:/opt/nvim"
+
+Upgrade LunarVim (in ``lvim``)::
+
+  :LvimUpdate
 
 Older Versions::
 
