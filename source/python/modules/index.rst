@@ -14,6 +14,7 @@ Contents
    :maxdepth: 1
 
    argparse
+   attrs
    barcode
    beautiful-soup
    click
