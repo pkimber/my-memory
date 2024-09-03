@@ -175,4 +175,3 @@ found the above article.  When I ran:
 .. _`Virtualbox Host Interface Networking - Windows host, Ubuntu guest`: http://georgelantz.com/2007/11/27/virtualbox-host-interface-networking-windows-host-ubuntu-guest/
 .. _`Additions and SSH Access to a VirtualBox Guest`: http://allisterx.blogspot.com/2008/05/additions-and-ssh-access-to-virtualbox.html
 .. _`Howto Access via ssh a Virtualbox Guest machine`: http://mydebian.blogdns.org/?p=148
-
