@@ -15,7 +15,7 @@ version:
 
   apt-get install vim ctags vim-doc vim-scripts
 
-...or... install the python enabled version, :doc:`install/install`.
+...or... install the python enabled version, :doc:`install`.
 
 Mapping
 =======

@@ -107,13 +107,13 @@ Build
 Configuration
 =============
 
-:doc:`config`
+:doc:`../config`
 
 python Support
 ==============
 
 To check if your version of vim supports python run the ``version`` command...
-See :doc:`config`, *version*.
+See :doc:`../config`, *version*.
 
 To download a version of vim which includes support for python, download the
 `Windows Vim installers without Cream`_.  (I found this link on the

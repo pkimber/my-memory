@@ -6,7 +6,7 @@ Links
 
 - My config files are in, https://gitlab.com/pkimber/cfg/
 - :ref:`advent-of-neovim-2024-build`
-- :doc:`../keymaps`
+- :doc:`keymaps`
 
 .. _advent-of-neovim-2024-config:
 

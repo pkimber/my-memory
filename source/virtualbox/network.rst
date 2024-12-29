@@ -65,7 +65,7 @@ Guest Setup (Linux)
 -------------------
 
 - Start the virtual machine with Ubuntu Installed (Debian in my case).
-- Make sure ssh is installed (:doc:`../linux/debian/install`).
+- Make sure ssh is installed (:doc:`../../linux/distro/debian/install`).
 
 .. 23/03/2008 I am not sure this needs to be done... I have removed the extra
 ..            section from toybox, and everything is working perfectly.  The IP

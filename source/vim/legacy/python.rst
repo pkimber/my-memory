@@ -28,10 +28,10 @@ Three ways to check if your version of vim includes support for python:
 
     :set filetype
 
-- run the ``version`` command, :doc:`install/config`.
+- run the ``version`` command, :doc:`../config`.
 
 If your version of vim does not include support for python, install a version
-which does, :doc:`install/install`.
+which does, :doc:`install`.
 
 Auto Complete
 =============
