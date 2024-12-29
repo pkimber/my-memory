@@ -13,7 +13,7 @@ Links
 Prerequisites
 =============
 
-- Check the version of Ruby on your workstation :doc:`../../ruby/install`
+- Check the version of Ruby on your workstation :doc:`../../../ruby/install`
 - Make sure ``vim`` has support for Ruby :doc:`../ruby`.
 - The version of Ruby in ``vim`` and on the system should be the same.
 

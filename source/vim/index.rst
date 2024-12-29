@@ -7,27 +7,30 @@ Contents
    :maxdepth: 2
 
    install/index
-   plugin/index
-   snippets/index
+   keymaps
 
 .. toctree::
    :maxdepth: 1
+   :caption: Legacy
 
-   links
-   color
-   commands
-   digraph
-   font
-   issues
-   java
-   merge
-   omnicompletion
-   python
-   registers
-   ruby
-   script-python
-   script
-   server
-   ssh
-   syntax-highlight
-   tips
+   legacy/color
+   legacy/commands
+   legacy/digraph
+   legacy/font
+   legacy/install
+   legacy/issues
+   legacy/java
+   legacy/links
+   legacy/merge
+   legacy/omnicompletion
+   legacy/plugin/index
+   legacy/python
+   legacy/registers
+   legacy/ruby
+   legacy/script
+   legacy/script-python
+   legacy/server
+   legacy/snippets/index
+   legacy/ssh
+   legacy/syntax-highlight
+   legacy/tips
