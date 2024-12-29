@@ -11,12 +11,31 @@ Links
 LSP
 ===
 
+::
 
-Keyboard shortcuts::
+  checkhealth lsp
 
-  Ctrl ]        Go to definition
-  Ctrl T        Jump back
-  grr           List references
-  grn           Rename references
-  =g            Format the file
-  K             Docs
+  Ctrl ]                Go to definition
+  Ctrl T                Jump back
+  Ctrl X  Ctrl O        Omni-completion
+  Ctrl X  Ctrl L        Completes the current line
+  grr                   List references
+  grn                   Rename references
+  =g                    Format the file
+  K                     Docs
+
+Telescope
+=========
+
+::
+
+  checkhealth telescope
+
+  :Telescope find_files
+
+  <leader>en            nvim config files
+  <leader>fb            List buffers
+  <leader>fd            Files in directory
+  <leader>fg            grep string under cursor
+  <leader>fh            nvim Help
+  <leader>fq            Quickfix

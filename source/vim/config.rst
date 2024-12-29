@@ -15,8 +15,39 @@ TJ DeVries Advent of Neovim 2024 - December 2024 - Configuration
 
 - https://www.youtube.com/watch?v=TQn2hJeHQbM
 
+.. code-block:: bash
+
+  # Config is in
+  mkdir ~/.config/nvim/
+
+  nvim ~/.config/nvim/init.lua
+
+  # reload config e.g.
+  source %
+  # Or... shift 'v' to select a line, then
+  :lua
+
+  # Check health
+  checkhealth lazy
+
 Language Servers
 ----------------
+
+Lua
+
+.. code-block:: bash
+
+  cd ~/dev/src/
+  git clone https://github.com/LuaLS/lua-language-server
+  cd ~/dev/src/lua-language-server
+  ./make.sh
+
+.. code-block:: lua
+
+  -- In your ``setup`` function, set the full path for the ``cmd`` e.g.
+  require("lspconfig").lua_ls.setup {
+    cmd = { "/home/patrick/dev/src/lua-language-server/bin/lua-language-server" }
+  }
 
 Python ``pyright``:
 
@@ -28,18 +59,3 @@ Python ``pyright``:
   pyright --version
   # load nvim and 'checkhealth'
   checkhealth lsp
-
-.. code-block:: bash
-
-  # Config is in
-  mkdir ~/.config/nvim/
-
-  nvim ~/.config/nvim/init.lua
-
-  # reload config
-  source %
-  # Or... shift 'v' to select a line, then
-  :lua
-
-  # Check health
-  checkhealth lazy
