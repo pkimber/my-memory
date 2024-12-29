@@ -26,4 +26,4 @@ modes.
 
   - To change the default auto complete mode, set the
     ``SuperTabDefaultCompletionType`` option in your ``_vimrc`` file.  For a
-    sample setting see my default configuration in :doc:`../../config`.
+    sample setting see my default configuration in :doc:`../config`.

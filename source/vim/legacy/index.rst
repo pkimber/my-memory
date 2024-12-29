@@ -8,6 +8,7 @@ Legacy
 
    build
    color
+   config
    commands
    digraph
    font

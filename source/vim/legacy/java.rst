@@ -13,5 +13,5 @@ Press *Alt* *C* to generate the comment.
 Syntax Highlighting
 ===================
 
-See configuration notes, :doc:`../config`.
+See configuration notes, :doc:`config`.
 
