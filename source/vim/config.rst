@@ -7,6 +7,31 @@ Links
 - My config files are in, https://gitlab.com/pkimber/cfg/
 - :ref:`advent-of-neovim-2024-build`
 - :doc:`keymaps`
+- `Add Icons to your Fonts with Nerd Fonts`_
+
+Nerd Font
+=========
+
+Download fonts from https://www.nerdfonts.com/
+
+::
+
+  # Extract the ``ttf`` files into a sub-folder of
+  cd ~/.local/share/fonts/
+  # e.g.
+  ls -l /.local/share/fonts/UbuntuMono
+
+Select the font in your terminal. For Gnome:
+
+- Press the menu button in the top-right corner of the window and
+  select *Preferences*.
+- In the sidebar, select your current profile in the *Profiles* section.
+  (my be *Unnamed*)
+- Select Text.
+- Tick *Custom font*.
+- Select your font from the drop down.
+
+.. tip:: For more information, see `Add Icons to your Fonts with Nerd Fonts`_
 
 .. _advent-of-neovim-2024-config:
 
@@ -59,3 +84,6 @@ Python ``pyright``:
   pyright --version
   # load nvim and 'checkhealth'
   checkhealth lsp
+
+
+.. _`Add Icons to your Fonts with Nerd Fonts`: https://www.youtube.com/watch?v=fR4ThXzhQYI
