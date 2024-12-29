@@ -24,6 +24,28 @@ LSP
   =g                    Format the file
   K                     Docs
 
+Oil
+===
+
+.. tip:: Seems to *just work*...
+
+QuickFix
+========
+
+::
+
+  Ctrl q                Copy Telescope list to Quickfix
+  Alt k         cnext   Move to the next location in the QuickFix list
+  Alt j         cprev   Move to the previous item in the QuickFix list
+  cclose                Close the QuickFix list
+  copen                 Move to the next location in the QuickFix list
+  cdo s/pin/pop/gc      For each item in the QuickFix list, do a search and replace (with confirmation)
+
+  lua vim.diagnostic.setqflist()        Copy diagnostics to the QuickFix list
+
+  -- Copied from LSP section
+  grr                   List references
+
 Telescope
 =========
 
@@ -39,3 +61,15 @@ Telescope
   <leader>fg            grep string under cursor
   <leader>fh            nvim Help
   <leader>fq            Quickfix
+
+  -- Copied from the QuickFix section
+  Ctrl q                Copy Telescope list to Quickfix
+
+Terminal
+========
+
+::
+
+  term                  Open the terminal
+  i                     To use the terminal
+  Ctrl \   Ctrl N       Leave terminal mode

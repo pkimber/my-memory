@@ -52,7 +52,7 @@ Lua
 Python ``pyright``:
 
 .. code-block:: bash
-  
+
   pnpm env use --global 20
   pnpm i -g pyright
   # check you can run 'pyright' from the command prompt
