@@ -6,12 +6,13 @@ Keyboard
 
 :doc:`shortcuts`
 
-Run the *Tweak Tool* (``apt install gnome-tweak-tool``):
+Run *Tweaks* (``apt install gnome-tweaks``):
 
 - *Keyboard and Mouse*
 - *Additional Layout Options*
 - *Ctrl position* to *Caps Lock as Ctrl*
 - *Caps Lock behaviour* to *Caps is also a Ctrl*
+  (or maybe *Make Caps Lock an additional Ctrl*)
 
 Keyboard Issues
 ===============
