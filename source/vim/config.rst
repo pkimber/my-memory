@@ -12,9 +12,7 @@ Links
 Nerd Font
 =========
 
-Download fonts from https://www.nerdfonts.com/
-
-::
+Download fonts from https://www.nerdfonts.com/::
 
   # Extract the ``ttf`` files into a sub-folder of
   cd ~/.local/share/fonts/
