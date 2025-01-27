@@ -101,7 +101,7 @@ If you haven't made changes to ``config.h``::
 
   cp config.def.h config.h
 
-Then run `Make and Install`_ (see above)...
+Then run *Compile and install* (see above in dwm_)...
 
 st - terminal
 =============
@@ -148,7 +148,7 @@ I like to use a font size of 14::
   vim config.h
   static char *font = "Ubuntu Mono:pixelsize=14:antialias=true:autohint=true";
 
-Then run `Make and Install`_ (see above)...
+Then run *Compile and install* (see above in dwm_)...
 
 surf
 ====
