@@ -415,7 +415,28 @@ Temporary
 File
 ----
 
-::
+The file has no name::
+
+  # create a temporary file using a context manager
+  with tempfile.TemporaryFile() as fp:
+      fp.write(b'Hello world!')
+
+  # file is now closed and removed
+
+A named file::
+
+  # create a temporary file using a context manager
+  # close the file, use the name to open the file again
+  with tempfile.NamedTemporaryFile(delete_on_close=False) as fp:
+      fp.write(b'Hello world!')
+      fp.close()
+      # the file is closed, but not removed
+      # open the file again by using its name
+      with open(fp.name, mode='rb') as f:
+          f.read()
+  # file is now removed
+
+Or (from my legacy notes)::
 
   import tempfile
   f = tempfile.NamedTemporaryFile(delete=False)
@@ -425,6 +446,15 @@ Folder
 `tempfile - Generate temporary files and directories`_
 
 To create a temporary folder::
+
+  import tempfile
+  # create a temporary directory using the context manager
+  with tempfile.TemporaryDirectory() as tmpdirname:
+      print('created temporary directory', tmpdirname)
+
+  # directory and contents have been removed
+
+Or (from my legacy notes)::
 
   import tempfile
   return tempfile.mkdtemp()
