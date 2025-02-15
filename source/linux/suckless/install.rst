@@ -47,6 +47,24 @@ I had to edit line 637 of ``demnu.c``:
 .. tip:: For details, see:
          https://www.reddit.com/r/suckless/comments/ll3bm1/dmenu_installation_issue/
 
+slock
+=====
+
+::
+
+  sudo apt install libxrandr-dev
+
+::
+
+  cd ~/dev/src/
+  git clone https://git.suckless.org/slock
+
+::
+
+  sudo -i
+  cd /home/patrick/dev/src/slock/
+  make clean install
+
 Startup
 =======
 
