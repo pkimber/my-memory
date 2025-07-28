@@ -11,15 +11,17 @@ e.g::
   import pathlib
   INFO_FOLDER = pathlib.Path.home().joinpath("Private", "deploy")
 
-List all files in a folder
-==========================
+List all files (and folders) in a folder
+========================================
 
-::
+To list files **and** folders::
 
   pillar_folder = pathlib.Path.home().joinpath("Private", "deploy")
-  for folder in pillar_folder.iterdir():
-      if folder.is_dir():
+  for item in pillar_folder.iterdir():
+      if item.is_dir():
           pass
+
+.. tip:: Use ``is_dir`` to find out if the item is a folder (or not).
 
 ::
 
@@ -29,6 +31,13 @@ List all files in a folder
 
 Glob
 ----
+
+Recursive::
+
+  folder = pathlib.Path.cwd()
+  for child in folder.rglob("pyproject.toml"):
+      result = child
+      break
 
 `PyMOTW: glob`_::
 
@@ -205,6 +214,15 @@ Move
 
 Move (rename) a file or directory::
 
+  import pathlib
+
+  file_name = pathlib.Path("archive") / "1-2-3.doc"
+  current_folder = pathlib.Path.cwd()
+
+  return file_name.rename(current_folder / file_name.name)
+
+::
+
   import shutil
   shutil.move('from.txt', 'to.txt')
 
@@ -272,6 +290,13 @@ or...::
 Normalise
 ---------
 
+Using ``pathlib``::
+
+  p = pathlib.Path('file.txt')
+  p.resolve()
+
+Using ``os.path``:
+
 On case-insensitive filesystems, it converts the path to lowercase.  On
 Windows, it also converts forward slashes to backward slashes::
 
@@ -338,10 +363,20 @@ File
 
 ::
 
+  file_name = pathlib.Path("1-2-3.doc")
+  file_name.unlink()
+
+::
+
   os.remove(os.path.join(folder, name))
 
 Folder
 ------
+
+::
+
+  folder = pathlib.Path("documents")
+  folder.rmdir()
 
 ::
 
