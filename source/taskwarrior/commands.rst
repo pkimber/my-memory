@@ -46,6 +46,10 @@ If a task depends on another task::
 
   task ID modify depends:OTHER_ID
 
+Recur::
+
+  task 14 modify due:wednesday recur:weekly
+
 Don't show the task until::
 
   task 12 modify wait:11months
