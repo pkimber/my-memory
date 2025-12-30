@@ -11,37 +11,38 @@ from fabric.api import run
 from fabric.api import sudo
 from fabric.api import task
 from fabric.colors import green
-#from fabric.contrib.project import rsync_project
+# from fabric.contrib.project import rsync_project
 
-env.html_folder = 'build/html/'
+env.html_folder = "build/html/"
 
-#env.hosts = ['rex.pkimber.net',]
-#env.remote_sync_folder = '/home/patrick/repo/sync/www'
-#env.remote_www_folder = '/var/www/pkimber.net'
-#env.remote_www_temp_folder = os.path.join(env.remote_www_folder, 'sync')
+# env.hosts = ['rex.pkimber.net',]
+# env.remote_sync_folder = '/home/patrick/repo/sync/www'
+# env.remote_www_folder = '/var/www/pkimber.net'
+# env.remote_www_temp_folder = os.path.join(env.remote_www_folder, 'sync')
 
 env.FOLDERS = (
-    '_downloads',
-    'info',
-    '_images',
-    '_sources',
-    '_static',
+    "_downloads",
+    "info",
+    "_images",
+    "_sources",
+    "_static",
 )
 
 
 def clean():
-    local('make clean html')
+    local("make clean html")
 
 
 @task
 def sync():
-    folder = '/home/web/repo/project/pkimber_net/howto'
-    run('find %s/ -type d -exec chmod 0755 {} \;' % folder)
-    run('find %s/ -type f -exec chmod 0755 {} \;' % folder)
-    print(green('complete'))
+    folder = "/home/web/repo/project/pkimber_net/howto"
+    run("find %s/ -type d -exec chmod 0755 {} \;" % folder)
+    run("find %s/ -type f -exec chmod 0755 {} \;" % folder)
+    print(green("complete"))
 
-#@task
-#def sync():
+
+# @task
+# def sync():
 #    print(green('create remote sync folder'))
 #    run('mkdir -p %s' % env.remote_sync_folder)
 #    print(green('sync'))
