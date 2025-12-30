@@ -4,7 +4,8 @@ Config
 Links
 =====
 
-- My config files are in, https://gitlab.com/pkimber/cfg/
+- My config files are in,
+  https://gitlab.com/pkimber/cfg/-/blob/master/.cfg/README.rst
 - :ref:`advent-of-neovim-2024-build`
 - :doc:`keymaps`
 - `Add Icons to your Fonts with Nerd Fonts`_
