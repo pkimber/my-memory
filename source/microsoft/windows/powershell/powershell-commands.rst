@@ -1,9 +1,17 @@
 Powershell Commands
 *******************
 
-From `Unix tail equivalent command in Windows Powershell`_
+path
+----
 
 ::
+
+  $env:path -split ";"
+
+tail
+----
+
+From `Unix tail equivalent command in Windows Powershell`_::
 
   Get-Content ./log.log -Wait -Tail 10
 
