@@ -1,0 +1,14 @@
+[project]
+name = "my-memory"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = []
+
+[dependency-groups]
+dev = [
+    "renku-sphinx-theme>=0.5.0",
+    "roman-numerals-py==4.0.0",
+    "sphinx>=8.1.3",
+]
