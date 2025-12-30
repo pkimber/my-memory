@@ -62,3 +62,7 @@ To find the ``MX`` address and ``TXT`` records for a domain::
 
   dig mx westcountrycycles.co.uk
   dig txt westcountrycycles.co.uk
+
+.. tip:: To view the ``TXT`` record for a sub-domain then try
+         including the sub-domain in the query e.g.
+         ``dig txt _acme-challenge.westcountrycycles.co.uk``
